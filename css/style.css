@@ -226,6 +226,49 @@ footer {
     color: #e6e6e6;
 }
 
+.hero-sirio {
+  background: url('immagini/hero-nastro.jpg') center/cover no-repeat;
+  padding: 160px 20px;
+  color: white;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.hero-sirio-content {
+  max-width: 600px;
+  background: rgba(0,0,0,0.45);
+  padding: 35px;
+  border-radius: 12px;
+}
+
+.hero-sirio h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-sirio p {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+.btn-hero {
+  display: inline-block;
+  background: #ff6600;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 18px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-hero:hover {
+  background: #cc5200;
+}
+
 
 
 
