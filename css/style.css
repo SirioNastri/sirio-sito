@@ -118,3 +118,29 @@ footer {
         margin: 10px;
     }
 }
+/* HERO */
+.hero {
+    background: url('https://images.unsplash.com/photo-1581091870627-3f9c1c6c2a4b') center/cover no-repeat;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+
