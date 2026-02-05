@@ -193,6 +193,39 @@ footer {
     background: #e65c00;
 }
 
+.prodotti-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.prodotto {
+    background: #1a1a1a;
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.prodotto h3 {
+    font-size: 26px;
+    margin-bottom: 5px;
+    color: #ff6600;
+}
+
+.prodotto h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #cccccc;
+}
+
+.prodotto p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #e6e6e6;
+}
+
 
 
 
