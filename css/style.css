@@ -8,6 +8,12 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+<script>
+const slider = document.querySelector('.product-slider');
+document.querySelector('.next').onclick = () => slider.scrollBy({ left: 300, behavior: 'smooth' });
+document.querySelector('.prev').onclick = () => slider.scrollBy({ left: -300, behavior: 'smooth' });
+</script>
+
 body {
     background: #f5f7fa;
     color: #222;
@@ -333,6 +339,33 @@ footer {
 .product-card .price {
   font-weight: bold;
   margin: 10px 0;
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.slider-controls button {
+  background: #222;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  font-size: 22px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cart-btn {
+  background: #0077ff;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
 }
 
 
