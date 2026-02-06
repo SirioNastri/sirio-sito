@@ -499,6 +499,42 @@ footer {
   color: #66ccff;
 }
 
+.prodotti-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 1px solid #333;
+}
+
+.prodotti-grid .box {
+  border: 1px solid #333;
+  padding: 35px; /* più spazio interno */
+  background: #111;
+  transition: background 0.2s;
+}
+
+.prodotti-grid .box:not(:nth-child(odd)) {
+  border-left: none;
+}
+
+.prodotti-grid .box:nth-child(n+3) {
+  border-top: none;
+}
+
+/* DISTANZA TRA I CONTENUTI */
+.prodotti-grid .box h4 {
+  margin-bottom: 10px;
+}
+
+.prodotti-grid .box span {
+  display: block;
+  margin-bottom: 20px; /* più aria sotto il sottotitolo */
+  color: #66ccff;
+}
+
+.prodotti-grid .box p {
+  line-height: 1.7; /* testo più leggibile */
+}
+
 
 
 
