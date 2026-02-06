@@ -2,6 +2,25 @@ body {
   background: #000;
   color: #fff;
 }
+header {
+  background: #000;
+  border-bottom: 1px solid #222;
+}
+
+nav a {
+  color: #fff;
+}
+
+nav a:hover {
+  color: #4db8ff;
+}
+section {
+  padding: 60px 20px;
+}
+body {
+  background: #000 url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2NkYGD4DwABAgEAffNkWQAAAABJRU5ErkJggg==') repeat;
+}
+
 
 /* FONT MODERNO */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
@@ -662,6 +681,7 @@ footer {
   object-fit: cover;
   box-shadow: 0 0 20px rgba(0,0,0,0.4);
 }
+
 
 
 
