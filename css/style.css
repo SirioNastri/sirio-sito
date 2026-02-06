@@ -373,6 +373,50 @@ footer {
   object-fit: cover;
   border-radius: 6px;
 }
+.chi-siamo-home {
+  padding: 60px 20px;
+  background: #f7f7f7;
+}
+
+.chi-siamo-container {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.chi-siamo-immagine {
+  flex: 1;
+  min-width: 300px;
+}
+
+.chi-siamo-immagine img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.chi-siamo-testo {
+  flex: 1;
+  min-width: 300px;
+}
+
+.chi-siamo-testo h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.chi-siamo-testo p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.chi-siamo-testo .btn {
+  display: inline-block;
+  margin-top: 15px;
+}
+
 
 
 
