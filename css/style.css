@@ -534,6 +534,67 @@ footer {
 .prodotti-grid .box p {
   line-height: 1.7; /* testo più leggibile */
 }
+.contatti-sirio {
+  background: #000;
+  color: #fff;
+  padding: 60px 20px;
+}
+
+.contatti-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.contatti-left h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.contatti-left h3 {
+  font-size: 20px;
+  color: #66ccff;
+}
+
+.contatti-right p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.policy-links {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.policy-links a {
+  color: #66ccff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.policy-links a:hover {
+  color: #fff;
+}
+
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #66ccff;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #fff;
+}
+
 
 
 
