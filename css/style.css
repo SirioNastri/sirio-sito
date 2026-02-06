@@ -268,6 +268,35 @@ footer {
 .btn-hero:hover {
   background: #cc5200;
 }
+.hero {
+  background-color: #e5e5e5;
+  padding: 60px 20px;
+}
+
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 
 
 
