@@ -399,8 +399,9 @@ footer {
 }
 .chi-siamo-home {
   padding: 60px 20px;
-  background: #f7f7f7;
+  background: #0d0d0d; /* nero industriale leggero */
 }
+
 
 .chi-siamo-container {
   display: flex;
@@ -701,6 +702,7 @@ nav a {
 nav a:hover {
   color: #4db8ff;
 }
+
 
 
 
