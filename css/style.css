@@ -595,6 +595,69 @@ footer {
   color: #fff;
 }
 
+.hero-sirio {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 60px;
+  background: #0d0d0d;
+  color: #fff;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.hero-content {
+  flex: 1;
+  min-width: 320px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.hero-content h2 {
+  font-size: 24px;
+  color: #4db8ff;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 500px;
+  margin-bottom: 30px;
+  color: #e6e6e6;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #4db8ff;
+  color: #000;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.hero-btn:hover {
+  background: #82d1ff;
+}
+
+.hero-image {
+  flex: 1;
+  min-width: 320px;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
 
 
 
