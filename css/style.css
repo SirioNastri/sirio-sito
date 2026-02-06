@@ -471,6 +471,34 @@ footer {
   color: #ccc;
   line-height: 1.6;
 }
+.prodotti-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  border: 1px solid #333;
+}
+
+.prodotti-grid .box {
+  border: 1px solid #333;
+  padding: 30px;
+  background: #111;
+  transition: background 0.2s;
+}
+
+.prodotti-grid .box:hover {
+  background: #181818;
+}
+
+.prodotti-grid .box h4 {
+  margin-bottom: 5px;
+}
+
+.prodotti-grid .box span {
+  display: block;
+  margin-bottom: 15px;
+  color: #66ccff;
+}
+
 
 
 
