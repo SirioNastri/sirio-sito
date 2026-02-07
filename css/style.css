@@ -799,6 +799,24 @@ section {
     font-size: 15px;
     line-height: 1.5;
 }
+/* HERO INFO (stile simile alla home) */
+.hero-info {
+    background: #050505;
+    padding: 120px 20px 80px;
+    text-align: center;
+}
+
+.hero-info h1 {
+    color: #4db8ff;
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero-info p {
+    color: #ccc;
+    font-size: 20px;
+}
+
 
 
 
