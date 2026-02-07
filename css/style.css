@@ -703,6 +703,13 @@ nav a:hover {
   color: #4db8ff;
 }
 
+/* Rende nera la sezione prodotti nella home */
+.prodotti-home,
+.linea-prodotti,
+.slider-section {
+  background: #000 !important;
+}
+
 
 
 
