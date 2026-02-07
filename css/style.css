@@ -817,6 +817,88 @@ section {
     font-size: 20px;
 }
 
+/* GRIGLIA 2 COLONNE (testo + immagine) */
+.info-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 40px;
+    padding: 80px 10%;
+    align-items: center;
+}
+
+.info-grid-text h2 {
+    color: #4db8ff;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.info-grid-text p {
+    color: #ccc;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.info-grid-img img {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #1f1f1f;
+}
+/* SERVIZI IN GRIGLIA (4 box) */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 80px 10%;
+}
+
+.service-box {
+    background: #111;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #1f1f1f;
+    text-align: center;
+}
+
+.service-box h3 {
+    color: #4db8ff;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.service-box p {
+    color: #ccc;
+    font-size: 15px;
+}
+/* TABELLA QUALITÀ (4 colonne) */
+.quality-table {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 1px solid #1f1f1f;
+    margin: 80px 10%;
+    background: #050505;
+}
+
+.quality-table .qt-item {
+    padding: 30px;
+    border-right: 1px solid #1f1f1f;
+}
+
+.quality-table .qt-item:last-child {
+    border-right: none;
+}
+
+.quality-table h3 {
+    color: #4db8ff;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.quality-table p {
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
 
 
 
