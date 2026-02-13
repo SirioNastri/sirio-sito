@@ -1,6 +1,183 @@
-/* ============================
-   INFO HERO IMMAGINI
-============================ */
+/* =========================================
+   RESET & BASE
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+header {
+    background: #000;
+    border-bottom: 1px solid #222;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: #fff;
+    margin-left: 25px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #4db8ff;
+}
+
+/* =========================================
+   HERO GENERALE
+========================================= */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 60px;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.hero-content {
+    flex: 1;
+    min-width: 320px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.hero-content h2 {
+    font-size: 24px;
+    color: #4db8ff;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 500px;
+    margin-bottom: 30px;
+    color: #e6e6e6;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background: #4db8ff;
+    color: #000;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.hero-btn:hover {
+    background: #82d1ff;
+}
+
+.hero-image {
+    flex: 1;
+    min-width: 320px;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+/* =========================================
+   HERO SIRIO
+========================================= */
+
+.hero-sirio {
+    background: url('immagini/hero-nastro.jpg') center/cover no-repeat;
+    padding: 160px 20px;
+    color: white;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-sirio::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 1;
+}
+
+.hero-sirio-content {
+    max-width: 600px;
+    background: rgba(0,0,0,0.45);
+    padding: 35px;
+    border-radius: 12px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-sirio h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-sirio p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.btn-hero {
+    display: inline-block;
+    background: #ff6600;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-hero:hover {
+    background: #cc5200;
+}
+
+/* =========================================
+   INFO HERO
+========================================= */
+
+.info-hero {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.info-hero h1 {
+    color: #4db8ff;
+    font-size: 42px;
+    margin-bottom: 40px;
+}
 
 .info-hero-images {
     display: flex;
@@ -11,15 +188,52 @@
 
 .info-hero-images img {
     width: 450px;
-    height: auto;
+    border-radius: 10px;
     border: 2px solid #1a1a1a;
-    border-radius: 6px;
     background: #0d0d0d;
 }
 
-/* ============================
-   SEZIONE SERVIZI (2 COLONNE)
-============================ */
+.info-description {
+    max-width: 900px;
+    margin: 0 auto;
+    color: #ccc;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+/* =========================================
+   INFO GRID
+========================================= */
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 40px;
+    padding: 80px 10%;
+    align-items: center;
+}
+
+.info-grid-text h2 {
+    color: #4db8ff;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.info-grid-text p {
+    color: #ccc;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.info-grid-img img {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #1f1f1f;
+}
+
+/* =========================================
+   SERVIZI (2 COLONNE)
+========================================= */
 
 .services-table {
     background: #000;
@@ -41,19 +255,16 @@
 .services-table .cell .icon {
     font-size: 40px;
     color: #4db8ff;
-    margin-bottom: 10px;
 }
 
 .services-table .cell h3 {
     color: #4db8ff;
     font-size: 24px;
-    margin: 0;
 }
 
 .services-table .cell p {
     color: #cccccc;
     line-height: 1.6;
-    margin: 0;
 }
 
 /* Linee tipo tabella */
@@ -65,4 +276,103 @@
 .services-table .cell:nth-child(1),
 .services-table .cell:nth-child(3) {
     border-right: 1px solid #1a1a1a;
+}
+
+/* =========================================
+   TABELLA QUALITÀ
+========================================= */
+
+.quality-table {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 1px solid #1f1f1f;
+    margin: 80px 10%;
+    background: #050505;
+}
+
+.quality-table .qt-item {
+    padding: 30px;
+    border-right: 1px solid #1f1f1f;
+}
+
+.quality-table .qt-item:last-child {
+    border-right: none;
+}
+
+.quality-table h3 {
+    color: #4db8ff;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.quality-table p {
+    color: #ccc;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* =========================================
+   CONTATTI
+========================================= */
+
+.contatti-sirio {
+    background: #000;
+    color: #fff;
+    padding: 60px 20px;
+}
+
+.contatti-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.contatti-left h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.contatti-left h3 {
+    font-size: 20px;
+    color: #66ccff;
+}
+
+.contatti-right p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.policy-links {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.policy-links a {
+    color: #66ccff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.policy-links a:hover {
+    color: #fff;
+}
+
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #66ccff;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #fff;
 }
