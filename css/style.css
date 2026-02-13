@@ -814,6 +814,7 @@ footer {
 }
 
 /* QUADRANTI SERVIZI */
+/* GRIGLIA QUADRANTI */
 .services-table {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -822,26 +823,45 @@ footer {
     text-align: center;
 }
 
-.services-table .icon {
-    font-size: 48px;
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 20px;
+/* RIQUADRI */
+.services-table .cell {
+    background-color: #111111;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 
-.service-title {
+/* ICONA (asterisco piccolo) */
+.services-table .icon {
     font-size: 28px;
     font-weight: 700;
     color: #ffffff;
-    margin-bottom: 5px;
-}
-
-.service-subtitle {
-    font-size: 20px;
-    font-weight: 400;
-    color: #cccccc;
     margin-bottom: 15px;
 }
+
+/* TITOLO */
+.service-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 6px;
+}
+
+/* SOTTOTITOLO */
+.service-subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    color: #cccccc;
+    margin-bottom: 12px;
+}
+
+/* TESTO */
+.services-table .cell p {
+    font-size: 16px;
+    color: #cccccc;
+    line-height: 1.5;
+}
+
 /* SEZIONE TEAM */
 .team-section {
     padding: 80px 0;
@@ -1045,6 +1065,7 @@ footer {
     color: #cccccc;
     line-height: 1.5;
 }
+
 
 
 
