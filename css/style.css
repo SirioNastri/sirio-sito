@@ -623,4 +623,74 @@ footer {
     color: #cccccc;
     line-height: 1.6;
 }
+/* SEZIONE INFO */
+.info-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+/* TITOLO */
+.info-title {
+    font-size: 52px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+/* SOTTOTITOLO */
+.info-subtitle {
+    font-size: 26px;
+    font-weight: 400;
+    color: #cccccc;
+    margin-bottom: 50px;
+}
+
+/* 3 IMMAGINI SOVRAPPOSTE */
+.info-3-images {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.info-3-images img {
+    width: 320px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+/* SOVRAPPOSIZIONE */
+.info-3-images img:nth-child(1) {
+    transform: translateX(40px);
+    z-index: 1;
+}
+
+.info-3-images img:nth-child(2) {
+    z-index: 3;
+}
+
+.info-3-images img:nth-child(3) {
+    transform: translateX(-40px);
+    z-index: 2;
+}
+
+/* HOVER PREMIUM */
+.info-3-images img:hover {
+    transform: scale(1.05);
+    z-index: 10;
+}
+
+/* DESCRIZIONE */
+.info-description {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 20px;
+    color: #cccccc;
+    line-height: 1.6;
+}
+
 
