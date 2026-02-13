@@ -243,46 +243,45 @@ nav a.active {
 /* =========================================
    SEZIONE 4 BLOCCHI TIPO WIX (INFO)
 ========================================= */
+/* CROCE 4 QUADRANTI */
 .services-table {
-    padding: 0 5% 80px;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
     max-width: var(--max-width);
-    margin: 0 auto;
+    margin: 0 auto 60px auto;
+    padding: 0;
     position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
-/* togliamo i bordi singoli dalle celle */
+/* quadranti */
 .services-table .cell {
-    padding: 40px 40px;
-    background: var(--bg-card);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 14px;
+    padding: 50px 40px;
+    text-align: center;
 }
 
-/* linea verticale centrale */
+/* linea verticale */
 .services-table::before {
     content: "";
     position: absolute;
-    top: 10%;
-    bottom: 10%;
+    top: 0;
+    bottom: 0;
     left: 50%;
     width: 1px;
     background: var(--border-soft);
 }
 
-/* linea orizzontale centrale */
+/* linea orizzontale */
 .services-table::after {
     content: "";
     position: absolute;
-    left: 10%;
-    right: 10%;
+    left: 0;
+    right: 0;
     top: 50%;
     height: 1px;
     background: var(--border-soft);
 }
+
 
 /* =========================================
    SEZIONE PRODOTTI (CARD)
@@ -549,4 +548,5 @@ footer {
         padding: 32px 20px;
     }
 }
+
 
