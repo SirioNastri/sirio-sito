@@ -36,22 +36,41 @@
         SIRIO NASTRI TRASPORTATORI
     </h1>
 
-    <!-- BLOCCO IMMAGINE + TESTO A DESTRA -->
-    <div style="
-        display:grid;
-        grid-template-columns: 1.2fr 1fr;
-        gap:40px;
-        align-items:center;
-    ">
+  <!-- BLOCCO TESTO SINISTRA + IMMAGINE DESTRA -->
+<div style="
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:40px;
+    align-items:center;
+">
 
-        <!-- IMMAGINE A SINISTRA -->
-        <img src="img/nastro-hero.jpg" 
+    <!-- TESTO A SINISTRA -->
+    <div>
+        <p style="color:var(--text-muted); font-size:18px; line-height:1.6; margin-bottom:20px;">
+            Sirio Nastri: soluzioni affidabili per ogni linea produttiva.<br>
+            Diamo continuità al tuo lavoro con nastri progettati per durare.<br>
+            Movimentiamo il tuo lavoro con precisione e affidabilità.
+        </p>
+
+        <a href="contatti.html" class="btn btn-primary">
+            Richiedi il tuo progetto
+        </a>
+    </div>
+
+    <!-- IMMAGINE A DESTRA (PIÙ PICCOLA) -->
+    <div style="text-align:right;">
+        <img src="img/home-hero.jpg"
              alt="Sirio Nastri Trasportatori"
              style="
-                width:100%;
+                width:80%;
+                max-width:420px;
                 border-radius:6px;
                 border:1px solid var(--border-soft);
              ">
+    </div>
+
+</div>
+
 
         <!-- TESTO A DESTRA -->
         <div>
@@ -195,6 +214,7 @@
 
 </body>
 </html>
+
 
 
 
