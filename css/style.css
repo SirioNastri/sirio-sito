@@ -899,6 +899,42 @@ section {
     line-height: 1.5;
 }
 
+/* ============================
+   INFO HERO SECTION
+============================ */
+
+.info-hero {
+    background: #000;
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.info-hero-text h1 {
+    color: #ffffff;
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.info-hero-text h2 {
+    color: #4db8ff;
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.info-hero-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.info-hero-images img {
+    width: 450px;
+    height: auto;
+    border: 2px solid #1a1a1a;
+    border-radius: 6px;
+    background: #0d0d0d;
+}
 
 
 
