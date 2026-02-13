@@ -243,54 +243,45 @@ nav a.active {
 /* =========================================
    SEZIONE 4 BLOCCHI TIPO WIX (INFO)
 ========================================= */
-
 .services-table {
-    padding: 80px 5%;
+    padding: 0 5% 80px;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    border: 1px solid var(--border-soft);
-    background: var(--bg-main);
+    max-width: var(--max-width);
+    margin: 0 auto;
+    position: relative;
 }
 
+/* togliamo i bordi singoli dalle celle */
 .services-table .cell {
-    padding: 50px;
+    padding: 40px 40px;
     background: var(--bg-card);
-    border: 1px solid var(--border-soft);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 18px;
+    gap: 14px;
 }
 
-.services-table .icon {
-    font-size: 70px;
-    color: var(--accent);
-    font-weight: 700;
-    line-height: 1;
-    text-align: center;
+/* linea verticale centrale */
+.services-table::before {
+    content: "";
+    position: absolute;
+    top: 10%;
+    bottom: 10%;
+    left: 50%;
+    width: 1px;
+    background: var(--border-soft);
 }
 
-.services-table h3 {
-    color: var(--accent);
-    font-size: 22px;
-    text-align: center;
-}
-
-.services-table p {
-    color: var(--text-muted);
-    text-align: center;
-    max-width: 480px;
-}
-
-/* linee divisorie */
-.services-table .cell:nth-child(1),
-.services-table .cell:nth-child(2) {
-    border-bottom: 1px solid var(--border-soft);
-}
-
-.services-table .cell:nth-child(1),
-.services-table .cell:nth-child(3) {
-    border-right: 1px solid var(--border-soft);
+/* linea orizzontale centrale */
+.services-table::after {
+    content: "";
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    top: 50%;
+    height: 1px;
+    background: var(--border-soft);
 }
 
 /* =========================================
@@ -558,3 +549,4 @@ footer {
         padding: 32px 20px;
     }
 }
+
