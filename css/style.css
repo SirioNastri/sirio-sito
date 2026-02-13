@@ -842,6 +842,57 @@ footer {
     color: #cccccc;
     margin-bottom: 15px;
 }
+/* SEZIONE TEAM */
+.team-section {
+    padding: 80px 0;
+    text-align: left;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.team-title {
+    font-size: 48px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.team-subtitle {
+    font-size: 26px;
+    font-weight: 400;
+    color: #cccccc;
+    margin-bottom: 30px;
+}
+
+.team-description {
+    font-size: 20px;
+    color: #cccccc;
+    line-height: 1.6;
+}
+/* ICONA MOLTO PIÙ GRANDE */
+.services-table .icon {
+    font-size: 70px;   /* aumentato molto */
+    font-weight: 900;
+    color: #ffffff;
+    margin-bottom: 25px;
+}
+
+/* TITOLO DEL SERVIZIO (DESIGN, PRODUZIONE, ECC.) */
+.service-title {
+    font-size: 32px;   /* più grande */
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+/* SOTTOTITOLO (Progettazione su misura, ecc.) */
+.service-subtitle {
+    font-size: 22px;   /* più piccolo del titolo */
+    font-weight: 400;
+    color: #cccccc;
+    margin-bottom: 18px;
+}
+
 
 
 
