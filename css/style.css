@@ -957,6 +957,47 @@ footer {
     justify-content: flex-start;
 }
 
+/* ICONA (asterisco) - più piccola */
+.services-table .icon {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+/* TITOLO (Design, Produzione, ecc.) - più grande */
+.service-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 6px;
+}
+
+/* SOTTOTITOLO (Progettazione su misura, ecc.) - più piccolo */
+.service-subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    color: #cccccc;
+    margin-bottom: 12px;
+}
+
+/* TESTO DENTRO IL RIQUADRO */
+.services-table .cell p {
+    font-size: 16px;
+    color: #cccccc;
+    line-height: 1.5;
+}
+
+/* RIMETTIAMO I RIQUADRI COME PRIMA */
+.services-table .cell {
+    background-color: #111111;
+    padding: 25px 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    height: auto;          /* IMPORTANTISSIMO */
+    min-height: 250px;     /* così non esce nulla */
+    overflow: hidden;      /* blocca fuoriuscite */
+}
 
 
 
