@@ -936,7 +936,55 @@ section {
     background: #0d0d0d;
 }
 
+/* ============================
+   SEZIONE 4 BLOCCHI TIPO WIX
+============================ */
 
+.services-table {
+    background: #000;
+    padding: 80px 5%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: 1px solid #1a1a1a;
+}
+
+.services-table .cell {
+    padding: 40px;
+    background: #0d0d0d;
+    border: 1px solid #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.services-table .cell .icon {
+    font-size: 40px;
+    color: #4db8ff;
+    margin-bottom: 10px;
+}
+
+.services-table .cell h3 {
+    color: #4db8ff;
+    font-size: 24px;
+    margin: 0;
+}
+
+.services-table .cell p {
+    color: #cccccc;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Linee tipo tabella */
+.services-table .cell:nth-child(1),
+.services-table .cell:nth-child(2) {
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.services-table .cell:nth-child(1),
+.services-table .cell:nth-child(3) {
+    border-right: 1px solid #1a1a1a;
+}
 
 
 
