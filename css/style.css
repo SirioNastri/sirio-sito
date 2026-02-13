@@ -693,4 +693,32 @@ footer {
     line-height: 1.6;
 }
 
+/* INTRO SERVIZI */
+.services-intro {
+    text-align: center;
+    padding: 80px 0 40px 0;
+}
+
+.services-title {
+    font-size: 48px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.services-subtitle {
+    font-size: 26px;
+    font-weight: 400;
+    color: #cccccc;
+    margin-bottom: 30px;
+}
+
+.services-description {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 20px;
+    color: #cccccc;
+    line-height: 1.6;
+}
+
 
