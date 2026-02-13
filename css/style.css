@@ -557,3 +557,9 @@ footer {
     border-radius: 10px; /* se vuoi angoli arrotondati */
 }
 
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
