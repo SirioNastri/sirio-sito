@@ -890,6 +890,10 @@ nav a:hover {
     margin: 40px 0;
 }
 
+.team-member {
+    background: red !important;
+}
+
 
 
 
