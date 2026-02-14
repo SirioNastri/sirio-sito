@@ -1085,7 +1085,7 @@ nav a:hover {
 
 /* Avvicina la sezione al testo sopra */
 .info-images-section {
-    padding: 40px 5% !important;
+    padding: 15px 5% !important;
 }
 
 /* Riduce l’altezza del contenitore immagini */
@@ -1105,6 +1105,7 @@ nav a:hover {
 .img-right {
     top: 25px !important;
 }
+
 
 
 
