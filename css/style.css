@@ -1017,6 +1017,37 @@ nav a:hover {
     margin: 40px 0 !important;
 }
 
+/* ============================
+   TEAM — NOME E RUOLO SULLA STESSA RIGA
+============================ */
+
+.team-info {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 10px !important;
+}
+
+/* Nome */
+.team-name {
+    font-size: 26px !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    margin: 0 !important;
+}
+
+/* Trattino separatore */
+.team-info::before {
+    content: "" !important;
+}
+
+/* Ruolo */
+.team-role {
+    font-size: 18px !important;
+    color: #4db8ff !important;
+    margin: 0 !important;
+}
+
 
 
 
