@@ -30,7 +30,6 @@
 <section class="negozio-section">
 
     <h2 class="negozio-title">Negozio</h2>
-    <h3 class="negozio-subtitle">Qualità Superiore Garantita</h3>
 
     <p class="negozio-description">
         Sirio Nastri Trasportatori è specializzata nella produzione di nastri trasportatori industriali di alta qualità.
@@ -38,92 +37,96 @@
         e lunga durata nel tempo.
     </p>
 
-    <div class="negozio-layout">
+    <!-- FILTRI -->
+    <aside class="negozio-filters">
 
-        <!-- FILTRI -->
-        <aside class="negozio-filters">
-            <h4>Filtra per</h4>
+        <div class="filter-group">
+            <label>Prezzo</label>
+            <select>
+                <option>Tutti</option>
+                <option>1 € – 50 €</option>
+                <option>50 € – 200 €</option>
+                <option>200 € – 500 €</option>
+                <option>500 € – 1000 €</option>
+            </select>
+        </div>
 
-            <details class="filter-group">
-                <summary>Prezzo</summary>
-                <label><input type="checkbox"> 1 € – 50 €</label>
-                <label><input type="checkbox"> 50 € – 200 €</label>
-                <label><input type="checkbox"> 200 € – 500 €</label>
-                <label><input type="checkbox"> 500 € – 1000 €</label>
-            </details>
+        <div class="filter-group">
+            <label>Materiale</label>
+            <select>
+                <option>Tutti</option>
+                <option>Alluminio</option>
+                <option>Ferro</option>
+                <option>Acciaio inox</option>
+                <option>Plastica tecnica</option>
+                <option>Magnetico</option>
+            </select>
+        </div>
 
-            <details class="filter-group">
-                <summary>Materiale</summary>
-                <label><input type="checkbox"> Alluminio</label>
-                <label><input type="checkbox"> Ferro</label>
-                <label><input type="checkbox"> Acciaio inox</label>
-                <label><input type="checkbox"> Plastica tecnica</label>
-                <label><input type="checkbox"> Magnetico</label>
-            </details>
+        <div class="filter-group">
+            <label>Tipologia</label>
+            <select>
+                <option>Tutti</option>
+                <option>Nastri trasportatori</option>
+                <option>Rulliere</option>
+                <option>Curve</option>
+                <option>Evacuatori</option>
+                <option>Magnetici</option>
+                <option>Tapparella</option>
+            </select>
+        </div>
 
-            <details class="filter-group">
-                <summary>Tipologia</summary>
-                <label><input type="checkbox"> Nastri trasportatori</label>
-                <label><input type="checkbox"> Rulliere</label>
-                <label><input type="checkbox"> Curve</label>
-                <label><input type="checkbox"> Evacuatori</label>
-                <label><input type="checkbox"> Magnetici</label>
-                <label><input type="checkbox"> Tapparella</label>
-            </details>
+    </aside>
 
-        </aside>
+    <!-- GRIGLIA PRODOTTI -->
+    <div class="negozio-grid">
 
-        <!-- GRIGLIA PRODOTTI -->
-        <div class="negozio-grid">
+        <div class="negozio-card">
+            <img src="img/prodotto1.jpg">
+            <h3>Nastri Trasportatori in alluminio</h3>
+            <p class="price">1,00€</p>
+        </div>
 
-            <div class="negozio-card">
-                <img src="img/prodotto1.jpg">
-                <h4>Nastri Trasportatori in alluminio</h4>
-                <p class="price">1,00€</p>
-            </div>
+        <div class="negozio-card">
+            <img src="img/prodotto2.jpg">
+            <h3>Nastri Trasportatori in ferro</h3>
+            <p class="price">20,00€</p>
+        </div>
 
-            <div class="negozio-card">
-                <img src="img/prodotto2.jpg">
-                <h4>Nastri Trasportatori in ferro</h4>
-                <p class="price">20,00€</p>
-            </div>
+        <div class="negozio-card">
+            <img src="img/prodotto3.jpg">
+            <h3>Nastri Trasportatori in acciaio inox</h3>
+            <p class="price">56,00€</p>
+        </div>
 
-            <div class="negozio-card">
-                <img src="img/prodotto3.jpg">
-                <h4>Nastri Trasportatori in acciaio inox</h4>
-                <p class="price">56,00€</p>
-            </div>
+        <div class="negozio-card">
+            <img src="img/prodotto4.jpg">
+            <h3>Nastri a Tapparella</h3>
+            <p class="price">275,00€</p>
+        </div>
 
-            <div class="negozio-card">
-                <img src="img/prodotto4.jpg">
-                <h4>Nastri a Tapparella</h4>
-                <p class="price">275,00€</p>
-            </div>
+        <div class="negozio-card">
+            <img src="img/prodotto5.jpg">
+            <h3>Nastri Magnetici</h3>
+            <p class="price">80,00€</p>
+        </div>
 
-            <div class="negozio-card">
-                <img src="img/prodotto5.jpg">
-                <h4>Nastri Magnetici</h4>
-                <p class="price">80,00€</p>
-            </div>
+        <div class="negozio-card">
+            <img src="img/prodotto6.jpg">
+            <h3>Rulliere Folli o motorizzate</h3>
+            <p class="price">690,00€</p>
+        </div>
 
-            <div class="negozio-card">
-                <img src="img/prodotto6.jpg">
-                <h4>Rulliere Folli o motorizzate</h4>
-                <p class="price">690,00€</p>
-            </div>
+        <div class="negozio-card">
+            <img src="img/prodotto7.jpg">
+            <h3>Curve a Nastro</h3>
+            <p class="price">85,00€</p>
+        </div>
 
-            <div class="negozio-card">
-                <img src="img/prodotto7.jpg">
-                <h4>Curve a Nastro</h4>
-                <p class="price">85,00€</p>
-            </div>
-
-            <div class="negozio-card">
-                <img src="img/prodotto8.jpg">
-                <h4>Evacuatori di trucioli</h4>
-                <p class="price">25,00€</p>
-            </div>
-
+        <div class="negozio-card">
+            <img src="img/prodotto8.jpg">
+            <h3>Evacuatori di trucioli</h3>
+            <p class="price">25,00€</p>
         </div>
 
     </div>
@@ -158,10 +161,10 @@ document.querySelectorAll(".negozio-card").forEach(card => {
         modal.style.display = "flex";
 
         modalImg.src = card.querySelector("img").src;
-        modalTitle.textContent = card.querySelector("h4").textContent;
+        modalTitle.textContent = card.querySelector("h3").textContent;
         modalPrice.textContent = card.querySelector(".price").textContent;
 
-        const name = card.querySelector("h4").textContent;
+        const name = card.querySelector("h3").textContent;
 
         const descriptions = {
             "Nastri Trasportatori in alluminio": "Nastro leggero, resistente e ideale per applicazioni generiche.",
