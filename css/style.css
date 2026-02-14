@@ -677,5 +677,63 @@ nav a:hover {
     max-width: 800px;
     margin: 0 auto; /* CENTRA IL PARAGRAFO */
 }
+/* ============================
+   SEZIONE IMMAGINI SOVRAPPOSTE
+============================ */
+
+.info-images-section {
+    background: #000;
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.images-stack {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto 60px auto;
+    height: 350px;
+}
+
+.stack-img {
+    position: absolute;
+    width: 60%;
+    max-width: 350px;
+    border-radius: 10px;
+    border: 1px solid #1a1a1a;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+/* Immagine sinistra */
+.img-left {
+    left: 0;
+    top: 40px;
+    transform: rotate(-6deg);
+}
+
+/* Immagine centrale */
+.img-center {
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+
+/* Immagine destra */
+.img-right {
+    right: 0;
+    top: 40px;
+    transform: rotate(6deg);
+}
+
+/* Testo lungo sotto le immagini */
+.info-long-description {
+    font-size: 18px;
+    color: #cccccc;
+    line-height: 1.7;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
 
 
