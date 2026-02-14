@@ -1080,7 +1080,30 @@ nav a:hover {
 
 /* Altezza del contenitore aumentata */
 .images-stack {
-    height: 260px !important;
+    height: 180px !important;
+}
+
+/* Avvicina la sezione al testo sopra */
+.info-images-section {
+    padding: 40px 5% !important;
+}
+
+/* Riduce l’altezza del contenitore immagini */
+.images-stack {
+    height: 220px !important;
+}
+
+/* Avvicina le immagini verso l’alto */
+.img-left {
+    top: 25px !important;
+}
+
+.img-center {
+    top: -10px !important;
+}
+
+.img-right {
+    top: 25px !important;
 }
 
 
