@@ -10,36 +10,38 @@
 <body>
 
 <!-- HEADER -->
-<header>
-    <div class="logo">✦ SIRIO NASTRI TRASPORTATORI</div>
-    <nav>
-        <a href="index.html" class="active">Home</a>
+<header class="header">
+    <div class="logo">
+        <a href="index.html">Sirio Nastri Trasportatori</a>
+    </div>
+
+    <nav class="nav">
+        <a href="index.html">Home</a>
         <a href="info.html">Info</a>
         <a href="prodotti.html">Prodotti</a>
-        <a href="negozio.html" >Negozio</a>
         <a href="portfolio.html">Portfolio</a>
         <a href="blog.html">Blog</a>
+        <a href="negozio.html" class="active">Negozio</a>
         <a href="contatti.html">Contatti</a>
     </nav>
 </header>
 
 <!-- SEZIONE NEGOZIO -->
-<section class="shop-section">
+<section class="negozio-section">
 
-    <h2 class="shop-title">Negozio</h2>
-    <h3 class="shop-subtitle">Qualità Superiore Garantita</h3>
+    <h2 class="negozio-title">Negozio</h2>
+    <h3 class="negozio-subtitle">Qualità Superiore Garantita</h3>
 
-    <p class="shop-description">
+    <p class="negozio-description">
         Sirio Nastri Trasportatori è specializzata nella produzione di nastri trasportatori industriali di alta qualità.
         Utilizziamo materiali resistenti e tecnologie avanzate per garantire prestazioni affidabili, sicurezza operativa
-        e lunga durata nel tempo. Ogni prodotto è progettato per integrarsi perfettamente nei vostri impianti e migliorare
-        l’efficienza dei processi produttivi.
+        e lunga durata nel tempo.
     </p>
 
-    <div class="shop-layout">
+    <div class="negozio-layout">
 
         <!-- FILTRI -->
-        <aside class="shop-filters">
+        <aside class="negozio-filters">
             <h4>Filtra per</h4>
 
             <details class="filter-group">
@@ -69,87 +71,54 @@
                 <label><input type="checkbox"> Tapparella</label>
             </details>
 
-            <details class="filter-group">
-                <summary>Larghezza nastro</summary>
-                <label><input type="checkbox"> 200 mm</label>
-                <label><input type="checkbox"> 300 mm</label>
-                <label><input type="checkbox"> 400 mm</label>
-                <label><input type="checkbox"> 500 mm</label>
-                <label><input type="checkbox"> 600 mm</label>
-            </details>
-
-            <details class="filter-group">
-                <summary>Lunghezza nastro</summary>
-                <label><input type="checkbox"> 1 metro</label>
-                <label><input type="checkbox"> 2 metri</label>
-                <label><input type="checkbox"> 3 metri</label>
-                <label><input type="checkbox"> 4 metri</label>
-                <label><input type="checkbox"> 5+ metri</label>
-            </details>
-
-            <details class="filter-group">
-                <summary>Motorizzazione</summary>
-                <label><input type="checkbox"> Fisso</label>
-                <label><input type="checkbox"> Variabile</label>
-                <label><input type="checkbox"> Motorizzato</label>
-                <label><input type="checkbox"> Folle</label>
-            </details>
-
-            <details class="filter-group">
-                <summary>Stato</summary>
-                <label><input type="checkbox"> Novità</label>
-                <label><input type="checkbox"> In offerta</label>
-                <label><input type="checkbox"> I più venduti</label>
-            </details>
-
         </aside>
 
         <!-- GRIGLIA PRODOTTI -->
-        <div class="shop-grid">
+        <div class="negozio-grid">
 
-            <div class="product-card">
+            <div class="negozio-card">
                 <img src="img/prodotto1.jpg">
                 <h4>Nastri Trasportatori in alluminio</h4>
                 <p class="price">1,00€</p>
             </div>
 
-            <div class="product-card">
+            <div class="negozio-card">
                 <img src="img/prodotto2.jpg">
                 <h4>Nastri Trasportatori in ferro</h4>
                 <p class="price">20,00€</p>
             </div>
 
-            <div class="product-card">
+            <div class="negozio-card">
                 <img src="img/prodotto3.jpg">
                 <h4>Nastri Trasportatori in acciaio inox</h4>
                 <p class="price">56,00€</p>
             </div>
 
-            <div class="product-card">
+            <div class="negozio-card">
                 <img src="img/prodotto4.jpg">
                 <h4>Nastri a Tapparella</h4>
                 <p class="price">275,00€</p>
             </div>
 
-            <div class="product-card">
+            <div class="negozio-card">
                 <img src="img/prodotto5.jpg">
                 <h4>Nastri Magnetici</h4>
                 <p class="price">80,00€</p>
             </div>
 
-            <div class="product-card">
+            <div class="negozio-card">
                 <img src="img/prodotto6.jpg">
                 <h4>Rulliere Folli o motorizzate</h4>
                 <p class="price">690,00€</p>
             </div>
 
-            <div class="product-card">
+            <div class="negozio-card">
                 <img src="img/prodotto7.jpg">
                 <h4>Curve a Nastro</h4>
                 <p class="price">85,00€</p>
             </div>
 
-            <div class="product-card">
+            <div class="negozio-card">
                 <img src="img/prodotto8.jpg">
                 <h4>Evacuatori di trucioli</h4>
                 <p class="price">25,00€</p>
@@ -184,7 +153,7 @@ const modalTitle = document.getElementById("modal-title");
 const modalDesc = document.getElementById("modal-description");
 const modalPrice = document.getElementById("modal-price");
 
-document.querySelectorAll(".product-card").forEach(card => {
+document.querySelectorAll(".negozio-card").forEach(card => {
     card.addEventListener("click", () => {
         modal.style.display = "flex";
 
