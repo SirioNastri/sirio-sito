@@ -1109,6 +1109,11 @@ nav a:hover {
 .info-long-description {
     margin-top: 70px !important;
 }
+/* Aumenta lo spazio sotto le immagini */
+.images-stack {
+    height: 300px !important;
+}
+
 
 
 
