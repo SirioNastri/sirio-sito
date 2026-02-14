@@ -1230,406 +1230,55 @@ nav a:hover {
 /* --------------------------------------------------
    SEZIONE NEGOZIO
 -------------------------------------------------- */
-.shop-section {
-    padding: 50px 5%;
-    background: #fafafa;
-}
+<section class="negozio-section">
 
-.shop-title {
-    font-size: 30px;
-    margin-bottom: 5px;
-}
+    <h2 class="negozio-title">Negozio</h2>
+    <h3 class="negozio-subtitle">Qualità Superiore Garantita</h3>
 
-.shop-subtitle {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 15px;
-}
+    <p class="negozio-description">
+        Sirio Nastri Trasportatori è specializzata...
+    </p>
 
-.shop-description {
-    max-width: 600px;
-    line-height: 1.6;
-    margin-bottom: 35px;
-    color: #444;
-}
+    <div class="negozio-layout">
 
-/* --------------------------------------------------
-   LAYOUT FILTRI + GRIGLIA
--------------------------------------------------- */
-.shop-layout {
-    display: flex;
-    gap: 35px;
-}
+        <!-- FILTRI -->
+        <aside class="negozio-filters">
+            <h4>Filtra per</h4>
 
-/* --------------------------------------------------
-   FILTRI APRIBILI (ACCORDION)
--------------------------------------------------- */
-.shop-filters {
-    width: 230px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    background: #fff;
-}
+            <details class="filter-group">
+                <summary>Prezzo</summary>
+                <label><input type="checkbox"> 1 € – 50 €</label>
+                <label><input type="checkbox"> 50 € – 200 €</label>
+            </details>
 
-.shop-filters h4 {
-    margin-bottom: 20px;
-    font-size: 18px;
-    font-weight: 700;
-}
+            <details class="filter-group">
+                <summary>Materiale</summary>
+                <label><input type="checkbox"> Alluminio</label>
+                <label><input type="checkbox"> Ferro</label>
+            </details>
+        </aside>
 
-.filter-group {
-    margin-bottom: 12px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 8px;
-}
+        <!-- GRIGLIA -->
+        <div class="negozio-grid">
 
-.filter-group summary {
-    font-size: 15px;
-    font-weight: 600;
-    cursor: pointer;
-    list-style: none;
-    position: relative;
-    padding: 5px 0;
-    color: #333;
-}
+            <div class="negozio-card">
+                <img src="img/prodotto1.jpg">
+                <h4>Nastri Trasportatori in alluminio</h4>
+                <p class="price">1,00€</p>
+            </div>
 
-.filter-group summary::after {
-    content: "▾";
-    position: absolute;
-    right: 0;
-    top: 5px;
-    font-size: 13px;
-    transition: 0.2s;
-}
+            <div class="negozio-card">
+                <img src="img/prodotto2.jpg">
+                <h4>Nastri Trasportatori in ferro</h4>
+                <p class="price">20,00€</p>
+            </div>
 
-.filter-group[open] summary::after {
-    transform: rotate(180deg);
-}
+        </div>
 
-.filter-group label {
-    display: block;
-    margin-top: 6px;
-    font-size: 14px;
-    cursor: pointer;
-    color: #555;
-}
+    </div>
 
-/* --------------------------------------------------
-   GRIGLIA PRODOTTI 4×2
--------------------------------------------------- */
-.shop-grid {
-    flex: 1;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 22px;
-}
+</section>
 
-.product-card {
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 12px;
-    background: white;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.product-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
-}
-
-.product-card img {
-    width: 100%;
-    height: 130px; /* più piccolo */
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.product-card h4 {
-    margin-top: 10px;
-    font-size: 15px;
-    font-weight: 600;
-    color: #222;
-}
-
-.price {
-    font-size: 14px;
-    font-weight: 600;
-    color: #000;
-    margin-top: 4px;
-}
-
-/* --------------------------------------------------
-   POPUP PRODOTTO (MODALE)
--------------------------------------------------- */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.55);
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content {
-    background: white;
-    padding: 25px;
-    width: 420px; /* più compatto */
-    border-radius: 12px;
-    text-align: center;
-    position: relative;
-    animation: fadeIn 0.25s ease;
-}
-
-@keyframes fadeIn {
-    from { transform: scale(0.95); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-}
-
-.modal-content img {
-    width: 100%;
-    height: 220px; /* più proporzionato */
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-.close-modal {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 26px;
-    cursor: pointer;
-}
-
-.modal-price {
-    font-size: 18px;
-    font-weight: 700;
-    margin-top: 10px;
-}
-
-.info-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 20px;
-    background: #000;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 600;
-}
-
-/* --------------------------------------------------
-   RESET NEGOZIO (per evitare conflitti con vecchio CSS)
--------------------------------------------------- */
-.shop-section, .shop-layout, .shop-grid, .product-card, .shop-filters {
-    all: unset;
-    display: revert;
-}
-
-/* --------------------------------------------------
-   SEZIONE NEGOZIO
--------------------------------------------------- */
-.shop-section {
-    padding: 50px 5%;
-    background: #f4f4f4;
-    display: block;
-}
-
-.shop-title {
-    font-size: 30px;
-    margin-bottom: 5px;
-}
-
-.shop-subtitle {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 15px;
-}
-
-.shop-description {
-    max-width: 600px;
-    line-height: 1.6;
-    margin-bottom: 35px;
-    color: #444;
-}
-
-/* --------------------------------------------------
-   LAYOUT FILTRI + GRIGLIA
--------------------------------------------------- */
-.shop-layout {
-    display: flex;
-    gap: 35px;
-    align-items: flex-start;
-}
-
-/* --------------------------------------------------
-   FILTRI
--------------------------------------------------- */
-.shop-filters {
-    width: 230px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    background: #fff;
-}
-
-.shop-filters h4 {
-    margin-bottom: 20px;
-    font-size: 18px;
-    font-weight: 700;
-}
-
-.filter-group {
-    margin-bottom: 12px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 8px;
-}
-
-.filter-group summary {
-    font-size: 15px;
-    font-weight: 600;
-    cursor: pointer;
-    list-style: none;
-    position: relative;
-    padding: 5px 0;
-    color: #333;
-}
-
-.filter-group summary::after {
-    content: "▾";
-    position: absolute;
-    right: 0;
-    top: 5px;
-    font-size: 13px;
-    transition: 0.2s;
-}
-
-.filter-group[open] summary::after {
-    transform: rotate(180deg);
-}
-
-.filter-group label {
-    display: block;
-    margin-top: 6px;
-    font-size: 14px;
-    cursor: pointer;
-    color: #555;
-}
-
-/* --------------------------------------------------
-   GRIGLIA PRODOTTI
--------------------------------------------------- */
-.shop-grid {
-    flex: 1;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 22px;
-}
-
-.product-card {
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 12px;
-    background: white;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.product-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
-}
-
-.product-card img {
-    width: 100%;
-    height: 130px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.product-card h4 {
-    margin-top: 10px;
-    font-size: 15px;
-    font-weight: 600;
-    color: #222;
-}
-
-.price {
-    font-size: 14px;
-    font-weight: 600;
-    color: #000;
-    margin-top: 4px;
-}
-
-/* --------------------------------------------------
-   POPUP PRODOTTO
--------------------------------------------------- */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.55);
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content {
-    background: white;
-    padding: 25px;
-    width: 420px;
-    border-radius: 12px;
-    text-align: center;
-    position: relative;
-    animation: fadeIn 0.25s ease;
-}
-
-@keyframes fadeIn {
-    from { transform: scale(0.95); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-}
-
-.modal-content img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-.close-modal {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 26px;
-    cursor: pointer;
-}
-
-.modal-price {
-    font-size: 18px;
-    font-weight: 700;
-    margin-top: 10px;
-}
-
-.info-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 20px;
-    background: #000;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 600;
-}
 
 
 
