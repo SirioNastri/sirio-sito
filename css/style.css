@@ -962,4 +962,215 @@ button {
     background: #1a1a1a;
     margin: 40px 0;
 }
+/* =========================================
+   FIX PAGINA NEGOZIO — STILI DEDICATI
+========================================= */
+
+/* SEZIONE NEGOZIO */
+.negozio-section {
+    padding: 60px 8%;
+    background: #000;
+    margin-top: 30px;
+}
+
+.negozio-title {
+    font-size: 42px;
+    color: #4db8ff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.negozio-subtitle {
+    font-size: 22px;
+    color: #ccc;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.negozio-description {
+    max-width: 900px;
+    margin: 0 auto 40px;
+    text-align: center;
+    color: #ccc;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* LAYOUT GENERALE */
+.negozio-layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 40px;
+}
+
+@media (max-width: 900px) {
+    .negozio-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* FILTRI (VERSIONE SCURA) */
+.negozio-filters {
+    background: #0d0d0d;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #1a1a1a;
+}
+
+.negozio-filters h4 {
+    color: #4db8ff;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+/* DETAILS */
+.negozio-filters details {
+    background: #111;
+    border: 1px solid #1a1a1a;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.negozio-filters summary {
+    cursor: pointer;
+    color: #4db8ff;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.negozio-filters label {
+    display: block;
+    color: #ccc;
+    font-size: 15px;
+    margin: 4px 0;
+}
+
+/* GRIGLIA PRODOTTI */
+.negozio-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+@media (max-width: 1200px) {
+    .negozio-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .negozio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .negozio-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* CARD PRODOTTO */
+.negozio-card {
+    background: #0d0d0d;
+    border: 1px solid #1a1a1a;
+    border-radius: 12px;
+    padding: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.negozio-card:hover {
+    transform: translateY(-5px);
+    border-color: #4db8ff;
+}
+
+.negozio-card img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background: #111;
+}
+
+.negozio-card h4 {
+    font-size: 18px;
+    color: #4db8ff;
+    margin-bottom: 8px;
+}
+
+.negozio-card .price {
+    color: #82d1ff;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* POPUP PRODOTTO */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-content {
+    background: #0d0d0d;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+    border: 1px solid #1a1a1a;
+    position: relative;
+}
+
+.modal-content img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.modal-content h2 {
+    color: #4db8ff;
+    margin-bottom: 10px;
+}
+
+.modal-content p {
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.modal-price {
+    color: #82d1ff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.info-button {
+    display: block;
+    text-align: center;
+    background: #4db8ff;
+    color: #000;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.close-modal {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 26px;
+    color: #fff;
+    cursor: pointer;
+}
+
 
