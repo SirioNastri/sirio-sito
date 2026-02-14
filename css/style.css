@@ -417,4 +417,45 @@ nav a:hover {
 .four-words span:nth-child(2) {
     border-bottom: 1px solid #1a1a1a;
 }
+.section-title {
+    text-align: center;
+    font-size: 52px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+.section-subtitle {
+    text-align: center;
+    font-size: 22px;
+    color: #cccccc;
+    margin-bottom: 40px;
+}
+.four-words {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 60%;
+    margin: 60px auto;
+    text-align: center;
+    border: 1px solid #1a1a1a;
+}
+
+.four-words span {
+    padding: 35px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* Linea verticale */
+.four-words span:nth-child(1),
+.four-words span:nth-child(3) {
+    border-right: 1px solid #1a1a1a;
+}
+
+/* Linea orizzontale */
+.four-words span:nth-child(1),
+.four-words span:nth-child(2) {
+    border-bottom: 1px solid #1a1a1a;
+}
+
 
