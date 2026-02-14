@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Negozio - Sirio Nastri Trasportatori</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
 <header class="header">
     <div class="logo">
         <a href="index.html">Sirio Nastri Trasportatori</a>
@@ -7,13 +19,14 @@
         <a href="index.html">Home</a>
         <a href="info.html">Info</a>
         <a href="prodotti.html">Prodotti</a>
-       <a href="negozio.html" class="active">Negozio</a>
+         <a href="negozio.html" class="active">Negozio</a>
         <a href="portfolio.html">Portfolio</a>
         <a href="blog.html">Blog</a>
         <a href="contatti.html">Contatti</a>
     </nav>
 </header>
 
+<!-- SEZIONE NEGOZIO -->
 <section class="shop-section">
 
     <h2 class="shop-title">Negozio</h2>
@@ -32,86 +45,115 @@
         <aside class="shop-filters">
             <h4>Filtra per</h4>
 
-            <div class="filter-group">
-                <h5>Prezzo</h5>
-                <label><input type="checkbox"> 1 € – 690 €</label>
-            </div>
+            <details class="filter-group">
+                <summary>Prezzo</summary>
+                <label><input type="checkbox"> 1 € – 50 €</label>
+                <label><input type="checkbox"> 50 € – 200 €</label>
+                <label><input type="checkbox"> 200 € – 500 €</label>
+                <label><input type="checkbox"> 500 € – 1000 €</label>
+            </details>
 
-            <div class="filter-group">
-                <h5>Colore</h5>
-                <label><input type="checkbox"> Nero</label>
-                <label><input type="checkbox"> Grigio</label>
-                <label><input type="checkbox"> Inox</label>
-            </div>
+            <details class="filter-group">
+                <summary>Materiale</summary>
+                <label><input type="checkbox"> Alluminio</label>
+                <label><input type="checkbox"> Ferro</label>
+                <label><input type="checkbox"> Acciaio inox</label>
+                <label><input type="checkbox"> Plastica tecnica</label>
+                <label><input type="checkbox"> Magnetico</label>
+            </details>
 
-            <div class="filter-group">
-                <h5>Misura</h5>
-                <label><input type="checkbox"> Piccolo</label>
-                <label><input type="checkbox"> Medio</label>
-                <label><input type="checkbox"> Grande</label>
-            </div>
+            <details class="filter-group">
+                <summary>Tipologia</summary>
+                <label><input type="checkbox"> Nastri trasportatori</label>
+                <label><input type="checkbox"> Rulliere</label>
+                <label><input type="checkbox"> Curve</label>
+                <label><input type="checkbox"> Evacuatori</label>
+                <label><input type="checkbox"> Magnetici</label>
+                <label><input type="checkbox"> Tapparella</label>
+            </details>
 
-            <div class="filter-group">
-                <h5>Taglia</h5>
-                <label><input type="checkbox"> Standard</label>
-            </div>
+            <details class="filter-group">
+                <summary>Larghezza nastro</summary>
+                <label><input type="checkbox"> 200 mm</label>
+                <label><input type="checkbox"> 300 mm</label>
+                <label><input type="checkbox"> 400 mm</label>
+                <label><input type="checkbox"> 500 mm</label>
+                <label><input type="checkbox"> 600 mm</label>
+            </details>
+
+            <details class="filter-group">
+                <summary>Lunghezza nastro</summary>
+                <label><input type="checkbox"> 1 metro</label>
+                <label><input type="checkbox"> 2 metri</label>
+                <label><input type="checkbox"> 3 metri</label>
+                <label><input type="checkbox"> 4 metri</label>
+                <label><input type="checkbox"> 5+ metri</label>
+            </details>
+
+            <details class="filter-group">
+                <summary>Motorizzazione</summary>
+                <label><input type="checkbox"> Fisso</label>
+                <label><input type="checkbox"> Variabile</label>
+                <label><input type="checkbox"> Motorizzato</label>
+                <label><input type="checkbox"> Folle</label>
+            </details>
+
+            <details class="filter-group">
+                <summary>Stato</summary>
+                <label><input type="checkbox"> Novità</label>
+                <label><input type="checkbox"> In offerta</label>
+                <label><input type="checkbox"> I più venduti</label>
+            </details>
+
         </aside>
 
         <!-- GRIGLIA PRODOTTI -->
         <div class="shop-grid">
 
             <div class="product-card">
-                <img src="img/prodotto1.jpg" alt="">
-                <div class="cart-icon">🛒</div>
+                <img src="img/prodotto1.jpg">
                 <h4>Nastri Trasportatori in alluminio</h4>
                 <p class="price">1,00€</p>
             </div>
 
             <div class="product-card">
-                <img src="img/prodotto2.jpg" alt="">
-                <div class="cart-icon">🛒</div>
+                <img src="img/prodotto2.jpg">
                 <h4>Nastri Trasportatori in ferro</h4>
                 <p class="price">20,00€</p>
             </div>
 
             <div class="product-card">
-                <img src="img/prodotto3.jpg" alt="">
-                <div class="cart-icon">🛒</div>
+                <img src="img/prodotto3.jpg">
                 <h4>Nastri Trasportatori in acciaio inox</h4>
                 <p class="price">56,00€</p>
             </div>
 
             <div class="product-card">
-                <img src="img/prodotto4.jpg" alt="">
-                <div class="cart-icon">🛒</div>
+                <img src="img/prodotto4.jpg">
                 <h4>Nastri a Tapparella</h4>
                 <p class="price">275,00€</p>
             </div>
 
             <div class="product-card">
-                <img src="img/prodotto5.jpg" alt="">
-                <div class="cart-icon">🛒</div>
+                <img src="img/prodotto5.jpg">
                 <h4>Nastri Magnetici</h4>
                 <p class="price">80,00€</p>
             </div>
 
             <div class="product-card">
-                <img src="img/prodotto6.jpg" alt="">
-                <div class="cart-icon">🛒</div>
+                <img src="img/prodotto6.jpg">
                 <h4>Rulliere Folli o motorizzate</h4>
                 <p class="price">690,00€</p>
             </div>
 
             <div class="product-card">
-                <img src="img/prodotto7.jpg" alt="">
-                <div class="cart-icon">🛒</div>
+                <img src="img/prodotto7.jpg">
                 <h4>Curve a Nastro</h4>
                 <p class="price">85,00€</p>
             </div>
 
             <div class="product-card">
-                <img src="img/prodotto8.jpg" alt="">
-                <div class="cart-icon">🛒</div>
+                <img src="img/prodotto8.jpg">
                 <h4>Evacuatori di trucioli</h4>
                 <p class="price">25,00€</p>
             </div>
@@ -122,3 +164,57 @@
 
 </section>
 
+<!-- POPUP PRODOTTO -->
+<div id="product-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+
+        <img id="modal-image" src="" alt="">
+        <h2 id="modal-title"></h2>
+        <p id="modal-description"></p>
+        <p id="modal-price" class="modal-price"></p>
+
+        <a href="contatti.html" class="info-button">
+            Richiedi informazioni
+        </a>
+    </div>
+</div>
+
+<script>
+const modal = document.getElementById("product-modal");
+const modalImg = document.getElementById("modal-image");
+const modalTitle = document.getElementById("modal-title");
+const modalDesc = document.getElementById("modal-description");
+const modalPrice = document.getElementById("modal-price");
+
+document.querySelectorAll(".product-card").forEach(card => {
+    card.addEventListener("click", () => {
+        modal.style.display = "flex";
+
+        modalImg.src = card.querySelector("img").src;
+        modalTitle.textContent = card.querySelector("h4").textContent;
+        modalPrice.textContent = card.querySelector(".price").textContent;
+
+        const name = card.querySelector("h4").textContent;
+
+        const descriptions = {
+            "Nastri Trasportatori in alluminio": "Nastro leggero, resistente e ideale per applicazioni generiche.",
+            "Nastri Trasportatori in ferro": "Struttura robusta per ambienti industriali pesanti.",
+            "Nastri Trasportatori in acciaio inox": "Perfetto per alimentare, chimico e ambienti corrosivi.",
+            "Nastri a Tapparella": "Soluzione modulare per trasporto di materiali sfusi.",
+            "Nastri Magnetici": "Ideale per separazione e movimentazione di materiali ferrosi.",
+            "Rulliere Folli o motorizzate": "Perfette per linee di movimentazione manuali o automatizzate.",
+            "Curve a Nastro": "Permettono deviazioni fluide del percorso di trasporto.",
+            "Evacuatori di trucioli": "Soluzione compatta per la gestione dei trucioli di lavorazione."
+        };
+
+        modalDesc.textContent = descriptions[name] || "Descrizione non disponibile.";
+    });
+});
+
+document.querySelector(".close-modal").onclick = () => modal.style.display = "none";
+window.onclick = e => { if (e.target === modal) modal.style.display = "none"; };
+</script>
+
+</body>
+</html>
