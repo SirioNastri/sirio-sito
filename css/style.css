@@ -16,7 +16,7 @@ body {
 }
 
 /* =========================================
-   HEADER
+   HEADER (VERSIONE NERA)
 ========================================= */
 
 header {
@@ -311,1101 +311,451 @@ nav a:hover {
     font-size: 15px;
     line-height: 1.5;
 }
-
 /* =========================================
-   CONTATTI
+   TEAM SECTION
 ========================================= */
 
-.contatti-sirio {
-    background: #000;
-    color: #fff;
-    padding: 60px 20px;
+.team-section {
+    padding: 80px 10%;
+    text-align: center;
 }
 
-.contatti-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+.team-section h2 {
+    font-size: 42px;
+    color: #4db8ff;
+    margin-bottom: 50px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
 }
 
-.contatti-left h2 {
-    font-size: 32px;
+.team-card {
+    background: #0d0d0d;
+    border: 1px solid #1a1a1a;
+    padding: 30px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    border-color: #4db8ff;
+}
+
+.team-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #1f1f1f;
+}
+
+.team-card h3 {
+    color: #4db8ff;
+    font-size: 22px;
     margin-bottom: 10px;
 }
 
-.contatti-left h3 {
-    font-size: 20px;
-    color: #66ccff;
-}
-
-.contatti-right p {
-    margin: 5px 0;
+.team-card p {
+    color: #ccc;
     font-size: 16px;
+    line-height: 1.5;
 }
 
-.policy-links {
-    margin-top: 20px;
+/* =========================================
+   IMMAGINI GRANDI
+========================================= */
+
+.big-images-section {
+    padding: 80px 10%;
+}
+
+.big-images-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.big-images-grid img {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid #1a1a1a;
+    background: #0d0d0d;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    background: #000;
+    padding: 60px 10%;
+    border-top: 1px solid #1a1a1a;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.footer-col h3 {
+    color: #4db8ff;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.footer-col p,
+.footer-col a {
+    color: #ccc;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.footer-col a:hover {
+    color: #4db8ff;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    color: #777;
+    font-size: 14px;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1024px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .quality-table {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services-table {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .big-images-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================
+   NEGOZIO — VERSIONE SCURA
+========================================= */
+
+.negozio-section {
+    padding: 40px 8%;
+    background: #000;
+    margin-top: 30px; /* margine piccolo come richiesto */
+}
+
+.negozio-title {
+    font-size: 38px;
+    color: #4db8ff;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* FILTRI SCURI */
+
+.negozio-filters {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    background: #0d0d0d;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #1a1a1a;
+    margin-bottom: 40px;
+}
+
+.filter-group {
     display: flex;
     flex-direction: column;
     gap: 6px;
 }
 
-.policy-links a {
-    color: #66ccff;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-.policy-links a:hover {
-    color: #fff;
-}
-
-.social-icons {
-    margin-top: 20px;
-    display: flex;
-    gap: 15px;
-}
-
-.social-icons a {
-    color: #66ccff;
-    font-size: 22px;
-    text-decoration: none;
-}
-
-.social-icons a:hover {
-    color: #fff;
-}
-.section-title {
-    text-align: center;
-    font-size: 52px;
-    font-weight: 800;
-    color: #ffffff;
-    margin-bottom: 20px;
-}
-.section-subtitle {
-    text-align: center;
-    font-size: 22px;
-    color: #cccccc;
-    margin-bottom: 40px;
-}
-/* 4 PAROLE CON LINEE PERPENDICOLARI */
-.four-words {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    width: 60%;
-    margin: 60px auto;
-    text-align: center;
-    border: 1px solid #1a1a1a;
-}
-
-.four-words span {
-    padding: 35px;
-    font-size: 24px;
-    font-weight: 600;
-    color: #ffffff;
-}
-
-/* Linea verticale */
-.four-words span:nth-child(1),
-.four-words span:nth-child(3) {
-    border-right: 1px solid #1a1a1a;
-}
-
-/* Linea orizzontale */
-.four-words span:nth-child(1),
-.four-words span:nth-child(2) {
-    border-bottom: 1px solid #1a1a1a;
-}
-.section-title {
-    text-align: center;
-    font-size: 52px;
-    font-weight: 800;
-    color: #ffffff;
-    margin-bottom: 20px;
-}
-.section-subtitle {
-    text-align: center;
-    font-size: 22px;
-    color: #cccccc;
-    margin-bottom: 40px;
-}
-.four-words {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    width: 60%;
-    margin: 60px auto;
-    text-align: center;
-    border: 1px solid #1a1a1a;
-}
-
-.four-words span {
-    padding: 35px;
-    font-size: 24px;
-    font-weight: 600;
-    color: #ffffff;
-}
-
-/* Linea verticale */
-.four-words span:nth-child(1),
-.four-words span:nth-child(3) {
-    border-right: 1px solid #1a1a1a;
-}
-
-/* Linea orizzontale */
-.four-words span:nth-child(1),
-.four-words span:nth-child(2) {
-    border-bottom: 1px solid #1a1a1a;
-}
-
-/* CENTRARE TITOLO E SOTTOTITOLO DELLA SEZIONE INFO */
-.info-grid-text h2 {
-    text-align: center;
-    font-size: 52px;
-    font-weight: 800;
-    color: #ffffff;
-    margin-bottom: 20px;
-}
-
-.info-grid-text p {
-    text-align: center;
-    font-size: 22px;
-    color: #cccccc;
-    margin-bottom: 40px;
-}
-/* CENTRARE TITOLO E SOTTOTITOLO DELLA SEZIONE SERVIZI */
-.services-title {
-    text-align: center;
-    font-size: 52px;
-    font-weight: 800;
-    color: #ffffff;
-    margin-bottom: 20px;
-}
-
-.services-subtitle {
-    text-align: center;
-    font-size: 22px;
-    color: #cccccc;
-    margin-bottom: 40px;
-}
-.four-words {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    width: 60%;
-    margin: 60px auto;
-    text-align: center;
-    border: 1px solid #1a1a1a;
-}
-
-.four-words span {
-    padding: 35px;
-    font-size: 24px;
-    font-weight: 600;
-    color: #ffffff;
-}
-
-.four-words span:nth-child(1),
-.four-words span:nth-child(3) {
-    border-right: 1px solid #1a1a1a;
-}
-
-.four-words span:nth-child(1),
-.four-words span:nth-child(2) {
-    border-bottom: 1px solid #1a1a1a;
-}
-
-/* SEZIONE SERVIZI — VERSIONE CORRETTA */
-.services-section {
-    background: #000; /* nero identico */
-    padding: 80px 5%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 60px;
-}
-
-/* OGNI BLOCCO */
-.service-item {
-    text-align: center;
-    padding: 20px 10px;
-}
-
-/* TITOLO GRANDE */
-.service-title {
-    font-size: 46px;
-    font-weight: 800;
-    color: #ffffff;
-    margin-bottom: 10px;
-}
-
-/* SOTTOTITOLO PIÙ PICCOLO */
-.service-subtitle {
-    font-size: 22px;
-    color: #4db8ff;
-    margin-bottom: 20px;
-}
-
-/* TESTO */
-.service-item p {
-    font-size: 18px;
-    color: #cccccc;
-    line-height: 1.6;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-
-/* ============================
-   SEZIONE INFO — CENTRATA
-============================ */
-
-.info-section {
-    background: #000;
-    padding: 80px 5%;
-}
-
-.info-text-block {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.info-title {
-    font-size: 52px;
-    font-weight: 800;
-    color: #ffffff;
-    margin-bottom: 10px;
-}
-
-.info-subtitle {
-    font-size: 22px;
-    color: #4db8ff;
-    margin-bottom: 20px;
-}
-
-.info-description {
-    font-size: 18px;
-    color: #cccccc;
-    line-height: 1.6;
-}
-
-/* ============================
-   GRIGLIA SERVIZI CON LINEE
-============================ */
-
-.services-grid {
-    background: #000;
-    padding: 80px 5%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    border: 1px solid #1a1a1a;
-}
-
-.service-cell {
-    text-align: center;
-    padding: 40px 20px;
-    border-right: 1px solid #1a1a1a;
-    border-bottom: 1px solid #1a1a1a;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Rimuove il bordo destro alle celle di destra */
-.service-cell:nth-child(2),
-.service-cell:nth-child(4) {
-    border-right: none;
-}
-
-/* Rimuove il bordo inferiore alle celle in basso */
-.service-cell:nth-child(3),
-.service-cell:nth-child(4) {
-    border-bottom: none;
-}
-
-.service-star {
-    font-size: 40px;
-    color: #4db8ff;
-    margin-bottom: 10px;
-}
-
-.service-title {
-    font-size: 42px;
-    font-weight: 800;
-    color: #ffffff;
-    margin-bottom: 5px;
-}
-
-.service-subtitle {
-    font-size: 22px;
-    color: #4db8ff;
-    margin-bottom: 15px;
-}
-
-.service-text {
-    font-size: 18px;
-    color: #cccccc;
-    line-height: 1.6;
-    max-width: 600px;
-}
-/* ============================
-   INTRO SERVIZI — CENTRATA
-============================ */
-
-.services-intro {
-    background: #000;
-    padding: 80px 5%;
-    text-align: center; /* CENTRA TUTTO */
-}
-
-.services-title {
-    font-size: 52px;
-    font-weight: 800;
-    color: #ffffff;
-    margin-bottom: 10px;
-}
-
-.services-subtitle {
-    font-size: 22px;
-    color: #4db8ff;
-    margin-bottom: 20px;
-}
-
-.services-description {
-    font-size: 18px;
-    color: #cccccc;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto; /* CENTRA IL PARAGRAFO */
-}
-/* ============================
-   SEZIONE IMMAGINI SOVRAPPOSTE
-============================ */
-
-.info-images-section {
-    background: #000;
-    padding: 80px 5%;
-    text-align: center;
-}
-
-.images-stack {
-    position: relative;
-    width: 100%;
-    max-width: 700px;
-    margin: 0 auto 60px auto;
-    height: 350px;
-}
-
-.stack-img {
-    position: absolute;
-    width: 60%;
-    max-width: 350px;
-    border-radius: 10px;
-    border: 1px solid #1a1a1a;
-    box-shadow: 0 0 20px rgba(0,0,0,0.4);
-}
-
-/* Immagine sinistra */
-.img-left {
-    left: 0;
-    top: 40px;
-    transform: rotate(-6deg);
-}
-
-/* Immagine centrale */
-.img-center {
-    left: 50%;
-    top: 0;
-    transform: translateX(-50%);
-    z-index: 3;
-}
-
-/* Immagine destra */
-.img-right {
-    right: 0;
-    top: 40px;
-    transform: rotate(6deg);
-}
-
-/* Testo lungo sotto le immagini */
-.info-long-description {
-    font-size: 18px;
-    color: #cccccc;
-    line-height: 1.7;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-/* ============================
-   SEZIONE TEAM — TESTO A SINISTRA
-============================ */
-
-.team-section {
-    background: #000;
-    padding: 80px 5%;
-    text-align: left;
-}
-
-.team-title {
-    font-size: 52px;
-    font-weight: 800;
-    color: #ffffff;
-    margin-bottom: 10px;
-}
-
-.team-subtitle {
-    font-size: 22px;
-    color: #4db8ff;
-    margin-bottom: 20px;
-}
-
-.team-description {
-    font-size: 18px;
-    color: #cccccc;
-    line-height: 1.7;
-    max-width: 700px;
-}
-
-
-/* ============================
-   LISTA TEAM — ALTERNANZA
-============================ */
-
-.team-list {
-    background: #000;
-    padding: 60px 5%;
-}
-
-.team-member {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 40px;
-}
-
-.team-member.left {
-    align-items: flex-start;
-}
-
-.team-member.center {
-    align-items: center;
-}
-
-.team-member img {
-    width: 260px;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-.team-info {
-    text-align: center;
-}
-
-.team-member.left .team-info {
-    text-align: left;
-}
-
-.team-name {
-    font-size: 26px;
-    font-weight: 700;
-    color: #ffffff;
-}
-
-.team-role {
-    font-size: 18px;
-    color: #4db8ff;
-}
-
-/* Divisore */
-.team-divider {
-    width: 100%;
-    height: 1px;
-    background: #1a1a1a;
-    margin: 40px 0;
-}
-/* ============================
-   LISTA TEAM — FOTO + TESTO AFFIANCATI
-============================ */
-
-.team-list {
-    background: #000;
-    padding: 60px 5%;
-}
-
-/* Layout base: foto + testo affiancati */
-.team-member {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    margin-bottom: 40px;
-}
-
-/* FOTO */
-.team-member img {
-    width: 260px;
-    height: auto;
-    border-radius: 10px;
-}
-
-/* TESTO */
-.team-info {
-    display: flex;
-    flex-direction: column;
-}
-
-/* NOME */
-.team-name {
-    font-size: 26px;
-    font-weight: 700;
-    color: #ffffff;
-}
-
-/* RUOLO */
-.team-role {
-    font-size: 18px;
-    color: #4db8ff;
-}
-
-/* ============================
-   ALLINEAMENTI SPECIFICI
-============================ */
-
-/* Membro centrato */
-.team-member.center {
-    justify-content: center;
-    text-align: center;
-}
-
-/* Membro sinistra */
-.team-member.left {
-    justify-content: flex-start;
-    text-align: left;
-}
-
-/* Divisore */
-.team-divider {
-    width: 100%;
-    height: 1px;
-    background: #1a1a1a;
-    margin: 40px 0;
-}
-
-/* ============================
-   TEAM — LAYOUT DEFINITIVO
-============================ */
-
-.team-list {
-    background: #000 !important;
-    padding: 60px 5% !important;
-}
-
-/* FOTO + TESTO AFFIANCATI */
-.team-member {
-    display: flex !important;
-    align-items: center !important;
-    gap: 25px !important;
-    margin-bottom: 40px !important;
-}
-
-/* FOTO */
-.team-member img {
-    width: 260px !important;
-    height: auto !important;
-    border-radius: 10px !important;
-}
-
-/* TESTO */
-.team-info {
-    display: flex !important;
-    flex-direction: column !important;
-}
-
-/* NOME */
-.team-name {
-    font-size: 26px !important;
-    font-weight: 700 !important;
-    color: #ffffff !important;
-}
-
-/* RUOLO */
-.team-role {
-    font-size: 18px !important;
-    color: #4db8ff !important;
-}
-
-/* ALLINEAMENTI SPECIFICI */
-.team-member.center {
-    justify-content: center !important;
-    text-align: center !important;
-}
-
-.team-member.left {
-    justify-content: flex-start !important;
-    text-align: left !important;
-}
-
-/* DIVISORE */
-.team-divider {
-    width: 100% !important;
-    height: 1px !important;
-    background: #1a1a1a !important;
-    margin: 40px 0 !important;
-}
-
-/* ============================
-   TEAM — LAYOUT ORIZZONTALE FORZATO
-============================ */
-
-.team-list {
-    background: #000 !important;
-    padding: 60px 5% !important;
-}
-
-/* FOTO + TESTO AFFIANCATI (ORIZZONTALE) */
-.team-member {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    gap: 30px !important;
-    margin-bottom: 40px !important;
-}
-
-/* FOTO */
-.team-photo {
-    width: 260px !important;
-    height: auto !important;
-    border-radius: 10px !important;
-}
-
-/* TESTO */
-.team-info {
-    display: flex !important;
-    flex-direction: column !important;
-}
-
-/* NOME */
-.team-name {
-    font-size: 26px !important;
-    font-weight: 700 !important;
-    color: #ffffff !important;
-    margin: 0 !important;
-}
-
-/* RUOLO */
-.team-role {
-    font-size: 18px !important;
-    color: #4db8ff !important;
-    margin-top: 5px !important;
-}
-
-/* ALLINEAMENTI SPECIFICI */
-.team-member.center {
-    justify-content: center !important;
-    text-align: left !important;
-}
-
-.team-member.left {
-    justify-content: flex-start !important;
-    text-align: left !important;
-}
-
-/* DIVISORE */
-.team-divider {
-    width: 100% !important;
-    height: 1px !important;
-    background: #1a1a1a !important;
-    margin: 40px 0 !important;
-}
-
-/* ============================
-   TEAM — NOME E RUOLO SULLA STESSA RIGA
-============================ */
-
-.team-info {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    gap: 10px !important;
-}
-
-/* Nome */
-.team-name {
-    font-size: 26px !important;
-    font-weight: 700 !important;
-    color: #ffffff !important;
-    margin: 0 !important;
-}
-
-/* Trattino separatore */
-.team-info::before {
-    content: "" !important;
-}
-
-/* Ruolo */
-.team-role {
-    font-size: 18px !important;
-    color: #4db8ff !important;
-    margin: 0 !important;
-}
-/* Rende tutte le immagini identiche */
-.stack-img {
-    position: absolute;
-    width: 320px !important;
-    height: 220px !important;
-    object-fit: cover !important;
-    border-radius: 10px;
-    border: 1px solid #1a1a1a;
-    box-shadow: 0 0 20px rgba(0,0,0,0.4);
-}
-
-/* Posizioni */
-.img-left {
-    left: 0;
-    top: 40px;
-    transform: rotate(-6deg);
-}
-
-.img-center {
-    left: 50%;
-    top: 0;
-    transform: translateX(-50%);
-    z-index: 3;
-}
-
-.img-right {
-    right: 0;
-    top: 40px;
-    transform: rotate(6deg);
-}
-
-/* Altezza del contenitore aumentata */
-.images-stack {
-    height: 180px !important;
-}
-
-/* Avvicina la sezione al testo sopra */
-.info-images-section {
-    padding: 15px 5% !important;
-}
-
-/* Riduce l’altezza del contenitore immagini */
-.images-stack {
-    height: 220px !important;
-}
-
-/* Avvicina le immagini verso l’alto */
-.img-left {
-    top: 25px !important;
-}
-
-.img-center {
-    top: -10px !important;
-}
-
-.img-right {
-    top: 25px !important;
-}
-
-.info-long-description {
-    margin-top: 70px !important;
-}
-/* Aumenta lo spazio sotto le immagini */
-.images-stack {
-    height: 270px !important;
-}
-.carousel-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-.carousel-track {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    padding: 10px 0;
-}
-
-.carousel-track::-webkit-scrollbar {
-    display: none;
-}
-
-.carousel-item {
-    position: relative;
-    min-width: 280px;
-    height: 180px;
-    flex-shrink: 0;
-}
-
-.carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-}
-
-.cart-icon {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    background: white;
-    padding: 6px 8px;
-    border-radius: 50%;
-    font-size: 18px;
-    box-shadow: 0 0 6px rgba(0,0,0,0.3);
-    cursor: pointer;
-}
-
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #1a1a1a;
-    color: white;
-    border: none;
-    padding: 12px 16px;
-    font-size: 22px;
-    cursor: pointer;
-    border-radius: 50%;
-    z-index: 10;
-}
-
-.left-btn {
-    left: 10px;
-}
-
-.right-btn {
-    right: 10px;
-}
-
-/* --------------------------------------------------
-   HEADER
--------------------------------------------------- */
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 18px 5%;
-    background: #ffffff;
-    border-bottom: 1px solid #e5e5e5;
-}
-
-.logo a {
-    font-size: 22px;
-    font-weight: 700;
-    color: #000;
-    text-decoration: none;
-}
-
-.nav a {
-    margin-left: 25px;
-    font-size: 16px;
-    color: #444;
-    text-decoration: none;
-}
-
-.nav a.active {
-    font-weight: 700;
-    color: #000;
-}
-
-/* --------------------------------------------------
-   SEZIONE NEGOZIO
--------------------------------------------------- */
-.negozio-section {
-    padding: 50px 5%;
-    background: #f4f4f4;
-}
-
-.negozio-title {
-    font-size: 30px;
-    margin-bottom: 5px;
-}
-
-.negozio-subtitle {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 15px;
-}
-
-.negozio-description {
-    max-width: 600px;
-    line-height: 1.6;
-    margin-bottom: 35px;
-    color: #444;
-}
-
-/* --------------------------------------------------
-   LAYOUT
--------------------------------------------------- */
-.negozio-layout {
-    display: flex;
-    gap: 35px;
-    align-items: flex-start;
-}
-
-/* --------------------------------------------------
-   FILTRI
--------------------------------------------------- */
-.negozio-filters {
-    width: 230px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    background: #fff;
-}
-
-.negozio-filters h4 {
-    margin-bottom: 20px;
-    font-size: 18px;
-    font-weight: 700;
-}
-
-.filter-group {
-    margin-bottom: 12px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 8px;
-}
-
-.filter-group summary {
-    font-size: 15px;
-    font-weight: 600;
-    cursor: pointer;
-    list-style: none;
-    position: relative;
-    padding: 5px 0;
-    color: #333;
-}
-
-.filter-group summary::after {
-    content: "▾";
-    position: absolute;
-    right: 0;
-    top: 5px;
-    font-size: 13px;
-    transition: 0.2s;
-}
-
-.filter-group[open] summary::after {
-    transform: rotate(180deg);
-}
-
 .filter-group label {
-    display: block;
-    margin-top: 6px;
+    color: #4db8ff;
     font-size: 14px;
-    cursor: pointer;
-    color: #555;
 }
 
-/* --------------------------------------------------
-   GRIGLIA PRODOTTI
--------------------------------------------------- */
+.filter-group select {
+    padding: 10px;
+    background: #111;
+    color: #fff;
+    border: 1px solid #1f1f1f;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.filter-group select:focus {
+    outline: none;
+    border-color: #4db8ff;
+}
+
+/* GRIGLIA PRODOTTI — 4 COLONNE */
+
 .negozio-grid {
-    flex: 1;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 22px;
+    gap: 25px;
 }
 
+/* CARD SCURE */
+
 .negozio-card {
-    border: 1px solid #ddd;
+    background: #0d0d0d;
+    border: 1px solid #1a1a1a;
     border-radius: 10px;
-    padding: 12px;
-    background: white;
-    cursor: pointer;
-    transition: 0.2s;
+    padding: 20px;
+    transition: 0.3s;
 }
 
 .negozio-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+    transform: translateY(-5px);
+    border-color: #4db8ff;
 }
 
 .negozio-card img {
     width: 100%;
-    height: 130px;
+    height: 130px; /* come richiesto */
     object-fit: cover;
     border-radius: 8px;
+    margin-bottom: 15px;
+    background: #111;
 }
 
-.negozio-card h4 {
-    margin-top: 10px;
-    font-size: 15px;
-    font-weight: 600;
-    color: #222;
+.negozio-card h3 {
+    font-size: 18px;
+    color: #4db8ff;
+    margin-bottom: 8px;
 }
 
-.price {
+.negozio-card p {
+    color: #ccc;
     font-size: 14px;
-    font-weight: 600;
-    color: #000;
-    margin-top: 4px;
+    margin-bottom: 10px;
 }
 
-/* --------------------------------------------------
-   POPUP PRODOTTO
--------------------------------------------------- */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    left: 0;
-    top: 0;
+.negozio-card .price {
+    color: #82d1ff;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.negozio-card button {
     width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.55);
+    padding: 10px;
+    background: #4db8ff;
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.negozio-card button:hover {
+    background: #82d1ff;
+}
+/* =========================================
+   MODAL / POPUP PRODOTTO
+========================================= */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    display: none;
     justify-content: center;
     align-items: center;
+    z-index: 999;
+}
+
+.modal.active {
+    display: flex;
 }
 
 .modal-content {
-    background: white;
-    padding: 25px;
-    width: 420px;
+    background: #0d0d0d;
+    padding: 30px;
     border-radius: 12px;
-    text-align: center;
+    width: 90%;
+    max-width: 600px;
+    border: 1px solid #1a1a1a;
     position: relative;
-    animation: fadeIn 0.25s ease;
-}
-
-@keyframes fadeIn {
-    from { transform: scale(0.95); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
 }
 
 .modal-content img {
     width: 100%;
-    height: 220px;
+    height: 200px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    background: #111;
+}
+
+.modal-content h3 {
+    color: #4db8ff;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.modal-content p {
+    color: #ccc;
+    font-size: 16px;
     margin-bottom: 15px;
+}
+
+.modal-content .price {
+    color: #82d1ff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.modal-content button {
+    width: 100%;
+    padding: 12px;
+    background: #4db8ff;
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.modal-content button:hover {
+    background: #82d1ff;
 }
 
 .close-modal {
     position: absolute;
-    top: 10px;
-    right: 15px;
+    top: 12px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    color: #fff;
     font-size: 26px;
     cursor: pointer;
 }
 
-.modal-price {
-    font-size: 18px;
-    font-weight: 700;
-    margin-top: 10px;
+/* =========================================
+   OVERLAY DI CARICAMENTO (SE SERVE)
+========================================= */
+
+.loading-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 998;
 }
 
-.info-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 20px;
-    background: #000;
-    color: white;
+.loading-overlay.active {
+    display: flex;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #4db8ff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* =========================================
+   RESPONSIVE — SEZIONE NEGOZIO
+========================================= */
+
+@media (max-width: 1200px) {
+    .negozio-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .negozio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .negozio-filters {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    .negozio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-content {
+        padding: 20px;
+    }
+
+    .modal-content img {
+        height: 160px;
+    }
+}
+
+/* =========================================
+   FIX FINALI E MIGLIORIE
+========================================= */
+
+/* Rimozione bullet list */
+ul, li {
+    list-style: none;
+}
+
+/* Link generali */
+a {
+    color: #4db8ff;
     text-decoration: none;
-    border-radius: 8px;
-    font-weight: 600;
 }
 
+a:hover {
+    color: #82d1ff;
+}
+
+/* Pulsanti generici */
+button {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Immagini generiche
