@@ -514,4 +514,43 @@ nav a:hover {
     border-bottom: 1px solid #1a1a1a;
 }
 
+/* SEZIONE SERVIZI — VERSIONE CORRETTA */
+.services-section {
+    background: #000; /* nero identico */
+    padding: 80px 5%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+}
+
+/* OGNI BLOCCO */
+.service-item {
+    text-align: center;
+    padding: 20px 10px;
+}
+
+/* TITOLO GRANDE */
+.service-title {
+    font-size: 46px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+/* SOTTOTITOLO PIÙ PICCOLO */
+.service-subtitle {
+    font-size: 22px;
+    color: #4db8ff;
+    margin-bottom: 20px;
+}
+
+/* TESTO */
+.service-item p {
+    font-size: 18px;
+    color: #cccccc;
+    line-height: 1.6;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
 
