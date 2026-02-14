@@ -592,6 +592,22 @@ nav a.active {
     font-size: 18px;
     border-radius: 8px;
 }
+/* =========================================
+   PRODOTTI — SEZIONI PREMIUM
+========================================= */
+
+.section-title {
+    margin-bottom: 40px;
+}
+
+.section .card-servizio h3 {
+    font-size: 20px;
+}
+
+.section .card-servizio p {
+    font-size: 15px;
+    line-height: 1.6;
+}
 
 /* =========================================
    CONTATTI
@@ -658,4 +674,5 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
 
