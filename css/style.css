@@ -647,4 +647,35 @@ nav a:hover {
     line-height: 1.6;
     max-width: 600px;
 }
+/* ============================
+   INTRO SERVIZI — CENTRATA
+============================ */
+
+.services-intro {
+    background: #000;
+    padding: 80px 5%;
+    text-align: center; /* CENTRA TUTTO */
+}
+
+.services-title {
+    font-size: 52px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.services-subtitle {
+    font-size: 22px;
+    color: #4db8ff;
+    margin-bottom: 20px;
+}
+
+.services-description {
+    font-size: 18px;
+    color: #cccccc;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto; /* CENTRA IL PARAGRAFO */
+}
+
 
