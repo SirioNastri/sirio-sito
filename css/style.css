@@ -1196,13 +1196,16 @@ nav a:hover {
 /* --------------------------------------------------
    HEADER
 -------------------------------------------------- */
+/* --------------------------------------------------
+   HEADER
+-------------------------------------------------- */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 5%;
-    background: white;
-    border-bottom: 1px solid #eee;
+    padding: 18px 5%;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .logo a {
@@ -1215,7 +1218,7 @@ nav a:hover {
 .nav a {
     margin-left: 25px;
     font-size: 16px;
-    color: #333;
+    color: #444;
     text-decoration: none;
 }
 
@@ -1228,24 +1231,26 @@ nav a:hover {
    SEZIONE NEGOZIO
 -------------------------------------------------- */
 .shop-section {
-    padding: 60px 5%;
+    padding: 50px 5%;
+    background: #fafafa;
 }
 
 .shop-title {
-    font-size: 32px;
+    font-size: 30px;
     margin-bottom: 5px;
 }
 
 .shop-subtitle {
-    font-size: 20px;
-    color: #555;
+    font-size: 18px;
+    color: #666;
     margin-bottom: 15px;
 }
 
 .shop-description {
     max-width: 600px;
     line-height: 1.6;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
+    color: #444;
 }
 
 /* --------------------------------------------------
@@ -1253,14 +1258,14 @@ nav a:hover {
 -------------------------------------------------- */
 .shop-layout {
     display: flex;
-    gap: 40px;
+    gap: 35px;
 }
 
 /* --------------------------------------------------
    FILTRI APRIBILI (ACCORDION)
 -------------------------------------------------- */
 .shop-filters {
-    width: 220px;
+    width: 230px;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 12px;
@@ -1274,9 +1279,9 @@ nav a:hover {
 }
 
 .filter-group {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     border-bottom: 1px solid #eee;
-    padding-bottom: 10px;
+    padding-bottom: 8px;
 }
 
 .filter-group summary {
@@ -1286,6 +1291,7 @@ nav a:hover {
     list-style: none;
     position: relative;
     padding: 5px 0;
+    color: #333;
 }
 
 .filter-group summary::after {
@@ -1293,7 +1299,7 @@ nav a:hover {
     position: absolute;
     right: 0;
     top: 5px;
-    font-size: 14px;
+    font-size: 13px;
     transition: 0.2s;
 }
 
@@ -1303,9 +1309,10 @@ nav a:hover {
 
 .filter-group label {
     display: block;
-    margin-top: 8px;
+    margin-top: 6px;
     font-size: 14px;
     cursor: pointer;
+    color: #555;
 }
 
 /* --------------------------------------------------
@@ -1315,42 +1322,42 @@ nav a:hover {
     flex: 1;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
+    gap: 22px;
 }
 
 .product-card {
-    position: relative;
     border: 1px solid #ddd;
-    border-radius: 12px;
-    padding: 10px;
-    text-align: left;
+    border-radius: 10px;
+    padding: 12px;
     background: white;
     cursor: pointer;
     transition: 0.2s;
 }
 
 .product-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transform: translateY(-3px);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
 }
 
 .product-card img {
     width: 100%;
-    height: 160px;
+    height: 130px; /* più piccolo */
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
 .product-card h4 {
     margin-top: 10px;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
+    color: #222;
 }
 
 .price {
-    font-size: 15px;
-    font-weight: 500;
-    color: #1a1a1a;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    margin-top: 4px;
 }
 
 /* --------------------------------------------------
@@ -1364,7 +1371,7 @@ nav a:hover {
     top: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.55);
     justify-content: center;
     align-items: center;
 }
@@ -1372,7 +1379,7 @@ nav a:hover {
 .modal-content {
     background: white;
     padding: 25px;
-    width: 450px;
+    width: 420px; /* più compatto */
     border-radius: 12px;
     text-align: center;
     position: relative;
@@ -1386,6 +1393,8 @@ nav a:hover {
 
 .modal-content img {
     width: 100%;
+    height: 220px; /* più proporzionato */
+    object-fit: cover;
     border-radius: 10px;
     margin-bottom: 15px;
 }
@@ -1399,7 +1408,7 @@ nav a:hover {
 }
 
 .modal-price {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
     margin-top: 10px;
 }
@@ -1414,6 +1423,7 @@ nav a:hover {
     border-radius: 8px;
     font-weight: 600;
 }
+
 
 
 
