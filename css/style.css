@@ -952,6 +952,71 @@ nav a:hover {
     margin: 40px 0 !important;
 }
 
+/* ============================
+   TEAM — LAYOUT ORIZZONTALE FORZATO
+============================ */
+
+.team-list {
+    background: #000 !important;
+    padding: 60px 5% !important;
+}
+
+/* FOTO + TESTO AFFIANCATI (ORIZZONTALE) */
+.team-member {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 30px !important;
+    margin-bottom: 40px !important;
+}
+
+/* FOTO */
+.team-photo {
+    width: 260px !important;
+    height: auto !important;
+    border-radius: 10px !important;
+}
+
+/* TESTO */
+.team-info {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* NOME */
+.team-name {
+    font-size: 26px !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    margin: 0 !important;
+}
+
+/* RUOLO */
+.team-role {
+    font-size: 18px !important;
+    color: #4db8ff !important;
+    margin-top: 5px !important;
+}
+
+/* ALLINEAMENTI SPECIFICI */
+.team-member.center {
+    justify-content: center !important;
+    text-align: left !important;
+}
+
+.team-member.left {
+    justify-content: flex-start !important;
+    text-align: left !important;
+}
+
+/* DIVISORE */
+.team-divider {
+    width: 100% !important;
+    height: 1px !important;
+    background: #1a1a1a !important;
+    margin: 40px 0 !important;
+}
+
 
 
 
