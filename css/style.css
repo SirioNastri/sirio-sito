@@ -510,6 +510,88 @@ nav a.active {
     font-size: 26px;
     cursor: pointer;
 }
+/* =========================================
+   PRODOTTI
+========================================= */
+
+/* Hero Prodotti */
+.prodotti-hero {
+    text-align: center;
+    padding: 80px 10% 40px;
+}
+
+.prodotti-hero p {
+    max-width: 850px;
+    margin: 0 auto;
+    color: var(--text-muted);
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* Sezione Materiali */
+.prodotti-materiali {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.prodotti-materiali p {
+    max-width: 850px;
+    margin: 0 auto 40px;
+    color: var(--text-muted);
+}
+
+/* Sezione Caratteristiche Tecniche */
+.prodotti-tecnici {
+    padding: 80px 10%;
+    text-align: center;
+    background: #050505;
+    border-top: 1px solid #111;
+    border-bottom: 1px solid #111;
+}
+
+.prodotti-tecnici .card-servizio {
+    background: #0d0d0d;
+    border: 1px solid var(--border-soft);
+}
+
+/* Settori Serviti */
+.prodotti-settori {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.prodotti-settori p {
+    max-width: 850px;
+    margin: 0 auto 40px;
+    color: var(--text-muted);
+}
+
+/* Sezioni info-grid dedicate ai settori */
+.prodotti-info-grid {
+    padding: 100px 10%;
+}
+
+.prodotti-info-grid .info-grid-text h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.prodotti-info-grid .info-grid-text h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* CTA finale Prodotti */
+.prodotti-cta {
+    text-align: center;
+    padding: 80px 10%;
+}
+
+.prodotti-cta .btn-primary {
+    padding: 14px 32px;
+    font-size: 18px;
+    border-radius: 8px;
+}
 
 /* =========================================
    CONTATTI
@@ -576,3 +658,4 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
