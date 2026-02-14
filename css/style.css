@@ -1173,4 +1173,113 @@ button {
     cursor: pointer;
 }
 
+/* =========================================
+   FIX HOME — CLASSI MANCANTI
+========================================= */
+
+/* Variabili colore usate nella home */
+:root {
+    --accent: #4db8ff;
+    --text-muted: #ccc;
+    --border-soft: #1a1a1a;
+}
+
+/* Pulsanti */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: #000;
+}
+
+.btn-primary:hover {
+    background: #82d1ff;
+}
+
+.btn-ghost {
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+}
+
+.btn-ghost:hover {
+    background: var(--accent);
+    color: #000;
+}
+
+/* Sezioni generiche */
+.section {
+    padding: 60px 10%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Griglia 3 colonne */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+@media (max-width: 900px) {
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Card servizi */
+.card-servizio {
+    background: #0d0d0d;
+    border: 1px solid var(--border-soft);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card-servizio:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+.card-servizio img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.card-servizio h3 {
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+.card-servizio a {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.card-servizio a:hover {
+    color: #82d1ff;
+}
+
+/* Blocchi servizi */
+.servizi-blocco {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.servizi-blocco .section-title {
+    margin-bottom: 40px;
+}
+
 
