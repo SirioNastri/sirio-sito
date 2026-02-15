@@ -925,6 +925,21 @@ footer {
     border: 1px solid #e5e5e5;
 }
 
+/* ============================
+   CARD PRODOTTO
+============================ */
+
+.card-prodotto {
+    display: block;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 20px;
+    transition: all 0.25s ease;
+    border: 1px solid #e5e5e5;
+}
+
 .card-prodotto:hover {
     transform: translateY(-6px);
     box-shadow: 0 12px 25px rgba(0,0,0,0.12);
@@ -1048,23 +1063,10 @@ footer {
 .popup-btn:hover {
     background: #005fd1;
 }
-.negozio-menu {
-    text-align: center;
-    margin: 30px 0;
-}
 
-.negozio-menu a {
-    margin: 0 15px;
-    font-size: 18px;
-    color: #0077ff;
-    font-weight: 600;
-    text-decoration: none;
-    transition: 0.25s;
-}
-
-.negozio-menu a:hover {
-    color: #005fd1;
-}
+/* ============================
+   MINI MENU NEGOZIO (HEADER)
+============================ */
 
 header {
     position: relative;
@@ -1087,9 +1089,6 @@ header {
 
 .negozio-mini-menu a:hover {
     color: #005fd1;
-}
-html {
-    scroll-behavior: smooth;
 }
 
 .negozio-mini-menu a.active {
@@ -1097,25 +1096,5 @@ html {
     text-decoration: underline;
 }
 
-header {
-    position: relative;
-}
-
-.negozio-mini-menu {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
-.negozio-mini-menu a {
-    margin-left: 15px;
-    font-size: 16px;
-    color: #0077ff;
-    font-weight: 600;
-    text-decoration: none;
-    transition: 0.25s;
-}
-
-.negozio-mini-menu a:hover {
-    color: #005fd1;
-}
+/* ============================
+   SM
