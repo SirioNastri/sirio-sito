@@ -1081,3 +1081,48 @@ header {
     color: #005fd1;
     text-decoration: underline;
 }
+nav {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.menu-voce {
+    position: relative;
+}
+
+.menu-voce a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Dropdown */
+.menu-negozio .dropdown-negozio {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #000;
+    border: 1px solid #111;
+    padding: 10px 0;
+    display: none;
+    min-width: 180px;
+    z-index: 999;
+}
+
+.menu-negozio:hover .dropdown-negozio {
+    display: block;
+}
+
+.dropdown-negozio a {
+    display: block;
+    padding: 10px 20px;
+    color: #4db8ff;
+    text-decoration: none;
+}
+
+.dropdown-negozio a:hover {
+    background: #111;
+    color: #79caff;
+}
+
