@@ -1126,3 +1126,47 @@ nav {
     color: #79caff;
 }
 
+/* Contenitore della voce "Negozio" */
+.menu-negozio {
+    position: relative; /* fondamentale */
+    display: inline-block;
+}
+
+/* Dropdown nascosto */
+.dropdown-negozio {
+    position: absolute;
+    top: 100%;   /* esce sotto la voce */
+    left: 0;     /* allineato perfettamente sotto "Negozio" */
+    background: #000;
+    border: 1px solid #111;
+    padding: 10px 0;
+    display: none;
+    min-width: 180px;
+    z-index: 999;
+}
+
+/* Mostra il dropdown al passaggio */
+.menu-negozio:hover .dropdown-negozio {
+    display: block;
+}
+
+/* Link dentro il dropdown */
+.dropdown-negozio a {
+    display: block;
+    padding: 10px 20px;
+    color: #4db8ff;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: 0.25s;
+}
+
+.dropdown-negozio a:hover {
+    background: #111;
+    color: #79caff;
+}
+.menu-negozio > a::after {
+    content: " ▼";
+    font-size: 12px;
+    margin-left: 4px;
+}
+
