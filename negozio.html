@@ -5,21 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Negozio - Sirio Nastri Trasportatori</title>
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 
 <body>
 
-<!-- HEADER -->
-<header class="header">
-    <div class="logo">
-        <a href="index.html">Sirio Nastri Trasportatori</a>
-    </div>
-
-    <nav class="nav">
+<header>
+    <div class="logo">✦ SIRIO NASTRI TRASPORTATORI</div>
+    <nav>
         <a href="index.html">Home</a>
-        <a href="info.html">Info</a>
-        <a href="prodotti.html">Prodotti</a>
         <a href="negozio.html" class="active">Negozio</a>
         <a href="portfolio.html">Portfolio</a>
         <a href="area-tecnica.html">Area Tecnica</a>
@@ -27,164 +20,166 @@
     </nav>
 </header>
 
-<!-- SEZIONE NEGOZIO -->
-<section class="negozio-section">
-
-    <h2 class="negozio-title">Negozio</h2>
-
-    <p class="negozio-description">
-        Sirio Nastri Trasportatori è specializzata nella produzione di nastri trasportatori industriali di alta qualità.
-        Utilizziamo materiali resistenti e tecnologie avanzate per garantire prestazioni affidabili, sicurezza operativa
-        e lunga durata nel tempo.
+<!-- ============================
+     HERO NEGOZIO
+============================ -->
+<section class="blog-hero">
+    <h1 class="section-title">Negozio</h1>
+    <p class="blog-subtitle">
+        Selezione di nastri trasportatori, trasportatori completi e componenti tecnici per ogni esigenza produttiva.
     </p>
-
-    <!-- FILTRI -->
-    <aside class="negozio-filters">
-
-        <div class="filter-group">
-            <label>Prezzo</label>
-            <select>
-                <option>Tutti</option>
-                <option>1 € – 50 €</option>
-                <option>50 € – 200 €</option>
-                <option>200 € – 500 €</option>
-                <option>500 € – 1000 €</option>
-            </select>
-        </div>
-
-        <div class="filter-group">
-            <label>Materiale</label>
-            <select>
-                <option>Tutti</option>
-                <option>Alluminio</option>
-                <option>Ferro</option>
-                <option>Acciaio inox</option>
-                <option>Plastica tecnica</option>
-                <option>Magnetico</option>
-            </select>
-        </div>
-
-        <div class="filter-group">
-            <label>Tipologia</label>
-            <select>
-                <option>Tutti</option>
-                <option>Nastri trasportatori</option>
-                <option>Rulliere</option>
-                <option>Curve</option>
-                <option>Evacuatori</option>
-                <option>Magnetici</option>
-                <option>Tapparella</option>
-            </select>
-        </div>
-
-    </aside>
-
-    <!-- GRIGLIA PRODOTTI -->
-    <div class="negozio-grid">
-
-        <div class="negozio-card">
-            <img src="img/prodotto1.jpg">
-            <h3>Nastri Trasportatori in alluminio</h3>
-            <p class="price">1,00€</p>
-        </div>
-
-        <div class="negozio-card">
-            <img src="img/prodotto2.jpg">
-            <h3>Nastri Trasportatori in ferro</h3>
-            <p class="price">20,00€</p>
-        </div>
-
-        <div class="negozio-card">
-            <img src="img/prodotto3.jpg">
-            <h3>Nastri Trasportatori in acciaio inox</h3>
-            <p class="price">56,00€</p>
-        </div>
-
-        <div class="negozio-card">
-            <img src="img/prodotto4.jpg">
-            <h3>Nastri a Tapparella</h3>
-            <p class="price">275,00€</p>
-        </div>
-
-        <div class="negozio-card">
-            <img src="img/prodotto5.jpg">
-            <h3>Nastri Magnetici</h3>
-            <p class="price">80,00€</p>
-        </div>
-
-        <div class="negozio-card">
-            <img src="img/prodotto6.jpg">
-            <h3>Rulliere Folli o motorizzate</h3>
-            <p class="price">690,00€</p>
-        </div>
-
-        <div class="negozio-card">
-            <img src="img/prodotto7.jpg">
-            <h3>Curve a Nastro</h3>
-            <p class="price">85,00€</p>
-        </div>
-
-        <div class="negozio-card">
-            <img src="img/prodotto8.jpg">
-            <h3>Evacuatori di trucioli</h3>
-            <p class="price">25,00€</p>
-        </div>
-
-    </div>
-
 </section>
 
-<!-- POPUP PRODOTTO -->
-<div id="product-modal" class="modal">
-    <div class="modal-content">
-        <span class="close-modal">&times;</span>
+<!-- ============================
+     CATEGORIA: NASTRI TRASPORTATORI
+============================ -->
+<section class="section">
+    <h2 class="section-title">Nastri trasportatori</h2>
+    <p class="blog-subtitle" style="max-width: 700px; margin: 0 auto 40px;">
+        Nastri per trasporto continuo in diversi materiali e configurazioni, per applicazioni industriali, alimentari e logistiche.
+    </p>
 
-        <img id="modal-image" src="" alt="">
-        <h2 id="modal-title"></h2>
-        <p id="modal-description"></p>
-        <p id="modal-price" class="modal-price"></p>
+    <div class="grid-3">
 
-        <a href="contatti.html" class="info-button">
-            Richiedi informazioni
+        <!-- Nastro in PVC -->
+        <a href="prodotto-nastro-pvc.html" class="card-prodotto">
+            <div class="card-prodotto-img">
+                <img src="img/prod-nastro-pvc.jpg" alt="Nastro trasportatore in PVC">
+            </div>
+            <h3 class="card-prodotto-title">Nastro in PVC</h3>
         </a>
+
+        <!-- Nastro in PU -->
+        <a href="prodotto-nastro-pu.html" class="card-prodotto">
+            <div class="card-prodotto-img">
+                <img src="img/prod-nastro-pu.jpg" alt="Nastro trasportatore in PU">
+            </div>
+            <h3 class="card-prodotto-title">Nastro in PU</h3>
+        </a>
+
+        <!-- Nastro in gomma -->
+        <a href="prodotto-nastro-gomma.html" class="card-prodotto">
+            <div class="card-prodotto-img">
+                <img src="img/prod-nastro-gomma.jpg" alt="Nastro trasportatore in gomma">
+            </div>
+            <h3 class="card-prodotto-title">Nastro in gomma</h3>
+        </a>
+
+        <!-- Nastro alimentare -->
+        <a href="prodotto-nastro-alimentare.html" class="card-prodotto">
+            <div class="card-prodotto-img">
+                <img src="img/prod-nastro-alimentare.jpg" alt="Nastro trasportatore alimentare">
+            </div>
+            <h3 class="card-prodotto-title">Nastro alimentare (FDA)</h3>
+        </a>
+
+        <!-- Nastro alte temperature -->
+        <a href="prodotto-nastro-alte-temperature.html" class="card-prodotto">
+            <div class="card-prodotto-img">
+                <img src="img/prod-nastro-alte-temp.jpg" alt="Nastro per alte temperature">
+            </div>
+            <h3 class="card-prodotto-title">Nastro per alte temperature</h3>
+        </a>
+
+        <!-- Nastro modulare -->
+        <a href="prodotto-nastro-modulare.html" class="card-prodotto">
+            <div class="card-prodotto-img">
+                <img src="img/prod-nastro-modulare.jpg" alt="Nastro modulare in plastica">
+            </div>
+            <h3 class="card-prodotto-title">Nastro modulare in plastica</h3>
+        </a>
+
     </div>
-</div>
+</section>
 
-<script>
-const modal = document.getElementById("product-modal");
-const modalImg = document.getElementById("modal-image");
-const modalTitle = document.getElementById("modal-title");
-const modalDesc = document.getElementById("modal-description");
-const modalPrice = document.getElementById("modal-price");
+<!-- ============================
+     CATEGORIA: TRASPORTATORI COMPLETI
+============================ -->
+<section class="section">
+    <h2 class="section-title">Trasportatori completi</h2>
+    <p class="blog-subtitle" style="max-width: 700px; margin: 0 auto 40px;">
+        Sistemi completi per la movimentazione interna: configurazioni lineari, inclinate e curve per ogni layout produttivo.
+    </p>
 
-document.querySelectorAll(".negozio-card").forEach(card => {
-    card.addEventListener("click", () => {
-        modal.style.display = "flex";
+    <div class="grid-3">
 
-        modalImg.src = card.querySelector("img").src;
-        modalTitle.textContent = card.querySelector("h3").textContent;
-        modalPrice.textContent = card.querySelector(".price").textContent;
+        <!-- Trasportatore a nastro -->
+        <a href="prodotto-trasportatore-nastro.html" class="card-prodotto">
+            <div class="card-prodotto-img">
+                <img src="img/prod-trasp-nastro.jpg" alt="Trasportatore a nastro">
+            </div>
+            <h3 class="card-prodotto-title">Trasportatore a nastro</h3>
+        </a>
 
-        const name = card.querySelector("h3").textContent;
+        <!-- Trasportatore a rulli -->
+        <a href="prodotto-trasportatore-rulli.html" class="card-prodotto">
+            <div class="card-prodotto-img">
+                <img src="img/prod-trasp-rulli.jpg" alt="Trasportatore a rulli">
+            </div>
+            <h3 class="card-prodotto-title">Trasportatore a rulli</h3>
+        </a>
 
-        const descriptions = {
-            "Nastri Trasportatori in alluminio": "Nastro leggero, resistente e ideale per applicazioni generiche.",
-            "Nastri Trasportatori in ferro": "Struttura robusta per ambienti industriali pesanti.",
-            "Nastri Trasportatori in acciaio inox": "Perfetto per alimentare, chimico e ambienti corrosivi.",
-            "Nastri a Tapparella": "Soluzione modulare per trasporto di materiali sfusi.",
-            "Nastri Magnetici": "Ideale per separazione e movimentazione di materiali ferrosi.",
-            "Rulliere Folli o motorizzate": "Perfette per linee di movimentazione manuali o automatizzate.",
-            "Curve a Nastro": "Permettono deviazioni fluide del percorso di trasporto.",
-            "Evacuatori di trucioli": "Soluzione compatta per la gestione dei trucioli di lavorazione."
-        };
+        <!-- Trasportatore inclinato / Z -->
+        <a href="prodotto-trasportatore-inclinato.html" class="card-prodotto">
+            <div class="card-prodotto-img">
+                <img src="img/prod-trasp-inclinato.jpg" alt="Trasportatore inclinato / a Z">
+            </div>
+            <h3 class="card-prodotto-title">Trasportatore inclinato / Z</h3>
+        </a>
 
-        modalDesc.textContent = descriptions[name] || "Descrizione non disponibile.";
-    });
-});
+        <!-- Trasportatore a curva -->
+        <a href="prodotto-trasportatore-curva.html" class="card-prodotto">
+            <div class="card-prodotto-img">
+                <img src="img/prod-trasp-curva.jpg" alt="Trasportatore a curva">
+            </div>
+            <h3 class="card-prodotto-title">Trasportatore a curva</h3>
+        </a>
 
-document.querySelector(".close-modal").onclick = () => modal.style.display = "none";
-window.onclick = e => { if (e.target === modal) modal.style.display = "none"; };
-</script>
+    </div>
+</section>
+
+<!-- ============================
+     CATEGORIA: COMPONENTI
+============================ -->
+<section class="section">
+    <h2 class="section-title">Componenti</h2>
+    <p class="blog-subtitle" style="max-width: 700px; margin: 0 auto 40px;">
+        Componenti per manutenzione, revamping e realizzazione di nuovi impianti di trasporto.
+    </p>
+
+    <div class="grid-3">
+
+        <!-- Rulli -->
+        <a href="prodotto-rulli.html" class="card-prodotto">
+            <div class="card-prodotto-img">
+                <img src="img/prod-rulli.jpg" alt="Rulli per trasportatori">
+            </div>
+            <h3 class="card-prodotto-title">Rulli</h3>
+        </a>
+
+        <!-- Tamburi / Mototamburi -->
+        <a href="prodotto-tamburi.html" class="card-prodotto">
+            <div class="card-prodotto-img">
+                <img src="img/prod-tamburi.jpg" alt="Tamburi e mototamburi">
+            </div>
+            <h3 class="card-prodotto-title">Tamburi e mototamburi</h3>
+        </a>
+
+    </div>
+</section>
+
+<!-- ============================
+     CTA FINALE
+============================ -->
+<section class="blog-cta">
+    <h2>Non trovi il prodotto che cerchi?</h2>
+    <p>Possiamo realizzare soluzioni su misura per il tuo impianto.</p>
+    <a href="contatti.html" class="btn btn-primary">Richiedi preventivo</a>
+</section>
+
+<footer>
+    © 2026 Sirio Nastri Trasportatori — Tutti i diritti riservati
+</footer>
 
 </body>
 </html>
