@@ -1092,5 +1092,8 @@ html {
     scroll-behavior: smooth;
 }
 
-
+.negozio-mini-menu a.active {
+    color: #005fd1;
+    text-decoration: underline;
+}
 
