@@ -1048,5 +1048,22 @@ footer {
 .popup-btn:hover {
     background: #005fd1;
 }
+.negozio-menu {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.negozio-menu a {
+    margin: 0 15px;
+    font-size: 18px;
+    color: #0077ff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+.negozio-menu a:hover {
+    color: #005fd1;
+}
 
 
