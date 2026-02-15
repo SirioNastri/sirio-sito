@@ -197,3 +197,13 @@
 
 </body>
 </html>
+<script>
+const miniLinks = document.querySelectorAll('.negozio-mini-menu a');
+
+miniLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        miniLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+    });
+});
+</script>
