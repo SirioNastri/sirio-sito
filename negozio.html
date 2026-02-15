@@ -236,6 +236,7 @@
 <footer>
     © 2026 Sirio Nastri Trasportatori — Tutti i diritti riservati
 </footer>
+    
     <script>
 const miniLinks = document.querySelectorAll('.negozio-mini-menu a');
 
@@ -243,6 +244,24 @@ miniLinks.forEach(link => {
     link.addEventListener('click', () => {
         miniLinks.forEach(l => l.classList.remove('active'));
         link.classList.add('active');
+    });
+});
+</script>
+    
+<script>
+document.querySelectorAll('.mega-negozio a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const id = this.getAttribute('href').split('#')[1];
+        const target = document.querySelector('#' + id);
+
+        if (target) {
+            window.scrollTo({
+                top: target.offsetTop - 80,
+                behavior: 'smooth'
+            });
+        }
     });
 });
 </script>
