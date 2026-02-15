@@ -1053,16 +1053,19 @@ footer {
 
 header {
     position: relative;
+    min-height: 110px; /* evita che il mini-menu scenda nel contenuto */
 }
 
 .negozio-mini-menu {
     position: absolute;
-    top: 20px;
+    top: 50%;
     right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 15px;
 }
 
 .negozio-mini-menu a {
-    margin-left: 15px;
     font-size: 16px;
     color: #0077ff;
     font-weight: 600;
@@ -1078,16 +1081,3 @@ header {
     color: #005fd1;
     text-decoration: underline;
 }
-
-/* ============================
-   SMOOTH SCROLL
-============================ */
-
-html {
-    scroll-behavior: smooth;
-}
-header {
-    position: relative;
-    min-height: 100px; /* puoi aumentare se serve */
-}
-
