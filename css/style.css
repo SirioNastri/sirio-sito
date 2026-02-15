@@ -1170,3 +1170,7 @@ nav {
     margin-left: 4px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
