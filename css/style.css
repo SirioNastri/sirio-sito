@@ -1174,3 +1174,50 @@ html {
     scroll-behavior: smooth;
 }
 
+.menu-negozio {
+    position: relative;
+}
+
+.menu-negozio > a::after {
+    content: " ▼";
+    font-size: 12px;
+    margin-left: 4px;
+}
+
+.mega-negozio {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #000;
+    border: 1px solid #111;
+    padding: 25px 30px;
+    display: none;
+    width: 700px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    z-index: 999;
+}
+
+.menu-negozio:hover .mega-negozio {
+    display: grid;
+}
+
+.mega-negozio h4 {
+    color: #4db8ff;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.mega-negozio a {
+    display: block;
+    padding: 6px 0;
+    color: #ccc;
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+.mega-negozio a:hover {
+    color: #79caff;
+}
+
