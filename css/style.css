@@ -808,6 +808,10 @@ footer {
     margin-bottom: 10px;
 }
 
+/* ============================
+   BLOG SUBTITLE
+============================ */
+
 .blog-subtitle {
     font-size: 18px;
     color: var(--text-muted);
@@ -816,7 +820,10 @@ footer {
     line-height: 1.6;
 }
 
-/* Sezioni generiche */
+/* ============================
+   SEZIONI GENERICHE
+============================ */
+
 .section {
     padding: 80px 10%;
     text-align: center;
@@ -827,7 +834,10 @@ footer {
     margin-bottom: 20px;
 }
 
-/* Griglie */
+/* ============================
+   GRIGLIE
+============================ */
+
 .grid-3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -840,7 +850,20 @@ footer {
     gap: 30px;
 }
 
-/* Card servizi / icone */
+/* Responsive */
+@media (max-width: 900px) {
+    .grid-3, .grid-4 {
+        grid-template-columns: 1fr;
+    }
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================
+   CARD SERVIZI / ICONE
+============================ */
+
 .card-servizio {
     background: #fff;
     border: 1px solid var(--border-soft);
@@ -854,7 +877,10 @@ footer {
     box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
-/* Info grid (2 colonne) */
+/* ============================
+   INFO GRID (2 COLONNE)
+============================ */
+
 .info-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -885,7 +911,10 @@ footer {
     line-height: 1.6;
 }
 
-/* CTA finale */
+/* ============================
+   CTA FINALE
+============================ */
+
 .blog-cta {
     text-align: center;
     padding: 80px 10%;
@@ -901,32 +930,8 @@ footer {
     margin-bottom: 20px;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-    .grid-3, .grid-4 {
-        grid-template-columns: 1fr;
-    }
-    .info-grid {
-        grid-template-columns: 1fr;
-    }
-}
 /* ============================
-   NEGOZIO - CARD PRODOTTO
-============================ */
-
-.card-prodotto {
-    display: block;
-    background: #fff;
-    border-radius: 12px;
-    overflow: hidden;
-    text-align: center;
-    padding-bottom: 20px;
-    transition: all 0.25s ease;
-    border: 1px solid #e5e5e5;
-}
-
-/* ============================
-   CARD PRODOTTO
+   CARD PRODOTTO (NEGOZIO)
 ============================ */
 
 .card-prodotto {
@@ -956,28 +961,6 @@ footer {
     margin-top: 15px;
     font-weight: 600;
     color: #333;
-}
-
-/* ============================
-   GRID 3 COLONNE
-============================ */
-
-.grid-3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 35px;
-}
-
-@media(max-width: 900px) {
-    .grid-3 {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media(max-width: 600px) {
-    .grid-3 {
-        grid-template-columns: 1fr;
-    }
 }
 
 /* ============================
@@ -1097,4 +1080,9 @@ header {
 }
 
 /* ============================
-   SM
+   SMOOTH SCROLL
+============================ */
+
+html {
+    scroll-behavior: smooth;
+}
