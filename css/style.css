@@ -1088,5 +1088,9 @@ header {
 .negozio-mini-menu a:hover {
     color: #005fd1;
 }
+html {
+    scroll-behavior: smooth;
+}
+
 
 
