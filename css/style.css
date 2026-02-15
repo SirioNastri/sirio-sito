@@ -1066,4 +1066,27 @@ footer {
     color: #005fd1;
 }
 
+header {
+    position: relative;
+}
+
+.negozio-mini-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.negozio-mini-menu a {
+    margin-left: 15px;
+    font-size: 16px;
+    color: #0077ff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+.negozio-mini-menu a:hover {
+    color: #005fd1;
+}
+
 
