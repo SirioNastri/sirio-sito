@@ -910,4 +910,143 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+/* ============================
+   NEGOZIO - CARD PRODOTTO
+============================ */
+
+.card-prodotto {
+    display: block;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 20px;
+    transition: all 0.25s ease;
+    border: 1px solid #e5e5e5;
+}
+
+.card-prodotto:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+.card-prodotto-img img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-prodotto-title {
+    font-size: 20px;
+    margin-top: 15px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* ============================
+   GRID 3 COLONNE
+============================ */
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+@media(max-width: 900px) {
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 600px) {
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================
+   POPUP PREVENTIVO
+============================ */
+
+#popup-preventivo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    width: 90%;
+    max-width: 450px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.25s ease;
+    z-index: 9999;
+}
+
+#popup-preventivo.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+#popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.25s ease;
+    z-index: 9998;
+}
+
+#popup-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.popup-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 22px;
+    cursor: pointer;
+    color: #444;
+}
+
+.popup-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.popup-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.popup-btn {
+    width: 100%;
+    padding: 14px;
+    background: #0077ff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.popup-btn:hover {
+    background: #005fd1;
+}
+
 
