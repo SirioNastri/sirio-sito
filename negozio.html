@@ -258,8 +258,25 @@ document.querySelectorAll('.mega-negozio a').forEach(link => {
 });
 </script>
 
-    <!-- Include popup -->
-<?php include 'popup.html'; ?>
+    <div id="popup-container"></div>
+
+<script>
+fetch("popup.html")
+  .then(response => response.text())
+  .then(html => {
+    document.getElementById("popup-container").innerHTML = html;
+  });
+
+function apriPopup() {
+    document.getElementById("popup-preventivo").classList.add("active");
+    document.getElementById("popup-overlay").classList.add("active");
+}
+
+function chiudiPopup() {
+    document.getElementById("popup-preventivo").classList.remove("active");
+    document.getElementById("popup-overlay").classList.remove("active");
+}
+</script>
 
 </body>
 </html>
