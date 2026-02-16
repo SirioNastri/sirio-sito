@@ -1125,3 +1125,20 @@ nav {
     color: #79caff;
 }
 
+.btn-preventivo-nav {
+    background: #ffcc00;
+    padding: 10px 18px;
+    border-radius: 6px;
+    color: #000 !important;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.25s;
+    display: inline-block;
+    border: 2px solid #e6b800;
+}
+
+.btn-preventivo-nav:hover {
+    background: #e6b800;
+    border-color: #cc9900;
+}
+
