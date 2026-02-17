@@ -184,15 +184,23 @@
     © 2026 Sirio Nastri Trasportatori — Tutti i diritti riservati
 </footer>
 
-  <div id="popup-container"></div>
+<!-- POPUP PREVENTIVO -->
+<div id="popup-overlay"></div>
+
+<div id="popup-preventivo">
+    <span class="popup-close" onclick="chiudiPopup()">×</span>
+
+    <h2 class="popup-title">Richiedi un preventivo</h2>
+
+    <input type="text" class="popup-input" placeholder="Nome e Cognome">
+    <input type="email" class="popup-input" placeholder="Email">
+    <input type="text" class="popup-input" placeholder="Telefono">
+    <textarea class="popup-input" placeholder="Descrivi la tua richiesta"></textarea>
+
+    <button class="popup-btn">Invia richiesta</button>
+</div>
 
 <script>
-fetch("popup.html")
-  .then(response => response.text())
-  .then(html => {
-    document.getElementById("popup-container").innerHTML = html;
-  });
-
 function apriPopup() {
     document.getElementById("popup-preventivo").classList.add("active");
     document.getElementById("popup-overlay").classList.add("active");
@@ -202,6 +210,11 @@ function chiudiPopup() {
     document.getElementById("popup-preventivo").classList.remove("active");
     document.getElementById("popup-overlay").classList.remove("active");
 }
+
+document.querySelector(".btn-preventivo-nav").addEventListener("click", function(e) {
+    e.preventDefault();
+    apriPopup();
+});
 </script>
 
 </body>
