@@ -908,3 +908,44 @@ nav a.active {
         height: 150px;
     }
 }
+
+/* POPUP A DUE COLONNE (SCRITTE + FORM) */
+.popup-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 0;
+}
+
+.popup-col {
+    padding: 30px;
+}
+
+.popup-left {
+    background: #f7f7f7;
+}
+
+.popup-right {
+    background: #ffffff;
+}
+
+/* Lista punti */
+.popup-points {
+    margin-top: 15px;
+    padding-left: 20px;
+    color: #444;
+}
+
+.popup-points li {
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .popup-2col {
+        grid-template-columns: 1fr;
+    }
+}
