@@ -1512,6 +1512,124 @@ nav {
     }
 }
 
+/* =========================================
+   CONTATTI — VERSIONE DARK INDUSTRIALE
+========================================= */
+
+/* HERO */
+.contatti-hero {
+    text-align: center;
+    padding: 80px 10% 40px;
+}
+
+.contatti-hero h1 {
+    font-size: 42px;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+.contatti-hero p {
+    color: var(--text-muted);
+    font-size: 18px;
+}
+
+/* WRAPPER PRINCIPALE */
+.contatti-wrapper {
+    max-width: 1100px;
+    margin: 60px auto 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    padding: 0 20px;
+}
+
+/* COLONNA SINISTRA */
+.contatti-left h2 {
+    font-size: 22px;
+    margin-bottom: 8px;
+    color: var(--accent);
+}
+
+.contatti-left p {
+    margin-bottom: 25px;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* BOX ASSISTENZA URGENTE */
+.box-urgente {
+    background: #330000;
+    border-left: 4px solid #ff4d4d;
+    padding: 20px;
+    margin-top: 25px;
+    border-radius: 8px;
+}
+
+.box-urgente h3 {
+    margin-bottom: 10px;
+    color: #ff4d4d;
+}
+
+/* COLONNA DESTRA */
+.contatti-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contatti-form input,
+.contatti-form textarea {
+    padding: 14px;
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 6px;
+    color: #fff;
+}
+
+.contatti-form input:focus,
+.contatti-form textarea:focus {
+    border-color: var(--accent);
+    outline: none;
+}
+
+/* FILE UPLOAD */
+.file-drop {
+    border: 2px dashed #444;
+    padding: 25px;
+    text-align: center;
+    border-radius: 6px;
+    color: #888;
+    cursor: pointer;
+    transition: 0.25s;
+    background: #0d0d0d;
+}
+
+.file-drop:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* MAPPA GOOGLE */
+.mappa-google {
+    max-width: 1100px;
+    margin: 40px auto 100px;
+    padding: 0 20px;
+}
+
+.mappa-google h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    color: var(--accent);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .contatti-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
 
 
 
