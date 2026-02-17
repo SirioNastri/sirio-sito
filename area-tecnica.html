@@ -184,20 +184,17 @@
     © 2026 Sirio Nastri Trasportatori — Tutti i diritti riservati
 </footer>
 
-<!-- POPUP OVERLAY -->
 <div id="popup-overlay"></div>
 
-<!-- POPUP PREVENTIVO -->
 <div id="popup-preventivo" class="popup-2col">
     <span class="popup-close" onclick="chiudiPopup()">×</span>
 
-    <!-- COLONNA SINISTRA -->
+    <!-- SINISTRA -->
     <div class="popup-col popup-left">
-
         <h2 class="popup-title">Richiedi un preventivo</h2>
 
         <p class="popup-desc">
-            Un nostro tecnico ti risponderà entro 24 ore con una soluzione su misura.
+            Un nostro tecnico ti risponderà entro 24 ore con una soluzione su misura per la tua linea produttiva.
         </p>
 
         <h3>Perché contattarci</h3>
@@ -206,15 +203,16 @@
             <li>Preventivi chiari e senza impegno</li>
             <li>Soluzioni personalizzate per ogni settore</li>
             <li>Supporto diretto con un progettista</li>
+            <li>Risposta rapida e professionale</li>
         </ul>
 
-        <h3>Contatti diretti</h3>
-        <p><strong>Telefono:</strong><br>(+39) 0363 96.86.99</p>
-        <p><strong>Email:</strong><br>info@sirionastri.it</p>
-
+        <h3>Chi ti risponderà</h3>
+        <p>
+            Il nostro team tecnico analizzerà la tua richiesta e ti guiderà nella scelta del nastro o del trasportatore più adatto.
+        </p>
     </div>
 
-    <!-- COLONNA DESTRA (FORM) -->
+    <!-- DESTRA -->
     <div class="popup-col popup-right">
         <form class="popup-form">
             <input type="text" class="popup-input" placeholder="Azienda">
@@ -229,7 +227,6 @@
     </div>
 </div>
 
-<!-- SCRIPT POPUP -->
 <script>
 function apriPopup() {
     document.getElementById("popup-preventivo").classList.add("active");
@@ -246,6 +243,7 @@ document.querySelector(".btn-preventivo-nav").addEventListener("click", function
     apriPopup();
 });
 </script>
+
 
 
 </body>
