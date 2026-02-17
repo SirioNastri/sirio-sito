@@ -1063,3 +1063,7 @@ nav a.active {
         grid-template-columns: 1fr;
     }
 }
+.popup-info * {
+    color: #000 !important;
+}
+
