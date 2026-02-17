@@ -1183,40 +1183,10 @@ nav {
     transform: translate(-50%, -50%) scale(1);
 }
 
-.popup-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-}
+/* ============================
+   POPUP RICHIEDI PREVENTIVO
+============================ */
 
-.popup-form {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.popup-btn {
-    width: 100%;
-    padding: 14px;
-    background: #ffcc00;
-    color: #000;
-    border: none;
-    border-radius: 8px;
-    font-size: 18px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: 0.25s;
-}
-
-.popup-btn:hover {
-    background: #e6b800;
-}
-
-@media (max-width: 700px) {
-    .popup-grid {
-        grid-template-columns: 1fr;
-    }
-}
 /* Overlay scuro */
 #popup-overlay {
     position: fixed;
@@ -1267,6 +1237,17 @@ nav {
     gap: 25px;
 }
 
+/* ⭐ COLONNA SINISTRA (QUELLA CHE TI RISULTAVA VUOTA) */
+.popup-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    color: #000;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* Form */
 .popup-form {
     display: flex;
     flex-direction: column;
@@ -1279,6 +1260,7 @@ nav {
     border-radius: 6px;
 }
 
+/* Bottone */
 .popup-btn {
     width: 100%;
     padding: 14px;
@@ -1296,10 +1278,12 @@ nav {
     background: #e6b800;
 }
 
+/* Mobile */
 @media (max-width: 700px) {
     .popup-grid {
         grid-template-columns: 1fr;
     }
 }
+
 
 
