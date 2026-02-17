@@ -1230,14 +1230,14 @@ nav {
     transform: translate(-50%, -50%) scale(1);
 }
 
-/* Layout interno */
+/* Layout interno popup */
 .popup-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 25px;
 }
 
-/* ⭐ COLONNA SINISTRA (QUELLA CHE TI RISULTAVA VUOTA) */
+/* Colonna sinistra popup */
 .popup-info {
     display: flex;
     flex-direction: column;
@@ -1247,7 +1247,7 @@ nav {
     line-height: 1.5;
 }
 
-/* Form */
+/* Form popup */
 .popup-form {
     display: flex;
     flex-direction: column;
@@ -1260,7 +1260,7 @@ nav {
     border-radius: 6px;
 }
 
-/* Bottone */
+/* Bottone popup */
 .popup-btn {
     width: 100%;
     padding: 14px;
@@ -1278,12 +1278,57 @@ nav {
     background: #e6b800;
 }
 
-/* Mobile */
+/* Mobile popup */
 @media (max-width: 700px) {
     .popup-grid {
         grid-template-columns: 1fr;
     }
 }
+
+
+/* ============================
+   PAGINA CONTATTI
+============================ */
+
+/* HERO */
+.contatti-hero {
+    text-align: center;
+    padding: 70px 20px 40px;
+}
+
+.contatti-hero h1 {
+    font-size: 42px;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+.contatti-hero p {
+    color: var(--text-muted);
+    font-size: 18px;
+}
+
+/* WRAPPER PRINCIPALE */
+.contatti-wrapper {
+    max-width: 1100px;
+    margin: 50px auto 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    padding: 0 20px;
+}
+
+/* COLONNA SINISTRA */
+.contatti-left h2 {
+    font-size: 22px;
+    margin-bottom: 5px;
+    color: var(--accent);
+}
+
+.contatti-left p {
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
 /* BOX ASSISTENZA URGENTE */
 .box-urgente {
     background: #ffe9e9;
@@ -1298,6 +1343,36 @@ nav {
     color: #cc0000;
 }
 
+/* COLONNA DESTRA */
+.contatti-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contatti-form input,
+.contatti-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* FILE UPLOAD */
+.file-drop {
+    border: 2px dashed #ccc;
+    padding: 20px;
+    text-align: center;
+    border-radius: 6px;
+    color: #666;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.file-drop:hover {
+    border-color: #999;
+    color: #333;
+}
+
 /* MAPPA GOOGLE */
 .mappa-google {
     max-width: 1100px;
@@ -1310,6 +1385,15 @@ nav {
     margin-bottom: 15px;
     color: var(--accent);
 }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .contatti-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
 
 
 
