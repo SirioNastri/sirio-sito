@@ -25,17 +25,17 @@
         <div class="menu-voce menu-negozio">
             <a href="negozio.html">Negozio</a>
             <div class="mega-negozio">
-                <!-- qui rimane il tuo mega menu -->
+                <!-- Il tuo mega menu rimane qui -->
             </div>
         </div>
 
         <div class="menu-voce"><a href="portfolio.html">Portfolio</a></div>
         <div class="menu-voce"><a href="area-tecnica.html">Area Tecnica</a></div>
 
-        <!-- ✔ QUI È UNA PAGINA NORMALE, NON POPUP -->
+        <!-- ✔ Questa pagina -->
         <div class="menu-voce"><a href="contatti.html" class="active">Contatti</a></div>
 
-        <!-- ✔ QUESTO APRIRÀ IL POPUP NELLE ALTRE PAGINE -->
+        <!-- ✔ Il popup NON si apre qui -->
         <div class="menu-voce">
             <a href="#" class="btn-preventivo-nav" onclick="apriPopup()">Richiedi preventivo</a>
         </div>
@@ -44,7 +44,7 @@
 
 
 <!-- ============================
-     HERO CONTATTI
+     HERO
 ============================ -->
 <section class="contatti-hero">
     <h1>Contatti</h1>
@@ -72,6 +72,20 @@
             10098 Rivoli, Cascine Vica (TO)<br>
             Italia
         </p>
+
+        <h2>Orari di apertura</h2>
+        <p>
+            Lunedì – Venerdì<br>
+            08:00 – 12:30<br>
+            14:00 – 18:00
+        </p>
+
+        <div class="box-urgente">
+            <h3>Assistenza tecnica urgente</h3>
+            <p>Per guasti, fermo linea o emergenze produttive:</p>
+            <p><strong>+39 333 123 4567</strong></p>
+            <p>Risposta immediata di un tecnico specializzato.</p>
+        </div>
 
     </div>
 
@@ -110,67 +124,24 @@
 
 
 <!-- ============================
+     MAPPA GOOGLE
+============================ -->
+<section class="mappa-google">
+    <h2>Dove siamo</h2>
+
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2794.318... (qui metti il tuo embed)"
+        width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+</section>
+
+
+<!-- ============================
      FOOTER
 ============================ -->
 <footer>
     © 2026 Sirio Nastri Trasportatori — Tutti i diritti riservati
 </footer>
-
-
-<!-- ============================
-     POPUP (NON SI USA QUI, MA SERVE PER LE ALTRE PAGINE)
-============================ -->
-<div id="popup-overlay"></div>
-
-<div id="popup-preventivo">
-    <span class="popup-close" onclick="chiudiPopup()">×</span>
-
-    <div class="popup-grid">
-
-       <div class="popup-info">
-            <h2 class="popup-title">Richiedi un preventivo</h2>
-            <p>Un nostro tecnico ti risponderà entro 24 ore con una soluzione su misura per la tua linea produttiva.</p>
-
-            <h3>Perché contattarci</h3>
-            <ul style="margin:0; padding-left:18px; line-height:1.5;">
-                <li>Consulenza tecnica gratuita</li>
-                <li>Preventivi chiari e senza impegno</li>
-                <li>Soluzioni personalizzate per ogni settore</li>
-                <li>Supporto diretto con un progettista</li>
-                <li>Risposta rapida e professionale</li>
-            </ul>
-
-            <h3 style="margin-top:20px;">Chi ti risponderà</h3>
-            <p>
-                Il nostro team tecnico analizzerà la tua richiesta e ti guiderà nella scelta del nastro o del trasportatore più adatto.
-            </p>
-        </div>
-
-        <form class="popup-form">
-            <input type="text" class="popup-input" placeholder="Azienda">
-            <input type="text" class="popup-input" placeholder="Nome *" required>
-            <input type="text" class="popup-input" placeholder="Cognome *" required>
-            <input type="email" class="popup-input" placeholder="Email *" required>
-            <input type="text" class="popup-input" placeholder="Telefono">
-            <textarea class="popup-input" placeholder="Messaggio" rows="4"></textarea>
-
-            <button type="submit" class="popup-btn">Invia richiesta</button>
-        </form>
-
-    </div>
-</div>
-
-<script>
-function apriPopup() {
-    document.getElementById("popup-preventivo").classList.add("active");
-    document.getElementById("popup-overlay").classList.add("active");
-}
-
-function chiudiPopup() {
-    document.getElementById("popup-preventivo").classList.remove("active");
-    document.getElementById("popup-overlay").classList.remove("active");
-}
-</script>
 
 </body>
 </html>
