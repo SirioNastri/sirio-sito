@@ -184,19 +184,17 @@
     © 2026 Sirio Nastri Trasportatori — Tutti i diritti riservati
 </footer>
 
-<!-- POPUP PREVENTIVO A DUE COLONNE (SCRITTE + FORM) -->
+<!-- POPUP PREVENTIVO A DUE COLONNE (VERSIONE ORIGINALE) -->
 <div id="popup-overlay"></div>
 
 <div id="popup-preventivo" class="popup-2col">
     <span class="popup-close" onclick="chiudiPopup()">×</span>
 
-    <!-- COLONNA SINISTRA: TESTO -->
+    <!-- SINISTRA: TESTO -->
     <div class="popup-col popup-left">
         <h2 class="popup-title">Richiedi un preventivo</h2>
 
-        <p class="popup-desc">
-            Compila il modulo per ricevere:
-        </p>
+        <p class="popup-desc">Compila il modulo per ricevere:</p>
 
         <ul class="popup-points">
             <li>Preventivo personalizzato</li>
@@ -204,9 +202,13 @@
             <li>Tempi di consegna aggiornati</li>
             <li>Soluzioni su misura per il tuo settore</li>
         </ul>
+
+        <p class="popup-extra">
+            Il nostro team tecnico risponde entro poche ore lavorative.
+        </p>
     </div>
 
-    <!-- COLONNA DESTRA: FORM -->
+    <!-- DESTRA: FORM -->
     <div class="popup-col popup-right">
         <input type="text" class="popup-input" placeholder="Nome e Cognome">
         <input type="email" class="popup-input" placeholder="Email">
@@ -233,6 +235,7 @@ document.querySelector(".btn-preventivo-nav").addEventListener("click", function
     apriPopup();
 });
 </script>
+
 
 </body>
 </html>
