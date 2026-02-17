@@ -3,95 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sirio Nastri Trasportatori</title>
-    <link rel="stylesheet" href="css/style.css?v=3">
+    <title>Contatti – Sirio Nastri Trasportatori</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- ============================
+     HEADER + MENU
+============================ -->
 <header>
-    <div class="logo">✦ SIRIO NASTRI TRASPORTATORI</div>
+    <div class="logo">
+        <a href="index.html">SIRIO NASTRI TRASPORTATORI</a>
+    </div>
 
     <nav>
-
         <div class="menu-voce"><a href="index.html">Home</a></div>
         <div class="menu-voce"><a href="info.html">Info</a></div>
         <div class="menu-voce"><a href="prodotti.html">Prodotti</a></div>
 
         <div class="menu-voce menu-negozio">
             <a href="negozio.html">Negozio</a>
-
             <div class="mega-negozio">
-
-                <!-- COLONNA 1: NASTRI TRASPORTATORI -->
-                <div class="colonna">
-                    <h4>Nastri trasportatori</h4>
-                    <a href="negozio.html#pvc">Nastro in PVC</a>
-                    <a href="negozio.html#pu">Nastro in PU</a>
-                    <a href="negozio.html#gomma">Nastro in gomma</a>
-                    <a href="negozio.html#alimentare">Nastro alimentare (FDA)</a>
-                    <a href="negozio.html#alte-temperature">Nastro per alte temperature</a>
-                    <a href="negozio.html#modulare">Nastro modulare in plastica</a>
-                </div>
-
-                <!-- COLONNA 2: TRASPORTATORI COMPLETI -->
-                <div class="colonna">
-                    <h4>Trasportatori completi</h4>
-                    <a href="negozio.html#lineari">Lineari</a>
-                    <a href="negozio.html#inclinati">Inclinati</a>
-                    <a href="negozio.html#curvi">Curvi</a>
-                    <a href="negozio.html#inox">Acciaio inox</a>
-                    <a href="negozio.html#personalizzati">Personalizzati</a>
-                </div>
-
-                <!-- COLONNA 3: COMPONENTI -->
-                <div class="colonna">
-                    <h4>Componenti</h4>
-                    <a href="negozio.html#rulli">Rulli</a>
-                    <a href="negozio.html#tamburi">Tamburi e mototamburi</a>
-                </div>
-
+                <!-- qui rimane il tuo mega menu -->
             </div>
         </div>
 
         <div class="menu-voce"><a href="portfolio.html">Portfolio</a></div>
         <div class="menu-voce"><a href="area-tecnica.html">Area Tecnica</a></div>
-        <div class="menu-voce"><a href="contatti.html">Contatti</a></div>
 
-        <!-- ⭐ NUOVO BOTTONE SEMPRE VISIBILE -->
+        <!-- ✔ QUI È UNA PAGINA NORMALE, NON POPUP -->
+        <div class="menu-voce"><a href="contatti.html" class="active">Contatti</a></div>
+
+        <!-- ✔ QUESTO APRIRÀ IL POPUP NELLE ALTRE PAGINE -->
         <div class="menu-voce">
-            <a href="contatti.html" class="btn-preventivo-nav">Richiedi preventivo</a>
+            <a href="#" class="btn-preventivo-nav" onclick="apriPopup()">Richiedi preventivo</a>
         </div>
-
     </nav>
 </header>
 
 
-<section class="contatti">
-    <h2>Contattaci</h2>
-
-    <p>Per informazioni, preventivi o assistenza tecnica, puoi scriverci tramite il modulo qui sotto.</p>
-
-    <form action="https://formspree.io/f/mayvlzpq" method="POST">
-        <label>Nome</label>
-        <input type="text" name="nome" required>
-
-        <label>Email</label>
-        <input type="email" name="email" required>
-
-        <label>Messaggio</label>
-        <textarea name="messaggio" rows="5" required></textarea>
-
-        <button type="submit" class="btn">Invia Messaggio</button>
-    </form>
+<!-- ============================
+     HERO CONTATTI
+============================ -->
+<section class="contatti-hero">
+    <h1>Contatti</h1>
+    <p>Parla con il nostro team tecnico per informazioni, assistenza e richieste commerciali.</p>
 </section>
 
+
+<!-- ============================
+     CONTATTI – DUE COLONNE
+============================ -->
+<section class="contatti-wrapper">
+
+    <!-- COLONNA SINISTRA -->
+    <div class="contatti-left">
+
+        <h2>Telefono</h2>
+        <p>(+39) 011 953 94 92</p>
+
+        <h2>Email</h2>
+        <p>info@sirionastri.it</p>
+
+        <h2>Sede</h2>
+        <p>
+            Via Carlo Leone, 48<br>
+            10098 Rivoli, Cascine Vica (TO)<br>
+            Italia
+        </p>
+
+    </div>
+
+    <!-- COLONNA DESTRA -->
+    <div class="contatti-right">
+
+        <form class="contatti-form">
+
+            <label>Nome *</label>
+            <input type="text" required>
+
+            <label>Cognome *</label>
+            <input type="text" required>
+
+            <label>Email *</label>
+            <input type="email" required>
+
+            <label>Telefono *</label>
+            <input type="text" required>
+
+            <label>Messaggio</label>
+            <textarea rows="5"></textarea>
+
+            <label>Allega un file</label>
+            <div class="file-drop">
+                Trascina il file qui oppure clicca per caricarlo
+            </div>
+
+            <button class="btn btn-primary">Invia</button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- ============================
+     FOOTER
+============================ -->
 <footer>
-    <p>© 2026 Sirio Nastri Trasportatori</p>
+    © 2026 Sirio Nastri Trasportatori — Tutti i diritti riservati
 </footer>
 
-    <!-- ============================
-     POPUP RICHIEDI PREVENTIVO
+
+<!-- ============================
+     POPUP (NON SI USA QUI, MA SERVE PER LE ALTRE PAGINE)
 ============================ -->
 <div id="popup-overlay"></div>
 
@@ -100,17 +127,25 @@
 
     <div class="popup-grid">
 
-        <!-- COLONNA SINISTRA: CONTATTI -->
-        <div class="popup-info">
+       <div class="popup-info">
             <h2 class="popup-title">Richiedi un preventivo</h2>
-            <p>Compila i dati per richiedere una consulenza gratuita con un nostro tecnico.</p>
+            <p>Un nostro tecnico ti risponderà entro 24 ore con una soluzione su misura per la tua linea produttiva.</p>
 
-            <h3>Contatti</h3>
-            <p><strong>Telefono:</strong><br>(+39) 0363 96.86.99</p>
-            <p><strong>Email:</strong><br>info@sirionastri.it</p>
+            <h3>Perché contattarci</h3>
+            <ul style="margin:0; padding-left:18px; line-height:1.5;">
+                <li>Consulenza tecnica gratuita</li>
+                <li>Preventivi chiari e senza impegno</li>
+                <li>Soluzioni personalizzate per ogni settore</li>
+                <li>Supporto diretto con un progettista</li>
+                <li>Risposta rapida e professionale</li>
+            </ul>
+
+            <h3 style="margin-top:20px;">Chi ti risponderà</h3>
+            <p>
+                Il nostro team tecnico analizzerà la tua richiesta e ti guiderà nella scelta del nastro o del trasportatore più adatto.
+            </p>
         </div>
 
-        <!-- COLONNA DESTRA: FORM -->
         <form class="popup-form">
             <input type="text" class="popup-input" placeholder="Azienda">
             <input type="text" class="popup-input" placeholder="Nome *" required>
@@ -125,27 +160,7 @@
     </div>
 </div>
 
-    <script>
-function apriPopup() {
-    document.getElementById("popup-preventivo").classList.add("active");
-    document.getElementById("popup-overlay").classList.add("active");
-}
-
-function chiudiPopup() {
-    document.getElementById("popup-preventivo").classList.remove("active");
-    document.getElementById("popup-overlay").classList.remove("active");
-}
-</script>
-
-  <div id="popup-container"></div>
-
 <script>
-fetch("popup.html")
-  .then(response => response.text())
-  .then(html => {
-    document.getElementById("popup-container").innerHTML = html;
-  });
-
 function apriPopup() {
     document.getElementById("popup-preventivo").classList.add("active");
     document.getElementById("popup-overlay").classList.add("active");
@@ -156,10 +171,6 @@ function chiudiPopup() {
     document.getElementById("popup-overlay").classList.remove("active");
 }
 </script>
-    
+
 </body>
 </html>
-
-
-
-
