@@ -909,7 +909,7 @@ nav a.active {
     }
 }
 
-/* POPUP A DUE COLONNE (SCRITTE + FORM) */
+/* POPUP A DUE COLONNE (VERSIONE ORIGINALE) */
 .popup-2col {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -931,7 +931,6 @@ nav a.active {
     background: #ffffff;
 }
 
-/* Lista punti */
 .popup-points {
     margin-top: 15px;
     padding-left: 20px;
@@ -941,6 +940,12 @@ nav a.active {
 .popup-points li {
     margin-bottom: 8px;
     font-size: 15px;
+}
+
+.popup-extra {
+    margin-top: 20px;
+    color: #555;
+    font-size: 14px;
 }
 
 /* Responsive */
