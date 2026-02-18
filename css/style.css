@@ -1148,3 +1148,17 @@ section h3,
 section h4 {
     color: var(--sirio-green);
 }
+
+/* TITOLI INTERNI DI TUTTE LE PAGINE */
+section h1,
+section h2,
+section h3,
+section h4 {
+    color: var(--sirio-green) !important;
+}
+
+/* MENU ATTIVO VERDE */
+nav a.active {
+    color: var(--sirio-green) !important;
+}
+
