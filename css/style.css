@@ -1467,5 +1467,72 @@ footer a:hover {
     color: var(--text-muted);
 }
 
+/* Griglia servizi tipo diagramma 2x2 (solo due linee) */
+.azienda-services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 40px 0;
+}
+
+/* Linea verticale centrale */
+.azienda-services-grid::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: var(--border-soft);
+}
+
+/* Linea orizzontale centrale */
+.azienda-services-grid::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background: var(--border-soft);
+}
+
+/* Quadranti SENZA bordi */
+.azienda-service {
+    padding: 40px 50px;
+    text-align: center;
+    border: none !important; /* elimina qualsiasi bordo residuo */
+    background: transparent;
+}
+
+/* Asterisco grande */
+.azienda-service .asterisk {
+    font-size: 42px;
+    font-weight: 900;
+    color: var(--accent);
+    margin-bottom: 15px;
+}
+
+/* Titoli */
+.azienda-service h3 {
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+.azienda-service h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--text-muted);
+}
+
+/* Testo */
+.azienda-service p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text-muted);
+}
+
 
 
