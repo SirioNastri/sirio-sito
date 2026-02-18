@@ -1080,3 +1080,17 @@ footer a:hover {
     display: flex;
 }
 
+.popup-2col {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    display: none;
+}
+
+.popup-2col.active {
+    display: flex;
+}
+
+
