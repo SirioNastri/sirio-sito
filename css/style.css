@@ -1387,6 +1387,29 @@ footer a:hover {
     color: var(--text-muted);
 }
 
+/* Titoli principali di tutte le pagine */
+.info-block {
+    padding-top: 120px; /* distanza dall’header identica ovunque */
+}
+
+.info-block-text h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.info-block-text h3 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+/* Colore verde Sirio per tutti i titoli */
+:root {
+    --sirio-green: #8CC63F;
+}
+
+h1, h2, h3, h4 {
+    color: var(--sirio-green);
+}
+
 
 
 
