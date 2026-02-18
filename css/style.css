@@ -1,3 +1,7 @@
+:root {
+    --sirio-green: #8CC63F; /* colore del tuo logo */
+}
+
 /* =========================================
    RESET & BASE
 ========================================= */
@@ -1407,6 +1411,40 @@ footer a:hover {
 }
 
 h1, h2, h3, h4 {
+    color: var(--sirio-green);
+}
+
+/* TITOLI PRINCIPALI DI TUTTE LE PAGINE */
+.info-block {
+    padding-top: 120px; /* stessa altezza ovunque */
+    padding-bottom: 40px;
+}
+
+.info-block-text {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.info-block-text h2 {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--sirio-green);
+    margin-bottom: 10px;
+}
+
+.info-block-text h3 {
+    font-size: 26px;
+    font-weight: 500;
+    color: var(--sirio-green);
+    margin-bottom: 20px;
+}
+
+/* TITOLI DI SEZIONE INTERNI (Servizi, Portfolio, Prodotti, ecc.) */
+section h1,
+section h2,
+section h3,
+section h4 {
     color: var(--sirio-green);
 }
 
