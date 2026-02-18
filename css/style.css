@@ -1162,3 +1162,8 @@ nav a.active {
     color: var(--sirio-green) !important;
 }
 
+nav a,
+nav a.active {
+    text-transform: none !important;
+}
+
