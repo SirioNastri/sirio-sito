@@ -1,5 +1,8 @@
 :root {
     --sirio-green: #8CC63F; /* colore del tuo logo */
+    --accent: #4db8ff;
+    --text-muted: #ccc;
+    --border-soft: #1a1a1a;
 }
 
 /* =========================================
@@ -11,12 +14,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-}
-
-:root {
-    --accent: #4db8ff;
-    --text-muted: #ccc;
-    --border-soft: #1a1a1a;
 }
 
 body {
@@ -178,6 +175,7 @@ nav a.active {
     background: #e6b800;
     border-color: #cc9900;
 }
+
 /* =========================================
    SEZIONI GLOBALI
 ========================================= */
@@ -316,7 +314,7 @@ nav a.active {
 }
 
 /* =========================================
-   AZIENDA — BLOCCO INTRO (ex INFO)
+   AZIENDA — BLOCCO INTRO
 ========================================= */
 
 .azienda-block {
@@ -342,7 +340,7 @@ nav a.active {
 }
 
 /* =========================================
-   AZIENDA — IMMAGINI TRIPLE (ex INFO)
+   AZIENDA — IMMAGINI SOVRAPPOSTE
 ========================================= */
 
 .azienda-images {
@@ -351,31 +349,53 @@ nav a.active {
 }
 
 .azienda-images-stack {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 60px auto;
+    height: 380px;
 }
 
 .azienda-img {
-    width: 350px;
-    border-radius: 12px;
+    position: absolute;
+    width: 320px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 14px;
     border: 2px solid var(--border-soft);
-    background: #0d0d0d;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
 }
 
-.azienda-img.left { transform: translateY(20px); }
-.azienda-img.center { transform: translateY(-20px); }
-.azienda-img.right { transform: translateY(20px); }
+.azienda-img.left {
+    left: 0;
+    top: 20px;
+    z-index: 1;
+}
+
+.azienda-img.center {
+    left: 50%;
+    transform: translateX(-50%);
+    top: -20px;
+    z-index: 3;
+}
+
+.azienda-img.right {
+    right: 0;
+    top: 20px;
+    z-index: 2;
+}
 
 .azienda-text-long {
     max-width: 900px;
-    margin: 40px auto 0;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.7;
     color: var(--text-muted);
+    text-align: center;
 }
 
 /* =========================================
-   AZIENDA — SERVIZI INTRO (ex INFO)
+   AZIENDA — SERVIZI INTRO (vecchia struttura, se usata)
 ========================================= */
 
 .azienda-services-intro {
@@ -401,89 +421,95 @@ nav a.active {
 }
 
 /* =========================================
-   AZIENDA — SERVIZI IN GRIGLIA (ex INFO)
+   AZIENDA — SERVIZI (CROCE CENTRALE)
 ========================================= */
 
-.azienda-services-grid {
-    padding: 80px 10%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-}
-
-.azienda-service {
-    background: #0d0d0d;
-    border: 1px solid var(--border-soft);
-    border-radius: 12px;
-    padding: 20px;
-    text-align: center;
-}
-
-.azienda-service h2 {
-    color: var(--accent);
-}
-
-.azienda-service h3 {
-    color: var(--text-muted);
-    margin-bottom: 10px;
-}
-
-.azienda-service p {
-    color: var(--text-muted);
-}
-
-/* =========================================
-   AZIENDA — TEAM (ex INFO)
-========================================= */
-
-.azienda-team {
+.azienda-services {
     text-align: center;
     padding: 80px 10%;
 }
 
-.azienda-team h1 {
+.azienda-services h1 {
     font-size: 42px;
     margin-bottom: 10px;
 }
 
-.azienda-team h2 {
+.azienda-services h2 {
     font-size: 26px;
-    color: var(--accent);
     margin-bottom: 20px;
 }
 
-.azienda-team p {
-    max-width: 800px;
-    margin: 0 auto;
+.azienda-services-desc {
+    max-width: 900px;
+    margin: 0 auto 50px auto;
+    font-size: 18px;
+    line-height: 1.7;
     color: var(--text-muted);
 }
 
-/* =========================================
-   AZIENDA — TEAM LIST (ex INFO)
-========================================= */
-
-.azienda-team-list {
-    padding: 80px 10%;
+.azienda-services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 0;
 }
 
-.azienda-team-list .member {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+/* Linea verticale SOLO al centro */
+.azienda-services-grid::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    height: 80%;
+    width: 2px;
+    background: var(--border-soft);
 }
 
-.azienda-team-list .photo {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
+/* Linea orizzontale SOLO al centro */
+.azienda-services-grid::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background: var(--border-soft);
 }
 
-.azienda-team-list .details h3 {
+/* Quadranti */
+.azienda-service {
+    padding: 40px 50px;
+    text-align: center;
+    border: none !important;
+    background: transparent;
+}
+
+/* Asterisco grande */
+.azienda-service .asterisk {
+    font-size: 42px;
+    font-weight: 900;
     color: var(--accent);
+    margin-bottom: 15px;
 }
 
-.azienda-team-list .details h4 {
+/* Titoli servizi */
+.azienda-service h3 {
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+.azienda-service h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--text-muted);
+}
+
+/* Testo servizi */
+.azienda-service p {
+    font-size: 16px;
+    line-height: 1.7;
     color: var(--text-muted);
 }
 
@@ -734,7 +760,6 @@ nav a.active {
     z-index: 9999;
 }
 
-/* Mostra popup */
 .popup-overlay.active {
     display: flex;
 }
@@ -749,9 +774,17 @@ nav a.active {
     background: #fff;
     border-radius: 12px;
     overflow: hidden;
-    display: flex;
+    display: none;
     flex-direction: row;
-    position: relative;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+}
+
+.popup-2col.active {
+    display: flex;
 }
 
 /* =========================================
@@ -866,23 +899,6 @@ nav a.active {
 }
 
 /* =========================================
-   POPUP — RESPONSIVE
-========================================= */
-
-@media (max-width: 900px) {
-    .popup-2col {
-        flex-direction: column;
-        width: 95%;
-    }
-
-    .popup-left,
-    .popup-right {
-        width: 100%;
-        padding: 30px;
-    }
-}
-
-/* =========================================
    RESPONSIVE — TABLET (max 1024px)
 ========================================= */
 
@@ -974,6 +990,9 @@ nav a.active {
         max-width: 350px;
         margin: 0 auto;
         transform: none !important;
+        position: static;
+        height: auto;
+        box-shadow: none;
     }
 
     .area-tecnica-grid,
@@ -998,14 +1017,12 @@ nav a.active {
 
     .azienda-block-text h2,
     .azienda-services-intro h1,
-    .azienda-team h1,
     .prodotti-hero h1,
     .contatti-hero h1 {
         font-size: 32px;
     }
 
-    .azienda-services-intro h2,
-    .azienda-team h2 {
+    .azienda-services-intro h2 {
         font-size: 20px;
     }
 
@@ -1076,378 +1093,58 @@ footer a:hover {
     box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
 
-.popup-2col {
-    display: none;
+/* =========================================
+   UNIFORMITÀ TITOLI GLOBALI
+========================================= */
+
+h1, h2, h3, h4 {
+    color: var(--sirio-green);
+    font-weight: 700;
 }
 
-.popup-2col.active {
-    display: flex;
-}
-
-.popup-2col {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10000;
-    display: none;
-}
-
-.popup-2col.active {
-    display: flex;
-}
-
-/* Sezione Azienda – immagini triple */
-.azienda-images {
-    padding: 60px 10%;
+/* Titoli principali delle pagine (Hero / Intro) */
+.info-block,
+.azienda-block,
+.prodotti-hero,
+.area-tecnica-hero,
+.contatti-hero {
+    padding-top: 120px;
+    padding-bottom: 40px;
     text-align: center;
 }
 
-.azienda-images-stack {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 40px;
-}
-
-.azienda-img {
-    width: 320px;
-    max-width: 100%;
-    border-radius: 12px;
-    border: 2px solid var(--border-soft);
-    object-fit: cover;
-    display: block;
-}
-
-/* Effetti di posizione */
-.azienda-img.left { transform: translateY(20px); }
-.azienda-img.center { transform: translateY(-20px); }
-.azienda-img.right { transform: translateY(20px); }
-
-/* Sezione Azienda – immagini sovrapposte */
-.azienda-images {
-    padding: 80px 10%;
-    text-align: center;
-}
-
-.azienda-images-stack {
-    position: relative;
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto 60px auto;
-    height: 380px; /* Altezza del blocco */
-}
-
-/* Immagini */
-.azienda-img {
-    position: absolute;
-    width: 320px;
-    height: 380px; /* Più alte, non quadrate */
-    object-fit: cover;
-    border-radius: 14px;
-    border: 2px solid var(--border-soft);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-}
-
-/* Posizioni sovrapposte */
-.azienda-img.left {
-    left: 0;
-    top: 20px;
-    z-index: 1;
-}
-
-.azienda-img.center {
-    left: 50%;
-    transform: translateX(-50%);
-    top: -20px;
-    z-index: 3;
-}
-
-.azienda-img.right {
-    right: 0;
-    top: 20px;
-    z-index: 2;
-}
-
-/* Testo sotto */
-.azienda-text-long {
-    max-width: 900px;
-    margin: 0 auto;
-    font-size: 18px;
-    line-height: 1.7;
-    color: var(--text-muted);
-}
-
-/* Centra titoli e testi nella pagina Azienda */
 .info-block-text,
-.info-services-intro,
-.info-team,
-.azienda-text-long {
-    text-align: center;
+.azienda-block-text,
+.prodotti-hero,
+.area-tecnica-hero,
+.contatti-hero {
     max-width: 900px;
     margin: 0 auto;
+    text-align: center;
 }
 
 .info-block-text h2,
-.info-services-intro h1,
-.info-team h1 {
-    font-size: 42px;
+.azienda-block-text h2,
+.prodotti-hero h1,
+.area-tecnica-hero h1,
+.contatti-hero h1 {
+    font-size: 48px;
     margin-bottom: 10px;
 }
 
 .info-block-text h3,
-.info-services-intro h2,
-.info-team h2 {
+.azienda-block-text h3,
+.prodotti-hero h2,
+.area-tecnica-hero h2,
+.contatti-hero h2 {
     font-size: 26px;
     margin-bottom: 20px;
 }
 
-.info-block-text p,
-.info-services-intro p,
-.info-team p {
-    font-size: 18px;
-    line-height: 1.7;
-    color: var(--text-muted);
-}
-
-/* ============================================
-   SEZIONE INTRO AZIENDA (CENTRATA)
-============================================ */
-
-.info-block-text {
-    text-align: center;
-    max-width: 900px;
-    margin: 0 auto 60px auto;
-}
-
-.info-block-text h2 {
-    font-size: 42px;
-    margin-bottom: 10px;
-}
-
-.info-block-text h3 {
-    font-size: 26px;
-    margin-bottom: 20px;
-}
-
-.info-block-text p {
-    font-size: 18px;
-    line-height: 1.7;
-    color: var(--text-muted);
-}
-
-
-/* ============================================
-   IMMAGINI SOVRAPPOSTE AZIENDA
-============================================ */
-
-.azienda-images {
-    padding: 80px 10%;
-    text-align: center;
-}
-
-.azienda-images-stack {
-    position: relative;
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto 60px auto;
-    height: 380px;
-}
-
-.azienda-img {
-    position: absolute;
-    width: 320px;
-    height: 380px;
-    object-fit: cover;
-    border-radius: 14px;
-    border: 2px solid var(--border-soft);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-}
-
-.azienda-img.left {
-    left: 0;
-    top: 20px;
-    z-index: 1;
-}
-
-.azienda-img.center {
-    left: 50%;
-    transform: translateX(-50%);
-    top: -20px;
-    z-index: 3;
-}
-
-.azienda-img.right {
-    right: 0;
-    top: 20px;
-    z-index: 2;
-}
-
-.azienda-text-long {
-    max-width: 900px;
-    margin: 0 auto;
-    font-size: 18px;
-    line-height: 1.7;
-    color: var(--text-muted);
-    text-align: center;
-}
-
-
-/* ============================================
-   SEZIONE SERVIZI PREMIUM
-============================================ */
-
-.azienda-services {
-    text-align: center;
-    padding: 80px 10%;
-}
-
-.azienda-services h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
-}
-
-.azienda-services h2 {
-    font-size: 26px;
-    margin-bottom: 20px;
-}
-
-.azienda-services-desc {
-    max-width: 900px;
-    margin: 0 auto 50px auto;
-    font-size: 18px;
-    line-height: 1.7;
-    color: var(--text-muted);
-}
-
-
-/* ============================================
-   GRIGLIA SERVIZI – SOLO CROCE CENTRALE
-============================================ */
-
-.azienda-services-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    position: relative;
-    max-width: 1100px;
-    margin: 80px auto;
-    padding: 0;
-}
-
-/* Linea verticale SOLO al centro */
-.azienda-services-grid::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 10%;
-    height: 80%;
-    width: 2px;
-    background: var(--border-soft);
-}
-
-/* Linea orizzontale SOLO al centro */
-.azienda-services-grid::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 10%;
-    width: 80%;
-    height: 2px;
-    background: var(--border-soft);
-}
-
-/* Quadranti */
-.azienda-service {
-    padding: 40px 50px;
-    text-align: center;
-    border: none !important;
-    background: transparent;
-}
-
-/* Asterisco grande */
-.azienda-service .asterisk {
-    font-size: 42px;
-    font-weight: 900;
-    color: var(--accent);
-    margin-bottom: 15px;
-}
-
-/* Titoli */
-.azienda-service h3 {
-    font-size: 26px;
-    margin-bottom: 5px;
-}
-
-.azienda-service h4 {
-    font-size: 18px;
-    margin-bottom: 15px;
-    color: var(--text-muted);
-}
-
-/* Testo */
-.azienda-service p {
-    font-size: 16px;
-    line-height: 1.7;
-    color: var(--text-muted);
-}
-
-/* Titoli principali di tutte le pagine */
-.info-block {
-    padding-top: 120px; /* distanza dall’header identica ovunque */
-}
-
-.info-block-text h2 {
-    font-size: 48px;
-    margin-bottom: 10px;
-}
-
-.info-block-text h3 {
-    font-size: 26px;
-    margin-bottom: 20px;
-}
-/* Colore verde Sirio per tutti i titoli */
-:root {
-    --sirio-green: #8CC63F;
-}
-
-h1, h2, h3, h4 {
-    color: var(--sirio-green);
-}
-
-/* TITOLI PRINCIPALI DI TUTTE LE PAGINE */
-.info-block {
-    padding-top: 120px; /* stessa altezza ovunque */
-    padding-bottom: 40px;
-}
-
-.info-block-text {
-    text-align: center;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.info-block-text h2 {
-    font-size: 48px;
-    font-weight: 700;
-    color: var(--sirio-green);
-    margin-bottom: 10px;
-}
-
-.info-block-text h3 {
-    font-size: 26px;
-    font-weight: 500;
-    color: var(--sirio-green);
-    margin-bottom: 20px;
-}
-
-/* TITOLI DI SEZIONE INTERNI (Servizi, Portfolio, Prodotti, ecc.) */
+/* Titoli interni delle sezioni */
 section h1,
 section h2,
 section h3,
 section h4 {
     color: var(--sirio-green);
 }
-
-
-
-
