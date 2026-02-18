@@ -1221,3 +1221,61 @@ nav a.active {
     line-height: 1.6;
 }
 
+/* ============================================
+   FIX DEFINITIVO AREA TECNICA
+============================================ */
+
+/* CENTRARE TITOLO E DESCRIZIONE */
+.area-tecnica-hero {
+    padding: 120px 10% 40px 10% !important;
+    text-align: center !important;
+}
+
+.area-tecnica-hero h1,
+.area-tecnica-hero p {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 900px !important;
+}
+
+/* RIPRISTINO GRIGLIA */
+.area-tecnica-grid {
+    padding: 80px 10% !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 40px !important;
+    text-align: center !important;
+}
+
+/* CARD */
+.area-tecnica-card {
+    background: #0d0d0d !important;
+    border: 1px solid var(--border-soft) !important;
+    border-radius: 12px !important;
+    padding: 30px !important;
+    text-align: center !important;
+}
+
+/* ICONA */
+.area-tecnica-card img {
+    width: 80px !important;
+    height: 80px !important;
+    margin: 0 auto 20px auto !important;
+    display: block !important;
+}
+
+/* TITOLO CARD */
+.area-tecnica-card h3 {
+    font-size: 22px !important;
+    margin-bottom: 10px !important;
+    color: var(--sirio-green) !important;
+}
+
+/* TESTO CARD */
+.area-tecnica-card p {
+    color: var(--text-muted) !important;
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+}
+
