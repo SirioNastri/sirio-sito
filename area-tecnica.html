@@ -212,36 +212,56 @@
         </p>
     </div>
 
-    <!-- DESTRA -->
-    <div class="popup-col popup-right">
-        <form class="popup-form">
-            <input type="text" class="popup-input" placeholder="Azienda">
-            <input type="text" class="popup-input" placeholder="Nome *" required>
-            <input type="text" class="popup-input" placeholder="Cognome *" required>
-            <input type="email" class="popup-input" placeholder="Email *" required>
-            <input type="text" class="popup-input" placeholder="Telefono">
-            <textarea class="popup-input" placeholder="Messaggio" rows="4"></textarea>
+  <!-- OVERLAY -->
+<div class="popup-overlay" id="popup-overlay">
 
-            <button type="submit" class="popup-btn">Invia richiesta</button>
-        </form>
+    <!-- POPUP -->
+    <div class="popup-box" id="popup-preventivo">
+
+        <!-- CHIUDI -->
+        <span class="popup-close" onclick="chiudiPopup()">&times;</span>
+
+        <div class="popup-content" style="display:flex; gap:40px;">
+
+            <!-- SINISTRA (VERSIONE COMPLETA) -->
+            <div class="popup-col popup-left" style="flex:1;">
+                <h2>Richiedi Preventivo</h2>
+                <p style="color:#ccc; margin-bottom:20px;">
+                    Compila il modulo per ricevere un preventivo personalizzato per i nostri nastri trasportatori.
+                </p>
+
+                <ul style="color:#ccc; line-height:1.7; padding-left:20px;">
+                    <li>Risposta entro 24 ore</li>
+                    <li>Consulenza tecnica gratuita</li>
+                    <li>Soluzioni su misura per ogni settore</li>
+                    <li>Materiali certificati e garantiti</li>
+                </ul>
+
+                <p style="color:#ccc; margin-top:20px;">
+                    Oppure contattaci direttamente:<br>
+                    <strong style="color:#8CC63F;">info@sirionastri.it</strong>
+                </p>
+            </div>
+
+            <!-- DESTRA (FORM) -->
+            <div class="popup-col popup-right" style="flex:1;">
+                <form class="popup-form">
+                    <input type="text" class="popup-input" placeholder="Azienda">
+                    <input type="text" class="popup-input" placeholder="Nome *" required>
+                    <input type="text" class="popup-input" placeholder="Cognome *" required>
+                    <input type="email" class="popup-input" placeholder="Email *" required>
+                    <input type="text" class="popup-input" placeholder="Telefono">
+                    <textarea class="popup-input" placeholder="Messaggio" rows="4"></textarea>
+
+                    <button type="submit" class="popup-btn">Invia richiesta</button>
+                </form>
+            </div>
+
+        </div>
+
     </div>
 </div>
 
-<script>
-function apriPopup() {
-    document.getElementById("popup-preventivo").classList.add("active");
-    document.getElementById("popup-overlay").classList.add("active");
-}
-
-function chiudiPopup() {
-    document.getElementById("popup-preventivo").classList.remove("active");
-    document.getElementById("popup-overlay").classList.remove("active");
-}
-
-document.querySelector(".btn-preventivo-nav").addEventListener("click", function(e) {
-    e.preventDefault();
-    apriPopup();
-});
 </script>
 
 
