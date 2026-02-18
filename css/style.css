@@ -1402,5 +1402,70 @@ footer a:hover {
     line-height: 1.6;
 }
 
+/* Griglia servizi tipo diagramma 2x2 */
+.azienda-services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 40px 0;
+}
+
+/* Linea verticale */
+.azienda-services-grid::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: var(--border-soft);
+}
+
+/* Linea orizzontale */
+.azienda-services-grid::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background: var(--border-soft);
+}
+
+/* Ogni quadrante */
+.azienda-service {
+    padding: 40px 50px;
+    text-align: center;
+}
+
+/* Asterisco grande */
+.azienda-service .asterisk {
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--accent);
+    margin-bottom: 15px;
+}
+
+/* Titoli */
+.azienda-service h3 {
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+.azienda-service h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--text-muted);
+}
+
+/* Testo */
+.azienda-service p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text-muted);
+}
+
 
 
