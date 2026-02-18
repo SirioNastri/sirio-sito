@@ -1247,7 +1247,7 @@ footer a:hover {
     width: 100%;
     max-width: 900px;
     margin: 0 auto 60px auto;
-    height: 380px; /* Altezza del blocco immagini */
+    height: 380px;
 }
 
 .azienda-img {
@@ -1260,7 +1260,6 @@ footer a:hover {
     box-shadow: 0 10px 30px rgba(0,0,0,0.25);
 }
 
-/* Posizioni */
 .azienda-img.left {
     left: 0;
     top: 20px;
@@ -1280,7 +1279,6 @@ footer a:hover {
     z-index: 2;
 }
 
-/* Testo sotto immagini */
 .azienda-text-long {
     max-width: 900px;
     margin: 0 auto;
@@ -1318,230 +1316,18 @@ footer a:hover {
     color: var(--text-muted);
 }
 
-/* Griglia 2x2 con linee */
-.azienda-services-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    border-top: 2px solid var(--border-soft);
-    border-left: 2px solid var(--border-soft);
-}
-
-.azienda-service {
-    padding: 40px;
-    border-right: 2px solid var(--border-soft);
-    border-bottom: 2px solid var(--border-soft);
-}
-
-.azienda-service h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.azienda-service p {
-    font-size: 16px;
-    color: var(--text-muted);
-}
-
 
 /* ============================================
-   TEAM (CENTRATO)
+   GRIGLIA SERVIZI – SOLO CROCE CENTRALE
 ============================================ */
 
-.info-team {
-    text-align: center;
-    max-width: 900px;
-    margin: 80px auto 40px auto;
-}
-
-.info-team h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
-}
-
-.info-team h2 {
-    font-size: 26px;
-    margin-bottom: 20px;
-}
-
-.info-team p {
-    font-size: 18px;
-    line-height: 1.7;
-    color: var(--text-muted);
-}
-
-/* Griglia servizi premium 2x2 con linee perpendicolari */
-.azienda-services-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    border-top: 2px solid var(--border-soft);
-    border-left: 2px solid var(--border-soft);
-    margin-top: 40px;
-}
-
-.azienda-service {
-    padding: 50px 40px;
-    border-right: 2px solid var(--border-soft);
-    border-bottom: 2px solid var(--border-soft);
-    text-align: center;
-}
-
-.azienda-service .star {
-    font-size: 28px;
-    color: var(--accent);
-    margin-bottom: 10px;
-}
-
-.azienda-service h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.azienda-service p {
-    font-size: 16px;
-    color: var(--text-muted);
-    line-height: 1.6;
-}
-
-/* Griglia servizi tipo diagramma 2x2 */
-.azienda-services-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    position: relative;
-    max-width: 1100px;
-    margin: 60px auto;
-    padding: 40px 0;
-}
-
-/* Linea verticale */
-.azienda-services-grid::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 0;
-    width: 2px;
-    height: 100%;
-    background: var(--border-soft);
-}
-
-/* Linea orizzontale */
-.azienda-services-grid::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    height: 2px;
-    width: 100%;
-    background: var(--border-soft);
-}
-
-/* Ogni quadrante */
-.azienda-service {
-    padding: 40px 50px;
-    text-align: center;
-}
-
-/* Asterisco grande */
-.azienda-service .asterisk {
-    font-size: 40px;
-    font-weight: bold;
-    color: var(--accent);
-    margin-bottom: 15px;
-}
-
-/* Titoli */
-.azienda-service h3 {
-    font-size: 26px;
-    margin-bottom: 5px;
-}
-
-.azienda-service h4 {
-    font-size: 18px;
-    margin-bottom: 15px;
-    color: var(--text-muted);
-}
-
-/* Testo */
-.azienda-service p {
-    font-size: 16px;
-    line-height: 1.7;
-    color: var(--text-muted);
-}
-
-/* Griglia servizi tipo diagramma 2x2 (solo due linee) */
-.azienda-services-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    position: relative;
-    max-width: 1100px;
-    margin: 60px auto;
-    padding: 40px 0;
-}
-
-/* Linea verticale centrale */
-.azienda-services-grid::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 0;
-    width: 2px;
-    height: 100%;
-    background: var(--border-soft);
-}
-
-/* Linea orizzontale centrale */
-.azienda-services-grid::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    height: 2px;
-    width: 100%;
-    background: var(--border-soft);
-}
-
-/* Quadranti SENZA bordi */
-.azienda-service {
-    padding: 40px 50px;
-    text-align: center;
-    border: none !important; /* elimina qualsiasi bordo residuo */
-    background: transparent;
-}
-
-/* Asterisco grande */
-.azienda-service .asterisk {
-    font-size: 42px;
-    font-weight: 900;
-    color: var(--accent);
-    margin-bottom: 15px;
-}
-
-/* Titoli */
-.azienda-service h3 {
-    font-size: 26px;
-    margin-bottom: 5px;
-}
-
-.azienda-service h4 {
-    font-size: 18px;
-    margin-bottom: 15px;
-    color: var(--text-muted);
-}
-
-/* Testo */
-.azienda-service p {
-    font-size: 16px;
-    line-height: 1.7;
-    color: var(--text-muted);
-}
-
-/* Griglia servizi tipo diagramma 2x2 (solo croce centrale) */
 .azienda-services-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     position: relative;
     max-width: 1100px;
     margin: 80px auto;
-    padding: 0; /* niente padding che spinge i contenuti */
+    padding: 0;
 }
 
 /* Linea verticale SOLO al centro */
@@ -1549,8 +1335,8 @@ footer a:hover {
     content: "";
     position: absolute;
     left: 50%;
-    top: 10%;          /* NON parte dal bordo */
-    height: 80%;       /* NON arriva ai bordi */
+    top: 10%;
+    height: 80%;
     width: 2px;
     background: var(--border-soft);
 }
@@ -1560,13 +1346,13 @@ footer a:hover {
     content: "";
     position: absolute;
     top: 50%;
-    left: 10%;         /* NON parte dal bordo */
-    width: 80%;        /* NON arriva ai bordi */
+    left: 10%;
+    width: 80%;
     height: 2px;
     background: var(--border-soft);
 }
 
-/* Quadranti SENZA bordi e SENZA sfondo */
+/* Quadranti */
 .azienda-service {
     padding: 40px 50px;
     text-align: center;
@@ -1600,6 +1386,7 @@ footer a:hover {
     line-height: 1.7;
     color: var(--text-muted);
 }
+
 
 
 
