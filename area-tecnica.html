@@ -184,35 +184,7 @@
     © 2026 Sirio Nastri Trasportatori — Tutti i diritti riservati
 </footer>
 
-<div id="popup-overlay"></div>
-
-<div id="popup-preventivo" class="popup-2col">
-    <span class="popup-close" onclick="chiudiPopup()">×</span>
-
-    <!-- SINISTRA -->
-    <div class="popup-col popup-left">
-        <h2 class="popup-title">Richiedi un preventivo</h2>
-
-        <p class="popup-desc">
-            Un nostro tecnico ti risponderà entro 24 ore con una soluzione su misura per la tua linea produttiva.
-        </p>
-
-        <h3>Perché contattarci</h3>
-        <ul class="popup-points">
-            <li>Consulenza tecnica gratuita</li>
-            <li>Preventivi chiari e senza impegno</li>
-            <li>Soluzioni personalizzate per ogni settore</li>
-            <li>Supporto diretto con un progettista</li>
-            <li>Risposta rapida e professionale</li>
-        </ul>
-
-        <h3>Chi ti risponderà</h3>
-        <p>
-            Il nostro team tecnico analizzerà la tua richiesta e ti guiderà nella scelta del nastro o del trasportatore più adatto.
-        </p>
-    </div>
-
-  <!-- OVERLAY -->
+<!-- OVERLAY -->
 <div class="popup-overlay" id="popup-overlay">
 
     <!-- POPUP -->
@@ -221,30 +193,31 @@
         <!-- CHIUDI -->
         <span class="popup-close" onclick="chiudiPopup()">&times;</span>
 
-        <div class="popup-content" style="display:flex; gap:40px;">
+        <div class="popup-content">
 
-            <!-- SINISTRA (VERSIONE COMPLETA) -->
-            <div class="popup-col popup-left" style="flex:1;">
+            <!-- SINISTRA COMPLETA -->
+            <div class="popup-col popup-left">
                 <h2>Richiedi Preventivo</h2>
-                <p style="color:#ccc; margin-bottom:20px;">
+
+                <p class="popup-desc">
                     Compila il modulo per ricevere un preventivo personalizzato per i nostri nastri trasportatori.
                 </p>
 
-                <ul style="color:#ccc; line-height:1.7; padding-left:20px;">
+                <ul class="popup-list">
                     <li>Risposta entro 24 ore</li>
                     <li>Consulenza tecnica gratuita</li>
                     <li>Soluzioni su misura per ogni settore</li>
                     <li>Materiali certificati e garantiti</li>
                 </ul>
 
-                <p style="color:#ccc; margin-top:20px;">
+                <p class="popup-contact">
                     Oppure contattaci direttamente:<br>
-                    <strong style="color:#8CC63F;">info@sirionastri.it</strong>
+                    <strong>info@sirionastri.it</strong>
                 </p>
             </div>
 
-            <!-- DESTRA (FORM) -->
-            <div class="popup-col popup-right" style="flex:1;">
+            <!-- DESTRA FORM -->
+            <div class="popup-col popup-right">
                 <form class="popup-form">
                     <input type="text" class="popup-input" placeholder="Azienda">
                     <input type="text" class="popup-input" placeholder="Nome *" required>
@@ -261,9 +234,6 @@
 
     </div>
 </div>
-
-</script>
-
 
 
 </body>
