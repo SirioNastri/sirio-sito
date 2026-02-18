@@ -1369,5 +1369,38 @@ footer a:hover {
     color: var(--text-muted);
 }
 
+/* Griglia servizi premium 2x2 con linee perpendicolari */
+.azienda-services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 2px solid var(--border-soft);
+    border-left: 2px solid var(--border-soft);
+    margin-top: 40px;
+}
+
+.azienda-service {
+    padding: 50px 40px;
+    border-right: 2px solid var(--border-soft);
+    border-bottom: 2px solid var(--border-soft);
+    text-align: center;
+}
+
+.azienda-service .star {
+    font-size: 28px;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+.azienda-service h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.azienda-service p {
+    font-size: 16px;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
 
 
