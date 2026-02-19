@@ -1428,3 +1428,24 @@ h1, h2, h3 {
 .sottotitolo-bianco {
     color: #ffffff !important;
 }
+
+/* ============================
+   SOTTOTITOLI SPECIFICI BIANCHI
+============================ */
+
+h2:contains("Qualità e Affidabilità"),
+h2:contains("Leader nel settore"),
+h2:contains("Soluzioni Personalizzate"),
+h2:contains("Esperti del settore"),
+h2:contains("Qualità Superiore Garantita"),
+h2:contains("Materiali Disponibili"),
+h2:contains("I nostri progetti realizzati"),
+h3:contains("Qualità e Affidabilità"),
+h3:contains("Leader nel settore"),
+h3:contains("Soluzioni Personalizzate"),
+h3:contains("Esperti del settore"),
+h3:contains("Qualità Superiore Garantita"),
+h3:contains("Materiali Disponibili"),
+h3:contains("I nostri progetti realizzati") {
+    color: #ffffff !important;
+}
