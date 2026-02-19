@@ -1454,3 +1454,30 @@ h3:contains("I nostri progetti realizzati") {
     color: #ffffff !important;
 }
 
+/* TITOLI PRINCIPALI (verdi) */
+h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+/* SOTTOTITOLI BIANCHI */
+.sottotitolo-bianco {
+    color: #ffffff !important;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
