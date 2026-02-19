@@ -373,16 +373,20 @@ function chiudiPopup() {
     document.getElementById("popup-overlay").classList.remove("active");
 }
 
-document.querySelector(".btn-preventivo-nav").addEventListener("click", function(e) {
-    e.preventDefault();
-    apriPopup();
+document.querySelectorAll(".btn-preventivo").forEach(btn => {
+    btn.addEventListener("click", function(e) {
+        e.preventDefault();
+        apriPopup();
+    });
 });
+
 </script>
 
 
     
 </body>
 </html>
+
 
 
 
