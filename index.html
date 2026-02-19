@@ -356,9 +356,27 @@
 
 </script>
 
+    <script>
+function apriPopup() {
+    document.getElementById("popup-preventivo").classList.add("active");
+    document.getElementById("popup-overlay").classList.add("active");
+}
+
+function chiudiPopup() {
+    document.getElementById("popup-preventivo").classList.remove("active");
+    document.getElementById("popup-overlay").classList.remove("active");
+}
+
+document.querySelector(".btn-preventivo-nav").addEventListener("click", function(e) {
+    e.preventDefault();
+    apriPopup();
+});
+</script>
+
     
 </body>
 </html>
+
 
 
 
