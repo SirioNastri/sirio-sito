@@ -97,38 +97,74 @@ nav a.active {
    MEGA MENU — CENTRATO SOTTO NEGOZIO
 ========================================= */
 
+/* =========================================
+   MEGA MENU — VERSIONE CORRETTA
+========================================= */
+
+/* Il contenitore "Negozio" deve essere relativo */
 .menu-negozio {
     position: relative;
 }
 
+/* Freccina ▼ */
 .menu-negozio > a::after {
     content: " ▼";
     font-size: 12px;
     margin-left: 4px;
 }
 
+/* Mega menu nascosto di default */
 .mega-negozio {
     position: absolute;
     top: 100%;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
+    left: 50%;
+    transform: translateX(-50%);
     width: 700px;
     background: #000;
     border: 1px solid #111;
     padding: 25px 30px;
+
+    /* nascosto */
     opacity: 0;
     pointer-events: none;
-    transition: 0.25s ease;
+
+    /* animazione */
+    transition: opacity 0.25s ease;
+
+    /* layout */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+
     z-index: 999;
 }
 
+/* SI APRE SOLO QUANDO PASSI SOPRA "NEGOZIO" */
 .menu-negozio:hover .mega-negozio {
     opacity: 1;
     pointer-events: auto;
 }
+
+/* Titoli verdi */
+.mega-negozio h4 {
+    color: var(--sirio-green);
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* Link bianchi */
+.mega-negozio a {
+    display: block;
+    padding: 6px 0;
+    color: #fff;
+    transition: 0.25s;
+}
+
+/* Hover verde */
+.mega-negozio a:hover {
+    color: var(--sirio-green);
+}
+
 
 /* TITOLI DELLE 3 CATEGORIE — VERDI */
 .mega-negozio h4 {
@@ -1491,4 +1527,5 @@ h3 {
     position: relative;
     z-index: 20;
 }
+
 
