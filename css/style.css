@@ -1449,3 +1449,8 @@ h3:contains("Materiali Disponibili"),
 h3:contains("I nostri progetti realizzati") {
     color: #ffffff !important;
 }
+
+.sottotitolo-bianco {
+    color: #ffffff !important;
+}
+
