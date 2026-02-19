@@ -1492,36 +1492,3 @@ h3 {
     z-index: 20;
 }
 
-/* Nasconde il mega menu */
-.mega-negozio {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: white;
-    width: 100%;
-    z-index: 9999;
-    padding: 20px 40px;
-}
-
-/* Mostra il mega menu quando passo sopra la voce NEGOZIO */
-.menu-negozio:hover .mega-negozio {
-    display: flex;
-    gap: 40px;
-}
-
-/* Rende cliccabili i link interni */
-.mega-negozio a {
-    position: relative;
-    z-index: 10000;
-    pointer-events: auto;
-}
-
-/* Impedisce al link "Negozio" di coprire tutto */
-.menu-negozio > a {
-    position: relative;
-    z-index: 10;
-    pointer-events: auto;
-}
-
-
