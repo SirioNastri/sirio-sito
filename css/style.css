@@ -1405,3 +1405,26 @@ h2, h3 {
 .btn-ghost:hover {
     background: #1877d3;
 }
+
+/* ============================
+   COLORI SIRIO
+============================ */
+
+:root {
+    --accent: #8CC63F; /* Verde Sirio */
+}
+
+/* Titoli principali verdi */
+h1, h2, h3 {
+    color: var(--accent) !important;
+}
+
+/* Sottotitoli bianchi */
+.section-subtitle,
+.blog-subtitle,
+.info-grid-text h3,
+.card-servizio h3.subtitle,
+.sottotitolo,
+.sottotitolo-bianco {
+    color: #ffffff !important;
+}
