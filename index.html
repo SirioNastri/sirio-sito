@@ -341,18 +341,35 @@
             </div>
 
             <!-- DESTRA FORM -->
-            <div class="popup-col popup-right" style="flex:1;">
-                <form class="popup-form">
-                    <input type="text" class="popup-input" placeholder="Azienda">
-                    <input type="text" class="popup-input" placeholder="Nome *" required>
-                    <input type="text" class="popup-input" placeholder="Cognome *" required>
-                    <input type="email" class="popup-input" placeholder="Email *" required>
-                    <input type="text" class="popup-input" placeholder="Telefono">
-                    <textarea class="popup-input" placeholder="Messaggio" rows="4"></textarea>
+           <div class="popup-col popup-right" style="flex:1;">
+    <form class="popup-form">
 
-                    <button type="submit" class="popup-btn">Invia richiesta</button>
-                </form>
+        <input type="text" class="popup-input" placeholder="Azienda">
+        <input type="text" class="popup-input" placeholder="Nome *" required>
+        <input type="text" class="popup-input" placeholder="Cognome *" required>
+        <input type="email" class="popup-input" placeholder="Email *" required>
+        <input type="text" class="popup-input" placeholder="Telefono">
+        <textarea class="popup-input" placeholder="Messaggio" rows="4"></textarea>
+
+        <!-- ALLEGA FILE (DEVE STARE QUI, DENTRO IL FORM) -->
+        <div class="filebox">
+            <label class="filebox-title">Allega un file</label>
+
+            <div class="filebox-area">
+                <p>Fai clic o trascina il file su quest'area per caricarlo.</p>
+                <input type="file" class="filebox-input">
             </div>
+
+            <div class="filebox-privacy">
+                <input type="checkbox" id="privacy-check">
+                <label for="privacy-check">Accetto la Privacy Policy</label>
+            </div>
+        </div>
+
+        <button type="submit" class="popup-btn">Invia richiesta</button>
+
+    </form>
+</div>
 
         </div>
 
@@ -386,6 +403,7 @@ document.querySelectorAll(".btn-preventivo").forEach(btn => {
     
 </body>
 </html>
+
 
 
 
