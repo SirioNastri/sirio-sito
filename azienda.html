@@ -60,7 +60,7 @@
 
         <!-- ⭐ NUOVO BOTTONE SEMPRE VISIBILE -->
         <div class="menu-voce">
-            <a href="contatti.html" class="btn-preventivo-nav">Richiedi preventivo</a>
+<a href="#" class="btn-preventivo-nav" onclick="apriPopup()">Richiedi preventivo</a>
         </div>
 
     </nav>
@@ -172,46 +172,59 @@
 </footer>
 
 <!-- POPUP -->
-<div id="popup-overlay"></div>
+<!-- OVERLAY -->
+<div class="popup-overlay" id="popup-overlay">
 
-<div id="popup-preventivo" class="popup-2col">
-    <span class="popup-close" onclick="chiudiPopup()">×</span>
+    <!-- POPUP -->
+    <div class="popup-box" id="popup-preventivo">
 
-    <div class="popup-col popup-left">
-        <h2 class="popup-title">Richiedi un preventivo</h2>
+        <!-- CHIUDI -->
+        <span class="popup-close" onclick="chiudiPopup()">&times;</span>
 
-        <p class="popup-desc">
-            Un nostro tecnico ti risponderà entro 24 ore con una soluzione su misura per la tua linea produttiva.
-        </p>
+        <div class="popup-content" style="display:flex; gap:40px;">
 
-        <h3>Perché contattarci</h3>
-        <ul class="popup-points">
-            <li>Consulenza tecnica gratuita</li>
-            <li>Preventivi chiari e senza impegno</li>
-            <li>Soluzioni personalizzate per ogni settore</li>
-            <li>Supporto diretto con un progettista</li>
-            <li>Risposta rapida e professionale</li>
-        </ul>
+            <!-- SINISTRA COMPLETA -->
+            <div class="popup-col popup-left" style="flex:1;">
+                <h2>Richiedi Preventivo</h2>
 
-        <h3>Chi ti risponderà</h3>
-        <p>
-            Il nostro team tecnico analizzerà la tua richiesta e ti guiderà nella scelta del nastro o del trasportatore più adatto.
-        </p>
-    </div>
+                <p class="popup-desc">
+                    Un nostro tecnico ti risponderà entro 24 ore con una soluzione su misura per la tua linea produttiva.
+                </p>
 
-    <div class="popup-col popup-right">
-        <form class="popup-form">
-            <input type="text" class="popup-input" placeholder="Azienda">
-            <input type="text" class="popup-input" placeholder="Nome *" required>
-            <input type="text" class="popup-input" placeholder="Cognome *" required>
-            <input type="email" class="popup-input" placeholder="Email *" required>
-            <input type="text" class="popup-input" placeholder="Telefono">
-            <textarea class="popup-input" placeholder="Messaggio" rows="4"></textarea>
+                <h3>Perché contattarci</h3>
+                <ul class="popup-points">
+                    <li>Consulenza tecnica gratuita</li>
+                    <li>Preventivi chiari e senza impegno</li>
+                    <li>Soluzioni personalizzate per ogni settore</li>
+                    <li>Supporto diretto con un progettista</li>
+                    <li>Risposta rapida e professionale</li>
+                </ul>
 
-            <button type="submit" class="popup-btn">Invia richiesta</button>
-        </form>
+                <h3>Chi ti risponderà</h3>
+                <p>
+                    Il nostro team tecnico analizzerà la tua richiesta e ti guiderà nella scelta del nastro o del trasportatore più adatto.
+                </p>
+            </div>
+
+            <!-- DESTRA FORM -->
+            <div class="popup-col popup-right" style="flex:1;">
+                <form class="popup-form">
+                    <input type="text" class="popup-input" placeholder="Azienda">
+                    <input type="text" class="popup-input" placeholder="Nome *" required>
+                    <input type="text" class="popup-input" placeholder="Cognome *" required>
+                    <input type="email" class="popup-input" placeholder="Email *" required>
+                    <input type="text" class="popup-input" placeholder="Telefono">
+                    <textarea class="popup-input" placeholder="Messaggio" rows="4"></textarea>
+
+                    <button type="submit" class="popup-btn">Invia richiesta</button>
+                </form>
+            </div>
+
+        </div>
+
     </div>
 </div>
+
 
 <script>
 function apriPopup() {
@@ -223,12 +236,8 @@ function chiudiPopup() {
     document.getElementById("popup-preventivo").classList.remove("active");
     document.getElementById("popup-overlay").classList.remove("active");
 }
-
-document.querySelector(".btn-preventivo-nav").addEventListener("click", function(e) {
-    e.preventDefault();
-    apriPopup();
-});
 </script>
+
 
 </body>
 </html>
