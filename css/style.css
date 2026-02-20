@@ -1,9 +1,10 @@
 /* =========================================
-   ROOT VARIABLES — VERDE SIRIO ONLY
+   ROOT VARIABLES — VERDE SIRIO
 ========================================= */
 
 :root {
     --sirio-green: #8CC63F;
+    --accent: #8CC63F;
     --text-muted: #ccc;
     --border-soft: #1a1a1a;
 }
@@ -36,13 +37,17 @@ img {
 }
 
 /* =========================================
-   GLOBAL TITLES — ALL GREEN SIRIO
+   GLOBAL TITLES
 ========================================= */
 
 h1, h2, h3, h4 {
-    color: var(--sirio-green);
+    color: var(--accent);
     font-weight: 700;
 }
+
+h1 { font-size: 42px; margin-bottom: 20px; }
+h2 { font-size: 32px; margin-bottom: 15px; }
+h3 { font-size: 26px; margin-bottom: 12px; }
 
 /* =========================================
    HEADER
@@ -69,7 +74,8 @@ nav a {
     transition: 0.25s;
 }
 
-nav a:hover {
+nav a:hover,
+a:hover {
     color: var(--sirio-green);
 }
 
@@ -94,26 +100,17 @@ nav a.active {
 }
 
 /* =========================================
-   MEGA MENU — CENTRATO SOTTO NEGOZIO
+   MEGA MENU
 ========================================= */
 
-/* =========================================
-   MEGA MENU — VERSIONE CORRETTA
-========================================= */
+.menu-negozio { position: relative; }
 
-/* Il contenitore "Negozio" deve essere relativo */
-.menu-negozio {
-    position: relative;
-}
-
-/* Freccina ▼ */
 .menu-negozio > a::after {
     content: " ▼";
     font-size: 12px;
     margin-left: 4px;
 }
 
-/* Mega menu nascosto di default */
 .mega-negozio {
     position: absolute;
     top: 100%;
@@ -123,57 +120,26 @@ nav a.active {
     background: #000;
     border: 1px solid #111;
     padding: 25px 30px;
-
-    /* nascosto */
     opacity: 0;
     pointer-events: none;
-
-    /* animazione */
     transition: opacity 0.25s ease;
-
-    /* layout */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-
     z-index: 999;
 }
 
-/* SI APRE SOLO QUANDO PASSI SOPRA "NEGOZIO" */
 .menu-negozio:hover .mega-negozio {
     opacity: 1;
     pointer-events: auto;
 }
 
-/* Titoli verdi */
 .mega-negozio h4 {
     color: var(--sirio-green);
     margin-bottom: 10px;
     font-size: 16px;
 }
 
-/* Link bianchi */
-.mega-negozio a {
-    display: block;
-    padding: 6px 0;
-    color: #fff;
-    transition: 0.25s;
-}
-
-/* Hover verde */
-.mega-negozio a:hover {
-    color: var(--sirio-green);
-}
-
-
-/* TITOLI DELLE 3 CATEGORIE — VERDI */
-.mega-negozio h4 {
-    color: var(--sirio-green);
-    margin-bottom: 10px;
-    font-size: 16px;
-}
-
-/* SOTTOCATEGORIE — BIANCHE */
 .mega-negozio a {
     display: block;
     padding: 6px 0;
@@ -246,10 +212,6 @@ nav a.active {
     border: 1px solid var(--border-soft);
 }
 
-.services-table .cell h3 {
-    margin-bottom: 10px;
-}
-
 .services-table .cell p {
     color: var(--text-muted);
 }
@@ -299,9 +261,7 @@ nav a.active {
     text-align: center;
 }
 
-.azienda-block-text h2 {
-    font-size: 42px;
-}
+.azienda-block-text h2 { font-size: 42px; }
 
 .azienda-block-text h3 {
     font-size: 22px;
@@ -326,10 +286,9 @@ nav a.active {
 
 .azienda-images-stack {
     position: relative;
-    width: 100%;
     max-width: 900px;
-    margin: 0 auto 60px auto;
     height: 380px;
+    margin: 0 auto 60px;
 }
 
 .azienda-img {
@@ -364,19 +323,12 @@ nav a.active {
     padding: 80px 10%;
 }
 
-.azienda-services h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
-}
-
-.azienda-services h2 {
-    font-size: 26px;
-    margin-bottom: 20px;
-}
+.azienda-services h1 { font-size: 42px; }
+.azienda-services h2 { font-size: 26px; margin-bottom: 20px; }
 
 .azienda-services-desc {
     max-width: 900px;
-    margin: 0 auto 50px auto;
+    margin: 0 auto 50px;
     font-size: 18px;
     line-height: 1.7;
     color: var(--text-muted);
@@ -390,25 +342,25 @@ nav a.active {
     margin: 80px auto;
 }
 
-/* Linee della croce */
-.azienda-services-grid::before {
+.azienda-services-grid::before,
+.azienda-services-grid::after {
     content: "";
     position: absolute;
+    background: var(--border-soft);
+}
+
+.azienda-services-grid::before {
     left: 50%;
     top: 10%;
     height: 80%;
     width: 2px;
-    background: var(--border-soft);
 }
 
 .azienda-services-grid::after {
-    content: "";
-    position: absolute;
     top: 50%;
     left: 10%;
     width: 80%;
     height: 2px;
-    background: var(--border-soft);
 }
 
 .azienda-service {
@@ -421,11 +373,6 @@ nav a.active {
     font-weight: 900;
     color: var(--sirio-green);
     margin-bottom: 15px;
-}
-
-.azienda-service h3 {
-    font-size: 26px;
-    margin-bottom: 5px;
 }
 
 .azienda-service h4 {
@@ -518,6 +465,7 @@ nav a.active {
 
 .portfolio-feature .info-grid-text p {
     color: var(--text-muted);
+    line-height: 1.7;
 }
 
 /* =========================================
@@ -545,236 +493,11 @@ nav a.active {
 
 .portfolio-alt .info-grid-text p {
     color: var(--text-muted);
-}
-
-/* =========================================
-   AREA TECNICA — HERO
-========================================= */
-
-.area-tecnica-hero {
-    padding: 120px 10% 40px 10%;
-    text-align: center;
-}
-
-.area-tecnica-hero h1 {
-    font-size: 48px;
-}
-
-.area-tecnica-hero p {
-    max-width: 900px;
-    margin: 20px auto 0;
-    color: var(--text-muted);
-}
-
-/* =========================================
-   AREA TECNICA — GRID
-========================================= */
-
-.area-tecnica-grid {
-    padding: 80px 10%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    text-align: center;
-}
-
-.area-tecnica-card {
-    background: #0d0d0d;
-    border: 1px solid var(--border-soft);
-    border-radius: 12px;
-    padding: 30px;
-    transition: 0.3s;
-}
-
-.area-tecnica-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--sirio-green);
-}
-
-.area-tecnica-card img {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 20px auto;
-    display: block;
-}
-
-.area-tecnica-card h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-
-.area-tecnica-card p {
-    color: var(--text-muted);
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-/* =========================================
-   CONTATTI — HERO
-========================================= */
-
-.contatti-hero {
-    padding: 80px 10%;
-    text-align: center;
-}
-
-.contatti-hero h1 {
-    font-size: 42px;
-}
-
-.contatti-hero p {
-    max-width: 800px;
-    margin: 20px auto 0;
-    color: var(--text-muted);
-}
-
-/* =========================================
-   CONTATTI — FORM
-========================================= */
-
-.contatti-form {
-    padding: 80px 10%;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.contatti-form input,
-.contatti-form textarea {
-    width: 100%;
-    padding: 14px;
-    margin-bottom: 20px;
-    border-radius: 6px;
-    border: 1px solid #333;
-    background: #0d0d0d;
-    color: #fff;
-}
-
-.contatti-form button {
-    background: var(--sirio-green);
-    color: #000;
-    padding: 14px 24px;
-    border-radius: 6px;
-    font-weight: 700;
-    border: none;
-    cursor: pointer;
-    transition: 0.25s;
-}
-
-.contatti-form button:hover {
-    background: #7ab532;
-}
-
-/* =========================================
-   PRODOTTI — HERO
-========================================= */
-
-.prodotti-hero {
-    padding: 80px 10%;
-    text-align: center;
-}
-
-.prodotti-hero h1 {
-    font-size: 42px;
-}
-
-.prodotti-hero p {
-    max-width: 800px;
-    margin: 20px auto 0;
-    color: var(--text-muted);
-}
-
-/* =========================================
-   PRODOTTI — GRID
-========================================= */
-
-.prodotti-info-grid {
-    padding: 80px 10%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-
-.prodotto-card {
-    background: #0d0d0d;
-    border: 1px solid var(--border-soft);
-    border-radius: 12px;
-    padding: 20px;
-    transition: 0.3s;
-}
-
-.prodotto-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--sirio-green);
-}
-
-.prodotto-card img {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-.prodotto-card p {
-    color: var(--text-muted);
-}
-
-/* =========================================
-   PORTFOLIO — FEATURE BLOCK (immagine + testo)
-========================================= */
-
-.portfolio-feature {
-    padding: 80px 10%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
-}
-
-.portfolio-feature img {
-    width: 100%;
-    border-radius: 10px;
-    border: 1px solid var(--border-soft);
-}
-
-.portfolio-feature .info-grid-text h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-.portfolio-feature .info-grid-text p {
-    color: var(--text-muted);
     line-height: 1.7;
 }
 
 /* =========================================
-   PORTFOLIO — ALTERNATE BLOCK (testo + immagine)
-========================================= */
-
-.portfolio-alt {
-    padding: 80px 10%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
-}
-
-.portfolio-alt .info-grid-img img {
-    width: 100%;
-    border-radius: 10px;
-    border: 1px solid var(--border-soft);
-}
-
-.portfolio-alt .info-grid-text h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-.portfolio-alt .info-grid-text p {
-    color: var(--text-muted);
-    line-height: 1.7;
-}
-
-/* =========================================
-   PORTFOLIO — GRID PROGETTI (se ti serve)
+   PORTFOLIO — GRID PROGETTI
 ========================================= */
 
 .portfolio-grid {
@@ -819,7 +542,7 @@ nav a.active {
 ========================================= */
 
 .area-tecnica-hero {
-    padding: 120px 10% 40px 10%;
+    padding: 120px 10% 40px;
     text-align: center;
 }
 
@@ -862,8 +585,7 @@ nav a.active {
 .area-tecnica-card img {
     width: 80px;
     height: 80px;
-    margin: 0 auto 20px auto;
-    display: block;
+    margin: 0 auto 20px;
 }
 
 .area-tecnica-card h3 {
@@ -878,7 +600,7 @@ nav a.active {
 }
 
 /* =========================================
-   AREA TECNICA — BLOCCO LUNGO (se presente)
+   AREA TECNICA — BLOCCO LUNGO
 ========================================= */
 
 .area-tecnica-long {
@@ -972,15 +694,12 @@ nav a.active {
 }
 
 /* =========================================
-   POPUP PREVENTIVO — OVERLAY
+   POPUP — OVERLAY + BOX
 ========================================= */
 
 .popup-overlay {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background: rgba(0,0,0,0.75);
     backdrop-filter: blur(4px);
     display: none;
@@ -996,24 +715,18 @@ nav a.active {
     opacity: 1;
 }
 
-/* =========================================
-   POPUP PREVENTIVO — FINESTRA
-========================================= */
-
 .popup-box {
     background: #0d0d0d;
     border: 1px solid var(--border-soft);
     border-radius: 12px;
     width: 90%;
-    max-width: 1000px;   /* LARGHEZZA AUMENTATA */
+    max-width: 1000px;
+    max-height: 90vh;
+    overflow-y: auto;
     padding: 40px;
     position: relative;
     animation: popupFade 0.35s ease forwards;
-
-    max-height: 90vh;    /* EVITA CHE ESCa DALLO SCHERMO */
-    overflow-y: auto;    /* AGGIUNGE SCROLL SE SERVE */
 }
-
 
 @keyframes popupFade {
     from { transform: translateY(20px); opacity: 0; }
@@ -1021,7 +734,7 @@ nav a.active {
 }
 
 /* =========================================
-   POPUP — TITOLO
+   POPUP — TITOLO + FORM + BUTTON
 ========================================= */
 
 .popup-box h2 {
@@ -1030,10 +743,6 @@ nav a.active {
     margin-bottom: 20px;
     text-align: center;
 }
-
-/* =========================================
-   POPUP — FORM
-========================================= */
 
 .popup-box input,
 .popup-box textarea {
@@ -1059,13 +768,9 @@ nav a.active {
     resize: vertical;
 }
 
-/* =========================================
-   POPUP — BOTTONE INVIO
-========================================= */
-
-.popup-box button {
-    background: var(--sirio-green);
-    color: #000;
+.popup-btn {
+    background: var(--accent) !important;
+    color: #000 !important;
     padding: 14px 24px;
     border-radius: 6px;
     font-weight: 700;
@@ -1075,13 +780,9 @@ nav a.active {
     width: 100%;
 }
 
-.popup-box button:hover {
-    background: #7ab532;
+.popup-btn:hover {
+    background: #ffd84d !important;
 }
-
-/* =========================================
-   POPUP — BOTTONE CHIUSURA
-========================================= */
 
 .popup-close {
     position: absolute;
@@ -1098,27 +799,36 @@ nav a.active {
 }
 
 /* =========================================
+   POPUP — PRIVACY
+========================================= */
+
+.filebox-privacy {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.filebox-privacy label {
+    margin: 0;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+/* =========================================
    RESPONSIVE — TABLET (max-width: 1024px)
 ========================================= */
 
 @media (max-width: 1024px) {
 
-    /* Header */
-    header {
-        padding: 20px 20px;
-    }
+    header { padding: 20px 20px; }
+    nav { gap: 18px; }
 
-    nav {
-        gap: 18px;
-    }
-
-    /* Mega menu */
     .mega-negozio {
         width: 600px;
         grid-template-columns: repeat(3, 1fr);
     }
 
-    /* Griglie */
     .info-grid,
     .portfolio-feature,
     .portfolio-alt {
@@ -1132,20 +842,9 @@ nav a.active {
         margin: 0 auto;
     }
 
-    /* Prodotti */
-    .prodotti-info-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    /* Area tecnica */
-    .area-tecnica-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    /* Portfolio grid */
-    .portfolio-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    .prodotti-info-grid { grid-template-columns: repeat(2, 1fr); }
+    .area-tecnica-grid { grid-template-columns: repeat(2, 1fr); }
+    .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* =========================================
@@ -1154,7 +853,6 @@ nav a.active {
 
 @media (max-width: 768px) {
 
-    /* Header */
     header {
         flex-direction: column;
         gap: 20px;
@@ -1167,19 +865,14 @@ nav a.active {
         gap: 15px;
     }
 
-    /* Mega menu */
     .mega-negozio {
         width: 90%;
         grid-template-columns: 1fr 1fr;
         padding: 20px;
     }
 
-    /* Sezioni */
-    .section {
-        padding: 60px 8%;
-    }
+    .section { padding: 60px 8%; }
 
-    /* Griglie */
     .info-grid,
     .portfolio-feature,
     .portfolio-alt {
@@ -1187,27 +880,12 @@ nav a.active {
         gap: 30px;
     }
 
-    /* Prodotti */
-    .prodotti-info-grid {
-        grid-template-columns: 1fr;
-    }
+    .prodotti-info-grid { grid-template-columns: 1fr; }
+    .area-tecnica-grid { grid-template-columns: 1fr; }
+    .portfolio-grid { grid-template-columns: 1fr; }
 
-    /* Area tecnica */
-    .area-tecnica-grid {
-        grid-template-columns: 1fr;
-    }
+    .contatti-form { padding: 60px 8%; }
 
-    /* Portfolio grid */
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-    }
-
-    /* Form contatti */
-    .contatti-form {
-        padding: 60px 8%;
-    }
-
-    /* Popup */
     .popup-box {
         padding: 30px;
         width: 92%;
@@ -1220,26 +898,16 @@ nav a.active {
 
 @media (max-width: 480px) {
 
-    h1 {
-        font-size: 32px;
-    }
+    h1 { font-size: 32px; }
+    h2 { font-size: 26px; }
 
-    h2 {
-        font-size: 26px;
-    }
-
-    /* Mega menu */
     .mega-negozio {
         grid-template-columns: 1fr;
         gap: 20px;
     }
 
-    /* Popup */
-    .popup-box {
-        padding: 25px;
-    }
+    .popup-box { padding: 25px; }
 
-    /* Form */
     .contatti-form input,
     .contatti-form textarea {
         font-size: 15px;
@@ -1280,9 +948,7 @@ nav a.active {
 .text-left   { text-align: left; }
 .text-right  { text-align: right; }
 
-.text-muted {
-    color: var(--text-muted);
-}
+.text-muted { color: var(--text-muted); }
 
 /* =========================================
    UTILITY — WIDTH
@@ -1297,9 +963,7 @@ nav a.active {
    UTILITY — FLEX
 ========================================= */
 
-.flex {
-    display: flex;
-}
+.flex { display: flex; }
 
 .flex-center {
     display: flex;
@@ -1352,9 +1016,7 @@ nav a.active {
     box-shadow: 0 6px 20px rgba(0,0,0,0.25);
 }
 
-.transition {
-    transition: 0.25s ease;
-}
+.transition { transition: 0.25s ease; }
 
 /* =========================================
    FIX — IMMAGINI
@@ -1373,20 +1035,10 @@ nav a.active {
 }
 
 /* =========================================
-   FIX — LINK HOVER
-========================================= */
-
-a:hover {
-    color: var(--sirio-green);
-}
-
-/* =========================================
    FIX — SCROLL SMOOTH
 ========================================= */
 
-html {
-    scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 /* =========================================
    FIX — SEPARATORE
@@ -1403,34 +1055,18 @@ html {
    FIX — CONTENITORI GRANDI
 ========================================= */
 
-.max-800 {
-    max-width: 800px;
-    margin: 0 auto;
-}
+.max-800  { max-width: 800px;  margin: 0 auto; }
+.max-1000 { max-width: 1000px; margin: 0 auto; }
+.max-1200 { max-width: 1200px; margin: 0 auto; }
 
-.max-1000 {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.max-1200 {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.hero h1,
-.section-title.hero-title {
-    color: var(--accent) !important;
-}
-
-h2, h3 {
-    color: #ffffff !important;
-}
+/* =========================================
+   BOTTONI GLOBALI
+========================================= */
 
 .btn,
 .btn-primary,
 .btn-ghost {
-    background: #1E90FF; /* blu/azzurrino */
+    background: #1E90FF;
     color: white !important;
     padding: 12px 24px;
     border-radius: 6px;
@@ -1446,88 +1082,9 @@ h2, h3 {
     background: #1877d3;
 }
 
-/* ============================
-   COLORI SIRIO
-============================ */
-
-:root {
-    --accent: #8CC63F; /* Verde Sirio */
-}
-
-/* Titoli principali verdi */
-h1, h2, h3 {
-    color: var(--accent) !important;
-}
-
-/* Sottotitoli bianchi */
-.section-subtitle,
-.blog-subtitle,
-.info-grid-text h3,
-.card-servizio h3.subtitle,
-.sottotitolo,
-.sottotitolo-bianco {
-    color: #ffffff !important;
-}
-
-/* ============================
-   SOTTOTITOLI SPECIFICI BIANCHI
-============================ */
-
-h2:contains("Qualità e Affidabilità"),
-h2:contains("Leader nel settore"),
-h2:contains("Soluzioni Personalizzate"),
-h2:contains("Esperti del settore"),
-h2:contains("Qualità Superiore Garantita"),
-h2:contains("Materiali Disponibili"),
-h2:contains("I nostri progetti realizzati"),
-h3:contains("Qualità e Affidabilità"),
-h3:contains("Leader nel settore"),
-h3:contains("Soluzioni Personalizzate"),
-h3:contains("Esperti del settore"),
-h3:contains("Qualità Superiore Garantita"),
-h3:contains("Materiali Disponibili"),
-h3:contains("I nostri progetti realizzati") {
-    color: #ffffff !important;
-}
-
-.sottotitolo-bianco {
-    color: #ffffff !important;
-}
-
-/* TITOLI PRINCIPALI (verdi) */
-h1 {
-    font-size: 42px;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
-h2 {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 15px;
-}
-
-h3 {
-    font-size: 26px;
-    font-weight: 600;
-    margin-bottom: 12px;
-}
-
-/* SOTTOTITOLI BIANCHI */
-.sottotitolo-bianco {
-    color: #ffffff !important;
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 15px;
-}
-
-.menu-negozio:hover .mega-negozio {
-    opacity: 1;
-    pointer-events: auto;
-}
-
-
-/* ====== CATALOGO NEGOZIO ====== */
+/* =========================================
+   CATALOGO — CARD PRODOTTO (versione finale)
+========================================= */
 
 .catalogo-grid {
     display: grid;
@@ -1539,15 +1096,16 @@ h3 {
 .card-prodotto {
     background: #ffffff;
     border: 1px solid var(--border-soft);
-    padding: 20px;
     border-radius: 8px;
+    padding: 20px;
     text-align: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
 }
 
 .card-prodotto:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
 .card-prodotto img {
@@ -1567,112 +1125,3 @@ h3 {
     margin-top: 10px;
     display: inline-block;
 }
-
-.card-prodotto {
-    background: #ffffff;
-    border: 1px solid var(--border-soft);
-    border-radius: 8px;
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.06); /* ombra leggera */
-}
-
-.card-prodotto:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12); /* ombra più forte in hover */
-}
-
-.popup-btn {
-    background: var(--accent); /* il tuo giallo */
-    color: #000;
-    padding: 14px 24px;
-    border-radius: 6px;
-    font-weight: 700;
-    border: none;
-    cursor: pointer;
-    transition: 0.25s;
-    width: 100%;
-}
-
-.popup-btn:hover {
-    background: #ffd84d;
-}
-
-
-.popup-btn {
-    background: var(--accent) !important;
-    color: #000 !important;
-    padding: 14px 24px;
-    border-radius: 6px;
-    font-weight: 700;
-    border: none;
-    cursor: pointer;
-    transition: 0.25s;
-    width: 100%;
-}
-
-.popup-btn:hover {
-    background: #ffd84d !important;
-}
-
-.filebox-privacy {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: 10px;
-}
-
-.filebox-privacy label {
-    margin: 0;
-    font-size: 14px;
-    color: var(--text-muted);
-}
-
-/* Popup larghezza e scroll */
-.popup-box {
-    background: #0d0d0d;
-    border: 1px solid var(--border-soft);
-    border-radius: 12px;
-    width: 90%;
-    max-width: 1000px;
-    max-height: 90vh;
-    overflow-y: auto;
-    padding: 40px;
-    position: relative;
-    animation: popupFade 0.35s ease forwards;
-}
-
-/* Bottone giallo */
-.popup-btn {
-    background: var(--accent) !important;
-    color: #000 !important;
-    padding: 14px 24px;
-    border-radius: 6px;
-    font-weight: 700;
-    border: none;
-    cursor: pointer;
-    transition: 0.25s;
-    width: 100%;
-}
-
-.popup-btn:hover {
-    background: #ffd84d !important;
-}
-
-/* Privacy allineata */
-.filebox-privacy {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: 10px;
-}
-
-.filebox-privacy label {
-    margin: 0;
-    font-size: 14px;
-    color: var(--text-muted);
-}
-
-
-
