@@ -1125,3 +1125,130 @@ html { scroll-behavior: smooth; }
     margin-top: 10px;
     display: inline-block;
 }
+
+/* =========================================
+   PAGINE INTERNE – LAYOUT C1 (INDUSTRIALE PULITO)
+========================================= */
+
+/* Titolo principale */
+.section h1 {
+    font-size: 42px;
+    color: var(--sirio-green);
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+}
+
+.section h1::after {
+    content: "";
+    width: 80px;
+    height: 3px;
+    background: var(--sirio-green);
+    display: block;
+    margin: 12px auto 0;
+    border-radius: 2px;
+}
+
+/* Sottotitoli */
+.section h2 {
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.section h3 {
+    font-size: 22px;
+    color: var(--sirio-green);
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* Testo */
+.section p {
+    color: var(--text-muted);
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.section ul {
+    margin: 15px 0 25px 20px;
+}
+
+.section ul li {
+    color: var(--text-muted);
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+/* Griglia testo + immagine */
+.info-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 50px;
+    align-items: center;
+    margin-top: 40px;
+}
+
+/* Immagine interna */
+.info-grid-img img {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid #1a1a1a;
+    box-shadow: 0 0 20px rgba(140, 198, 63, 0.15);
+    transition: 0.3s ease;
+}
+
+.info-grid-img img:hover {
+    box-shadow: 0 0 30px rgba(140, 198, 63, 0.25);
+}
+
+/* CTA finale */
+.section .btn-primary {
+    background: var(--sirio-green);
+    color: #000 !important;
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-weight: 700;
+    display: inline-block;
+    transition: 0.25s ease;
+}
+
+.section .btn-primary:hover {
+    background: #7ab532;
+}
+
+/* =========================================
+   RESPONSIVE PAGINE INTERNE
+========================================= */
+
+@media (max-width: 1024px) {
+    .info-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .info-grid-img img {
+        margin: 0 auto;
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .section h1 {
+        font-size: 32px;
+    }
+
+    .section h2 {
+        font-size: 24px;
+    }
+
+    .section p {
+        font-size: 16px;
+    }
+
+    .info-grid-img img {
+        max-width: 100%;
+    }
+}
+
