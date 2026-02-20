@@ -1005,11 +1005,15 @@ nav a.active {
     border: 1px solid var(--border-soft);
     border-radius: 12px;
     width: 90%;
-    max-width: 600px;
+    max-width: 1000px;   /* LARGHEZZA AUMENTATA */
     padding: 40px;
     position: relative;
     animation: popupFade 0.35s ease forwards;
+
+    max-height: 90vh;    /* EVITA CHE ESCa DALLO SCHERMO */
+    overflow-y: auto;    /* AGGIUNGE SCROLL SE SERVE */
 }
+
 
 @keyframes popupFade {
     from { transform: translateY(20px); opacity: 0; }
@@ -1594,5 +1598,6 @@ h3 {
 .popup-btn:hover {
     background: #ffd84d;
 }
+
 
 
