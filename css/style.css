@@ -1629,4 +1629,50 @@ h3 {
     color: var(--text-muted);
 }
 
+/* Popup larghezza e scroll */
+.popup-box {
+    background: #0d0d0d;
+    border: 1px solid var(--border-soft);
+    border-radius: 12px;
+    width: 90%;
+    max-width: 1000px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 40px;
+    position: relative;
+    animation: popupFade 0.35s ease forwards;
+}
+
+/* Bottone giallo */
+.popup-btn {
+    background: var(--accent) !important;
+    color: #000 !important;
+    padding: 14px 24px;
+    border-radius: 6px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: 0.25s;
+    width: 100%;
+}
+
+.popup-btn:hover {
+    background: #ffd84d !important;
+}
+
+/* Privacy allineata */
+.filebox-privacy {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.filebox-privacy label {
+    margin: 0;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+
 
