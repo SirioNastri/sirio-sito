@@ -1600,4 +1600,20 @@ h3 {
 }
 
 
+.popup-btn {
+    background: var(--accent) !important;
+    color: #000 !important;
+    padding: 14px 24px;
+    border-radius: 6px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: 0.25s;
+    width: 100%;
+}
+
+.popup-btn:hover {
+    background: #ffd84d !important;
+}
+
 
