@@ -1616,4 +1616,17 @@ h3 {
     background: #ffd84d !important;
 }
 
+.filebox-privacy {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.filebox-privacy label {
+    margin: 0;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
 
