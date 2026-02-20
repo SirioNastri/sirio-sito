@@ -1579,4 +1579,20 @@ h3 {
     box-shadow: 0 8px 20px rgba(0,0,0,0.12); /* ombra più forte in hover */
 }
 
+.popup-btn {
+    background: var(--accent); /* il tuo giallo */
+    color: #000;
+    padding: 14px 24px;
+    border-radius: 6px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: 0.25s;
+    width: 100%;
+}
+
+.popup-btn:hover {
+    background: #ffd84d;
+}
+
 
