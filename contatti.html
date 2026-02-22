@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contatti – Sirio Nastri Trasportatori</title>
-<link rel="stylesheet" href="css/style.css">
-</head>
-
 <body>
 
 <header>
@@ -23,35 +14,29 @@
 
             <div class="mega-negozio">
 
-                <!-- COLONNA 1: NASTRI TRASPORTATORI -->
                 <div class="colonna">
-                 <h4>Nastri trasportatori</h4>
-<a href="prodotto-nastro-pvc.html">Nastro in PVC</a>
-<a href="prodotto-nastro-pu.html">Nastro in PU</a>
-<a href="prodotto-nastro-gomma.html">Nastro in gomma</a>
-<a href="prodotto-nastro-alimentare.html">Nastro alimentare (FDA)</a>
-<a href="prodotto-nastro-alte-temperature.html">Nastro per alte temperature</a>
-<a href="prodotto-nastro-modulare.html">Nastro modulare in plastica</a>
-
+                    <h4>Nastri trasportatori</h4>
+                    <a href="prodotto-nastro-pvc.html">Nastro in PVC</a>
+                    <a href="prodotto-nastro-pu.html">Nastro in PU</a>
+                    <a href="prodotto-nastro-gomma.html">Nastro in gomma</a>
+                    <a href="prodotto-nastro-alimentare.html">Nastro alimentare (FDA)</a>
+                    <a href="prodotto-nastro-alte-temperature.html">Nastro per alte temperature</a>
+                    <a href="prodotto-nastro-modulare.html">Nastro modulare in plastica</a>
                 </div>
 
-                <!-- COLONNA 2: TRASPORTATORI COMPLETI -->
                 <div class="colonna">
                     <h4>Trasportatori completi</h4>
-<a href="prodotto-trasportatore-nastro.html">Lineari</a>
-<a href="prodotto-trasportatore-inclinato.html">Inclinati</a>
-<a href="prodotto-trasportatore-curva.html">Curvi</a>
-<a href="prodotto-trasportatore-rulli.html">Acciaio inox / Rulliere</a>
-<a href="prodotto-trasportatore-nastro.html">Personalizzati</a>
-
+                    <a href="prodotto-trasportatore-nastro.html">Lineari</a>
+                    <a href="prodotto-trasportatore-inclinato.html">Inclinati</a>
+                    <a href="prodotto-trasportatore-curva.html">Curvi</a>
+                    <a href="prodotto-trasportatore-rulli.html">Acciaio inox / Rulliere</a>
+                    <a href="prodotto-trasportatore-nastro.html">Personalizzati</a>
                 </div>
 
-                <!-- COLONNA 3: COMPONENTI -->
                 <div class="colonna">
-                   <h4>Componenti</h4>
-<a href="prodotto-rulli.html">Rulli</a>
-<a href="prodotto-tamburi.html">Tamburi e mototamburi</a>
-
+                    <h4>Componenti</h4>
+                    <a href="prodotto-rulli.html">Rulli</a>
+                    <a href="prodotto-tamburi.html">Tamburi e mototamburi</a>
                 </div>
 
             </div>
@@ -59,9 +44,8 @@
 
         <div class="menu-voce"><a href="portfolio.html">Portfolio</a></div>
         <div class="menu-voce"><a href="area-tecnica.html">Area Tecnica</a></div>
-        <div class="menu-voce"><a href="contatti.html">Contatti</a></div>
+        <div class="menu-voce"><a href="contatti.html" class="active">Contatti</a></div>
 
-        <!-- ⭐ BOTTONE CHE APRE IL POPUP -->
         <div class="menu-voce">
             <a href="#" class="btn-preventivo-nav" onclick="apriPopup()">Richiedi preventivo</a>
         </div>
@@ -70,6 +54,9 @@
 </header>
 
 
+<!-- ============================
+     TITOLO PAGINA
+============================ -->
 <section class="section">
     <h1>Contatti</h1>
 
@@ -79,39 +66,56 @@
 </section>
 
 
-<section class="contatti-wrapper">
+<!-- ============================
+     BLOCCO CONTATTI + FORM
+============================ -->
+<section class="contatti-wrapper" style="
+    padding:60px 10%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+">
 
-    <div class="contatti-left">
+    <!-- COLONNA SINISTRA -->
+    <div class="contatti-left" style="text-align:left;">
 
-        <h2>Telefono</h2>
-        <p>(+39) 011 953 94 92</p>
+        <h2 style="color:var(--sirio-green);">Telefono</h2>
+        <p style="color:var(--text-muted); margin-bottom:25px;">(+39) 011 953 94 92</p>
 
-        <h2>Email</h2>
-        <p>info@sirionastri.it</p>
+        <h2 style="color:var(--sirio-green);">Email</h2>
+        <p style="color:var(--text-muted); margin-bottom:25px;">info@sirionastri.it</p>
 
-        <h2>Sede</h2>
-        <p>
+        <h2 style="color:var(--sirio-green);">Sede</h2>
+        <p style="color:var(--text-muted); line-height:1.7; margin-bottom:25px;">
             Via Carlo Leone, 48<br>
             10098 Rivoli, Cascine Vica (TO)<br>
             Italia
         </p>
 
-        <h2>Orari di apertura</h2>
-        <p>
+        <h2 style="color:var(--sirio-green);">Orari di apertura</h2>
+        <p style="color:var(--text-muted); line-height:1.7; margin-bottom:25px;">
             Lunedì – Venerdì<br>
             08:00 – 12:30<br>
             14:00 – 18:00
         </p>
 
-        <div class="box-urgente">
-            <h3>Assistenza tecnica urgente</h3>
-            <p>Per guasti, fermo linea o emergenze produttive:</p>
-            <p><strong>+39 333 123 4567</strong></p>
-            <p>Risposta immediata di un tecnico specializzato.</p>
+        <div class="box-urgente" style="
+            background:#0d0d0d;
+            border:1px solid var(--border-soft);
+            padding:20px;
+            border-radius:10px;
+            margin-top:30px;
+        ">
+            <h3 style="color:var(--sirio-green); margin-bottom:10px;">Assistenza tecnica urgente</h3>
+            <p style="color:var(--text-muted);">Per guasti, fermo linea o emergenze produttive:</p>
+            <p style="font-size:20px; font-weight:700; margin:10px 0;">+39 333 123 4567</p>
+            <p style="color:var(--text-muted);">Risposta immediata di un tecnico specializzato.</p>
         </div>
 
     </div>
 
+
+    <!-- COLONNA DESTRA: FORM -->
     <div class="contatti-right">
 
         <form class="contatti-form">
@@ -132,8 +136,23 @@
             <textarea rows="5"></textarea>
 
             <label>Allega un file</label>
-            <div class="file-drop">
-                Trascina il file qui oppure clicca per caricarlo
+            <div class="file-drop" style="
+                background:#0d0d0d;
+                border:1px dashed var(--border-soft);
+                padding:20px;
+                text-align:center;
+                border-radius:8px;
+                color:var(--text-muted);
+                cursor:pointer;
+                margin-bottom:20px;
+            ">
+                Fai clic o trascina il file qui
+                <input type="file" style="display:none;">
+            </div>
+
+            <div style="display:flex; align-items:center; gap:10px; margin-bottom:20px;">
+                <input type="checkbox" id="privacy">
+                <label for="privacy" style="color:var(--text-muted);">Accetto la Privacy Policy</label>
             </div>
 
             <button class="btn btn-primary">Invia</button>
@@ -144,8 +163,12 @@
 
 </section>
 
-<section class="mappa-google">
-    <h2>Dove siamo</h2>
+
+<!-- ============================
+     MAPPA GOOGLE
+============================ -->
+<section class="mappa-google" style="padding:60px 10%; text-align:center;">
+    <h2 style="color:var(--sirio-green); margin-bottom:20px;">Dove siamo</h2>
 
     <iframe 
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2849.676040983682!2d7.560998!3d45.067640!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47886d8c2c2f0f3f%3A0x8e3b9e2b2d4c3f4!2sVia%20Carlo%20Leone%2C%2048%2C%2010098%20Rivoli%20TO!5e0!3m2!1sit!2sit!4v0000000000000"
@@ -162,25 +185,17 @@
     © 2026 Sirio Nastri Trasportatori — Tutti i diritti riservati
 </footer>
 
-<!-- ============================
-     POPUP COMPLETO
-============================ -->
+<!-- POPUP (resta identico al tuo) -->
 <div class="popup-overlay" id="popup-overlay">
-
     <div class="popup-box" id="popup-preventivo">
-
         <span class="popup-close" onclick="chiudiPopup()">&times;</span>
-
         <div class="popup-content" style="display:flex; gap:40px;">
-
             <!-- SINISTRA -->
             <div class="popup-col popup-left" style="flex:1;">
                 <h2>Richiedi Preventivo</h2>
-
                 <p class="popup-desc">
                     Un nostro tecnico ti risponderà entro 24 ore con una soluzione su misura per la tua linea produttiva.
                 </p>
-
                 <h3>Perché contattarci</h3>
                 <ul class="popup-points">
                     <li>Consulenza tecnica gratuita</li>
@@ -189,14 +204,13 @@
                     <li>Supporto diretto con un progettista</li>
                     <li>Risposta rapida e professionale</li>
                 </ul>
-
                 <h3>Chi ti risponderà</h3>
                 <p>
                     Il nostro team tecnico analizzerà la tua richiesta e ti guiderà nella scelta del nastro o del trasportatore più adatto.
                 </p>
             </div>
 
-            <!-- DESTRA FORM -->
+            <!-- DESTRA -->
             <div class="popup-col popup-right" style="flex:1;">
                 <form class="popup-form">
 
@@ -227,7 +241,6 @@
             </div>
 
         </div>
-
     </div>
 </div>
 
@@ -241,24 +254,6 @@ function chiudiPopup() {
     document.getElementById("popup-preventivo").classList.remove("active");
     document.getElementById("popup-overlay").classList.remove("active");
 }
-
-document.querySelectorAll(".btn-preventivo-nav, .btn-preventivo").forEach(btn => {
-    btn.addEventListener("click", function(e) {
-        e.preventDefault();
-        apriPopup();
-    });
-});
 </script>
 
-
-
 </body>
-</html>
-
-
-
-
-
-
-
-
