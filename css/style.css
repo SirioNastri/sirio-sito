@@ -59,6 +59,16 @@ h3 { font-size: 26px; margin-bottom: 12px; }
     color: var(--sirio-green) !important;
 }
 
+.section p,
+.section ul li {
+    color: var(--text-muted) !important;
+}
+
+.info-grid-img img {
+    box-shadow: 0 0 20px rgba(140, 198, 63, 0.15) !important;
+    border: 1px solid var(--border-soft) !important;
+}
+
 /* =========================================
    HEADER
 ========================================= */
@@ -1261,5 +1271,6 @@ html { scroll-behavior: smooth; }
         max-width: 100%;
     }
 }
+
 
 
