@@ -60,7 +60,7 @@
 <section class="section">
     <h1>Contatti</h1>
 
-    <p style="text-align:center; color:var(--text-muted); max-width:900px; margin:0 auto;">
+    <p class="contatti-desc">
         Parla con il nostro team tecnico per informazioni, assistenza e richieste commerciali.
     </p>
 </section>
@@ -69,47 +69,77 @@
 <!-- ============================
      BLOCCO CONTATTI + FORM
 ============================ -->
-<section class="contatti-wrapper" style="
-    padding:60px 10%;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:50px;
-">
+<section class="contatti-wrapper">
 
     <!-- COLONNA SINISTRA -->
-    <div class="contatti-left" style="text-align:left;">
+    <div class="contatti-left">
 
-        <h2 style="color:var(--sirio-green);">Telefono</h2>
-        <p style="color:var(--text-muted); margin-bottom:25px;">(+39) 011 953 94 92</p>
+        <!-- TELEFONO -->
+        <div class="contatti-item">
+            <div class="icon">
+                <svg width="26" height="26" fill="var(--sirio-green)" viewBox="0 0 24 24">
+                    <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.72 11.72 0 003.68.59 1 1 0 011 1v3.5a1 1 0 01-1 1A17.5 17.5 0 012 6a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.01l-2.23 2.1z"/>
+                </svg>
+            </div>
+            <div>
+                <h2>Telefono</h2>
+                <p>(+39) 011 953 94 92</p>
+            </div>
+        </div>
 
-        <h2 style="color:var(--sirio-green);">Email</h2>
-        <p style="color:var(--text-muted); margin-bottom:25px;">info@sirionastri.it</p>
+        <!-- EMAIL -->
+        <div class="contatti-item">
+            <div class="icon">
+                <svg width="26" height="26" fill="var(--sirio-green)" viewBox="0 0 24 24">
+                    <path d="M20 4H4a2 2 0 00-2 2v1l10 6 10-6V6a2 2 0 00-2-2zm0 4.236l-8.445 5.067a1 1 0 01-1.11 0L4 8.236V18a2 2 0 002 2h12a2 2 0 002-2V8.236z"/>
+                </svg>
+            </div>
+            <div>
+                <h2>Email</h2>
+                <p>info@sirionastri.it</p>
+            </div>
+        </div>
 
-        <h2 style="color:var(--sirio-green);">Sede</h2>
-        <p style="color:var(--text-muted); line-height:1.7; margin-bottom:25px;">
-            Via Carlo Leone, 48<br>
-            10098 Rivoli, Cascine Vica (TO)<br>
-            Italia
-        </p>
+        <!-- SEDE -->
+        <div class="contatti-item">
+            <div class="icon">
+                <svg width="26" height="26" fill="var(--sirio-green)" viewBox="0 0 24 24">
+                    <path d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 119.5 9 2.5 2.5 0 0112 11.5z"/>
+                </svg>
+            </div>
+            <div>
+                <h2>Sede</h2>
+                <p>
+                    Via Carlo Leone, 48<br>
+                    10098 Rivoli, Cascine Vica (TO)<br>
+                    Italia
+                </p>
+            </div>
+        </div>
 
-        <h2 style="color:var(--sirio-green);">Orari di apertura</h2>
-        <p style="color:var(--text-muted); line-height:1.7; margin-bottom:25px;">
-            Lunedì – Venerdì<br>
-            08:00 – 12:30<br>
-            14:00 – 18:00
-        </p>
+        <!-- ORARI -->
+        <div class="contatti-item">
+            <div class="icon">
+                <svg width="26" height="26" fill="var(--sirio-green)" viewBox="0 0 24 24">
+                    <path d="M12 1a11 11 0 1011 11A11.013 11.013 0 0012 1zm1 11h4a1 1 0 010 2h-5a1 1 0 01-1-1V6a1 1 0 012 0z"/>
+                </svg>
+            </div>
+            <div>
+                <h2>Orari di apertura</h2>
+                <p>
+                    Lunedì – Venerdì<br>
+                    08:00 – 12:30<br>
+                    14:00 – 18:00
+                </p>
+            </div>
+        </div>
 
-        <div class="box-urgente" style="
-            background:#0d0d0d;
-            border:1px solid var(--border-soft);
-            padding:20px;
-            border-radius:10px;
-            margin-top:30px;
-        ">
-            <h3 style="color:var(--sirio-green); margin-bottom:10px;">Assistenza tecnica urgente</h3>
-            <p style="color:var(--text-muted);">Per guasti, fermo linea o emergenze produttive:</p>
-            <p style="font-size:20px; font-weight:700; margin:10px 0;">+39 333 123 4567</p>
-            <p style="color:var(--text-muted);">Risposta immediata di un tecnico specializzato.</p>
+        <!-- URGENZA -->
+        <div class="box-urgente">
+            <h3>Assistenza tecnica urgente</h3>
+            <p>Per guasti, fermo linea o emergenze produttive:</p>
+            <p class="urgente-numero">+39 333 123 4567</p>
+            <p>Risposta immediata di un tecnico specializzato.</p>
         </div>
 
     </div>
@@ -136,23 +166,14 @@
             <textarea rows="5"></textarea>
 
             <label>Allega un file</label>
-            <div class="file-drop" style="
-                background:#0d0d0d;
-                border:1px dashed var(--border-soft);
-                padding:20px;
-                text-align:center;
-                border-radius:8px;
-                color:var(--text-muted);
-                cursor:pointer;
-                margin-bottom:20px;
-            ">
+            <div class="file-drop">
                 Fai clic o trascina il file qui
-                <input type="file" style="display:none;">
+                <input type="file">
             </div>
 
-            <div style="display:flex; align-items:center; gap:10px; margin-bottom:20px;">
+            <div class="privacy-box">
                 <input type="checkbox" id="privacy">
-                <label for="privacy" style="color:var(--text-muted);">Accetto la Privacy Policy</label>
+                <label for="privacy">Accetto la Privacy Policy</label>
             </div>
 
             <button class="btn btn-primary">Invia</button>
@@ -167,8 +188,8 @@
 <!-- ============================
      MAPPA GOOGLE
 ============================ -->
-<section class="mappa-google" style="padding:60px 10%; text-align:center;">
-    <h2 style="color:var(--sirio-green); margin-bottom:20px;">Dove siamo</h2>
+<section class="mappa-google">
+    <h2>Dove siamo</h2>
 
     <iframe 
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2849.676040983682!2d7.560998!3d45.067640!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47886d8c2c2f0f3f%3A0x8e3b9e2b2d4c3f4!2sVia%20Carlo%20Leone%2C%2048%2C%2010098%20Rivoli%20TO!5e0!3m2!1sit!2sit!4v0000000000000"
@@ -257,3 +278,4 @@ function chiudiPopup() {
 </script>
 
 </body>
+
