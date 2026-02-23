@@ -166,51 +166,44 @@ nav a.active {
 }
 
 /* =========================================
-   HOME — INFO GRID
+   HOME — INFO GRID (solo override locale)
 ========================================= */
 
-.info-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    padding: 60px 10%;
-    align-items: center;
-}
-
-/* Immagine */
-.info-grid-img img {
-    width: 100%;
-    border-radius: 10px;
-    border: 1px solid var(--border-soft);
-}
-
-/* Titolo "Sirio Nastri" */
+/* Titolo "Sirio Nastri:" */
 .info-grid-text h2 {
-    font-size: 48px;        /* più grande */
-    font-weight: 800;       /* grassetto forte */
-    margin-bottom: 40px;    /* meno spazio sotto */
-    text-align: center;     /* centrato */
+    font-size: 48px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-/* Paragrafo */
+/* Paragrafi della prima sezione */
 .info-grid-text p {
+    text-align: center;
     color: var(--text-muted);
     font-size: 17px;
     line-height: 1.7;
-    text-align: center;     /* centrato */
 }
 
 /* =========================================
-   SEZIONE "CHI SIAMO"
+   SEZIONE "CHI SIAMO" (solo testo)
 ========================================= */
 
+/* Titolo "Chi Siamo" — NON tocca i global titles */
 .section-title {
+    margin-top: 80px;
+    margin-bottom: 20px;
     text-align: center;
-    margin-top: 100px;      /* lo spinge più in basso */
-    margin-bottom: 20px;    /* avvicina il testo sotto */
-    font-size: 36px;        /* più grande e visibile */
-    font-weight: 700;
 }
+
+/* Testo sotto "Chi Siamo" allineato a sinistra */
+.section-text p {
+    text-align: left;
+    color: var(--text-muted);
+    font-size: 17px;
+    line-height: 1.7;
+}
+
 
 
 /* =========================================
@@ -1213,6 +1206,7 @@ html { scroll-behavior: smooth; }
         max-width: 100%;
     }
 }
+
 
 
 
