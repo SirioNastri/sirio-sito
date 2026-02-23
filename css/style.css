@@ -185,7 +185,7 @@ nav a.active {
 
 .info-grid-text h2 {
     font-size: 32px;
-    margin-bottom: 60px;
+    margin-bottom: 100px;
 }
 
 .info-grid-text p {
@@ -1194,6 +1194,7 @@ html { scroll-behavior: smooth; }
         max-width: 100%;
     }
 }
+
 
 
 
