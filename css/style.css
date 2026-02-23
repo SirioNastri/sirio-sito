@@ -199,22 +199,25 @@ nav a.active {
 }
 
 /* Immagine NON enorme */
-.chi-siamo-img {
+.info-grid-img img {
     width: 100%;
-    max-width: 420px;
+    max-width: 550px; /* più grande, come nella tua immagine originale */
     border-radius: 10px;
     border: 1px solid var(--border-soft);
 }
 
-/* Testo ordinato a destra */
-.chi-siamo-text {
+
+.info-grid-text {
     text-align: left;
-    color: var(--text-muted);
-    font-size: 17px;
-    line-height: 1.7;
+    padding: 0;
+    margin: 0;
 }
 
-
+.info-grid-text p {
+    text-align: left;
+    margin: 0 0 20px 0;
+    line-height: 1.7;
+}
 
 
 /* =========================================
@@ -1217,6 +1220,7 @@ html { scroll-behavior: smooth; }
         max-width: 100%;
     }
 }
+
 
 
 
