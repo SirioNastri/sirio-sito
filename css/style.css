@@ -174,15 +174,16 @@ nav a.active {
     font-size: 18px;
     line-height: 1.6;
     text-align: left;
+    display: flex;          /* TRUCCO MAGICO */
+    flex-wrap: wrap;        /* permette di andare a capo */
 }
 
-/* "Sirio Nastri:" più grande, verde, ma inline */
 .hero-title {
     font-size: 26px;
     font-weight: 800;
     color: var(--sirio-green);
-    white-space: nowrap;   /* NON va mai a capo */
     margin-right: 6px;
+    white-space: nowrap;    /* NON va mai a capo */
 }
 
 
@@ -1222,6 +1223,7 @@ html { scroll-behavior: smooth; }
         max-width: 100%;
     }
 }
+
 
 
 
