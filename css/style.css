@@ -169,20 +169,17 @@ nav a.active {
    HOME — INFO GRID (solo override locale)
 ========================================= */
 
-/* Titolo "Sirio Nastri:" */
-.info-grid-text h2 {
-    font-size: 48px;
-    font-weight: 800;
-    text-align: center;
-    margin-bottom: 40px;
+.hero-text {
+    color: var(--text-muted);
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: left;
 }
 
-/* Paragrafi della prima sezione */
-.info-grid-text p {
-    text-align: center;
-    color: var(--text-muted);
-    font-size: 17px;
-    line-height: 1.7;
+.hero-title {
+    font-size: 24px;     /* più grande ma NON enorme */
+    font-weight: 800;
+    margin-right: 4px;
 }
 
 /* =========================================
@@ -1220,6 +1217,7 @@ html { scroll-behavior: smooth; }
         max-width: 100%;
     }
 }
+
 
 
 
