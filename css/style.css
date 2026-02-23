@@ -1292,16 +1292,38 @@ html { scroll-behavior: smooth; }
     border: 1px solid var(--sirio-blue);
 }
 
+/* ============================
+   SEZIONE CONTATTI – LAYOUT DESKTOP
+============================ */
 .contatti-wrapper {
     display: flex;
     gap: 60px;
-    padding: 40px 40px; /* spazio ai lati */
+    padding: 40px 40px;
+    position: relative;
+}
+
+/* Linea verticale centrale */
+.contatti-wrapper::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    bottom: 20px;
+    width: 2px;
+    background: #e0e0e0; /* grigio elegante */
 }
 
 /* Colonna sinistra */
 .contatti-left {
     flex: 1;
-    padding-left: 20px; /* stacca dal bordo */
+    padding-left: 20px;
+    padding-right: 40px; /* spazio dalla linea */
+}
+
+/* Colonna destra */
+.contatti-right {
+    flex: 1;
+    padding-left: 40px; /* spazio dalla linea */
 }
 
 /* Icona + testo */
@@ -1320,6 +1342,77 @@ html { scroll-behavior: smooth; }
     fill: #00aa55; /* verde Sirio */
     margin-top: 4px;
 }
+
+/* Box assistenza urgente */
+.box-urgente {
+    background: #f7f7f7;
+    padding: 20px;
+    border-left: 4px solid #00aa55;
+    border-radius: 6px;
+    margin-top: 20px;
+}
+
+/* ============================
+   FORM CONTATTI
+============================ */
+.contatti-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contatti-form input,
+.contatti-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.file-drop {
+    background: #fafafa;
+    border: 2px dashed #ccc;
+    padding: 20px;
+    text-align: center;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* ============================
+   RESPONSIVE MOBILE
+============================ */
+@media (max-width: 768px) {
+
+    .contatti-wrapper {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    /* La linea verticale sparisce */
+    .contatti-wrapper::before {
+        display: none;
+    }
+
+    .contatti-left,
+    .contatti-right {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .contatti-left {
+        margin-bottom: 40px;
+    }
+
+    .contatto-item {
+        gap: 12px;
+    }
+
+    .contatto-icona svg {
+        width: 26px;
+        height: 26px;
+    }
+}
+
 
 
 
