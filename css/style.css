@@ -1310,7 +1310,7 @@ html { scroll-behavior: smooth; }
     top: 20px;
     bottom: 20px;
     width: 1px;
-    background: #d9d9d9;
+    background: #dcdcdc;
 }
 
 /* Colonna sinistra */
@@ -1319,10 +1319,48 @@ html { scroll-behavior: smooth; }
     padding-right: 40px;
 }
 
-/* Colonna destra */
+/* Colonna destra (stile popup preventivo) */
 .contatti-right {
     flex: 1;
     padding-left: 40px;
+}
+
+.contatti-form {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Label */
+.contatti-form label {
+    font-weight: 600;
+    color: #222;
+}
+
+/* Input */
+.contatti-form input,
+.contatti-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    background: #fafafa;
+}
+
+/* File drop */
+.file-drop {
+    background: #f5f5f5;
+    border: 2px dashed #ccc;
+    padding: 20px;
+    text-align: center;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #666;
 }
 
 /* Icona + testo */
@@ -1333,13 +1371,14 @@ html { scroll-behavior: smooth; }
     margin-bottom: 28px;
 }
 
-/* SVG icone grigie */
+/* SVG icone bianche */
 .contatto-icona svg {
     width: 28px;
     height: 28px;
     flex-shrink: 0;
-    fill: #555; /* grigio scuro elegante */
+    fill: #ffffff; /* BIANCO */
     margin-top: 4px;
+    filter: drop-shadow(0 0 2px rgba(0,0,0,0.3)); /* per farle risaltare */
 }
 
 /* Titoli sinistra */
@@ -1349,50 +1388,13 @@ html { scroll-behavior: smooth; }
     color: #222;
 }
 
-/* Box assistenza urgente */
+/* Box urgente */
 .box-urgente {
     background: #f5f5f5;
     padding: 18px;
     border-left: 4px solid #00aa55;
     border-radius: 6px;
     margin-top: 25px;
-}
-
-/* ============================
-   FORM CONTATTI – PULITO
-============================ */
-.contatti-form {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-}
-
-.contatti-form label {
-    font-weight: 600;
-    color: #333;
-}
-
-.contatti-form input,
-.contatti-form textarea {
-    width: 100%;
-    padding: 12px 14px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 15px;
-}
-
-.contatti-form textarea {
-    resize: vertical;
-}
-
-.file-drop {
-    background: #fafafa;
-    border: 2px dashed #ccc;
-    padding: 20px;
-    text-align: center;
-    border-radius: 6px;
-    cursor: pointer;
-    color: #666;
 }
 
 /* ============================
@@ -1426,7 +1428,13 @@ html { scroll-behavior: smooth; }
         width: 24px;
         height: 24px;
     }
+
+    .contatti-form {
+        padding: 20px;
+    }
 }
+
+
 
 
 
