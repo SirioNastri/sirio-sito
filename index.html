@@ -231,7 +231,7 @@
     <div class="card-servizio">
       <img src="sopralluogo-tecnico.jpg" alt="Sopralluogo tecnico">
       <h3 class="sottotitolo-bianco">Sopralluogo tecnico</h3>
-<a href="sopralluogo-tecnico.html" class="btn-ghost">Scopri di più →</a>
+<a href="#" class="btn-ghost" onclick="apriPopupInterno('sopralluogo-tecnico.html')">Scopri di più →</a>
     </div>
 
     <!-- Progettazione 3D -->
@@ -374,6 +374,22 @@
     </div>
 </div>
 
+    <!-- ============================
+     POPUP PAGINE INTERNE
+============================ -->
+<div class="popup-overlay" id="popup-interno-overlay">
+
+    <div class="popup-box" id="popup-interno-box">
+
+        <span class="popup-close" onclick="chiudiPopupInterno()">&times;</span>
+
+        <div id="popup-interno-content">
+            <!-- Qui dentro verrà caricata la pagina interna -->
+        </div>
+
+    </div>
+</div>
+    
 <script>
 function apriPopup() {
     document.getElementById("popup-preventivo").classList.add("active");
@@ -392,8 +408,25 @@ document.querySelectorAll(".btn-preventivo-nav, .btn-preventivo").forEach(btn =>
     });
 });
 </script> 
+
+    <script>
+function apriPopupInterno(url) {
+    fetch(url)
+        .then(res => res.text())
+        .then(html => {
+            document.getElementById("popup-interno-content").innerHTML = html;
+            document.getElementById("popup-interno-overlay").classList.add("active");
+        });
+}
+
+function chiudiPopupInterno() {
+    document.getElementById("popup-interno-overlay").classList.remove("active");
+}
+</script>
+
         </body>
 </html>
+
 
 
 
