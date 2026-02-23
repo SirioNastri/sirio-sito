@@ -1313,7 +1313,7 @@ html { scroll-behavior: smooth; }
     background: #dcdcdc;
 }
 
-/* Colonna sinistra */
+/* COLONNA SINISTRA */
 .contatti-left {
     flex: 1;
     padding-right: 40px;
@@ -1324,29 +1324,31 @@ html { scroll-behavior: smooth; }
     display: flex;
     align-items: flex-start;
     gap: 14px;
-    margin-bottom: 28px;
+    margin-bottom: 26px;
 }
 
-/* SVG icone VERDI */
+/* SVG icone VERDI SIRIO */
 .contatto-icona svg {
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
     flex-shrink: 0;
-    fill: #00aa55; /* verde Sirio */
+    fill: #00aa55;
     margin-top: 4px;
 }
 
-/* Titoletti (Telefono, Email, Sede, Orari) VERDI */
+/* Titoletti VERDI (come popup) */
 .contatti-left h2 {
     font-size: 20px;
     margin-bottom: 4px;
-    color: #00aa55; /* verde Sirio */
+    color: #00aa55;
+    font-weight: 600;
 }
 
-/* Testo sotto (numeri, email, indirizzo) BIANCO */
+/* Testo sotto BIANCO (come popup) */
 .contatti-left p {
-    color: #ffffff; /* bianco */
+    color: #ffffff;
     margin: 0;
+    line-height: 1.4;
 }
 
 /* Sezione urgente SENZA RIQUADRO */
@@ -1354,22 +1356,22 @@ html { scroll-behavior: smooth; }
     background: none;
     padding: 0;
     border: none;
-    margin-top: 25px;
+    margin-top: 30px;
 }
 
-/* Titolo urgente verde */
 .box-urgente h3 {
     color: #00aa55;
     margin-bottom: 6px;
+    font-size: 20px;
 }
 
-/* Testo urgente bianco */
 .box-urgente p {
     color: #ffffff;
+    margin: 0;
 }
 
 /* ============================
-   FORM CONTATTI – PULITO
+   FORM CONTATTI – STILE PULITO
 ============================ */
 .contatti-right {
     flex: 1;
@@ -1379,7 +1381,7 @@ html { scroll-behavior: smooth; }
 .contatti-form {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 16px;
 }
 
 .contatti-form label {
@@ -1435,10 +1437,12 @@ html { scroll-behavior: smooth; }
     }
 
     .contatto-icona svg {
-        width: 24px;
-        height: 24px;
+        width: 22px;
+        height: 22px;
     }
 }
+
+
 
 
 
