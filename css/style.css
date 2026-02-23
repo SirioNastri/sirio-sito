@@ -247,6 +247,7 @@ nav a.active {
 
 .titolo-verde {
     color: var(--sirio-green);
+    font-weight: 800;
 }
 
 /* =========================================
@@ -1227,6 +1228,7 @@ html { scroll-behavior: smooth; }
         max-width: 100%;
     }
 }
+
 
 
 
