@@ -1292,13 +1292,7 @@ html { scroll-behavior: smooth; }
     border: 1px solid var(--sirio-blue);
 }
 
-.section h1 {
-    text-align: left;
-    border-bottom: 4px solid #00aa55; /* verde Sirio */
-    display: inline-block;
-    padding-bottom: 8px;
-    margin-bottom: 30px;
-}
+
 
 
 
