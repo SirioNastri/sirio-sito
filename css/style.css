@@ -176,11 +176,15 @@ nav a.active {
     text-align: left;
 }
 
+/* "Sirio Nastri:" più grande, verde, ma inline */
 .hero-title {
-    font-size: 24px;     /* più grande ma NON enorme */
+    font-size: 26px;          /* più grande ma non enorme */
     font-weight: 800;
-    margin-right: 4px;
+    color: var(--sirio-green);
+    display: inline;          /* fondamentale: resta nella stessa riga */
+    margin-right: 6px;        /* spazio tra titolo e testo */
 }
+
 
 /* =========================================
    SEZIONE "CHI SIAMO" (solo testo)
@@ -1217,6 +1221,7 @@ html { scroll-behavior: smooth; }
         max-width: 100%;
     }
 }
+
 
 
 
