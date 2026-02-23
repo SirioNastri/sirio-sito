@@ -246,9 +246,9 @@ nav a.active {
 }
 
 .titolo-verde {
-    color: var(--sirio-green);
-    font-weight: 800;
+    color: var(--sirio-green) !important;
 }
+
 
 /* =========================================
    HOME — SERVIZI BLOCCO (grid-3)
@@ -1228,6 +1228,7 @@ html { scroll-behavior: smooth; }
         max-width: 100%;
     }
 }
+
 
 
 
