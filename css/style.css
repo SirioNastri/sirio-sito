@@ -1232,6 +1232,24 @@ html { scroll-behavior: smooth; }
     }
 }
 
+/* Pulsante indietro */
+.popup-back {
+    margin-bottom: 20px;
+}
+
+.popup-back-btn {
+    color: var(--sirio-green);
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.popup-back-btn:hover {
+    color: #b6ff6a;
+}
+
 
 
 
