@@ -177,22 +177,41 @@ nav a.active {
     align-items: center;
 }
 
+/* Immagine */
 .info-grid-img img {
     width: 100%;
     border-radius: 10px;
     border: 1px solid var(--border-soft);
 }
 
+/* Titolo "Sirio Nastri" */
 .info-grid-text h2 {
-    font-size: 32px;
-    margin-bottom: 100px;
+    font-size: 48px;        /* più grande */
+    font-weight: 800;       /* grassetto forte */
+    margin-bottom: 40px;    /* meno spazio sotto */
+    text-align: center;     /* centrato */
 }
 
+/* Paragrafo */
 .info-grid-text p {
     color: var(--text-muted);
     font-size: 17px;
     line-height: 1.7;
+    text-align: center;     /* centrato */
 }
+
+/* =========================================
+   SEZIONE "CHI SIAMO"
+========================================= */
+
+.section-title {
+    text-align: center;
+    margin-top: 100px;      /* lo spinge più in basso */
+    margin-bottom: 20px;    /* avvicina il testo sotto */
+    font-size: 36px;        /* più grande e visibile */
+    font-weight: 700;
+}
+
 
 /* =========================================
    HOME — SERVIZI (4 celle)
@@ -1194,6 +1213,7 @@ html { scroll-behavior: smooth; }
         max-width: 100%;
     }
 }
+
 
 
 
