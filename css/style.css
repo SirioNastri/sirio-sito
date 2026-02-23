@@ -1250,6 +1250,26 @@ html { scroll-behavior: smooth; }
     color: #b6ff6a;
 }
 
+.back-wrapper {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 8px 14px;
+    border: 1px solid var(--sirio-green);
+    border-radius: 6px;
+    color: var(--sirio-green) !important;
+    font-weight: 600;
+    transition: 0.25s ease;
+}
+
+.back-btn:hover {
+    background: var(--sirio-green);
+    color: #000 !important;
+}
+
 
 
 
