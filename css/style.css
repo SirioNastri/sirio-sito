@@ -189,20 +189,31 @@ nav a.active {
    SEZIONE "CHI SIAMO" (solo testo)
 ========================================= */
 
-/* Titolo "Chi Siamo" — NON tocca i global titles */
-.section-title {
-    margin-top: 80px;
-    margin-bottom: 20px;
-    text-align: center;
+/* Layout a due colonne */
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 60px 10%;
+    align-items: center;
 }
 
-/* Testo sotto "Chi Siamo" allineato a sinistra */
-.section-text p {
+/* Immagine NON enorme */
+.chi-siamo-img {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 10px;
+    border: 1px solid var(--border-soft);
+}
+
+/* Testo ordinato a destra */
+.chi-siamo-text {
     text-align: left;
     color: var(--text-muted);
     font-size: 17px;
     line-height: 1.7;
 }
+
 
 
 
@@ -1206,6 +1217,7 @@ html { scroll-behavior: smooth; }
         max-width: 100%;
     }
 }
+
 
 
 
