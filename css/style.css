@@ -1319,50 +1319,6 @@ html { scroll-behavior: smooth; }
     padding-right: 40px;
 }
 
-/* Colonna destra (stile popup preventivo) */
-.contatti-right {
-    flex: 1;
-    padding-left: 40px;
-}
-
-.contatti-form {
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.06);
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
-
-/* Label */
-.contatti-form label {
-    font-weight: 600;
-    color: #222;
-}
-
-/* Input */
-.contatti-form input,
-.contatti-form textarea {
-    width: 100%;
-    padding: 12px 14px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 15px;
-    background: #fafafa;
-}
-
-/* File drop */
-.file-drop {
-    background: #f5f5f5;
-    border: 2px dashed #ccc;
-    padding: 20px;
-    text-align: center;
-    border-radius: 6px;
-    cursor: pointer;
-    color: #666;
-}
-
 /* Icona + testo */
 .contatto-item {
     display: flex;
@@ -1371,30 +1327,84 @@ html { scroll-behavior: smooth; }
     margin-bottom: 28px;
 }
 
-/* SVG icone bianche */
+/* SVG icone VERDI */
 .contatto-icona svg {
     width: 28px;
     height: 28px;
     flex-shrink: 0;
-    fill: #ffffff; /* BIANCO */
+    fill: #00aa55; /* verde Sirio */
     margin-top: 4px;
-    filter: drop-shadow(0 0 2px rgba(0,0,0,0.3)); /* per farle risaltare */
 }
 
-/* Titoli sinistra */
+/* Titoletti (Telefono, Email, Sede, Orari) VERDI */
 .contatti-left h2 {
     font-size: 20px;
     margin-bottom: 4px;
+    color: #00aa55; /* verde Sirio */
+}
+
+/* Testo sotto (numeri, email, indirizzo) BIANCO */
+.contatti-left p {
+    color: #ffffff; /* bianco */
+    margin: 0;
+}
+
+/* Sezione urgente SENZA RIQUADRO */
+.box-urgente {
+    background: none;
+    padding: 0;
+    border: none;
+    margin-top: 25px;
+}
+
+/* Titolo urgente verde */
+.box-urgente h3 {
+    color: #00aa55;
+    margin-bottom: 6px;
+}
+
+/* Testo urgente bianco */
+.box-urgente p {
+    color: #ffffff;
+}
+
+/* ============================
+   FORM CONTATTI – PULITO
+============================ */
+.contatti-right {
+    flex: 1;
+    padding-left: 40px;
+}
+
+.contatti-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contatti-form label {
+    font-weight: 600;
     color: #222;
 }
 
-/* Box urgente */
-.box-urgente {
-    background: #f5f5f5;
-    padding: 18px;
-    border-left: 4px solid #00aa55;
+.contatti-form input,
+.contatti-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #ccc;
     border-radius: 6px;
-    margin-top: 25px;
+    font-size: 15px;
+    background: #fff;
+}
+
+.file-drop {
+    background: #fafafa;
+    border: 2px dashed #ccc;
+    padding: 20px;
+    text-align: center;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #666;
 }
 
 /* ============================
@@ -1428,11 +1438,9 @@ html { scroll-behavior: smooth; }
         width: 24px;
         height: 24px;
     }
-
-    .contatti-form {
-        padding: 20px;
-    }
 }
+
+
 
 
 
