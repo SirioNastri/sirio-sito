@@ -1,14 +1,37 @@
-<section class="popup-section">
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sopralluogo tecnico - Sirio Nastri Trasportatori</title>
 
-    <!-- Pulsante indietro -->
-    <div class="popup-back">
-        <span onclick="closePopup()" class="popup-back-btn">← Torna indietro</span>
-    </div>
+    <!-- IMPORTANTE: questo collega il CSS globale -->
+    <link rel="stylesheet" href="css/style.css?v=3">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">✦ SIRIO NASTRI TRASPORTATORI</div>
+
+    <nav>
+        <div class="menu-voce"><a href="index.html">Home</a></div>
+        <div class="menu-voce"><a href="azienda.html">Azienda</a></div>
+        <div class="menu-voce"><a href="prodotti.html">Prodotti</a></div>
+        <div class="menu-voce"><a href="portfolio.html">Portfolio</a></div>
+        <div class="menu-voce"><a href="area-tecnica.html">Area Tecnica</a></div>
+        <div class="menu-voce"><a href="contatti.html">Contatti</a></div>
+    </nav>
+</header>
+
+
+<section class="section">
+    <a href="index.html#servizi" class="btn-ghost" style="margin-bottom:20px; display:inline-block;">← Torna indietro</a>
 
     <h1>Sopralluogo tecnico</h1>
 
-    <div class="popup-info-grid">
-        <div class="popup-info-text">
+    <div class="info-grid">
+        <div class="info-grid-text">
             <h2>Analisi dell’ambiente e studio delle esigenze reali</h2>
 
             <p>Ogni progetto di movimentazione nasce da un sopralluogo accurato. Entriamo in azienda, osserviamo i flussi produttivi, analizziamo gli spazi e ascoltiamo le necessità operative del cliente.</p>
@@ -33,14 +56,16 @@
             <h3>Soluzioni personalizzate di movimentazione industriale</h3>
         </div>
 
-        <div class="popup-info-img">
+        <div class="info-grid-img">
             <img src="sopralluogo-tecnico.jpg" alt="Sopralluogo tecnico Sirio">
         </div>
     </div>
-
 </section>
-<script>
-function closePopup() {
-    document.querySelector('.popup-overlay').classList.remove('active');
-}
-</script>
+
+
+<footer>
+    © 2026 Sirio Nastri Trasportatori — Tutti i diritti riservati
+</footer>
+
+</body>
+</html>
