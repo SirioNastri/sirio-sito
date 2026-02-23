@@ -1293,7 +1293,7 @@ html { scroll-behavior: smooth; }
 }
 
 /* ============================
-   SEZIONE CONTATTI – LAYOUT DESKTOP
+   SEZIONE CONTATTI – DESKTOP
 ============================ */
 .contatti-wrapper {
     display: flex;
@@ -1302,71 +1302,87 @@ html { scroll-behavior: smooth; }
     position: relative;
 }
 
-/* Linea verticale centrale */
+/* Linea verticale */
 .contatti-wrapper::before {
     content: "";
     position: absolute;
     left: 50%;
     top: 20px;
     bottom: 20px;
-    width: 2px;
-    background: #e0e0e0; /* grigio elegante */
+    width: 1px;
+    background: #d9d9d9;
 }
 
 /* Colonna sinistra */
 .contatti-left {
     flex: 1;
-    padding-left: 20px;
-    padding-right: 40px; /* spazio dalla linea */
+    padding-right: 40px;
 }
 
 /* Colonna destra */
 .contatti-right {
     flex: 1;
-    padding-left: 40px; /* spazio dalla linea */
+    padding-left: 40px;
 }
 
 /* Icona + testo */
 .contatto-item {
     display: flex;
     align-items: flex-start;
-    gap: 15px;
-    margin-bottom: 30px;
+    gap: 14px;
+    margin-bottom: 28px;
 }
 
-/* SVG icone */
+/* SVG icone grigie */
 .contatto-icona svg {
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
     flex-shrink: 0;
-    fill: #00aa55; /* verde Sirio */
+    fill: #555; /* grigio scuro elegante */
     margin-top: 4px;
+}
+
+/* Titoli sinistra */
+.contatti-left h2 {
+    font-size: 20px;
+    margin-bottom: 4px;
+    color: #222;
 }
 
 /* Box assistenza urgente */
 .box-urgente {
-    background: #f7f7f7;
-    padding: 20px;
+    background: #f5f5f5;
+    padding: 18px;
     border-left: 4px solid #00aa55;
     border-radius: 6px;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 /* ============================
-   FORM CONTATTI
+   FORM CONTATTI – PULITO
 ============================ */
 .contatti-form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 14px;
+}
+
+.contatti-form label {
+    font-weight: 600;
+    color: #333;
 }
 
 .contatti-form input,
 .contatti-form textarea {
     width: 100%;
-    padding: 12px;
+    padding: 12px 14px;
     border: 1px solid #ccc;
     border-radius: 6px;
+    font-size: 15px;
+}
+
+.contatti-form textarea {
+    resize: vertical;
 }
 
 .file-drop {
@@ -1376,6 +1392,7 @@ html { scroll-behavior: smooth; }
     text-align: center;
     border-radius: 6px;
     cursor: pointer;
+    color: #666;
 }
 
 /* ============================
@@ -1388,15 +1405,13 @@ html { scroll-behavior: smooth; }
         padding: 20px;
     }
 
-    /* La linea verticale sparisce */
     .contatti-wrapper::before {
         display: none;
     }
 
     .contatti-left,
     .contatti-right {
-        padding-left: 0;
-        padding-right: 0;
+        padding: 0;
     }
 
     .contatti-left {
@@ -1408,10 +1423,11 @@ html { scroll-behavior: smooth; }
     }
 
     .contatto-icona svg {
-        width: 26px;
-        height: 26px;
+        width: 24px;
+        height: 24px;
     }
 }
+
 
 
 
