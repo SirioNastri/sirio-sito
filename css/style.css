@@ -798,6 +798,35 @@ nav a.active {
     background: #a8e85a;
 }
 
+.file-drop {
+    background: #0d0d0d;
+    border: 2px dashed #333;
+    padding: 20px;
+    text-align: center;
+    border-radius: 6px;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: 0.25s;
+}
+
+.file-drop:hover {
+    border-color: var(--sirio-green);
+    color: var(--sirio-green);
+}
+
+.filebox-privacy {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.filebox-privacy label {
+    margin: 0;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+
 /* MOBILE */
 @media (max-width: 768px) {
     .contatti-wrapper {
@@ -1200,3 +1229,4 @@ html { scroll-behavior: smooth; }
         font-size: 15px;
     }
 }
+
