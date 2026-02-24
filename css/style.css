@@ -309,6 +309,14 @@ nav a.active {
     color: var(--text-muted);
 }
 
+.titolo-azienda {
+    color: #2ecc71; /* Verde Sirio – sostituisci con il tuo esatto codice */
+    text-align: left;
+    border-bottom: 3px solid #2ecc71;
+    display: inline-block; /* Per far sì che la sottolineatura sia della larghezza del testo */
+    padding-bottom: 5px;
+}
+
 /* =========================================
    AZIENDA — IMMAGINI SOVRAPPOSTE
 ========================================= */
@@ -1441,6 +1449,7 @@ html { scroll-behavior: smooth; }
         height: 22px;
     }
 }
+
 
 
 
