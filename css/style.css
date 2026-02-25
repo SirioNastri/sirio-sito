@@ -686,6 +686,25 @@ nav a.active {
     margin-right: auto;
 }
 
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.25s ease;
+}
+
+.btn-primary {
+    background: #007bff; /* blu elegante */
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #0056c7; /* blu più scuro in hover */
+}
+
 /* =========================================
    PORTFOLIO — FEATURE BLOCK
 ========================================= */
@@ -1426,6 +1445,7 @@ html { scroll-behavior: smooth; }
         font-size: 15px;
     }
 }
+
 
 
 
