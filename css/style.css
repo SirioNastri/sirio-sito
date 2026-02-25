@@ -121,6 +121,31 @@ nav a.active {
     border-color: #cc9900;
 }
 
+.btn-preventivo {
+    display: inline-block;
+    background: #007bff; /* Blu professionale */
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 600;
+    text-align: center;
+    transition: 0.25s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-preventivo:hover {
+    background: #0a84ff; /* Blu più acceso */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 123, 255, 0.35);
+}
+
+.btn-preventivo:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
 /* =========================================
    MEGA MENU
 ========================================= */
@@ -1330,6 +1355,7 @@ html { scroll-behavior: smooth; }
         font-size: 15px;
     }
 }
+
 
 
 
