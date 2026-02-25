@@ -587,6 +587,10 @@ nav a.active {
     color: var(--text-muted);
 }
 
+.titolo-bianco {
+    color: #fff;
+}
+
 /* =========================================
    PRODOTTI — HERO
 ========================================= */
@@ -1380,6 +1384,7 @@ html { scroll-behavior: smooth; }
         font-size: 15px;
     }
 }
+
 
 
 
