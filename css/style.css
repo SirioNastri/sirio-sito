@@ -262,6 +262,31 @@ nav a.active {
     color: var(--text-muted);
 }
 
+.btn-blu {
+    display: inline-block;
+    background: #007bff; /* Blu professionale */
+    color: #fff !important;
+    padding: 12px 26px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    transition: 0.25s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-blu:hover {
+    background: #0a84ff; /* Blu più acceso */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 123, 255, 0.35);
+}
+
+.btn-blu:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
 /* =========================================
    HOME — SERVIZI (4 CELLE)
 ========================================= */
@@ -1355,6 +1380,7 @@ html { scroll-behavior: smooth; }
         font-size: 15px;
     }
 }
+
 
 
 
