@@ -705,6 +705,22 @@ nav a.active {
     background: #0056c7; /* blu più scuro in hover */
 }
 
+.componenti-cta {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.componenti-cta h3 {
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+.componenti-cta p {
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+
 /* =========================================
    PORTFOLIO — FEATURE BLOCK
 ========================================= */
@@ -1445,6 +1461,7 @@ html { scroll-behavior: smooth; }
         font-size: 15px;
     }
 }
+
 
 
 
