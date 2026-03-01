@@ -475,6 +475,12 @@ nav a.active {
     background: #0056c7;
 }
 
+.back-wrapper {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+
 /* =========================================
    AZIENDA — INTRO
 ========================================= */
@@ -1486,6 +1492,7 @@ html { scroll-behavior: smooth; }
         font-size: 15px;
     }
 }
+
 
 
 
