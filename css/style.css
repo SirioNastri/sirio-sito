@@ -754,6 +754,9 @@ nav a.active {
     margin-bottom: 20px;
 }
 
+.azienda-service h4.sottotitolo-bianco {
+    color: #ffffff !important;
+}
 
 /* =========================================
    PORTFOLIO — FEATURE BLOCK
@@ -1495,6 +1498,7 @@ html { scroll-behavior: smooth; }
         font-size: 15px;
     }
 }
+
 
 
 
