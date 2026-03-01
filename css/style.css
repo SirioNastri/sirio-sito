@@ -456,6 +456,25 @@ nav a.active {
     margin-top: 10px;
 }
 
+.back-wrapper {
+    margin-bottom: 20px;
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 10px 22px;
+    background: #007bff;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s ease;
+}
+
+.back-btn:hover {
+    background: #0056c7;
+}
+
 /* =========================================
    AZIENDA — INTRO
 ========================================= */
@@ -1467,6 +1486,7 @@ html { scroll-behavior: smooth; }
         font-size: 15px;
     }
 }
+
 
 
 
