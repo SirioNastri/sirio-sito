@@ -1499,6 +1499,10 @@ html { scroll-behavior: smooth; }
     }
 }
 
+.info-grid-text h3.sottotitolo-bianco {
+    color: #ffffff !important;
+}
+
 
 
 
