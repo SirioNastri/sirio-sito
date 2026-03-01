@@ -758,19 +758,22 @@ nav a.active {
     color: #ffffff !important;
 }
 
-.back-button {
+.back-btn {
     display: inline-block;
-    margin: 20px 0 10px 20px;
-    color: var(--accent);
+    background: var(--primary); /* BLU */
+    color: #ffffff;
+    padding: 10px 18px;
+    border-radius: 6px;
     font-weight: 600;
     text-decoration: none;
+    margin: 30px 0 50px 20px; /* più staccato dal titolo */
     font-size: 16px;
-    transition: 0.2s;
+    transition: 0.25s ease;
 }
 
-.back-button:hover {
-    color: #0a5f3c;
-    text-decoration: underline;
+.back-btn:hover {
+    background: #003366; /* blu più scuro per hover */
+    transform: translateX(-3px);
 }
 
 /* =========================================
@@ -1521,6 +1524,7 @@ html { scroll-behavior: smooth; }
 .sottotitolo-bianco {
     color: #ffffff !important;
 }
+
 
 
 
