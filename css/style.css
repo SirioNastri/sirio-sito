@@ -450,6 +450,12 @@ nav a.active {
     }
 }
 
+.back-btn {
+    display: inline-block;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+
 /* =========================================
    AZIENDA — INTRO
 ========================================= */
@@ -1461,6 +1467,7 @@ html { scroll-behavior: smooth; }
         font-size: 15px;
     }
 }
+
 
 
 
