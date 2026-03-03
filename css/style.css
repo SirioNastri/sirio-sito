@@ -979,6 +979,11 @@ nav a.active {
     line-height: 1.8;
 }
 
+.blog-cta {
+    text-align: center;
+    padding: 60px 10%;
+}
+
 /* =========================================
    CONTATTI — HERO
 ========================================= */
@@ -1666,6 +1671,7 @@ html { scroll-behavior: smooth; }
         margin: 0 8px;
     }
 }
+
 
 
 
