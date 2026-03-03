@@ -1553,6 +1553,34 @@ html { scroll-behavior: smooth; }
 }
 
 
+/* =========================================
+   FIX — DESCRIZIONI TUTTE GRIGIE
+========================================= */
+
+/* Paragrafi generali */
+.blog-hero p,
+.info-grid-text p,
+.info-grid-text ul li,
+.blog-cta p,
+.section p,
+.card-prodotto p,
+.prodotto-card p,
+.portfolio-card p,
+.area-tecnica-card p,
+.area-tecnica-long p,
+.contatti-left p,
+.contatti-hero p,
+.prodotti-hero p {
+    color: var(--text-muted) !important;
+}
+
+/* Liste descrittive */
+.info-grid-text ul li,
+.portfolio-feature .info-grid-text p,
+.portfolio-alt .info-grid-text p {
+    color: var(--text-muted) !important;
+}
+
 
 
 
