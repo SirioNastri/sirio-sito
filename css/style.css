@@ -776,6 +776,33 @@ nav a.active {
     transform: translateX(-3px);
 }
 
+.card-prodotto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.card-prodotto-img {
+    width: 100%;
+    height: 220px; /* altezza uniforme */
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.card-prodotto-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ritaglia e centra */
+}
+
+.card-prodotto-title {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
 /* =========================================
    PORTFOLIO — FEATURE BLOCK
 ========================================= */
@@ -1524,6 +1551,7 @@ html { scroll-behavior: smooth; }
 .sottotitolo-bianco {
     color: #ffffff !important;
 }
+
 
 
 
