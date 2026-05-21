@@ -9,6 +9,13 @@
     --border-soft: #1a1a1a;
 }
 
+.logo img {
+    height: 55px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+}
+
 /* =========================================
    RESET & BASE
 ========================================= */
