@@ -1687,8 +1687,65 @@ html { scroll-behavior: smooth; }
 }
 
 
+/* =========================================================
+   📱 SEZIONE MOBILE — Ottimizzazione completa per smartphone
+   ========================================================= */
 
+@media (max-width: 768px) {
 
+    /* HEADER + LOGO */
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .logo img {
+        height: 40px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    /* MENU PRINCIPALE */
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .menu-voce a {
+        font-size: 16px;
+        padding: 8px 0;
+    }
+
+    /* MEGA-MENU */
+    .mega-negozio {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .mega-negozio .colonna {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* TESTI GENERALI */
+    body {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    /* FOOTER */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .footer-col {
+        width: 100%;
+    }
+}
 
 
 
