@@ -1686,6 +1686,55 @@ html { scroll-behavior: smooth; }
     margin-bottom: 20px;
 }
 
+/* --------------------------------------------------
+   🍔 HAMBURGER MENU — stile + animazione
+   -------------------------------------------------- */
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 28px;
+    height: 3px;
+    background: #00ff66;
+    transition: 0.3s;
+}
+
+/* ANIMAZIONE */
+.hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* MOSTRARE IL BOTTONE SOLO SU MOBILE */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    nav.open {
+        display: flex;
+    }
+}
+
 
 /* =========================================================
    📱 SEZIONE MOBILE — Ottimizzazione completa per smartphone
@@ -1746,7 +1795,6 @@ html { scroll-behavior: smooth; }
         width: 100%;
     }
 }
-
 
 
 
