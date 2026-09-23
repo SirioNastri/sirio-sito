@@ -308,16 +308,23 @@
 
         <!-- FORM -->
         <div class="contact-right">
-            <label>Nome</label>
-            <input type="text" placeholder="Inserisci il tuo nome">
+            <form action="https://formsubmit.co/info@sirionastri.it" method="POST">
+                
+                <!-- Configurazione FormSubmit -->
+                <input type="hidden" name="_subject" value="Nuovo messaggio dalla pagina Contatti">
+                <input type="hidden" name="_captcha" value="false">
 
-            <label>Email</label>
-            <input type="email" placeholder="Inserisci la tua email">
+                <label>Nome</label>
+                <input type="text" name="Nome" placeholder="Inserisci il tuo nome" required>
 
-            <label>Messaggio</label>
-            <textarea placeholder="Scrivi il tuo messaggio"></textarea>
+                <label>Email</label>
+                <input type="email" name="Email" placeholder="Inserisci la tua email" required>
 
-            <button class="btn-primary contact-btn">Invia richiesta</button>
+                <label>Messaggio</label>
+                <textarea name="Messaggio" placeholder="Scrivi il tuo messaggio" rows="4" required></textarea>
+
+                <button type="submit" class="btn-primary contact-btn">Invia richiesta</button>
+            </form>
         </div>
 
     </div>
@@ -359,26 +366,30 @@
 
             <!-- DESTRA FORM -->
             <div class="popup-col popup-right" style="flex:1;">
-                <form class="popup-form">
+                <form action="https://formsubmit.co/info@sirionastri.it" method="POST" enctype="multipart/form-data" class="popup-form">
 
-                    <input type="text" class="popup-input" placeholder="Azienda">
-                    <input type="text" class="popup-input" placeholder="Nome *" required>
-                    <input type="text" class="popup-input" placeholder="Cognome *" required>
-                    <input type="email" class="popup-input" placeholder="Email *" required>
-                    <input type="text" class="popup-input" placeholder="Telefono">
-                    <textarea class="popup-input" placeholder="Messaggio" rows="4"></textarea>
+                    <!-- Configurazione FormSubmit -->
+                    <input type="hidden" name="_subject" value="Nuova richiesta preventivo dal Popup">
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <input type="text" name="Azienda" class="popup-input" placeholder="Azienda">
+                    <input type="text" name="Nome" class="popup-input" placeholder="Nome *" required>
+                    <input type="text" name="Cognome" class="popup-input" placeholder="Cognome *" required>
+                    <input type="email" name="Email" class="popup-input" placeholder="Email *" required>
+                    <input type="text" name="Telefono" class="popup-input" placeholder="Telefono">
+                    <textarea name="Messaggio" class="popup-input" placeholder="Messaggio" rows="4"></textarea>
 
                     <div class="filebox">
                         <label class="filebox-title">Allega un file</label>
 
                         <div class="filebox-area">
                             <p>Fai clic o trascina il file su quest'area per caricarlo.</p>
-                            <input type="file" class="filebox-input">
+                            <input type="file" name="Allegato" class="filebox-input">
                         </div>
 
                         <div class="filebox-privacy">
-                            <input type="checkbox" id="privacy-check">
-                            <label for="privacy-check">Accetto la Privacy Policy</label>
+                            <input type="checkbox" id="privacy-check" name="Privacy" value="Accettata" required>
+                            <label for="privacy-check">Accetto la Privacy Policy *</label>
                         </div>
                     </div>
 
@@ -392,7 +403,7 @@
     </div>
 </div>
 
-    <!-- ============================
+<!-- ============================
      POPUP PAGINE INTERNE
 ============================ -->
 <div class="popup-overlay" id="popup-interno-overlay">
@@ -427,7 +438,7 @@ document.querySelectorAll(".btn-preventivo-nav, .btn-preventivo").forEach(btn =>
 });
 </script> 
 
-    <script>
+<script>
 function apriPopupInterno(url) {
     fetch(url)
         .then(res => res.text())
@@ -442,15 +453,15 @@ function chiudiPopupInterno() {
 }
 </script>
 
-   <footer class="footer-sirio">
+<footer class="footer-sirio">
 
     <div class="footer-top">
 
         <!-- COLONNA 1: LOGO + DESCRIZIONE + CONTATTI -->
         <div class="footer-col">
-           <div class="footer-logo">
-    <img src="img/logo.jpg" alt="Sirio Nastri Trasportatori">
-</div>
+            <div class="footer-logo">
+                <img src="img/logo.jpg" alt="Sirio Nastri Trasportatori">
+            </div>
             <p class="footer-desc">
                 Produzione di nastri trasportatori, trasportatori completi e sistemi di movimentazione industriale.
             </p>
@@ -510,17 +521,15 @@ function chiudiPopupInterno() {
 
 </footer>
 
-    <script>
+<script>
 function toggleMenu() {
     document.querySelector('.hamburger').classList.toggle('active');
     document.querySelector('nav').classList.toggle('open');
 }
 </script>
 
-        </body>
+</body>
 </html>
-
-
 
 
 
