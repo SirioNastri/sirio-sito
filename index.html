@@ -74,23 +74,54 @@
     </nav>
 </header>
 
-<!-- HERO SECTION -->
-<section class="hero">
-    <h1>SIRIO NASTRI TRASPORTATORI</h1>
+<!-- HERO SECTION (PAGINAZIONE E GRIGLIA BLOCCATE) -->
+<section class="hero" style="padding: 40px 0;">
 
-    <div class="hero-grid">
-        <div class="hero-content">
-            <p class="hero-text">
-                <span class="hero-title">Soluzioni Ingegneristiche per la Movimentazione Industriale.</span>
+    <h1 style="
+        font-size: 42px; 
+        margin-bottom: 25px; 
+        color: var(--accent, #a2ff00); 
+        text-align: left;
+    ">
+        SIRIO NASTRI TRASPORTATORI
+    </h1>
+
+    <div style="
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        gap: 40px; 
+        align-items: center;
+    ">
+
+        <!-- TESTO A SINISTRA -->
+        <div>
+            <p class="hero-text" style="font-size: 18px; line-height: 1.6; margin-bottom: 25px;">
+                <span class="hero-title" style="font-weight: bold; color: #ffffff;">
+                    Soluzioni Ingegneristiche per la Movimentazione Industriale.
+                </span><br>
                 Progettabili su misura, costruiti per durare. Ottimizziamo l'efficienza delle tue linee produttive con impianti ad elevate prestazioni.
             </p>
-            <a href="#" class="btn btn-primary btn-preventivo">Richiedi Progetto Custom</a>
+
+            <a href="#" class="btn btn-primary btn-preventivo">
+                Richiedi Progetto Custom
+            </a>
         </div>
 
-        <div class="hero-image">
-            <img src="img/nastro-sirio.jpg" alt="Impianto di trasporto industriale Sirio">
+        <!-- IMMAGINE A DESTRA (DIMENSIONE LIMITATA) -->
+        <div style="text-align: right;">
+            <img src="img/nastro-sirio.jpg" 
+                 alt="Impianto di trasporto industriale Sirio" 
+                 style="
+                    max-width: 420px; 
+                    width: 100%; 
+                    height: auto; 
+                    border-radius: 8px; 
+                    border: 1px solid rgba(255,255,255,0.1);
+                 ">
         </div>
+
     </div>
+
 </section>
 
 <!-- CHI SIAMO -->
