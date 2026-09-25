@@ -32,7 +32,7 @@
 
         <!-- DROPDOWN CATALOGO TECNICO CORRETTO -->
         <div class="menu-voce menu-dropdown">
-            <a href="catalogo.html">Catalogo Tecnico</a>
+            <a href="catalogo.html" class="link-diretto">Catalogo Tecnico</a>
 
             <div class="mega-menu">
                 <!-- COLONNA 1: NASTRI TRASPORTATORI -->
@@ -317,6 +317,16 @@ document.querySelectorAll(".btn-preventivo-nav, .btn-preventivo").forEach(btn =>
         e.preventDefault();
         apriPopup();
     });
+});
+
+// Forzatura navigazione Catalogo Tecnico
+document.addEventListener("DOMContentLoaded", function() {
+    const linkCatalogo = document.querySelector('.menu-dropdown > a');
+    if (linkCatalogo) {
+        linkCatalogo.addEventListener('click', function(e) {
+            window.location.href = this.getAttribute('href');
+        });
+    }
 });
 </script>
 
