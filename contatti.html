@@ -6,6 +6,7 @@
     <title>Contatti – Sirio Nastri Trasportatori</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
 <header>
@@ -26,6 +27,7 @@
 
         <div class="menu-voce menu-negozio">
             <a href="negozio.html">Negozio</a>
+
             <div class="mega-negozio">
                 <!-- COLONNA 1: NASTRI TRASPORTATORI -->
                 <div class="colonna">
@@ -60,6 +62,7 @@
         <div class="menu-voce"><a href="portfolio.html">Portfolio</a></div>
         <div class="menu-voce"><a href="contatti.html" class="active">Contatti</a></div>
         
+        <!-- BOTTONE POPUP PREVENTIVO -->
         <div class="menu-voce">
             <a href="#" class="btn-preventivo-nav" onclick="apriPopup()">Richiedi preventivo</a>
         </div>
@@ -71,14 +74,18 @@
     <div style="text-align:left; margin-bottom:10px;">
         <h1 class="titolo-pagina">Contatti</h1>
     </div>
-    <p class="sottotitolo-pagina">
+
+    <p style="text-align:center; color:var(--text-muted); max-width:900px; margin:10px auto 0; font-size:16px; line-height:1.7;">
         Parla con il nostro team tecnico per informazioni, assistenza e richieste commerciali.
     </p>
 </section>
 
 <!-- SEZIONE CONTATTI -->
 <section class="contatti-wrapper">
+
+    <!-- COLONNA SINISTRA -->
     <div class="contatti-left">
+
         <div class="contatto-item">
             <span class="contatto-icona">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="#00aa55">
@@ -134,11 +141,13 @@
                 </p>
             </div>
         </div>
+
     </div>
 
-    <!-- FORM CONTATTI -->
+    <!-- COLONNA DESTRA: FORM -->
     <div class="contatti-right">
         <form class="contatti-form">
+
             <label>Nome *</label>
             <input type="text" required>
 
@@ -166,10 +175,13 @@
             </div>
 
             <button type="submit" class="btn btn-primary">Invia</button>
+
         </form>
     </div>
+
 </section>
 
+<!-- MAPPA GOOGLE -->
 <section class="mappa-google">
     <h2>Dove siamo</h2>
     <iframe 
@@ -182,16 +194,20 @@
     </iframe>
 </section>
 
-<!-- POPUP -->
+<!-- POPUP PREVENTIVO -->
 <div class="popup-overlay" id="popup-overlay">
     <div class="popup-box" id="popup-preventivo">
         <span class="popup-close" onclick="chiudiPopup()">&times;</span>
-        <div class="popup-content">
-            <div class="popup-col popup-left">
+
+        <div class="popup-content" style="display:flex; gap:40px;">
+
+            <div class="popup-col popup-left" style="flex:1;">
                 <h2>Richiedi Preventivo</h2>
+
                 <p class="popup-desc">
                     Un nostro tecnico ti risponderà entro 24 ore con una soluzione su misura per la tua linea produttiva.
                 </p>
+
                 <h3>Perché contattarci</h3>
                 <ul class="popup-points">
                     <li>Consulenza tecnica gratuita</li>
@@ -200,13 +216,14 @@
                     <li>Supporto diretto con un progettista</li>
                     <li>Risposta rapida e professionale</li>
                 </ul>
+
                 <h3>Chi ti risponderà</h3>
                 <p>
                     Il nostro team tecnico analizzerà la tua richiesta e ti guiderà nella scelta del nastro o del trasportatore più adatto.
                 </p>
             </div>
 
-            <div class="popup-col popup-right">
+            <div class="popup-col popup-right" style="flex:1;">
                 <form class="popup-form">
                     <input type="text" class="popup-input" placeholder="Azienda">
                     <input type="text" class="popup-input" placeholder="Nome *" required>
@@ -221,6 +238,7 @@
                             <p>Fai clic o trascina il file su quest'area per caricarlo.</p>
                             <input type="file" class="filebox-input">
                         </div>
+
                         <div class="filebox-privacy">
                             <input type="checkbox" id="privacy-check" required>
                             <label for="privacy-check">Accetto la Privacy Policy</label>
@@ -230,12 +248,15 @@
                     <button type="submit" class="popup-btn">Invia richiesta</button>
                 </form>
             </div>
+
         </div>
     </div>
 </div>
 
+<!-- FOOTER -->
 <footer class="footer-sirio">
     <div class="footer-top">
+
         <div class="footer-col">
             <div class="footer-logo">
                 <img src="img/logo.jpg" alt="Sirio Nastri Trasportatori">
@@ -243,7 +264,7 @@
             <p class="footer-desc">
                 Produzione di nastri trasportatori, trasportatori completi e sistemi di movimentazione industriale.
             </p>
-            <p class="footer-contact">📞 (+39) 011 953 9492</p>
+            <p class="footer-contact">📞 (+39) 011 953 9492 </p>
             <p class="footer-contact">✉️ info@sirionastri.it</p>
         </div>
 
@@ -279,6 +300,7 @@
             <a href="prodotto-rulli.html">Rulli</a>
             <a href="prodotto-tamburi.html">Tamburi e mototamburi</a>
         </div>
+
     </div>
 
     <div class="footer-bottom">
