@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catalogo Nastri Trasportatori e Componenti Industriali | Sirio Nastri</title>
     <meta name="description" content="Sfoglia il catalogo tecnico Sirio Nastri: nastri in PVC, Poliuretano FDA, gomma, tapparelle metalliche, rulli e trasportatori completi per la movimentazione industriale.">
-    <link rel="canonical" href="https://sirionastri.github.io/sirio-sito/negozio.html">
-    <link rel="stylesheet" href="css/style.css?v=4">
+    <link rel="canonical" href="https://sirionastri.github.io/sirio-sito/catalogo.html">
+    <link rel="stylesheet" href="css/style.css?v=5">
 </head>
 
 <body>
@@ -30,11 +30,11 @@
         <div class="menu-voce"><a href="azienda.html">Azienda</a></div>
         <div class="menu-voce"><a href="prodotti.html">Prodotti</a></div>
 
-        <!-- CATALOGO TECNICO / NEGOZIO B2B -->
-        <div class="menu-voce menu-negozio">
-            <a href="negozio.html" class="active">Catalogo Tecnico</a>
+        <!-- CATALOGO TECNICO B2B DROPDOWN -->
+        <div class="menu-voce menu-dropdown">
+            <a href="catalogo.html" class="active">Catalogo Tecnico</a>
 
-            <div class="mega-negozio">
+            <div class="mega-menu">
                 <!-- COLONNA 1: NASTRI TRASPORTATORI -->
                 <div class="colonna">
                     <h4>Nastri Trasportatori</h4>
@@ -69,168 +69,284 @@
         <div class="menu-voce"><a href="contatti.html">Contatti</a></div>
 
         <div class="menu-voce">
-            <a href="#" class="btn-preventivo-nav">Richiedi Preventivo (RFQ)</a>
+            <a href="#" class="btn-preventivo-nav" onclick="apriPopup()">Richiedi Preventivo (RFQ)</a>
         </div>
     </nav>
 </header>
 
-<!-- HERO CATALOGO -->
-<section class="section" style="padding-top:60px;">
-    <div style="text-align:left; margin-bottom:10px;">
-        <h1 class="titolo-pagina">Catalogo Tecnico</h1>
+<!-- HERO CATALOGO HIGH-IMPACT -->
+<section class="section container" style="padding-top:60px; padding-bottom: 30px;">
+    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+        <span style="background: rgba(162, 255, 0, 0.1); color: var(--accent, #a2ff00); border: 1px solid rgba(162, 255, 0, 0.3); padding: 4px 12px; border-radius: 4px; font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px;">
+            Gamma Prodotti & Ricambistica
+        </span>
     </div>
 
-    <h2 style="text-align:center; margin-top:0; margin-bottom:15px;" class="sottotitolo-bianco">Componenti e Sistemi di Movimentazione</h2>
+    <h1 class="titolo-pagina" style="margin-top: 0; font-size: 42px;">Catalogo Tecnico Industriale</h1>
 
-    <p style="max-width:850px; margin:10px auto 0; font-size:16px; line-height:1.7; color:var(--text-muted, #a0a0a0); text-align:center;">
-        Esplora la nostra gamma completa di nastri di trasporto, strutture portanti e componentistica industriale per manutenzione, ricambistica o nuovi impianti.
+    <p style="max-width:850px; margin-top: 15px; font-size: 18px; line-height: 1.6; color: #a0aab8;">
+        Esplora le nostre soluzioni per il trasporto continuo: tappeti elastometrici e termoplastici, trasportatori integrati con carpenteria su misura e ricambistica per manutenzione ordinaria o straordinaria.
     </p>
+
+    <!-- BARRA ANCORAGGI RAPIDI -->
+    <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 30px;">
+        <a href="#nastri" style="background: rgba(255,255,255,0.05); color: #fff; padding: 10px 20px; border-radius: 6px; text-decoration: none; border: 1px solid rgba(255,255,255,0.1); font-size: 14px; font-weight: 600; transition: all 0.2s;">
+            ⬇️ Nastri Trasportatori
+        </a>
+        <a href="#trasportatori" style="background: rgba(255,255,255,0.05); color: #fff; padding: 10px 20px; border-radius: 6px; text-decoration: none; border: 1px solid rgba(255,255,255,0.1); font-size: 14px; font-weight: 600; transition: all 0.2s;">
+            ⬇️ Trasportatori Completi
+        </a>
+        <a href="#componenti" style="background: rgba(255,255,255,0.05); color: #fff; padding: 10px 20px; border-radius: 6px; text-decoration: none; border: 1px solid rgba(255,255,255,0.1); font-size: 14px; font-weight: 600; transition: all 0.2s;">
+            ⬇️ Componenti & Ricambi
+        </a>
+    </div>
 </section>
 
 <!-- CATEGORIA: NASTRI TRASPORTATORI -->
-<section class="section" id="nastri">
-    <h2 class="section-title">Nastri Trasportatori</h2>
-    <p class="blog-subtitle" style="max-width: 700px; margin: 0 auto 40px; text-align:center;">
-        Nastri per trasporto continuo in elastomeri, termoplastici e maglie modulari per settori industriali, alimentari e logistici.
-    </p>
+<section class="section container" id="nastri" style="padding-top: 40px;">
+    <div style="border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px; margin-bottom: 30px;">
+        <h2 class="section-title" style="text-align: left; margin: 0;">01. Nastri Trasportatori (Tappeti)</h2>
+        <p style="color: #a0aab8; font-size: 15px; margin-top: 5px;">
+            Materiali in rotoli o tagliati su misura con giunzione vulcanizzata, anello chiuso o ganci metallici.
+        </p>
+    </div>
 
     <div class="grid-3">
         <!-- Nastro in PVC -->
-        <a href="prodotto-nastro-pvc.html" class="card-prodotto">
-            <div class="card-prodotto-img">
-                <img src="img/nastro-pvc.jpg" alt="Nastro trasportatore industriale in PVC">
+        <a href="prodotto-nastro-pvc.html" class="card-prodotto" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; overflow: hidden; text-decoration: none; display: flex; flex-direction: column;">
+            <div class="card-prodotto-img" style="height: 200px; overflow: hidden; position: relative;">
+                <img src="img/nastro-pvc.jpg" alt="Nastro trasportatore industriale in PVC" style="width: 100%; height: 100%; object-fit: cover;">
+                <span style="position: absolute; top: 12px; left: 12px; background: rgba(0,0,0,0.7); color: var(--accent, #a2ff00); font-size: 11px; padding: 4px 8px; border-radius: 4px; font-weight: 700; text-transform: uppercase;">Standard & Antistatico</span>
             </div>
-            <h3 class="card-prodotto-title">Nastro in PVC</h3>
+            <div style="padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <h3 class="card-prodotto-title" style="color: #fff; font-size: 18px; margin: 0 0 10px 0;">Nastro in PVC</h3>
+                    <p style="color: #a0aab8; font-size: 13px; margin: 0 0 15px 0; line-height: 1.5;">Per movimentazione generale, logistica, packaging e linee di scatolamento.</p>
+                </div>
+                <span style="color: var(--accent, #a2ff00); font-size: 13px; font-weight: 700; display: inline-flex; align-items: center; gap: 5px;">Scheda Tecnica & Specifiche →</span>
+            </div>
         </a>
 
         <!-- Nastro in PU -->
-        <a href="prodotto-nastro-pu.html" class="card-prodotto">
-            <div class="card-prodotto-img">
-                <img src="img/nastro-pu.jpg" alt="Nastro trasportatore in Poliuretano PU">
+        <a href="prodotto-nastro-pu.html" class="card-prodotto" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; overflow: hidden; text-decoration: none; display: flex; flex-direction: column;">
+            <div class="card-prodotto-img" style="height: 200px; overflow: hidden; position: relative;">
+                <img src="img/nastro-pu.jpg" alt="Nastro trasportatore in Poliuretano PU" style="width: 100%; height: 100%; object-fit: cover;">
+                <span style="position: absolute; top: 12px; left: 12px; background: rgba(0,0,0,0.7); color: var(--accent, #a2ff00); font-size: 11px; padding: 4px 8px; border-radius: 4px; font-weight: 700; text-transform: uppercase;">Alta Flessibilità</span>
             </div>
-            <h3 class="card-prodotto-title">Nastro in PU</h3>
+            <div style="padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <h3 class="card-prodotto-title" style="color: #fff; font-size: 18px; margin: 0 0 10px 0;">Nastro in Poliuretano (PU)</h3>
+                    <p style="color: #a0aab8; font-size: 13px; margin: 0 0 15px 0; line-height: 1.5;">Elevata resistenza a grassi, olii e spigoli vivi. Ideale per penne di rinvio strette.</p>
+                </div>
+                <span style="color: var(--accent, #a2ff00); font-size: 13px; font-weight: 700; display: inline-flex; align-items: center; gap: 5px;">Scheda Tecnica & Specifiche →</span>
+            </div>
         </a>
 
         <!-- Nastro in gomma -->
-        <a href="prodotto-nastro-gomma.html" class="card-prodotto">
-            <div class="card-prodotto-img">
-                <img src="img/nastro-gomma.jpg" alt="Nastro trasportatore in gomma antiabrasiva">
+        <a href="prodotto-nastro-gomma.html" class="card-prodotto" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; overflow: hidden; text-decoration: none; display: flex; flex-direction: column;">
+            <div class="card-prodotto-img" style="height: 200px; overflow: hidden; position: relative;">
+                <img src="img/nastro-gomma.jpg" alt="Nastro trasportatore in gomma antiabrasiva" style="width: 100%; height: 100%; object-fit: cover;">
+                <span style="position: absolute; top: 12px; left: 12px; background: rgba(0,0,0,0.7); color: var(--accent, #a2ff00); font-size: 11px; padding: 4px 8px; border-radius: 4px; font-weight: 700; text-transform: uppercase;">Heavy Duty / Cave</span>
             </div>
-            <h3 class="card-prodotto-title">Nastro in Gomma</h3>
+            <div style="padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <h3 class="card-prodotto-title" style="color: #fff; font-size: 18px; margin: 0 0 10px 0;">Nastro in Gomma Antiabrasiva</h3>
+                    <p style="color: #a0aab8; font-size: 13px; margin: 0 0 15px 0; line-height: 1.5;">Per carichi pesanti, materiali abrasivi, inerti, riciclaggio e granulati.</p>
+                </div>
+                <span style="color: var(--accent, #a2ff00); font-size: 13px; font-weight: 700; display: inline-flex; align-items: center; gap: 5px;">Scheda Tecnica & Specifiche →</span>
+            </div>
         </a>
 
         <!-- Nastro alimentare -->
-        <a href="prodotto-nastro-alimentare.html" class="card-prodotto">
-            <div class="card-prodotto-img">
-                <img src="img/nastro-alimentare.jpg" alt="Nastro trasportatore alimentare certificato FDA">
+        <a href="prodotto-nastro-alimentare.html" class="card-prodotto" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; overflow: hidden; text-decoration: none; display: flex; flex-direction: column;">
+            <div class="card-prodotto-img" style="height: 200px; overflow: hidden; position: relative;">
+                <img src="img/nastro-alimentare.jpg" alt="Nastro trasportatore alimentare certificato FDA" style="width: 100%; height: 100%; object-fit: cover;">
+                <span style="position: absolute; top: 12px; left: 12px; background: rgba(0,0,0,0.7); color: var(--accent, #a2ff00); font-size: 11px; padding: 4px 8px; border-radius: 4px; font-weight: 700; text-transform: uppercase;">Certificato FDA & EU 10/2011</span>
             </div>
-            <h3 class="card-prodotto-title">Nastro Alimentare (FDA)</h3>
+            <div style="padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <h3 class="card-prodotto-title" style="color: #fff; font-size: 18px; margin: 0 0 10px 0;">Nastro Alimentare (FDA)</h3>
+                    <p style="color: #a0aab8; font-size: 13px; margin: 0 0 15px 0; line-height: 1.5;">Superfici atossiche e lavabili per contatto diretto con alimenti sfusi o confezionati.</p>
+                </div>
+                <span style="color: var(--accent, #a2ff00); font-size: 13px; font-weight: 700; display: inline-flex; align-items: center; gap: 5px;">Scheda Tecnica & Specifiche →</span>
+            </div>
         </a>
 
         <!-- Nastro alte temperature -->
-        <a href="prodotto-nastro-alte-temperature.html" class="card-prodotto">
-            <div class="card-prodotto-img">
-                <img src="img/nastro-alte-temperature.jpg" alt="Nastro per alte temperature in Silicone PTFE">
+        <a href="prodotto-nastro-alte-temperature.html" class="card-prodotto" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; overflow: hidden; text-decoration: none; display: flex; flex-direction: column;">
+            <div class="card-prodotto-img" style="height: 200px; overflow: hidden; position: relative;">
+                <img src="img/nastro-alte-temperature.jpg" alt="Nastro per alte temperature in Silicone PTFE" style="width: 100%; height: 100%; object-fit: cover;">
+                <span style="position: absolute; top: 12px; left: 12px; background: rgba(0,0,0,0.7); color: var(--accent, #a2ff00); font-size: 11px; padding: 4px 8px; border-radius: 4px; font-weight: 700; text-transform: uppercase;">Fino a +260°C</span>
             </div>
-            <h3 class="card-prodotto-title">Nastro per Alte Temperature</h3>
+            <div style="padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <h3 class="card-prodotto-title" style="color: #fff; font-size: 18px; margin: 0 0 10px 0;">Nastro per Alte Temperature</h3>
+                    <p style="color: #a0aab8; font-size: 13px; margin: 0 0 15px 0; line-height: 1.5;">Rivestimenti in Silicone e PTFE per forni d'essiccazione, termoretrazione e cottura.</p>
+                </div>
+                <span style="color: var(--accent, #a2ff00); font-size: 13px; font-weight: 700; display: inline-flex; align-items: center; gap: 5px;">Scheda Tecnica & Specifiche →</span>
+            </div>
         </a>
 
         <!-- Nastro modulare -->
-        <a href="prodotto-nastro-modulare.html" class="card-prodotto">
-            <div class="card-prodotto-img">
-                <img src="img/nastro-modulare-plastica.jpg" alt="Nastro modulare in plastica ad alta resistenza">
+        <a href="prodotto-nastro-modulare.html" class="card-prodotto" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; overflow: hidden; text-decoration: none; display: flex; flex-direction: column;">
+            <div class="card-prodotto-img" style="height: 200px; overflow: hidden; position: relative;">
+                <img src="img/nastro-modulare-plastica.jpg" alt="Nastro modulare in plastica ad alta resistenza" style="width: 100%; height: 100%; object-fit: cover;">
+                <span style="position: absolute; top: 12px; left: 12px; background: rgba(0,0,0,0.7); color: var(--accent, #a2ff00); font-size: 11px; padding: 4px 8px; border-radius: 4px; font-weight: 700; text-transform: uppercase;">Maglia Plastica PP/PE/POM</span>
             </div>
-            <h3 class="card-prodotto-title">Nastro Modulare in Plastica</h3>
+            <div style="padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <h3 class="card-prodotto-title" style="color: #fff; font-size: 18px; margin: 0 0 10px 0;">Nastro Modulare in Plastica</h3>
+                    <p style="color: #a0aab8; font-size: 13px; margin: 0 0 15px 0; line-height: 1.5;">Sistemi a moduli ad ingranaggio diretto. Massima stabilità e manutenzione rapida.</p>
+                </div>
+                <span style="color: var(--accent, #a2ff00); font-size: 13px; font-weight: 700; display: inline-flex; align-items: center; gap: 5px;">Scheda Tecnica & Specifiche →</span>
+            </div>
         </a>
     </div>
 </section>
 
 <!-- CATEGORIA: TRASPORTATORI COMPLETI -->
-<section class="section" id="trasportatori">
-    <h2 class="section-title">Trasportatori Completi</h2>
-    <p class="blog-subtitle" style="max-width: 700px; margin: 0 auto 40px; text-align:center;">
-        Sistemi di movimentazione intralogistica completi di carpenteria, motorizzazione e quadro di comando.
-    </p>
+<section class="section container" id="trasportatori" style="padding-top: 50px;">
+    <div style="border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px; margin-bottom: 30px;">
+        <h2 class="section-title" style="text-align: left; margin: 0;">02. Trasportatori Completi (Sistemi)</h2>
+        <p style="color: #a0aab8; font-size: 15px; margin-top: 5px;">
+            Macchine pronte all'uso complete di telaio, motorizzazione, guide di sponda e quadro di comando.
+        </p>
+    </div>
 
     <div class="grid-3">
         <!-- Trasportatore a nastro -->
-        <a href="prodotto-trasportatore-nastro.html" class="card-prodotto">
-            <div class="card-prodotto-img">
-                <img src="img/trasportatore-nastro.jpg" alt="Trasportatore a nastro lineare">
+        <a href="prodotto-trasportatore-nastro.html" class="card-prodotto" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; overflow: hidden; text-decoration: none; display: flex; flex-direction: column;">
+            <div class="card-prodotto-img" style="height: 200px; overflow: hidden; position: relative;">
+                <img src="img/trasportatore-nastro.jpg" alt="Trasportatore a nastro lineare" style="width: 100%; height: 100%; object-fit: cover;">
+                <span style="position: absolute; top: 12px; left: 12px; background: rgba(0,0,0,0.7); color: #fff; font-size: 11px; padding: 4px 8px; border-radius: 4px; font-weight: 700; text-transform: uppercase;">Alluminio / Acciaio</span>
             </div>
-            <h3 class="card-prodotto-title">Trasportatore a Nastro Lineare</h3>
+            <div style="padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <h3 class="card-prodotto-title" style="color: #fff; font-size: 18px; margin: 0 0 10px 0;">Trasportatore Lineare</h3>
+                    <p style="color: #a0aab8; font-size: 13px; margin: 0 0 15px 0; line-height: 1.5;">Configurazioni rettilinee modulari per linee di assemblaggio e trasferimento.</p>
+                </div>
+                <span style="color: var(--accent, #a2ff00); font-size: 13px; font-weight: 700; display: inline-flex; align-items: center; gap: 5px;">Scopri la Configurazione →</span>
+            </div>
         </a>
 
         <!-- Trasportatore a rulli -->
-        <a href="prodotto-trasportatore-rulli.html" class="card-prodotto">
-            <div class="card-prodotto-img">
-                <img src="img/trasportatore-rulli.jpg" alt="Trasportatore a rulli folli e motorizzati">
+        <a href="prodotto-trasportatore-rulli.html" class="card-prodotto" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; overflow: hidden; text-decoration: none; display: flex; flex-direction: column;">
+            <div class="card-prodotto-img" style="height: 200px; overflow: hidden; position: relative;">
+                <img src="img/trasportatore-rulli.jpg" alt="Trasportatore a rulli folli e motorizzati" style="width: 100%; height: 100%; object-fit: cover;">
+                <span style="position: absolute; top: 12px; left: 12px; background: rgba(0,0,0,0.7); color: #fff; font-size: 11px; padding: 4px 8px; border-radius: 4px; font-weight: 700; text-transform: uppercase;">Folli / Motorizzati</span>
             </div>
-            <h3 class="card-prodotto-title">Rulliere & Trasportatori a Rulli</h3>
+            <div style="padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <h3 class="card-prodotto-title" style="color: #fff; font-size: 18px; margin: 0 0 10px 0;">Rulliere & Trasportatori a Rulli</h3>
+                    <p style="color: #a0aab8; font-size: 13px; margin: 0 0 15px 0; line-height: 1.5;">Movimentazione di colli rigidi, scatole e pallet con rulli folli o comandati a catena.</p>
+                </div>
+                <span style="color: var(--accent, #a2ff00); font-size: 13px; font-weight: 700; display: inline-flex; align-items: center; gap: 5px;">Scopri la Configurazione →</span>
+            </div>
         </a>
 
         <!-- Trasportatore inclinato / Z -->
-        <a href="prodotto-trasportatore-inclinato.html" class="card-prodotto">
-            <div class="card-prodotto-img">
-                <img src="img/trasportatore-inclinato.jpg" alt="Trasportatore inclinato e a Z con listelli">
+        <a href="prodotto-trasportatore-inclinato.html" class="card-prodotto" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; overflow: hidden; text-decoration: none; display: flex; flex-direction: column;">
+            <div class="card-prodotto-img" style="height: 200px; overflow: hidden; position: relative;">
+                <img src="img/trasportatore-inclinato.jpg" alt="Trasportatore inclinato e a Z con listelli" style="width: 100%; height: 100%; object-fit: cover;">
+                <span style="position: absolute; top: 12px; left: 12px; background: rgba(0,0,0,0.7); color: #fff; font-size: 11px; padding: 4px 8px; border-radius: 4px; font-weight: 700; text-transform: uppercase;">Elevazione & Listelli</span>
             </div>
-            <h3 class="card-prodotto-title">Trasportatore Inclinato / a Z</h3>
+            <div style="padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <h3 class="card-prodotto-title" style="color: #fff; font-size: 18px; margin: 0 0 10px 0;">Trasportatore Inclinato / a Z</h3>
+                    <p style="color: #a0aab8; font-size: 13px; margin: 0 0 15px 0; line-height: 1.5;">Per il superamento di dislivelli e l'alimentazione di tramogge o presse per la plastica.</p>
+                </div>
+                <span style="color: var(--accent, #a2ff00); font-size: 13px; font-weight: 700; display: inline-flex; align-items: center; gap: 5px;">Scopri la Configurazione →</span>
+            </div>
         </a>
 
         <!-- Trasportatore a curva -->
-        <a href="prodotto-trasportatore-curva.html" class="card-prodotto">
-            <div class="card-prodotto-img">
-                <img src="img/trasportatore-curva.jpg" alt="Trasportatore a nastro curvo">
+        <a href="prodotto-trasportatore-curva.html" class="card-prodotto" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; overflow: hidden; text-decoration: none; display: flex; flex-direction: column;">
+            <div class="card-prodotto-img" style="height: 200px; overflow: hidden; position: relative;">
+                <img src="img/trasportatore-curva.jpg" alt="Trasportatore a nastro curvo" style="width: 100%; height: 100%; object-fit: cover;">
+                <span style="position: absolute; top: 12px; left: 12px; background: rgba(0,0,0,0.7); color: #fff; font-size: 11px; padding: 4px 8px; border-radius: 4px; font-weight: 700; text-transform: uppercase;">Raggi 45° / 90° / 180°</span>
             </div>
-            <h3 class="card-prodotto-title">Trasportatore a Curva</h3>
+            <div style="padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <h3 class="card-prodotto-title" style="color: #fff; font-size: 18px; margin: 0 0 10px 0;">Trasportatore a Curva</h3>
+                    <p style="color: #a0aab8; font-size: 13px; margin: 0 0 15px 0; line-height: 1.5;">Cambi di direzione senza alterare l'orientamento dei prodotti trasportati.</p>
+                </div>
+                <span style="color: var(--accent, #a2ff00); font-size: 13px; font-weight: 700; display: inline-flex; align-items: center; gap: 5px;">Scopri la Configurazione →</span>
+            </div>
         </a>
 
         <!-- Trasportatore custom -->
-        <a href="prodotto-trasportatore-custom.html" class="card-prodotto">
-            <div class="card-prodotto-img">
-                <img src="img/trasportatore-nastro.jpg" alt="Trasportatore industriale personalizzato su misura">
+        <a href="prodotto-trasportatore-custom.html" class="card-prodotto" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; overflow: hidden; text-decoration: none; display: flex; flex-direction: column;">
+            <div class="card-prodotto-img" style="height: 200px; overflow: hidden; position: relative;">
+                <img src="img/trasportatore-nastro.jpg" alt="Trasportatore industriale personalizzato su misura" style="width: 100%; height: 100%; object-fit: cover;">
+                <span style="position: absolute; top: 12px; left: 12px; background: rgba(0,0,0,0.7); color: var(--accent, #a2ff00); font-size: 11px; padding: 4px 8px; border-radius: 4px; font-weight: 700; text-transform: uppercase;">Progettazione CAD 3D</span>
             </div>
-            <h3 class="card-prodotto-title">Sistemi Personalizzati & Custom</h3>
+            <div style="padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <h3 class="card-prodotto-title" style="color: #fff; font-size: 18px; margin: 0 0 10px 0;">Sistemi Personalizzati & Custom</h3>
+                    <p style="color: #a0aab8; font-size: 13px; margin: 0 0 15px 0; line-height: 1.5;">Progettazione ex-novo basata sui vostri vincoli di layout e ingombro in stabilimento.</p>
+                </div>
+                <span style="color: var(--accent, #a2ff00); font-size: 13px; font-weight: 700; display: inline-flex; align-items: center; gap: 5px;">Richiedi Fattibilità →</span>
+            </div>
         </a>
     </div>
 </section>
 
 <!-- CATEGORIA: COMPONENTI -->
-<section class="section" id="componenti">
-    <h2 class="section-title">Componenti & Ricambi</h2>
-    <p class="blog-subtitle" style="max-width: 700px; margin: 0 auto 40px; text-align:center;">
-        Componentistica per manutenzione ordinaria, straordinaria e revamping di impianti esistenti.
-    </p>
+<section class="section container" id="componenti" style="padding-top: 50px;">
+    <div style="border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px; margin-bottom: 30px;">
+        <h2 class="section-title" style="text-align: left; margin: 0;">03. Componenti & Ricambistica</h2>
+        <p style="color: #a0aab8; font-size: 15px; margin-top: 5px;">
+            Ricambi meccanici ad alta precisione per manutenzione e revamping imminente.
+        </p>
+    </div>
 
     <div class="grid-3">
         <!-- Rulli -->
-        <a href="prodotto-rulli.html" class="card-prodotto">
-            <div class="card-prodotto-img">
-                <img src="img/rulli.jpg" alt="Rulli per trasportatori industriali">
+        <a href="prodotto-rulli.html" class="card-prodotto" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; overflow: hidden; text-decoration: none; display: flex; flex-direction: column;">
+            <div class="card-prodotto-img" style="height: 200px; overflow: hidden; position: relative;">
+                <img src="img/rulli.jpg" alt="Rulli per trasportatori industriali" style="width: 100%; height: 100%; object-fit: cover;">
+                <span style="position: absolute; top: 12px; left: 12px; background: rgba(0,0,0,0.7); color: #fff; font-size: 11px; padding: 4px 8px; border-radius: 4px; font-weight: 700; text-transform: uppercase;">Acciaio / PVC / Inox</span>
             </div>
-            <h3 class="card-prodotto-title">Rulli di Trascinamento & Rinvio</h3>
+            <div style="padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <h3 class="card-prodotto-title" style="color: #fff; font-size: 18px; margin: 0 0 10px 0;">Rulli di Trascinamento & Rinvio</h3>
+                    <p style="color: #a0aab8; font-size: 13px; margin: 0 0 15px 0; line-height: 1.5;">Rulli folli, gommati, frizionati e scanalati per ogni tipo di carico e diametro.</p>
+                </div>
+                <span style="color: var(--accent, #a2ff00); font-size: 13px; font-weight: 700; display: inline-flex; align-items: center; gap: 5px;">Visualizza Modelli →</span>
+            </div>
         </a>
 
         <!-- Tamburi / Mototamburi -->
-        <a href="prodotto-tamburi.html" class="card-prodotto">
-            <div class="card-prodotto-img">
-                <img src="img/tamburi.jpg" alt="Tamburi e mototamburi per nastri trasportatori">
+        <a href="prodotto-tamburi.html" class="card-prodotto" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; overflow: hidden; text-decoration: none; display: flex; flex-direction: column;">
+            <div class="card-prodotto-img" style="height: 200px; overflow: hidden; position: relative;">
+                <img src="img/tamburi.jpg" alt="Tamburi e mototamburi per nastri trasportatori" style="width: 100%; height: 100%; object-fit: cover;">
+                <span style="position: absolute; top: 12px; left: 12px; background: rgba(0,0,0,0.7); color: #fff; font-size: 11px; padding: 4px 8px; border-radius: 4px; font-weight: 700; text-transform: uppercase;">Trazione Integrata</span>
             </div>
-            <h3 class="card-prodotto-title">Tamburi e Mototamburi</h3>
+            <div style="padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <h3 class="card-prodotto-title" style="color: #fff; font-size: 18px; margin: 0 0 10px 0;">Tamburi e Mototamburi</h3>
+                    <p style="color: #a0aab8; font-size: 13px; margin: 0 0 15px 0; line-height: 1.5;">Tamburi bombati, tassellati e motorizzati hermeticamente sigillati IP66/IP69K.</p>
+                </div>
+                <span style="color: var(--accent, #a2ff00); font-size: 13px; font-weight: 700; display: inline-flex; align-items: center; gap: 5px;">Visualizza Modelli →</span>
+            </div>
         </a>
     </div>
 </section>
 
-<!-- CTA FINALE -->
-<section class="section">
-    <div class="componenti-cta" style="text-align:center; padding:40px 20px; background: rgba(255,255,255,0.02); border-radius:10px;">
-        <h3 class="sottotitolo-bianco">Non Trovi il Prodotto Specifico per il Tuo Impianto?</h3>
-        <p style="color:var(--text-muted, #a0a0a0); margin-bottom:20px;">Progettiamo e realizziamo soluzioni speciali e ricambi su misura basandoci sulle tue specifiche tecniche.</p>
-        <a href="#" class="btn btn-primary btn-preventivo">Richiedi Studio di Fattibilità</a>
+<!-- CTA FINALE HIGH CONVERSION -->
+<section class="section container" style="padding-top: 60px;">
+    <div style="background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%); border: 1px solid rgba(162, 255, 0, 0.2); border-radius: 12px; padding: 50px 30px; text-align: center;">
+        <h3 style="color: #fff; font-size: 26px; margin: 0 0 10px 0;">Hai un Disegno Tecnico o un Campione da Replicare?</h3>
+        <p style="color: #a0aab8; max-width: 700px; margin: 0 auto 25px auto; font-size: 16px;">
+            I nostri tecnici sono specializzati nel rilievo dimensionale e nella vulcanizzazione in cantiere per ridurre a zero i tempi d'arresto della tua linea produttiva.
+        </p>
+        <a href="#" class="btn-preventivo-nav" onclick="apriPopup()" style="display: inline-block; background: var(--accent, #a2ff00); color: #000; padding: 14px 28px; font-weight: 700; text-decoration: none; border-radius: 6px;">
+            Richiedi Quotazione Speciale (RFQ) →
+        </a>
     </div>
 </section>
 
-<!-- POPUP COMPLETO PREVENTIVO (RFQ) -->
+<!-- POPUP PREVENTIVO OVERLAY -->
 <div class="popup-overlay" id="popup-overlay">
     <div class="popup-box" id="popup-preventivo">
         <span class="popup-close" onclick="chiudiPopup()">&times;</span>
@@ -283,7 +399,7 @@
     </div>
 </div>
 
-<!-- FOOTER -->
+<!-- FOOTER STANDARD CORRETTO E COMPLETO -->
 <footer class="footer-sirio">
     <div class="footer-top">
         <div class="footer-col">
@@ -302,7 +418,7 @@
             <a href="index.html">Home</a>
             <a href="azienda.html">Azienda</a>
             <a href="prodotti.html">Prodotti</a>
-            <a href="negozio.html">Catalogo Tecnico</a>
+            <a href="catalogo.html">Catalogo Tecnico</a>
             <a href="portfolio.html">Portfolio Impianti</a>
             <a href="contatti.html">Contatti</a>
         </div>
