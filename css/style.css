@@ -9,13 +9,6 @@
     --border-soft: #1a1a1a;
 }
 
-.logo img {
-    height: 55px;
-    width: auto;
-    display: block;
-    object-fit: contain;
-}
-
 /* =========================================
    RESET & BASE
 ========================================= */
@@ -45,8 +38,15 @@ img {
     display: block;
 }
 
+.logo img {
+    height: 55px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+}
+
 /* =========================================
-   GLOBAL TITLES
+   GLOBAL TITLES & TYPOGRAPHY
 ========================================= */
 
 h1, h2, h3, h4 {
@@ -106,6 +106,7 @@ nav a {
     font-weight: 500;
     transition: 0.25s;
     display: inline-block;
+    text-transform: none; /* Impedisce modifiche forzate ai nomi */
 }
 
 nav a:hover,
@@ -117,7 +118,7 @@ nav a.active {
     color: var(--sirio-green) !important;
 }
 
-/* CTA Preventivo Nav */
+/* BUTTONS NAV & CTA */
 .btn-preventivo-nav {
     background: #ffcc00;
     padding: 10px 18px;
@@ -133,7 +134,7 @@ nav a.active {
     border-color: #cc9900;
 }
 
-.btn-preventivo {
+.btn-preventivo, .btn-primary {
     display: inline-block;
     background: #007bff;
     color: #fff;
@@ -145,21 +146,22 @@ nav a.active {
     transition: 0.25s ease;
     border: none;
     cursor: pointer;
+    margin-top: 15px;
 }
 
-.btn-preventivo:hover {
+.btn-preventivo:hover, .btn-primary:hover {
     background: #0a84ff;
     transform: translateY(-2px);
     box-shadow: 0 6px 18px rgba(0, 123, 255, 0.35);
 }
 
-.btn-preventivo:active {
+.btn-preventivo:active, .btn-primary:active {
     transform: translateY(0);
     box-shadow: none;
 }
 
 /* =========================================
-   MEGA MENU (Prodotti / Catalogo / Dropdown)
+   MEGA MENU (Dropdown & Catalogo Tecnico)
 ========================================= */
 
 .menu-prodotti,
@@ -169,12 +171,14 @@ nav a.active {
     padding: 10px 0;
 }
 
+/* Generazione automatica della freccina singola nel menu */
 .menu-prodotti > a::after,
 .menu-dropdown > a::after,
 .menu-negozio > a::after {
-    content: " ▼";
-    font-size: 11px;
+    content: " ▾";
+    font-size: 12px;
     margin-left: 4px;
+    display: inline-block;
 }
 
 .mega-menu,
@@ -184,7 +188,7 @@ nav a.active {
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    width: 700px;
+    width: 720px;
     background: #000;
     border: 1px solid #222;
     padding: 25px 30px;
@@ -224,7 +228,7 @@ nav a.active {
 .mega-negozio h4 {
     color: var(--sirio-green);
     margin-bottom: 12px;
-    font-size: 16px;
+    font-size: 15px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
@@ -247,6 +251,67 @@ nav a.active {
 }
 
 /* =========================================
+   HERO SECTION (FIX ALLINEAMENTO E IMMAGINE)
+========================================= */
+
+.hero {
+    padding: 60px 10%;
+    background: #000;
+}
+
+.hero h1 {
+    color: var(--sirio-green);
+    font-size: 40px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.hero-text {
+    color: var(--text-muted);
+    font-size: 17px;
+    line-height: 1.6;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.hero-title {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--sirio-green);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.hero-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    max-height: 360px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid var(--border-soft);
+}
+
+/* =========================================
    SEZIONI GLOBALI & LAYOUT
 ========================================= */
 
@@ -258,23 +323,6 @@ nav a.active {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-}
-
-.hero-text {
-    color: var(--text-muted);
-    font-size: 18px;
-    line-height: 1.6;
-    text-align: left;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.hero-title {
-    font-size: 26px;
-    font-weight: 800;
-    color: var(--sirio-green);
-    margin-right: 6px;
-    white-space: nowrap;
 }
 
 /* =========================================
@@ -328,27 +376,30 @@ nav a.active {
     box-shadow: 0 6px 18px rgba(0, 123, 255, 0.35);
 }
 
-.btn-blu:active {
-    transform: translateY(0);
-    box-shadow: none;
-}
-
 /* =========================================
    HOME — SERVIZI (4 CELLE) & GRID 3
 ========================================= */
 
 .services-table {
     background: #000;
-    padding: 60px 5%;
+    padding: 60px 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    border: 1px solid var(--border-soft);
+    gap: 20px;
 }
 
 .services-table .cell {
     padding: 40px;
     background: #0d0d0d;
     border: 1px solid var(--border-soft);
+    border-radius: 8px;
+    text-align: left;
+}
+
+.services-table .cell h3 {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
 .services-table .cell p {
@@ -357,6 +408,12 @@ nav a.active {
 
 .titolo-verde {
     color: var(--sirio-green) !important;
+}
+
+.sottotitolo-bianco, .titolo-bianco {
+    color: #fff;
+    font-size: 28px;
+    margin-bottom: 20px;
 }
 
 .grid-3 {
@@ -391,6 +448,27 @@ nav a.active {
     color: var(--text-muted);
     font-size: 15px;
     line-height: 1.6;
+}
+
+.btn-ghost {
+    display: inline-block;
+    color: var(--sirio-green);
+    font-weight: 600;
+    margin-top: 10px;
+    transition: 0.25s;
+}
+
+.btn-ghost:hover {
+    color: #fff;
+    transform: translateX(5px);
+}
+
+.servizi-sirio {
+    padding: 60px 10%;
+}
+
+.mt-60 {
+    margin-top: 60px;
 }
 
 /* =========================================
@@ -608,7 +686,7 @@ nav a.active {
     margin-bottom: 10px;
 }
 
-.team-subtitle-white, .titolo-bianco {
+.team-subtitle-white {
     color: #fff;
     text-align: center;
     font-size: 32px;
@@ -1074,6 +1152,17 @@ nav a.active {
 .hamburger.active span:nth-child(2) { opacity: 0; }
 .hamburger.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
+@media (max-width: 992px) {
+    .hero-grid, .info-grid, .portfolio-feature {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .hero-image {
+        margin-top: 20px;
+    }
+}
+
 @media (max-width: 900px) {
     .contact-card, .contatti-wrapper, .footer-top {
         grid-template-columns: 1fr;
@@ -1106,7 +1195,7 @@ nav a.active {
 
     nav.open { display: flex; }
 
-    .grid-2, .grid-3, .grid-4, .prodotti-info-grid, .portfolio-grid, .area-tecnica-grid {
+    .grid-2, .grid-3, .grid-4, .services-table, .prodotti-info-grid, .portfolio-grid, .area-tecnica-grid {
         grid-template-columns: 1fr;
     }
 
