@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css?v=5">
     <style>
-        /* DESIGN CUSTOM PREMIUM PER SEZIONE CONTATTI */
+        /* DESIGN CUSTOM PER SEZIONE CONTATTI */
         .contatti-hero-custom {
             padding: 60px 20px 30px;
             text-align: center;
@@ -240,8 +240,9 @@
         <div class="menu-voce"><a href="azienda.html">Azienda</a></div>
         <div class="menu-voce"><a href="prodotti.html">Prodotti</a></div>
 
+        <!-- CATALOGO TEKNICO CON LINK DIRETTO E MEGA MENU -->
         <div class="menu-voce menu-negozio">
-            <a href="catalogo.html">Catalogo Tecnico</a>
+            <a href="catalogo.html" class="link-catalogo-main">Catalogo Tecnico</a>
             <div class="mega-negozio">
                 <div class="colonna">
                     <h4>Nastri Trasportatori</h4>
@@ -459,12 +460,6 @@
             <p class="footer-contact">📞 (+39) 011 953 9492</p>
             <p class="footer-contact">✉️ info@sirionastri.it</p>
 
-            <div class="footer-social">
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-            </div>
         </div>
 
         <div class="footer-col">
@@ -526,6 +521,14 @@ function chiudiPopup() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
+    // Garantisce che il link a Catalogo Tecnico sia sempre cliccabile
+    const linkCatalogo = document.querySelector('.link-catalogo-main');
+    if (linkCatalogo) {
+        linkCatalogo.addEventListener('click', function(e) {
+            window.location.href = 'catalogo.html';
+        });
+    }
+
     document.querySelectorAll(".btn-preventivo-nav, .btn-preventivo").forEach(btn => {
         btn.addEventListener("click", function(e) {
             e.preventDefault();
