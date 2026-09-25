@@ -3,20 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sirio Nastri Trasportatori | Soluzioni per la Movimentazione Industriale</title>
-    <link rel="stylesheet" href="css/style.css?v=3">
-    <!-- FontAwesome per icone footer/social -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Sirio Nastri Trasportatori | Ingegneria e Movimentazione Industriale</title>
+    <meta name="description" content="Sirio Nastri Trasportatori: progettazione e produzione di nastri trasportatori industriali, rulliere e soluzioni di movimentazione su misura.">
+    <link rel="canonical" href="https://sirionastri.github.io/sirio-sito/index.html">
+    <link rel="stylesheet" href="css/style.css?v=5">
+    <style>
+        /* Regolazione contenuta per l'immagine Hero per evitare ingombri eccesivi */
+        .hero-img-container {
+            max-width: 320px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        .hero-img-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            object-fit: contain;
+        }
+        /* Card servizi con immagini intere non tagliate */
+        .card-servizio-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            display: block;
+        }
+    </style>
 </head>
 
 <body>
 
 <header>
     <div class="logo">
-        <a href="index.html"><img src="img/logo.jpg" alt="Sirio Nastri Trasportatori"></a>
+        <a href="index.html">
+            <img src="img/logo.jpg" alt="Sirio Nastri Trasportatori Industriali">
+        </a>
     </div>
 
-    <!-- 🍔 HAMBURGER MENU MOBILE -->
+    <!-- HAMBURGER MENU -->
     <div class="hamburger" onclick="toggleMenu()">
         <span></span>
         <span></span>
@@ -28,14 +54,14 @@
         <div class="menu-voce"><a href="azienda.html">Azienda</a></div>
         <div class="menu-voce"><a href="prodotti.html">Prodotti</a></div>
 
-        <!-- MEGA MENU CATALOGO -->
-        <div class="menu-voce menu-negozio">
-            <a href="catalogo.html">Catalogo</a>
+        <!-- DROPDOWN CATALOGO TECNICO CON GALLERIA -->
+        <div class="menu-voce menu-dropdown">
+            <a href="catalogo.html" class="link-diretto">Catalogo Tecnico</a>
 
-            <div class="mega-negozio">
-                <!-- COLONNA 1: NASTRI TRASPORTATORI -->
+            <div class="mega-menu">
+                <!-- COLONNA 1: GALLERIA -->
                 <div class="colonna">
-                    <h4>Nastri Trasportatori</h4>
+                    <h4>Galleria</h4>
                     <a href="prodotto-nastro-pvc.html">Nastro in PVC</a>
                     <a href="prodotto-nastro-pu.html">Nastro in PU</a>
                     <a href="prodotto-nastro-gomma.html">Nastro in gomma</a>
@@ -50,15 +76,15 @@
                     <a href="prodotto-trasportatore-nastro.html">Lineari</a>
                     <a href="prodotto-trasportatore-inclinato.html">Inclinati</a>
                     <a href="prodotto-trasportatore-curva.html">Curvi</a>
-                    <a href="prodotto-trasportatore-rulli.html">Acciaio inox / Rulliere</a>
-                    <a href="prodotto-trasportatore-personalizzato.html">Personalizzati</a>
+                    <a href="prodotto-trasportatore-rulli.html">Acciaio Inox / Rulliere</a>
+                    <a href="prodotto-trasportatore-custom.html">Personalizzati & Custom</a>
                 </div>
 
                 <!-- COLONNA 3: COMPONENTI -->
                 <div class="colonna">
-                    <h4>Componenti</h4>
-                    <a href="prodotto-rulli.html">Rulli</a>
-                    <a href="prodotto-tamburi.html">Tamburi e mototamburi</a>
+                    <h4>Componenti & Ricambi</h4>
+                    <a href="prodotto-rulli.html">Rulli di Trascinamento</a>
+                    <a href="prodotto-tamburi.html">Tamburi e Mototamburi</a>
                 </div>
             </div>
         </div>
@@ -66,248 +92,195 @@
         <div class="menu-voce"><a href="portfolio.html">Portfolio</a></div>
         <div class="menu-voce"><a href="contatti.html">Contatti</a></div>
 
-        <!-- BOTTONE PREVENTIVO -->
         <div class="menu-voce">
-            <a href="#" class="btn-preventivo-nav">Richiedi preventivo</a>
+            <a href="#" class="btn-preventivo-nav" onclick="apriPopup()">Richiedi Preventivo (RFQ)</a>
         </div>
     </nav>
 </header>
 
 
-<!-- ============================
-     HERO SECTION
-============================ -->
-<section class="hero">
-    <div class="hero-header container">
-        <h1 class="hero-main-title">SIRIO NASTRI TRASPORTATORI</h1>
+<!-- HERO SECTION -->
+<section class="section container" style="padding-top: 60px;">
+    <div style="text-align: left; margin-bottom: 20px;">
+        <span style="color: var(--accent, #a2ff00); font-weight: 700; text-transform: uppercase; font-size: 13px; letter-spacing: 1.5px;">Soluzioni di Movimentazione</span>
+        <h1 class="titolo-pagina" style="margin-top: 5px;">Sirio Nastri Trasportatori</h1>
     </div>
 
-    <div class="hero-grid container">
-        <!-- TESTO A SINISTRA -->
-        <div class="hero-text-block">
-            <p class="hero-text">
-                <span class="hero-title">Sirio Nastri:</span> soluzioni affidabili per ogni linea produttiva.
-                Diamo continuità al tuo lavoro con nastri progettati per durare.
-                Movimentiamo il tuo lavoro con precisione e affidabilità.
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+        <div>
+            <h2 class="sottotitolo-bianco" style="text-align: left; margin-bottom: 20px;">Affidabilità e Continuità Operativa per l'Industria</h2>
+            <p style="color: #a0aab8; font-size: 18px; line-height: 1.7; margin-bottom: 30px;">
+                Diamo continuità alle tue linee produttive con nastri e impianti progettati per durare. Risolviamo problematiche di scorrimento, usura e movimentazione complessa con ingegneria di precisione.
             </p>
-
-            <a href="#" class="btn btn-primary btn-preventivo">Richiedi il tuo progetto</a>
+            <a href="#" class="btn btn-primary btn-preventivo" onclick="apriPopup()">Richiedi il tuo progetto</a>
         </div>
 
-        <!-- IMMAGINE A DESTRA -->
-        <div class="hero-img-block">
-            <img src="img/nastro-sirio.jpg" alt="Sirio Nastri Trasportatori" class="hero-img">
+        <div class="hero-img-container">
+            <img src="img/nastro-sirio.jpg" alt="Impianto Nastro Trasportatore Sirio">
         </div>
     </div>
 </section>
 
 
-<!-- ============================
-     CHI SIAMO
-============================ -->
-<section class="info-grid container">
-    <div class="info-grid-img">
-        <img src="img/index3.jpg" alt="Chi Siamo - Sirio Nastri" class="chi-siamo-img">
-    </div>
-
-    <div class="info-grid-text">
-        <h2>Chi Siamo</h2>
-        <p class="chi-siamo-text">
-            La nostra azienda è specializzata nella produzione e fornitura di nastri trasportatori e soluzioni per la movimentazione industriale, progettati per garantire affidabilità, durata e prestazioni elevate in ogni contesto produttivo.
-            <br><br>
-            Operiamo da anni nel settore e collaboriamo con aziende di diverse dimensioni, offrendo prodotti su misura e un’assistenza tecnica costante.
-            <br><br>
-            Realizziamo nastri trasportatori in PVC, PU, gomma, silicone e materiali modulari, trasportatori draganti in acciaio, magnetici e rulliere. Adatti a settori come alimentare, logistico, metalmeccanico, agricolo e packaging. Ogni nastro viene progettato per resistere all’usura, ottimizzare i tempi di lavoro e migliorare l’efficienza delle linee produttive.
-            <br><br>
-            Oltre alla produzione, offriamo servizi di installazione, manutenzione e sostituzione rapida, garantendo interventi puntuali e soluzioni personalizzate in base alle esigenze del cliente.
-            <br><br>
-            Siamo un punto di riferimento per chi cerca qualità, competenza e soluzioni su misura nel mondo dei nastri trasportatori.
-        </p>
-
-        <a href="azienda.html" class="btn btn-blu">Scopri di più</a>
+<!-- CHI SIAMO SINTETICO -->
+<section class="azienda-images" style="padding-top: 40px;">
+    <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+        <div>
+            <img src="img/index3.jpg" alt="Produzione Sirio Nastri" style="width:100%; border-radius:8px; border:1px solid rgba(255,255,255,0.1);">
+        </div>
+        <div>
+            <span style="color: var(--accent, #a2ff00); font-weight: 700; text-transform: uppercase; font-size: 13px; letter-spacing: 1.5px;">Eccellenza Costruttiva</span>
+            <h2 class="sottotitolo-bianco" style="text-align:left; margin-top:5px; margin-bottom:20px;">Progettazione e Produzione Specializzata</h2>
+            <p style="color: #a0aab8; font-size: 16px; line-height: 1.7; margin-bottom: 25px;">
+                Specializzati nella fornitura di nastri trasportatori in PVC, PU, gomma, silicone e materiali modulari. Realizziamo impianti draganti, magnetici e rulliere per i settori alimentare, logistico, packaging e metalmeccanico.
+            </p>
+            <a href="azienda.html" class="btn btn-blu">Scopri l'Azienda</a>
+        </div>
     </div>
 </section>
 
 
-<!-- ============================
-     LINEA DI PRODOTTI
-============================ -->
-<section class="section container text-center">
-    <h2 class="section-title titolo-verde">Linea di Prodotti</h2>
-    <h3 class="sottotitolo-bianco">Qualità e Affidabilità</h3>
+<!-- LINEA DI PRODOTTI (STILE AZIENDA) -->
+<section class="azienda-services" style="text-align: center;">
+    <h2 class="titolo-verde">Linea di Prodotti</h2>
+    <h3 class="sottotitolo-bianco">Prestazioni ed Efficienza di Processo</h3>
 
-    <p class="section-desc">
-        La nostra gamma di nastri trasportatori è progettata per garantire prestazioni elevate,
-        durata nel tempo e massima affidabilità in ogni contesto industriale.
-        Sirio realizza soluzioni robuste e su misura, pensate per ottimizzare i tuoi processi produttivi
-        e superare le aspettative in termini di efficienza e sicurezza.
+    <p class="azienda-services-desc">
+        Ogni soluzione viene configurata per integrarsi perfettamente nei layout operativi esistenti, garantendo la massima resistenza all'usura.
     </p>
 
-    <!-- 4 CATEGORIE -->
-    <div class="services-table">
-        <div class="cell">
+    <div class="azienda-services-grid">
+        <div class="azienda-service">
+            <div class="asterisk">*</div>
             <h3>Nastri Standard</h3>
-            <p>La nostra linea standard di nastri trasportatori offre soluzioni robuste, affidabili e versatili per ogni tipo di impianto industriale.</p>
+            <p>Soluzioni robuste e versatili in PVC, PU e Gomma per il trasporto di carichi leggeri e medi in contesti industriali.</p>
         </div>
 
-        <div class="cell">
-            <h3>Nastri Personalizzati</h3>
-            <p>Progettiamo e realizziamo nastri trasportatori su misura per integrarsi perfettamente nel tuo processo produttivo.</p>
+        <div class="azienda-service">
+            <div class="asterisk">*</div>
+            <h3>Nastri Custom & Su Misura</h3>
+            <p>Sviluppo su specifiche del cliente con listelli, sponde di contenimento, guide vulcanizzate e geometrie dedicate.</p>
         </div>
 
-        <div class="cell">
-            <h3>Accessori Speciali</h3>
-            <p>Produciamo rulliere, curve, tapparelle, sistemi magnetici e accessori dedicati per migliorare prestazioni e sicurezza.</p>
+        <div class="azienda-service">
+            <div class="asterisk">*</div>
+            <h3>Sistemi & Accessori</h3>
+            <p>Integrazione di rulliere folli o motorizzate, curve di dDeviazione, tapparelle e sistemi di separazione magnetica.</p>
         </div>
 
-        <div class="cell">
-            <h3>Servizi Aggiuntivi</h3>
-            <p>Offriamo assistenza tecnica, manutenzione programmata e interventi rapidi per garantire continuità operativa.</p>
-        </div>
-    </div>
-</section>
-
-
-<!-- ============================
-     SERVIZI SIRIO
-============================ -->
-<section class="section servizi-sirio container">
-    <h2>Affianchiamo i nostri clienti in tutte le fasi d’acquisto</h2>
-
-    <div class="grid-3">
-        <div class="card-servizio">
-            <img src="img/sopralluogo-tecnico.jpg" alt="Sopralluogo tecnico">
-            <h3 class="sottotitolo-bianco">Sopralluogo tecnico</h3>
-            <a href="sopralluogo-tecnico.html" class="btn-ghost">Scopri di più →</a>
-        </div>
-
-        <div class="card-servizio">
-            <img src="img/progettazione.jpg" alt="Progettazione 3D">
-            <h3 class="sottotitolo-bianco">Progettazione 3D</h3>
-            <a href="progettazione.html" class="btn-ghost">Scopri di più →</a>
-        </div>
-
-        <div class="card-servizio">
-            <img src="img/vendita.jpg" alt="Vendita">
-            <h3 class="sottotitolo-bianco">Vendita</h3>
-            <a href="vendita.html" class="btn-ghost">Scopri di più →</a>
-        </div>
-    </div>
-
-    <h2 class="mt-60">Servizi tecnici specializzati</h2>
-
-    <div class="grid-3">
-        <div class="card-servizio">
-            <img src="img/realizzazione-collaudo.jpg" alt="Realizzazione e collaudo">
-            <h3 class="sottotitolo-bianco">Realizzazione e collaudo</h3>
-            <a href="collaudo.html" class="btn-ghost">Scopri di più →</a>
-        </div>
-
-        <div class="card-servizio">
-            <img src="img/installazione.jpg" alt="Installazione">
-            <h3 class="sottotitolo-bianco">Installazione</h3>
-            <a href="installazione.html" class="btn-ghost">Scopri di più →</a>
-        </div>
-
-        <div class="card-servizio">
-            <img src="img/assistenza-post-vendita.jpg" alt="Assistenza post vendita">
-            <h3 class="sottotitolo-bianco">Assistenza post vendita</h3>
-            <a href="assistenza.html" class="btn-ghost">Scopri di più →</a>
+        <div class="azienda-service">
+            <div class="asterisk">*</div>
+            <h3>Supporto & Manutenzione</h3>
+            <p>Interventi rapidi di vulcanizzazione e giunzione in opera per eliminare i fermi impianto non programmati.</p>
         </div>
     </div>
 </section>
 
 
-<!-- ============================
-     CONTATTI PREMIUM
-============================ -->
-<section class="contact-wrapper container">
-    <div class="contact-card">
-        <div class="contact-left">
-            <h2 class="contact-title">Contattaci</h2>
-            <p class="contact-text">Siamo a tua disposizione per informazioni, preventivi e supporto tecnico.</p>
+<!-- SERVIZI E FASI DI ACQUISTO (FOTO PROPORZIONATE SENZA TAGLI) -->
+<section class="section container">
+    <div style="text-align: center; margin-bottom: 40px;">
+        <h2 class="titolo-verde">Fasi Operative e Servizi Tecnici</h2>
+        <h3 class="sottotitolo-bianco">Supporto Metodologico e Integrato</h3>
+    </div>
 
-            <div class="contact-details">
-                <p><strong>Telefono:</strong> (+39) 011 953 94 92</p>
-                <p><strong>Indirizzo:</strong> Via Carlo Leone, 48<br>10098 Rivoli, Cascine Vica (TO) – Italia</p>
-                <p><strong>Email:</strong> info@sirionastri.it</p>
-            </div>
+    <!-- GRIGLIA FASI -->
+    <div class="azienda-services-grid" style="margin-bottom: 50px;">
+        <div class="azienda-service" style="text-align:left;">
+            <img src="img/sopralluogo-tecnico.jpg" alt="Sopralluogo Tecnico" class="card-servizio-img">
+            <h3>Sopralluogo Tecnico</h3>
+            <p>Rilievo dimensionale in cantiere per la verifica di ingombri e cinematiche di scorrimento.</p>
+            <a href="sopralluogo-tecnico.html" class="btn-ghost" style="margin-top:10px; display:inline-block;">Scopri di più →</a>
         </div>
 
-        <div class="contact-right">
-            <form action="https://formsubmit.co/info@sirionastri.it" method="POST">
-                <input type="hidden" name="_subject" value="Nuovo messaggio dalla pagina Contatti">
-                <input type="hidden" name="_captcha" value="false">
+        <div class="azienda-service" style="text-align:left;">
+            <img src="img/progettazione.jpg" alt="Progettazione 3D" class="card-servizio-img">
+            <h3>Progettazione 3D</h3>
+            <p>Modellazione CAD preventiva per validare le interfacce meccaniche prima della costruzione.</p>
+            <a href="progettazione.html" class="btn-ghost" style="margin-top:10px; display:inline-block;">Scopri di più →</a>
+        </div>
 
-                <label for="nome">Nome</label>
-                <input type="text" id="nome" name="Nome" placeholder="Inserisci il tuo nome" required>
+        <div class="azienda-service" style="text-align:left;">
+            <img src="img/vendita.jpg" alt="Fornitura Meccanica" class="card-servizio-img">
+            <h3>Fornitura & Vendita</h3>
+            <p>Selezione dei materiali idonei in linea con normative CE e standard di conformità FDA.</p>
+            <a href="vendita.html" class="btn-ghost" style="margin-top:10px; display:inline-block;">Scopri di più →</a>
+        </div>
+    </div>
 
-                <label for="email">Email</label>
-                <input type="email" id="email" name="Email" placeholder="Inserisci la tua email" required>
+    <!-- GRIGLIA ASSISTENZA -->
+    <div class="azienda-services-grid">
+        <div class="azienda-service" style="text-align:left;">
+            <img src="img/realizzazione-collaudo.jpg" alt="Realizzazione e collaudo" class="card-servizio-img">
+            <h3>Collaudo Meccanico</h3>
+            <p>Test di trazione, allineamento e centraggio nastro prima della consegna in stabilimento.</p>
+            <a href="collaudo.html" class="btn-ghost" style="margin-top:10px; display:inline-block;">Scopri di più →</a>
+        </div>
 
-                <label for="messaggio">Messaggio</label>
-                <textarea id="messaggio" name="Messaggio" placeholder="Scrivi il tuo messaggio" rows="4" required></textarea>
+        <div class="azienda-service" style="text-align:left;">
+            <img src="img/installazione.jpg" alt="Installazione" class="card-servizio-img">
+            <h3>Installazione in Opera</h3>
+            <p>Montaggio e giunzione eseguita da tecnici specializzati direttamente sulla linea di produzione.</p>
+            <a href="installazione.html" class="btn-ghost" style="margin-top:10px; display:inline-block;">Scopri di più →</a>
+        </div>
 
-                <button type="submit" class="btn-primary contact-btn">Invia richiesta</button>
-            </form>
+        <div class="azienda-service" style="text-align:left;">
+            <img src="img/assistenza-post-vendita.jpg" alt="Assistenza post vendita" class="card-servizio-img">
+            <h3>Assistenza Post-Vendita</h3>
+            <p>Programmi di manutenzione preventiva e fornitura rapida di componenti di ricambio.</p>
+            <a href="assistenza.html" class="btn-ghost" style="margin-top:10px; display:inline-block;">Scopri di più →</a>
         </div>
     </div>
 </section>
 
 
-<!-- ============================
-     POPUP PREVENTIVO
-============================ -->
+<!-- POPUP COMPLETO PREVENTIVO (RFQ) IDENTICO AD AZIENDA -->
 <div class="popup-overlay" id="popup-overlay">
     <div class="popup-box" id="popup-preventivo">
         <span class="popup-close" onclick="chiudiPopup()">&times;</span>
 
         <div class="popup-content">
-            <!-- SINISTRA -->
             <div class="popup-col popup-left">
-                <h2>Richiedi Preventivo</h2>
-                <p class="popup-desc">Un nostro tecnico ti risponderà entro 24 ore con una soluzione su misura per la tua linea produttiva.</p>
+                <h2>Richiesta Preventivo Tecnico (RFQ)</h2>
+                <p class="popup-desc">
+                    Ricevi una valutazione di fattibilità ed un preventivo personalizzato entro 24 ore lavorative.
+                </p>
 
-                <h3>Perché contattarci</h3>
+                <h3>Vantaggi Operativi</h3>
                 <ul class="popup-points">
-                    <li>Consulenza tecnica gratuita</li>
-                    <li>Preventivi chiari e senza impegno</li>
-                    <li>Soluzioni personalizzate per ogni settore</li>
-                    <li>Supporto diretto con un progettista</li>
-                    <li>Risposta rapida e professionale</li>
+                    <li>Analisi tecnica con un ingegnere dedicato</li>
+                    <li>Soluzioni idonee per spazi ed ingombri ridotti</li>
+                    <li>Conformità alle direttive Macchine CE e FDA</li>
+                    <li>Preventivi dettagliati senza costi nascosti</li>
                 </ul>
-
-                <h3>Chi ti risponderà</h3>
-                <p>Il nostro team tecnico analizzerà la tua richiesta e ti guiderà nella scelta del nastro o del trasportatore più adatto.</p>
             </div>
 
-            <!-- DESTRA FORM -->
             <div class="popup-col popup-right">
                 <form action="https://formsubmit.co/info@sirionastri.it" method="POST" enctype="multipart/form-data" class="popup-form">
-                    <input type="hidden" name="_subject" value="Nuova richiesta preventivo dal Popup">
+                    <input type="hidden" name="_subject" value="Richiesta Preventivo RFQ da Home Page">
                     <input type="hidden" name="_captcha" value="false">
 
-                    <input type="text" name="Azienda" class="popup-input" placeholder="Azienda">
+                    <input type="text" name="Azienda" class="popup-input" placeholder="Ragione Sociale Azienda">
                     <input type="text" name="Nome" class="popup-input" placeholder="Nome *" required>
                     <input type="text" name="Cognome" class="popup-input" placeholder="Cognome *" required>
-                    <input type="email" name="Email" class="popup-input" placeholder="Email *" required>
-                    <input type="text" name="Telefono" class="popup-input" placeholder="Telefono">
-                    <textarea name="Messaggio" class="popup-input" placeholder="Messaggio" rows="4"></textarea>
+                    <input type="email" name="Email" class="popup-input" placeholder="Email Aziendale *" required>
+                    <input type="text" name="Telefono" class="popup-input" placeholder="Telefono Diretto">
+                    <textarea name="Messaggio" class="popup-input" placeholder="Specifiche del progetto (Dimensioni, materiali, velocità richieste)..." rows="4"></textarea>
 
                     <div class="filebox">
-                        <label class="filebox-title">Allega un file</label>
+                        <label class="filebox-title">Allega Layout / Disegno Tecnico (PDF, DWG, PNG)</label>
                         <div class="filebox-area">
-                            <p>Fai clic o trascina il file su quest'area per caricarlo.</p>
+                            <p>Trascina il file qui o clicca per caricarlo</p>
                             <input type="file" name="Allegato" class="filebox-input">
                         </div>
 
                         <div class="filebox-privacy">
                             <input type="checkbox" id="privacy-check" name="Privacy" value="Accettata" required>
-                            <label for="privacy-check">Accetto la Privacy Policy *</label>
+                            <label for="privacy-check">Autorizzo il trattamento dei dati personali secondo la Privacy Policy *</label>
                         </div>
                     </div>
 
-                    <button type="submit" class="popup-btn">Invia richiesta</button>
+                    <button type="submit" class="popup-btn">Invia Specifiche Tecniche</button>
                 </form>
             </div>
         </div>
@@ -315,68 +288,53 @@
 </div>
 
 
-<!-- ============================
-     FOOTER
-============================ -->
+<!-- FOOTER CON GALLERIA (IDENTICO AD AZIENDA) -->
 <footer class="footer-sirio">
     <div class="footer-top">
-        <!-- COLONNA 1 -->
         <div class="footer-col">
             <div class="footer-logo">
-                <img src="img/logo.jpg" alt="Sirio Nastri Trasportatori">
+                <img src="img/logo.jpg" alt="Sirio Nastri Trasportatori Logo">
             </div>
-            <p class="footer-desc">Produzione di nastri trasportatori, trasportatori completi e sistemi di movimentazione industriale.</p>
-
+            <p class="footer-desc">
+                Progettazione e produzione di nastri trasportatori industriali, rulliere e sistemi completi di movimentazione.
+            </p>
             <p class="footer-contact">📞 (+39) 011 953 9492</p>
             <p class="footer-contact">✉️ info@sirionastri.it</p>
-
-            <div class="footer-social">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-            </div>
         </div>
 
-        <!-- COLONNA 2 -->
         <div class="footer-col">
-            <h4>Menu</h4>
+            <h4>Navigazione</h4>
             <a href="index.html">Home</a>
             <a href="azienda.html">Azienda</a>
             <a href="prodotti.html">Prodotti</a>
-            <a href="catalogo.html">Catalogo</a>
-            <a href="portfolio.html">Portfolio</a>
+            <a href="catalogo.html">Catalogo Tecnico</a>
+            <a href="portfolio.html">Portfolio Impianti</a>
             <a href="contatti.html">Contatti</a>
         </div>
 
-        <!-- COLONNA 3 -->
         <div class="footer-col">
-            <h4>Nastri trasportatori</h4>
+            <h4>Galleria</h4>
             <a href="prodotto-nastro-pvc.html">Nastro in PVC</a>
             <a href="prodotto-nastro-pu.html">Nastro in PU</a>
             <a href="prodotto-nastro-gomma.html">Nastro in gomma</a>
             <a href="prodotto-nastro-alimentare.html">Nastro alimentare (FDA)</a>
-            <a href="prodotto-nastro-alte-temperature.html">Nastro per alte temperature</a>
-            <a href="prodotto-nastro-modulare.html">Nastro modulare in plastica</a>
+            <a href="prodotto-nastro-alte-temperature.html">Nastro alte temperature</a>
+            <a href="prodotto-nastro-modulare.html">Nastro modulare</a>
         </div>
 
-        <!-- COLONNA 4 -->
         <div class="footer-col">
-            <h4>Trasportatori</h4>
-            <a href="prodotto-trasportatore-nastro.html">Lineari</a>
-            <a href="prodotto-trasportatore-inclinato.html">Inclinati</a>
-            <a href="prodotto-trasportatore-curva.html">Curvi</a>
-            <a href="prodotto-trasportatore-rulli.html">Acciaio inox / Rulliere</a>
-            <a href="prodotto-trasportatore-personalizzato.html">Personalizzati</a>
-
-            <h4>Componenti</h4>
+            <h4>Trasportatori & Componenti</h4>
+            <a href="prodotto-trasportatore-nastro.html">Trasportatori Lineari</a>
+            <a href="prodotto-trasportatore-inclinato.html">Trasportatori Inclinati</a>
+            <a href="prodotto-trasportatore-curva.html">Trasportatori Curvi</a>
+            <a href="prodotto-trasportatore-rulli.html">Rulliere & Inox</a>
             <a href="prodotto-rulli.html">Rulli</a>
-            <a href="prodotto-tamburi.html">Tamburi e mototamburi</a>
+            <a href="prodotto-tamburi.html">Tamburi</a>
         </div>
     </div>
 
     <div class="footer-bottom">
-        © 2026 SIRIO Nastri Trasportatori S.r.L. — P.IVA 07016110012 — Tutti i diritti riservati
+        © 2026 SIRIO Nastri Trasportatori S.r.l. — P.IVA 07016110012 — Via Carlo Leone 48, Rivoli (TO)
     </div>
 </footer>
 
@@ -401,6 +359,15 @@ document.querySelectorAll(".btn-preventivo-nav, .btn-preventivo").forEach(btn =>
         e.preventDefault();
         apriPopup();
     });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const linkCatalogo = document.querySelector('.menu-dropdown > a');
+    if (linkCatalogo) {
+        linkCatalogo.addEventListener('click', function(e) {
+            window.location.href = this.getAttribute('href');
+        });
+    }
 });
 </script>
 
