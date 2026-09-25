@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Impianti e Case History | Sirio Nastri Trasportatori</title>
-    <meta name="description" content="Esplora le nostre realizzazioni industriali: nastri trasportatori alimentari FDA, rulliere intralogistiche, linee farmaceutiche ed evacuatori di trucioli.">
-    <link rel="canonical" href="https://sirionastri.github.io/sirio-sito/portfolio.html">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css?v=4">
+    <title>Catalogo Tecnico Nastri e Componenti | Sirio Nastri</title>
+    <meta name="description" content="Consulta il catalogo tecnico completo di nastri trasportatori in PVC, PU, gomma, modulari, rulliere e componentistica industriale per ogni applicazione.">
+    <link rel="canonical" href="https://sirionastri.github.io/sirio-sito/catalogo.html">
+    <link rel="stylesheet" href="css/style.css?v=5">
 </head>
 
 <body>
@@ -19,7 +18,8 @@
         </a>
     </div>
 
-    <div class="hamburger" onclick="toggleMenu()" aria-label="Menu di navigazione">
+    <!-- HAMBURGER MENU -->
+    <div class="hamburger" onclick="toggleMenu()">
         <span></span>
         <span></span>
         <span></span>
@@ -29,13 +29,15 @@
         <div class="menu-voce"><a href="index.html">Home</a></div>
         <div class="menu-voce"><a href="azienda.html">Azienda</a></div>
         <div class="menu-voce"><a href="prodotti.html">Prodotti</a></div>
-        
-<div class="menu-voce menu-negozio">
-    <a href="catalogo.html" class="link-diretto">Catalogo Tecnico</a>
-    <div class="mega-negozio">
-        
+
+        <!-- DROPDOWN CATALOGO TECNICO CON GALLERIA -->
+        <div class="menu-voce menu-dropdown">
+            <a href="catalogo.html" class="active link-diretto">Catalogo Tecnico</a>
+
+            <div class="mega-menu">
+                <!-- COLONNA 1: GALLERIA -->
                 <div class="colonna">
-                    <h4>Nastri Trasportatori</h4>
+                    <h4>Galleria</h4>
                     <a href="prodotto-nastro-pvc.html">Nastro in PVC</a>
                     <a href="prodotto-nastro-pu.html">Nastro in PU</a>
                     <a href="prodotto-nastro-gomma.html">Nastro in gomma</a>
@@ -43,6 +45,8 @@
                     <a href="prodotto-nastro-alte-temperature.html">Nastro per alte temperature</a>
                     <a href="prodotto-nastro-modulare.html">Nastro modulare in plastica</a>
                 </div>
+
+                <!-- COLONNA 2: TRASPORTATORI COMPLETI -->
                 <div class="colonna">
                     <h4>Trasportatori Completi</h4>
                     <a href="prodotto-trasportatore-nastro.html">Lineari</a>
@@ -51,174 +55,130 @@
                     <a href="prodotto-trasportatore-rulli.html">Acciaio Inox / Rulliere</a>
                     <a href="prodotto-trasportatore-custom.html">Personalizzati & Custom</a>
                 </div>
+
+                <!-- COLONNA 3: COMPONENTI -->
                 <div class="colonna">
                     <h4>Componenti & Ricambi</h4>
-                    <a href="prodotto-rulli.html">Rulli</a>
+                    <a href="prodotto-rulli.html">Rulli di Trascinamento</a>
                     <a href="prodotto-tamburi.html">Tamburi e Mototamburi</a>
                 </div>
             </div>
         </div>
 
-        <div class="menu-voce"><a href="portfolio.html" class="active">Portfolio</a></div>
+        <div class="menu-voce"><a href="portfolio.html">Portfolio</a></div>
         <div class="menu-voce"><a href="contatti.html">Contatti</a></div>
 
         <div class="menu-voce">
-            <a href="#" class="btn-preventivo-nav">Richiedi Preventivo (RFQ)</a>
+            <a href="#" class="btn-preventivo-nav" onclick="apriPopup()">Richiedi Preventivo (RFQ)</a>
         </div>
     </nav>
 </header>
 
-<main>
-    <!-- HERO PORTFOLIO -->
-    <section class="section section-hero-portfolio">
-        <div class="hero-content">
-            <h1 class="titolo-pagina">Portfolio Realizzazioni</h1>
-            <p class="sottotitolo-evidenza">Case History e Impianti di Movimentazione Su Misura</p>
-            <p class="hero-description">
-                Analisi delle soluzioni ingegneristiche sviluppate per linee di produzione, automazione intralogistica e ambienti critici. Ogni installazione è progettata su specifiche dimensionali e operative del cliente.
-            </p>
-        </div>
-    </section>
+<!-- PAGE TITLE -->
+<section class="page-header" style="padding: 60px 0 30px; text-align: center;">
+    <h1 style="font-size: 38px; color: var(--accent, #a2ff00); margin-bottom: 15px;">Catalogo Tecnico Generale</h1>
+    <p style="font-size: 18px; max-width: 800px; margin: 0 auto; color: #ddd;">
+        Panoramica completa dei materiali, nastri di trasporto e impianti di movimentazione progettati da Sirio.
+    </p>
+</section>
 
-    <!-- GRIGLIA 3 COLONNE -->
-    <section class="section">
-        <div class="grid-3">
-            <article class="card-servizio">
-                <img src="img/progetto1.jpg" alt="Nastro trasportatore alimentare certificato FDA per linee di imbottigliamento">
-                <h3>Nastro Alimentare Certificato FDA</h3>
-                <p>Installazione di un nastro continuo lavabile ad alta sanificazione per il confezionamento primario in ambito alimentare.</p>
-                <ul class="card-specs">
-                    <li><strong>Sanificazione:</strong> Lavaggio ad alta pressione</li>
-                    <li><strong>Conformità:</strong> Regolamento CE 1935/2004, FDA</li>
-                </ul>
-            </article>
-
-            <article class="card-servizio">
-                <img src="img/progetto2.jpg" alt="Rulliera motorizzata per intralogistica pacchi e smistamento">
-                <h3>Rulliera Motorizzata Intralogistica</h3>
-                <p>Sistema di movimentazione e smistamento imballaggi con rulli frizionati per Hub di spedizione e magazzini automatizzati.</p>
-                <ul class="card-specs">
-                    <li><strong>Capacità:</strong> Fino a 1.200 colli/ora</li>
-                    <li><strong>Controllo:</strong> Integrazione PLC / Sensori optoelettronici</li>
-                </ul>
-            </article>
-
-            <article class="card-servizio">
-                <img src="img/progetto3.jpg" alt="Separatore magnetico trucioli per centri di lavoro CNC">
-                <h3>Separatore Magnetico Trucioli</h3>
-                <p>Impianto di evacuazione scarti di lavorazione con tappeto magnetico rinforzato per centri di lavoro CNC.</p>
-                <ul class="card-specs">
-                    <li><strong>Applicazione:</strong> Trucioli metallici ferrosi / Frequenza intensiva</li>
-                    <li><strong>Resistenza:</strong> Tappeto ad alta usura anti-incastro</li>
-                </ul>
-            </article>
+<!-- SEZIONI CATALOGO -->
+<section class="section container">
+    <div style="margin-bottom: 50px;">
+        <h2 style="color: var(--accent, #a2ff00); border-bottom: 2px solid var(--accent, #a2ff00); padding-bottom: 10px; margin-bottom: 25px;">1. Galleria</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+            <a href="prodotto-nastro-pvc.html" style="background: #111; padding: 20px; border-radius: 6px; text-decoration: none; color: #fff; border: 1px solid #333;">
+                <h3 style="color: #a2ff00; margin-bottom: 8px;">Nastri in PVC →</h3>
+                <p style="color: #aaa; font-size: 14px;">Versatili, economici e resistenti ad oli moderati.</p>
+            </a>
+            <a href="prodotto-nastro-pu.html" style="background: #111; padding: 20px; border-radius: 6px; text-decoration: none; color: #fff; border: 1px solid #333;">
+                <h3 style="color: #a2ff00; margin-bottom: 8px;">Nastri in Poliuretano (PU) →</h3>
+                <p style="color: #aaa; font-size: 14px;">Elevata flessibilità e conformità alimentare FDA.</p>
+            </a>
+            <a href="prodotto-nastro-gomma.html" style="background: #111; padding: 20px; border-radius: 6px; text-decoration: none; color: #fff; border: 1px solid #333;">
+                <h3 style="color: #a2ff00; margin-bottom: 8px;">Nastri in Gomma →</h3>
+                <p style="color: #aaa; font-size: 14px;">Per carichi elevati e contesti industriali gravosi.</p>
+            </a>
+            <a href="prodotto-nastro-modulare.html" style="background: #111; padding: 20px; border-radius: 6px; text-decoration: none; color: #fff; border: 1px solid #333;">
+                <h3 style="color: #a2ff00; margin-bottom: 8px;">Nastri Modulari →</h3>
+                <p style="color: #aaa; font-size: 14px;">In plastica ad alta resistenza, facili da pulire e riparare.</p>
+            </a>
         </div>
-    </section>
+    </div>
 
-    <!-- CASE STUDIES DETTAGLIATI -->
-    <section class="info-grid">
-        <div class="info-grid-img">
-            <img src="img/progetto4.jpg" alt="Sistema integrato di trasporto a curva con tapparelle metalliche">
+    <div>
+        <h2 style="color: var(--accent, #a2ff00); border-bottom: 2px solid var(--accent, #a2ff00); padding-bottom: 10px; margin-bottom: 25px;">2. Strutture e Impianti Completi</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+            <a href="prodotto-trasportatore-nastro.html" style="background: #111; padding: 20px; border-radius: 6px; text-decoration: none; color: #fff; border: 1px solid #333;">
+                <h3 style="color: #a2ff00; margin-bottom: 8px;">Trasportatori Lineari →</h3>
+                <p style="color: #aaa; font-size: 14px;">Strutture in alluminio extrudato o acciaio verniciato.</p>
+            </a>
+            <a href="prodotto-trasportatore-inclinato.html" style="background: #111; padding: 20px; border-radius: 6px; text-decoration: none; color: #fff; border: 1px solid #333;">
+                <h3 style="color: #a2ff00; margin-bottom: 8px;">Trasportatori Inclinati →</h3>
+                <p style="color: #aaa; font-size: 14px;">Con listelli e sponde per il trasporto in salita/discesa.</p>
+            </a>
+            <a href="prodotto-trasportatore-rulli.html" style="background: #111; padding: 20px; border-radius: 6px; text-decoration: none; color: #fff; border: 1px solid #333;">
+                <h3 style="color: #a2ff00; margin-bottom: 8px;">Rulliere e Strutture Inox →</h3>
+                <p style="color: #aaa; font-size: 14px;">Soluzioni ideali per scatole, pallet e ambienti igienici.</p>
+            </a>
         </div>
-        <div class="info-grid-text">
-            <h2>Linea Integrata ad Alta Capacità</h2>
-            <h3 class="sottotitolo-bianco">Impianto Automotive & Heavy Duty</h3>
-            <p>
-                Ingegnerizzazione di una linea di trasporto complessa costituita da curve a nastro a 90°, trasportatori a tapparelle in acciaio e stazioni di smistamento automatico trasversale. Progetto sviluppato per sostenere carichi gravosi fino a 800 kg/m con manutenzione ridotta.
-            </p>
-        </div>
-    </section>
+    </div>
+</section>
 
-    <section class="info-grid info-grid-reverse">
-        <div class="info-grid-img">
-            <img src="img/farmaceutica.jpg" alt="Nastro trasportatore in acciaio Inox per uso farmaceutico cleanroom">
-        </div>
-        <div class="info-grid-text">
-            <h2>Ambiente Sterile e Cleanroom</h2>
-            <h3 class="sottotitolo-bianco">Linea Confezionamento Farmaceutico</h3>
-            <p>
-                Progettazione di nastri in poliuretano con strutture portanti in acciaio Inox AISI 316L, idonei al lavaggio ad alta pressione e conformi alle direttive GMP/FDA per ambienti a contaminazione controllata ISO Class 7.
-            </p>
-        </div>
-    </section>
-
-    <section class="info-grid">
-        <div class="info-grid-img">
-            <img src="img/progetto6.jpg" alt="Impianto evacuazione trucioli e riciclo refrigerante">
-        </div>
-        <div class="info-grid-text">
-            <h2>Evacuazione Scarti di Fresatura</h2>
-            <h3 class="sottotitolo-bianco">Settore Metalmeccanico Pesante</h3>
-            <p>
-                Nastro trasportatore a cerniera metallica rinforzata con sistema integrato di filtrazione e recupero del liquido refrigerante, ideato per resistere all'azione di elementi abrasivi e trucioli incandescenti fino a 300°C.
-            </p>
-        </div>
-    </section>
-
-    <!-- CTA FINALE -->
-    <section class="section section-cta">
-        <h2 class="section-title">Hai un Problema di Movimentazione da Risolvere?</h2>
-        <p class="cta-desc">
-            Contatta il nostro ufficio tecnico per richiedere un sopralluogo in cantiere o un'analisi di fattibilità basata sui tuoi layout CAD (STEP, DWG, DXF).
-        </p>
-        <a href="#" class="btn btn-primary btn-preventivo">Richiedi Sopralluogo Tecnico</a>
-    </section>
-</main>
-
-<!-- POPUP RIGENERATO PREVENTIVO / RFQ -->
-<div class="popup-overlay" id="popup-overlay" aria-hidden="true">
-    <div class="popup-box" id="popup-preventivo" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-        <button type="button" class="popup-close" onclick="chiudiPopup()" aria-label="Chiudi finestra">&times;</button>
+<!-- POPUP PREVENTIVO -->
+<div class="popup-overlay" id="popup-overlay">
+    <div class="popup-box" id="popup-preventivo">
+        <span class="popup-close" onclick="chiudiPopup()">&times;</span>
 
         <div class="popup-content">
             <div class="popup-col popup-left">
-                <h2 id="modal-title">Richiedi Preventivo Tecnico</h2>
+                <h2>Richiesta Preventivo Tecnico (RFQ)</h2>
                 <p class="popup-desc">
-                    Un nostro ingegnere esaminerà i parametri della tua linea per fornirti un'offerta dedicata entro 24 ore lavorative.
+                    Ricevi una fattibilità tecnica ed un'offerta economica personalizzata entro 24 ore lavorative.
                 </p>
 
-                <h3>Servizi Tecnici Inclusi</h3>
+                <h3>Perché scegliere Sirio</h3>
                 <ul class="popup-points">
-                    <li>Rilievo dimensionale in cantiere</li>
-                    <li>Verifica compatibilità materiali (FDA, ATEX)</li>
-                    <li>Modellazione e integrazione CAD 3D</li>
-                    <li>Assistenza e installazione post-vendita</li>
+                    <li>Analisi di fattibilità con progettista dedicato</li>
+                    <li>Preventivi trasparenti senza costi nascosti</li>
+                    <li>Sviluppo di soluzioni custom per spazi ridotti</li>
+                    <li>Rispetto rigoroso delle normative di sicurezza CE e FDA</li>
                 </ul>
             </div>
 
             <div class="popup-col popup-right">
                 <form action="https://formsubmit.co/info@sirionastri.it" method="POST" enctype="multipart/form-data" class="popup-form">
-                    <input type="hidden" name="_subject" value="Richiesta Preventivo/Sopralluogo dal Portfolio">
+                    <input type="hidden" name="_subject" value="Richiesta Preventivo RFQ dal Popup">
                     <input type="hidden" name="_captcha" value="false">
 
                     <input type="text" name="Azienda" class="popup-input" placeholder="Ragione Sociale Azienda">
                     <input type="text" name="Nome" class="popup-input" placeholder="Nome *" required>
                     <input type="text" name="Cognome" class="popup-input" placeholder="Cognome *" required>
                     <input type="email" name="Email" class="popup-input" placeholder="Email Aziendale *" required>
-                    <input type="tel" name="Telefono" class="popup-input" placeholder="Telefono">
-                    <textarea name="Messaggio" class="popup-input" placeholder="Descrivi il progetto (Settore, tipo materiale, ingombri, layout)..." rows="4"></textarea>
+                    <input type="text" name="Telefono" class="popup-input" placeholder="Telefono Diretto">
+                    <textarea name="Messaggio" class="popup-input" placeholder="Dettagli tecnici (Dimensioni, Portata, Velocità, Materiale)..." rows="4"></textarea>
 
                     <div class="filebox">
-                        <label for="file-upload" class="filebox-title">Allega Layout o Disegno Tecnico (PDF, DWG, DXF, ZIP - Max 10MB)</label>
+                        <label class="filebox-title">Allega Layout / Disegno Tecnico (PDF, DWG, PNG)</label>
                         <div class="filebox-area">
-                            <p>Fai clic o trascina il file per caricarlo</p>
-                            <input type="file" id="file-upload" name="Allegato" class="filebox-input" accept=".pdf,.dwg,.dxf,.zip,.rar,.step,.stp">
+                            <p>Trascina il file qui o clicca per caricarlo</p>
+                            <input type="file" name="Allegato" class="filebox-input">
                         </div>
 
                         <div class="filebox-privacy">
-                            <input type="checkbox" id="privacy-check-portfolio" name="Privacy" value="Accettata" required>
-                            <label for="privacy-check-portfolio">Autorizzo il trattamento dei dati personali secondo la Privacy Policy *</label>
+                            <input type="checkbox" id="privacy-check" name="Privacy" value="Accettata" required>
+                            <label for="privacy-check">Autorizzo il trattamento dei dati personali secondo la Privacy Policy *</label>
                         </div>
                     </div>
 
-                    <button type="submit" class="popup-btn">Invia Richiesta Tecnica</button>
+                    <button type="submit" class="popup-btn">Invia Specifiche Tecniche</button>
                 </form>
             </div>
         </div>
     </div>
 </div>
 
-<!-- FOOTER -->
+<!-- FOOTER CON GALLERIA -->
 <footer class="footer-sirio">
     <div class="footer-top">
         <div class="footer-col">
@@ -230,13 +190,6 @@
             </p>
             <p class="footer-contact">📞 (+39) 011 953 9492</p>
             <p class="footer-contact">✉️ info@sirionastri.it</p>
-
-            <div class="footer-social">
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-            </div>
         </div>
 
         <div class="footer-col">
@@ -245,12 +198,12 @@
             <a href="azienda.html">Azienda</a>
             <a href="prodotti.html">Prodotti</a>
             <a href="catalogo.html">Catalogo Tecnico</a>
-            <a href="portfolio.html">Portfolio</a>
+            <a href="portfolio.html">Portfolio Impianti</a>
             <a href="contatti.html">Contatti</a>
         </div>
 
         <div class="footer-col">
-            <h4>Nastri Trasportatori</h4>
+            <h4>Galleria</h4>
             <a href="prodotto-nastro-pvc.html">Nastro in PVC</a>
             <a href="prodotto-nastro-pu.html">Nastro in PU</a>
             <a href="prodotto-nastro-gomma.html">Nastro in gomma</a>
@@ -266,7 +219,7 @@
             <a href="prodotto-trasportatore-curva.html">Trasportatori Curvi</a>
             <a href="prodotto-trasportatore-rulli.html">Rulliere & Inox</a>
             <a href="prodotto-rulli.html">Rulli</a>
-            <a href="prodotto-tamburi.html">Tamburi e Mototamburi</a>
+            <a href="prodotto-tamburi.html">Tamburi</a>
         </div>
     </div>
 
@@ -282,34 +235,30 @@ function toggleMenu() {
 }
 
 function apriPopup() {
-    const popup = document.getElementById("popup-preventivo");
-    const overlay = document.getElementById("popup-overlay");
-    popup.classList.add("active");
-    overlay.classList.add("active");
-    overlay.setAttribute("aria-hidden", "false");
+    document.getElementById("popup-preventivo").classList.add("active");
+    document.getElementById("popup-overlay").classList.add("active");
 }
 
 function chiudiPopup() {
-    const popup = document.getElementById("popup-preventivo");
-    const overlay = document.getElementById("popup-overlay");
-    popup.classList.remove("active");
-    overlay.classList.remove("active");
-    overlay.setAttribute("aria-hidden", "true");
+    document.getElementById("popup-preventivo").classList.remove("active");
+    document.getElementById("popup-overlay").classList.remove("active");
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    document.querySelectorAll(".btn-preventivo-nav, .btn-preventivo").forEach(btn => {
-        btn.addEventListener("click", function(e) {
-            e.preventDefault();
-            apriPopup();
-        });
+document.querySelectorAll(".btn-preventivo-nav, .btn-preventivo").forEach(btn => {
+    btn.addEventListener("click", function(e) {
+        e.preventDefault();
+        apriPopup();
     });
+});
 
-    document.addEventListener("keydown", function(e) {
-        if (e.key === "Escape") {
-            chiudiPopup();
-        }
-    });
+// Forzatura navigazione Catalogo Tecnico
+document.addEventListener("DOMContentLoaded", function() {
+    const linkCatalogo = document.querySelector('.menu-dropdown > a');
+    if (linkCatalogo) {
+        linkCatalogo.addEventListener('click', function(e) {
+            window.location.href = this.getAttribute('href');
+        });
+    }
 });
 </script>
 
