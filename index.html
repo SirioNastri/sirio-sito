@@ -6,50 +6,7 @@
     <title>Nastri Trasportatori Industriali e Soluzioni di Movimentazione | Sirio Nastri</title>
     <meta name="description" content="Progettazione, produzione e manutenzione di nastri trasportatori industriali su misura, rulliere e sistemi di movimentazione per ogni settore produttivo.">
     <link rel="canonical" href="https://sirionastri.github.io/sirio-sito/index.html">
-    <link rel="stylesheet" href="css/style.css?v=5">
-    <style>
-        /* CORREZIONI STRUTTURALI E LAYOUT HERO */
-        .hero-grid {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        .hero-content {
-            flex: 1;
-            max-width: 600px;
-        }
-
-        .hero-image {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .hero-image img {
-            width: 100%;
-            max-width: 450px;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-            object-fit: cover;
-        }
-
-        /* CORREZIONE Z-INDEX DROPDOWN PER NON COPRIRE MALE L'IMMAGINE */
-        .mega-negozio {
-            z-index: 9999 !important;
-        }
-
-        /* STILE LINK CATALOGO TECNICO */
-        .menu-negozio {
-            position: relative;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css?v=6">
 </head>
 
 <body>
@@ -73,12 +30,13 @@
         <div class="menu-voce"><a href="azienda.html">Azienda</a></div>
         <div class="menu-voce"><a href="prodotti.html">Prodotti</a></div>
 
-        <!-- VOCE MEGA MENU: CATALOGO TECNICO (Link funzionante + Titoli Corretti) -->
+        <!-- VOCE MEGA MENU: CATALOGO TECNICO -->
+        <!-- NOTA: onclick diretto forza la navigazione senza interferenze JS -->
         <div class="menu-voce menu-negozio">
-            <a href="prodotti.html" id="link-catalogo">Catalogo Tecnico ▾</a>
+            <a href="prodotti.html" onclick="window.location.href='prodotti.html'; return true;">Catalogo Tecnico</a>
 
             <div class="mega-negozio">
-                <!-- COLONNA 1: CORRETTA SENZA RIPETIZIONI -->
+                <!-- COLONNA 1 -->
                 <div class="colonna">
                     <h4>TIPI DI NASTRO</h4>
                     <a href="prodotto-nastro-pvc.html">Nastro in PVC</a>
@@ -89,7 +47,7 @@
                     <a href="prodotto-nastro-modulare.html">Nastro modulare in plastica</a>
                 </div>
 
-                <!-- COLONNA 2: TRASPORTATORI COMPLETI -->
+                <!-- COLONNA 2 -->
                 <div class="colonna">
                     <h4>TRASPORTATORI COMPLETI</h4>
                     <a href="prodotto-trasportatore-nastro.html">Lineari</a>
@@ -99,7 +57,7 @@
                     <a href="prodotto-trasportatore-custom.html">Personalizzati & Custom</a>
                 </div>
 
-                <!-- COLONNA 3: COMPONENTI -->
+                <!-- COLONNA 3 -->
                 <div class="colonna">
                     <h4>COMPONENTI & RICAMBI</h4>
                     <a href="prodotto-rulli.html">Rulli di Trascinamento</a>
@@ -124,10 +82,9 @@
     <div class="hero-grid">
         <div class="hero-content">
             <p class="hero-text">
-                <span class="hero-title">Soluzioni Ingegneristiche per la Movimentazione Industriale.</span><br>
+                <span class="hero-title">Soluzioni Ingegneristiche per la Movimentazione Industriale.</span>
                 Progettabili su misura, costruiti per durare. Ottimizziamo l'efficienza delle tue linee produttive con impianti ad elevate prestazioni.
             </p>
-            <br>
             <a href="#" class="btn btn-primary btn-preventivo">Richiedi Progetto Custom</a>
         </div>
 
@@ -387,17 +344,6 @@ document.querySelectorAll(".btn-preventivo-nav, .btn-preventivo").forEach(btn =>
         e.preventDefault();
         apriPopup();
     });
-});
-
-// Forza la navigazione diretta quando si clicca su "Catalogo Tecnico"
-document.addEventListener("DOMContentLoaded", function() {
-    const linkCatalogo = document.getElementById('link-catalogo');
-    if (linkCatalogo) {
-        linkCatalogo.addEventListener('click', function(e) {
-            e.stopPropagation(); // Evita che il menu tendina blocchi il click
-            window.location.href = "prodotti.html";
-        });
-    }
 });
 </script>
 
