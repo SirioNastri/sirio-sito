@@ -1119,3 +1119,14 @@ nav a.active {
         padding: 15px 0;
     }
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Risolve il blocco sul link del Catalogo Tecnico
+    const linkCatalogo = document.querySelector('.menu-negozio > a');
+    if (linkCatalogo) {
+        linkCatalogo.addEventListener('click', function(e) {
+            // Se si clicca sul testo "Catalogo Tecnico", reindirizza immediatamente
+            window.location.href = this.getAttribute('href');
+        });
+    }
+});
