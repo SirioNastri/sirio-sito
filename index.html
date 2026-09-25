@@ -6,22 +6,48 @@
     <title>Nastri Trasportatori Industriali e Soluzioni di Movimentazione | Sirio Nastri</title>
     <meta name="description" content="Progettazione, produzione e manutenzione di nastri trasportatori industriali su misura, rulliere e sistemi di movimentazione per ogni settore produttivo.">
     <link rel="canonical" href="https://sirionastri.github.io/sirio-sito/index.html">
-    <link rel="stylesheet" href="css/style.css?v=4">
+    <link rel="stylesheet" href="css/style.css?v=5">
     <style>
-        /* Correzione specifica per l'immagine Hero gigante */
-        .hero-image img {
-            max-width: 380px;
-            width: 100%;
-            height: auto;
-            display: block;
+        /* CORREZIONI STRUTTURALI E LAYOUT HERO */
+        .hero-grid {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            max-width: 1200px;
             margin: 0 auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            padding: 40px 20px;
         }
-        
-        /* Garantisce che la voce Catalogo Tecnico sia chiaramente cliccabile */
-        .menu-negozio > a {
-            cursor: pointer;
+
+        .hero-content {
+            flex: 1;
+            max-width: 600px;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 450px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+            object-fit: cover;
+        }
+
+        /* CORREZIONE Z-INDEX DROPDOWN PER NON COPRIRE MALE L'IMMAGINE */
+        .mega-negozio {
+            z-index: 9999 !important;
+        }
+
+        /* STILE LINK CATALOGO TECNICO */
+        .menu-negozio {
+            position: relative;
         }
     </style>
 </head>
@@ -47,14 +73,14 @@
         <div class="menu-voce"><a href="azienda.html">Azienda</a></div>
         <div class="menu-voce"><a href="prodotti.html">Prodotti</a></div>
 
-        <!-- VOCE MEGA MENU: CATALOGO TECNICO -->
+        <!-- VOCE MEGA MENU: CATALOGO TECNICO (Link funzionante + Titoli Corretti) -->
         <div class="menu-voce menu-negozio">
-            <a href="prodotti.html" class="link-diretto">Catalogo Tecnico</a>
+            <a href="prodotti.html" id="link-catalogo">Catalogo Tecnico ▾</a>
 
             <div class="mega-negozio">
-                <!-- COLONNA 1: NASTRI TRASPORTATORI -->
+                <!-- COLONNA 1: CORRETTA SENZA RIPETIZIONI -->
                 <div class="colonna">
-                    <h4>Nastri Trasportatori</h4>
+                    <h4>TIPI DI NASTRO</h4>
                     <a href="prodotto-nastro-pvc.html">Nastro in PVC</a>
                     <a href="prodotto-nastro-pu.html">Nastro in PU</a>
                     <a href="prodotto-nastro-gomma.html">Nastro in gomma</a>
@@ -65,7 +91,7 @@
 
                 <!-- COLONNA 2: TRASPORTATORI COMPLETI -->
                 <div class="colonna">
-                    <h4>Trasportatori Completi</h4>
+                    <h4>TRASPORTATORI COMPLETI</h4>
                     <a href="prodotto-trasportatore-nastro.html">Lineari</a>
                     <a href="prodotto-trasportatore-inclinato.html">Inclinati</a>
                     <a href="prodotto-trasportatore-curva.html">Curvi</a>
@@ -75,7 +101,7 @@
 
                 <!-- COLONNA 3: COMPONENTI -->
                 <div class="colonna">
-                    <h4>Componenti & Ricambi</h4>
+                    <h4>COMPONENTI & RICAMBI</h4>
                     <a href="prodotto-rulli.html">Rulli di Trascinamento</a>
                     <a href="prodotto-tamburi.html">Tamburi e Mototamburi</a>
                 </div>
@@ -98,9 +124,10 @@
     <div class="hero-grid">
         <div class="hero-content">
             <p class="hero-text">
-                <span class="hero-title">Soluzioni Ingegneristiche per la Movimentazione Industriale.</span>
+                <span class="hero-title">Soluzioni Ingegneristiche per la Movimentazione Industriale.</span><br>
                 Progettabili su misura, costruiti per durare. Ottimizziamo l'efficienza delle tue linee produttive con impianti ad elevate prestazioni.
             </p>
+            <br>
             <a href="#" class="btn btn-primary btn-preventivo">Richiedi Progetto Custom</a>
         </div>
 
@@ -362,12 +389,13 @@ document.querySelectorAll(".btn-preventivo-nav, .btn-preventivo").forEach(btn =>
     });
 });
 
-// Forzatura della navigazione diretta al click su Catalogo Tecnico
+// Forza la navigazione diretta quando si clicca su "Catalogo Tecnico"
 document.addEventListener("DOMContentLoaded", function() {
-    const linkCatalogo = document.querySelector('.menu-negozio > a');
+    const linkCatalogo = document.getElementById('link-catalogo');
     if (linkCatalogo) {
         linkCatalogo.addEventListener('click', function(e) {
-            window.location.href = this.getAttribute('href');
+            e.stopPropagation(); // Evita che il menu tendina blocchi il click
+            window.location.href = "prodotti.html";
         });
     }
 });
