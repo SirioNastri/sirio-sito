@@ -3,231 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contatti – Sirio Nastri Trasportatori</title>
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-        /* INLINE CUSTOM STYLES PER INTERFACCIA PREMIUM */
-        :root {
-            --bg-dark: #0a0b0d;
-            --card-bg: #121418;
-            --card-border: #22262f;
-            --accent-green: #00ff66;
-            --accent-green-hover: #00cc52;
-            --text-main: #f0f2f5;
-            --text-muted: #8e95a5;
-        }
-
-        body {
-            background-color: var(--bg-dark);
-            color: var(--text-main);
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
-
-        .hero-contatti {
-            padding: 80px 20px 40px;
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .hero-badge {
-            display: inline-block;
-            padding: 6px 16px;
-            background: rgba(0, 255, 102, 0.08);
-            border: 1px solid rgba(0, 255, 102, 0.25);
-            color: var(--accent-green);
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-        }
-
-        .titolo-pagina-premium {
-            font-size: 2.8rem;
-            font-weight: 800;
-            letter-spacing: -1px;
-            margin-bottom: 15px;
-            background: linear-gradient(180deg, #ffffff 0%, #a0a5b5 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .contatti-grid {
-            display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            gap: 40px;
-            max-width: 1200px;
-            margin: 0 auto 80px;
-            padding: 0 20px;
-        }
-
-        @media (max-width: 900px) {
-            .contatti-grid { grid-template-columns: 1fr; }
-        }
-
-        .card-info-group {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        @media (max-width: 600px) {
-            .card-info-group { grid-template-columns: 1fr; }
-        }
-
-        .contatto-card {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 16px;
-            padding: 24px;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .contatto-card:hover {
-            border-color: var(--accent-green);
-            transform: translateY(-4px);
-            box-shadow: 0 10px 30px rgba(0, 255, 102, 0.05);
-        }
-
-        .icon-box {
-            width: 48px;
-            height: 48px;
-            border-radius: 12px;
-            background: rgba(0, 255, 102, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 16px;
-        }
-
-        .contatto-card h3 {
-            font-size: 15px;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 8px;
-        }
-
-        .contatto-card p {
-            font-size: 16px;
-            font-weight: 600;
-            color: var(--text-main);
-            margin: 0;
-            line-height: 1.5;
-        }
-
-        .form-container-premium {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 20px;
-            padding: 36px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        .form-container-premium label {
-            display: block;
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--text-muted);
-            margin-bottom: 8px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .form-container-premium input[type="text"],
-        .form-container-premium input[type="email"],
-        .form-container-premium textarea {
-            width: 100%;
-            background: #0a0b0d;
-            border: 1px solid var(--card-border);
-            border-radius: 10px;
-            padding: 14px 16px;
-            color: #fff;
-            font-size: 15px;
-            box-sizing: border-box;
-            transition: border-color 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .form-container-premium input:focus,
-        .form-container-premium textarea:focus {
-            outline: none;
-            border-color: var(--accent-green);
-            box-shadow: 0 0 0 3px rgba(0, 255, 102, 0.15);
-        }
-
-        .file-upload-box {
-            border: 2px dashed var(--card-border);
-            border-radius: 12px;
-            padding: 20px;
-            text-align: center;
-            cursor: pointer;
-            background: #0a0b0d;
-            transition: all 0.2s ease;
-        }
-
-        .file-upload-box:hover {
-            border-color: var(--accent-green);
-            background: rgba(0, 255, 102, 0.02);
-        }
-
-        .file-upload-box p {
-            margin: 0;
-            font-size: 14px;
-            color: var(--text-muted);
-        }
-
-        .btn-submit-glow {
-            width: 100%;
-            background: var(--accent-green);
-            color: #000;
-            font-size: 16px;
-            font-weight: 700;
-            padding: 16px;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin-top: 10px;
-        }
-
-        .btn-submit-glow:hover {
-            background: var(--accent-green-hover);
-            box-shadow: 0 0 25px rgba(0, 255, 102, 0.4);
-            transform: translateY(-1px);
-        }
-
-        .map-section-premium {
-            max-width: 1200px;
-            margin: 0 auto 80px;
-            padding: 0 20px;
-        }
-
-        .map-card {
-            border-radius: 20px;
-            overflow: hidden;
-            border: 1px solid var(--card-border);
-            filter: grayscale(0.8) contrast(1.2) invert(0.9);
-            transition: filter 0.3s ease;
-        }
-
-        .map-card:hover {
-            filter: grayscale(0);
-        }
-    </style>
+    <title>Contatti & Sede Operativa | Sirio Nastri Trasportatori</title>
+    <meta name="description" content="Contatta Sirio Nastri Trasportatori per consulenze tecniche, sopralluoghi e richieste di preventivo (RFQ). Sede operativa a Rivoli (TO).">
+    <link rel="canonical" href="https://sirionastri.github.io/sirio-sito/contatti.html">
+    <link rel="stylesheet" href="css/style.css?v=5">
 </head>
 
 <body>
@@ -235,10 +14,11 @@
 <header>
     <div class="logo">
         <a href="index.html">
-            <img src="img/logo.jpg" alt="Sirio Nastri Trasportatori">
+            <img src="img/logo.jpg" alt="Sirio Nastri Trasportatori Industriali">
         </a>
     </div>
 
+    <!-- HAMBURGER MENU MOBILE -->
     <div class="hamburger" onclick="toggleMenu()">
         <span></span>
         <span></span>
@@ -250,9 +30,12 @@
         <div class="menu-voce"><a href="azienda.html">Azienda</a></div>
         <div class="menu-voce"><a href="prodotti.html">Prodotti</a></div>
 
+        <!-- CATALOGO TECNICO B2B DROPDOWN -->
         <div class="menu-voce menu-dropdown">
             <a href="catalogo.html">Catalogo Tecnico</a>
+
             <div class="mega-menu">
+                <!-- COLONNA 1: NASTRI TRASPORTATORI -->
                 <div class="colonna">
                     <h4>Nastri Trasportatori</h4>
                     <a href="prodotto-nastro-pvc.html">Nastro in PVC</a>
@@ -262,216 +45,216 @@
                     <a href="prodotto-nastro-alte-temperature.html">Nastro per alte temperature</a>
                     <a href="prodotto-nastro-modulare.html">Nastro modulare in plastica</a>
                 </div>
+
+                <!-- COLONNA 2: TRASPORTATORI COMPLETI -->
                 <div class="colonna">
-                    <h4>Trasportatori completi</h4>
+                    <h4>Trasportatori Completi</h4>
                     <a href="prodotto-trasportatore-nastro.html">Lineari</a>
                     <a href="prodotto-trasportatore-inclinato.html">Inclinati</a>
                     <a href="prodotto-trasportatore-curva.html">Curvi</a>
-                    <a href="prodotto-trasportatore-rulli.html">Acciaio inox / Rulliere</a>
-                    <a href="prodotto-trasportatore-nastro.html">Personalizzati</a>
+                    <a href="prodotto-trasportatore-rulli.html">Acciaio Inox / Rulliere</a>
+                    <a href="prodotto-trasportatore-custom.html">Personalizzati & Custom</a>
                 </div>
+
+                <!-- COLONNA 3: COMPONENTI -->
                 <div class="colonna">
-                    <h4>Componenti</h4>
-                    <a href="prodotto-rulli.html">Rulli</a>
-                    <a href="prodotto-tamburi.html">Tamburi e mototamburi</a>
+                    <h4>Componenti & Ricambi</h4>
+                    <a href="prodotto-rulli.html">Rulli di Trascinamento</a>
+                    <a href="prodotto-tamburi.html">Tamburi e Mototamburi</a>
                 </div>
             </div>
         </div>
 
         <div class="menu-voce"><a href="portfolio.html">Portfolio</a></div>
         <div class="menu-voce"><a href="contatti.html" class="active">Contatti</a></div>
-        
+
         <div class="menu-voce">
             <a href="#" class="btn-preventivo-nav" onclick="apriPopup()">Richiedi Preventivo (RFQ)</a>
         </div>
     </nav>
 </header>
 
-<!-- HERO SECTION -->
-<section class="hero-contatti">
-    <span class="hero-badge">Assistenza & Consulenza Tecnica</span>
-    <h1 class="titolo-pagina-premium">Entra in contatto con l'Ingegneria Sirio</h1>
-    <p style="color: var(--text-muted); font-size: 18px; line-height: 1.6;">
-        Siamo a disposizione per lo studio di fattibilità, preventivazione rapida e supporto sui sistemi di movimentazione industriale.
+<!-- HERO CONTATTI -->
+<section class="section container" style="padding-top:60px;">
+    <div style="text-align:left; margin-bottom: 20px;">
+        <span style="color: var(--accent, #a2ff00); font-weight: 700; text-transform: uppercase; font-size: 13px; letter-spacing: 1.5px;">Supporto Diretto</span>
+        <h1 class="titolo-pagina" style="margin-top: 5px;">Contatti & Assistenza Tecnica</h1>
+    </div>
+
+    <h2 class="sottotitolo-bianco" style="text-align: left; margin-bottom: 25px;">Parla con i Nostri Ingegneri di Processo</h2>
+
+    <p style="max-width:900px; color: #a0aab8; font-size:18px; line-height:1.7; text-align:left;">
+        Siamo a disposizione per analisi di fattibilità, sopralluoghi nello stabilimento, dimensionamenti dimensionali e quotazioni rapide per nuovi impianti o ricambistica urgente.
     </p>
 </section>
 
-<!-- CONTATTI & FORM GRID -->
-<section class="contatti-grid">
+<!-- SEZIONE INFORMAZIONI E FORM -->
+<section class="section container">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start;">
+        
+        <!-- COLONNA INFO DI CONTATTO -->
+        <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); padding: 40px; border-radius: 8px;">
+            <h3 class="sottotitolo-bianco" style="margin-bottom: 20px;">Sede Operativa & Stabilimento</h3>
+            
+            <p style="color: #a0aab8; margin-bottom: 15px; font-size: 16px;">
+                <strong style="color: #fff;">SIRIO Nastri Trasportatori S.r.l.</strong><br>
+                Via Carlo Leone 48<br>
+                10098 Rivoli (TO) — Italia
+            </p>
 
-    <!-- COLONNA INFO CARDS -->
-    <div class="card-info-group">
-        <div class="contatto-card">
-            <div class="icon-box">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="#00ff66">
-                    <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V21a1 1 0 01-1 1C10.07 22 2 13.93 2 3a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.2 2.2z"/>
-                </svg>
-            </div>
-            <h3>Telefono Diretto</h3>
-            <p>(+39) 011 953 94 92</p>
+            <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 25px 0;">
+
+            <h4 style="color: var(--accent, #a2ff00); font-size: 14px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;">Recapiti Diretti</h4>
+            <p style="color: #fff; font-size: 18px; font-weight: 600; margin-bottom: 10px;">
+                📞 (+39) 011 953 9492
+            </p>
+            <p style="color: #fff; font-size: 18px; font-weight: 600; margin-bottom: 25px;">
+                ✉️ info@sirionastri.it
+            </p>
+
+            <h4 style="color: var(--accent, #a2ff00); font-size: 14px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;">Orari Ufficio Tecnico</h4>
+            <p style="color: #a0aab8; font-size: 15px;">
+                Lunedì – Venerdì: 08:00 – 12:30 | 13:30 – 18:00<br>
+                Sabato – Domenica: Chiuso
+            </p>
         </div>
 
-        <div class="contatto-card">
-            <div class="icon-box">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="#00ff66">
-                    <path d="M20 4H4a2 2 0 00-2 2v1l10 6 10-6V6a2 2 0 00-2-2zm0 4.236l-8.445 5.067a1 1 0 01-1.11 0L4 8.236V18a2 2 0 002 2h12a2 2 0 002-2V8.236z"/>
-                </svg>
-            </div>
-            <h3>Email Commerciale</h3>
-            <p>info@sirionastri.it</p>
+        <!-- COLONNA FORM DI CONTATTO DIRETTO -->
+        <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); padding: 40px; border-radius: 8px;">
+            <h3 class="sottotitolo-bianco" style="margin-bottom: 10px;">Invia un Messaggio Diretto</h3>
+            <p style="color: #a0aab8; margin-bottom: 25px; font-size: 14px;">Compila il modulo per richieste generali o per fissare una chiamata tecnica.</p>
+
+            <form action="https://formsubmit.co/info@sirionastri.it" method="POST" class="popup-form" style="display: flex; flex-direction: column; gap: 15px;">
+                <input type="hidden" name="_subject" value="Nuovo Messaggio da Pagina Contatti">
+                <input type="hidden" name="_captcha" value="false">
+
+                <input type="text" name="Azienda" class="popup-input" placeholder="Ragione Sociale Azienda">
+                <input type="text" name="Nome_Cognome" class="popup-input" placeholder="Nome e Cognome *" required>
+                <input type="email" name="Email" class="popup-input" placeholder="Email Aziendale *" required>
+                <input type="text" name="Telefono" class="popup-input" placeholder="Telefono Diretto">
+                <textarea name="Messaggio" class="popup-input" placeholder="Inserisci il tuo messaggio o la richiesta di informazioni..." rows="5" required></textarea>
+
+                <div class="filebox-privacy" style="margin-top: 5px;">
+                    <input type="checkbox" id="privacy-check" name="Privacy" value="Accettata" required>
+                    <label for="privacy-check">Autorizzo il trattamento dei dati personali secondo la Privacy Policy *</label>
+                </div>
+
+                <button type="submit" class="popup-btn" style="margin-top: 10px;">Invia Richiesta</button>
+            </form>
         </div>
 
-        <div class="contatto-card">
-            <div class="icon-box">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="#00ff66">
-                    <path d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 119.5 9 2.5 2.5 0 0112 11.5z"/>
-                </svg>
-            </div>
-            <h3>Sede Operativa</h3>
-            <p>Via Carlo Leone, 48<br>10098 Rivoli (TO), Italia</p>
-        </div>
-
-        <div class="contatto-card">
-            <div class="icon-box">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="#00ff66">
-                    <path d="M12 1a11 11 0 1011 11A11.013 11.013 0 0012 1zm1 11h4a1 1 0 000-2h-3V6a1 1 0 00-2 0v6a1 1 0 001 1z"/>
-                </svg>
-            </div>
-            <h3>Orari di Apertura</h3>
-            <p>Lun – Ven<br>08:00–12:00 / 13:00–17:00</p>
-        </div>
-    </div>
-
-    <!-- COLONNA FORM PREMIUM -->
-    <div class="form-container-premium">
-        <form>
-            <div class="form-row">
-                <div class="form-group">
-                    <label>Nome *</label>
-                    <input type="text" placeholder="es. Mario" required>
-                </div>
-                <div class="form-group">
-                    <label>Cognome *</label>
-                    <input type="text" placeholder="es. Rossi" required>
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group">
-                    <label>Email Aziendale *</label>
-                    <input type="email" placeholder="mario.rossi@azienda.it" required>
-                </div>
-                <div class="form-group">
-                    <label>Telefono *</label>
-                    <input type="text" placeholder="+39 333 0000000" required>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label>Messaggio o specifiche di progetto</label>
-                <textarea rows="4" placeholder="Descrivi il tipo di nastro o trasportatore richiesto, ingombri o materiale da movimentare..."></textarea>
-            </div>
-
-            <div class="form-group">
-                <label>Allegato Tecnico (Layout / DWG / PDF)</label>
-                <div class="file-upload-box" onclick="document.getElementById('file-input-page').click()">
-                    <p>📄 Clicca per selezionare o trascina il tuo file qui</p>
-                </div>
-                <input type="file" id="file-input-page" style="display:none;">
-            </div>
-
-            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
-                <input type="checkbox" id="privacy-page" required style="accent-color: var(--accent-green);">
-                <label for="privacy-page" style="margin: 0; text-transform: none; font-weight: 400; font-size: 13px;">Acconsento al trattamento dati per ricevere risposta tecnica.</label>
-            </div>
-
-            <button type="submit" class="btn-submit-glow">Invia Richiesta Tecnica</button>
-        </form>
-    </div>
-
-</section>
-
-<!-- MAPPA STILIZZATA -->
-<section class="map-section-premium">
-    <h2 style="font-size: 20px; font-weight: 700; margin-bottom: 20px; color: var(--text-main);">Posizione dello Stabilimento</h2>
-    <div class="map-card">
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2849.676040983682!2d7.560998!3d45.067640!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47886d8c2c2f0f3f%3A0x8e3b9e2b2d4c3f4!2sVia%20Carlo%20Leone%2C%2048%2C%2010098%20Rivoli%20TO!5e0!3m2!1sit!2sit!4v0000000000000"
-            width="100%" 
-            height="380" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy">
-        </iframe>
     </div>
 </section>
 
-<!-- POPUP PREVENTIVO OVERLAY -->
+<!-- POPUP COMPLETO PREVENTIVO (RFQ) -->
 <div class="popup-overlay" id="popup-overlay">
     <div class="popup-box" id="popup-preventivo">
         <span class="popup-close" onclick="chiudiPopup()">&times;</span>
-        <div class="popup-content" style="display:flex; gap:40px;">
-            <div class="popup-col popup-left" style="flex:1;">
-                <h2>Richiedi Preventivo (RFQ)</h2>
-                <p class="popup-desc">Un nostro ingegnere valuterà le specifiche per fornirti una proposta dettagliata entro 24 ore.</p>
+
+        <div class="popup-content">
+            <div class="popup-col popup-left">
+                <h2>Richiesta Preventivo Tecnico (RFQ)</h2>
+                <p class="popup-desc">
+                    Ricevi una valutazione di fattibilità ed un preventivo personalizzato entro 24 ore lavorative.
+                </p>
+
+                <h3>Vantaggi Operativi</h3>
                 <ul class="popup-points">
-                    <li>Consulenza personalizzata</li>
-                    <li>Verifica ingombri e portata</li>
-                    <li>Scontistica B2B dedicata</li>
+                    <li>Consulenza tecnica con un ingegnere dedicato</li>
+                    <li>Soluzioni idonee per spazi ed ingombri ridotti</li>
+                    <li>Conformità alle direttive Macchine CE e FDA</li>
+                    <li>Preventivi dettagliati senza costi nascosti</li>
                 </ul>
             </div>
-            <div class="popup-col popup-right" style="flex:1;">
-                <form class="popup-form">
-                    <input type="text" class="popup-input" placeholder="Azienda">
-                    <input type="text" class="popup-input" placeholder="Nome *" required>
-                    <input type="email" class="popup-input" placeholder="Email *" required>
-                    <textarea class="popup-input" placeholder="Dettagli richiesta..." rows="3"></textarea>
-                    <button type="submit" class="popup-btn">Invia RFQ</button>
+
+            <div class="popup-col popup-right">
+                <form action="https://formsubmit.co/info@sirionastri.it" method="POST" enctype="multipart/form-data" class="popup-form">
+                    <input type="hidden" name="_subject" value="Richiesta Preventivo RFQ da Pagina Contatti">
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <input type="text" name="Azienda" class="popup-input" placeholder="Ragione Sociale Azienda">
+                    <input type="text" name="Nome" class="popup-input" placeholder="Nome *" required>
+                    <input type="text" name="Cognome" class="popup-input" placeholder="Cognome *" required>
+                    <input type="email" name="Email" class="popup-input" placeholder="Email Aziendale *" required>
+                    <input type="text" name="Telefono" class="popup-input" placeholder="Telefono Diretto">
+                    <textarea name="Messaggio" class="popup-input" placeholder="Dettagli richiesta (Dimensioni nastro, interasse, velocità, materiale trasportato)..." rows="4"></textarea>
+
+                    <div class="filebox">
+                        <label class="filebox-title">Allega Scheda Tecnica / Disegno (PDF, DWG, PNG)</label>
+                        <div class="filebox-area">
+                            <p>Trascina il file qui o clicca per caricarlo</p>
+                            <input type="file" name="Allegato" class="filebox-input">
+                        </div>
+
+                        <div class="filebox-privacy">
+                            <input type="checkbox" id="privacy-check-popup" name="Privacy" value="Accettata" required>
+                            <label for="privacy-check-popup">Autorizzo il trattamento dei dati personali secondo la Privacy Policy *</label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="popup-btn">Invia Specifiche Tecniche</button>
                 </form>
             </div>
         </div>
     </div>
 </div>
 
+<!-- FOOTER STANDARD CORRETTO -->
 <footer class="footer-sirio">
     <div class="footer-top">
         <div class="footer-col">
             <div class="footer-logo">
-                <img src="img/logo.jpg" alt="Sirio Nastri Trasportatori">
+                <img src="img/logo.jpg" alt="Sirio Nastri Trasportatori Logo">
             </div>
-            <p class="footer-desc">Produzione di nastri trasportatori, sistemi modulari e componenti industriali su misura.</p>
+            <p class="footer-desc">
+                Progettazione e produzione di nastri trasportatori industriali, rulliere e sistemi completi di movimentazione.
+            </p>
             <p class="footer-contact">📞 (+39) 011 953 9492</p>
             <p class="footer-contact">✉️ info@sirionastri.it</p>
         </div>
+
         <div class="footer-col">
             <h4>Navigazione</h4>
             <a href="index.html">Home</a>
             <a href="azienda.html">Azienda</a>
             <a href="prodotti.html">Prodotti</a>
             <a href="catalogo.html">Catalogo Tecnico</a>
-            <a href="portfolio.html">Portfolio</a>
+            <a href="portfolio.html">Portfolio Impianti</a>
             <a href="contatti.html">Contatti</a>
         </div>
+
         <div class="footer-col">
-            <h4>Nastri</h4>
-            <a href="prodotto-nastro-pvc.html">PVC</a>
-            <a href="prodotto-nastro-pu.html">PU</a>
-            <a href="prodotto-nastro-alimentare.html">FDA Alimentare</a>
-            <a href="prodotto-nastro-modulare.html">Modulare</a>
+            <h4>Nastri Trasportatori</h4>
+            <a href="prodotto-nastro-pvc.html">Nastro in PVC</a>
+            <a href="prodotto-nastro-pu.html">Nastro in PU</a>
+            <a href="prodotto-nastro-gomma.html">Nastro in gomma</a>
+            <a href="prodotto-nastro-alimentare.html">Nastro alimentare (FDA)</a>
+            <a href="prodotto-nastro-alte-temperature.html">Nastro alte temperature</a>
+            <a href="prodotto-nastro-modulare.html">Nastro modulare</a>
         </div>
+
         <div class="footer-col">
-            <h4>Sistemi</h4>
-            <a href="prodotto-trasportatore-nastro.html">Lineari</a>
-            <a href="prodotto-trasportatore-curva.html">Curvi</a>
-            <a href="prodotto-trasportatore-rulli.html">Rulliere</a>
+            <h4>Trasportatori & Componenti</h4>
+            <a href="prodotto-trasportatore-nastro.html">Trasportatori Lineari</a>
+            <a href="prodotto-trasportatore-inclinato.html">Trasportatori Inclinati</a>
+            <a href="prodotto-trasportatore-curva.html">Trasportatori Curvi</a>
+            <a href="prodotto-trasportatore-rulli.html">Rulliere & Inox</a>
+            <a href="prodotto-rulli.html">Rulli</a>
+            <a href="prodotto-tamburi.html">Tamburi</a>
         </div>
     </div>
+
     <div class="footer-bottom">
-        © 2026 SIRIO Nastri Trasportatori S.r.L. — P.IVA 07016110012 — Tutti i diritti riservati
+        © 2026 SIRIO Nastri Trasportatori S.r.l. — P.IVA 07016110012 — Via Carlo Leone 48, Rivoli (TO)
     </div>
 </footer>
 
 <script>
+function toggleMenu() {
+    document.querySelector('.hamburger').classList.toggle('active');
+    document.querySelector('nav').classList.toggle('open');
+}
+
 function apriPopup() {
     document.getElementById("popup-preventivo").classList.add("active");
     document.getElementById("popup-overlay").classList.add("active");
@@ -480,11 +263,6 @@ function apriPopup() {
 function chiudiPopup() {
     document.getElementById("popup-preventivo").classList.remove("active");
     document.getElementById("popup-overlay").classList.remove("active");
-}
-
-function toggleMenu() {
-    document.querySelector('.hamburger').classList.toggle('active');
-    document.querySelector('nav').classList.toggle('open');
 }
 
 document.querySelectorAll(".btn-preventivo-nav, .btn-preventivo").forEach(btn => {
