@@ -6,21 +6,19 @@
     <title>Contatti – Sirio Nastri Trasportatori</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
 <header>
-<div class="logo">
-    <img src="img/logo.jpg" alt="Sirio Nastri Trasportatori">
-</div>
+    <div class="logo">
+        <img src="img/logo.jpg" alt="Sirio Nastri Trasportatori">
+    </div>
 
-<div class="hamburger" onclick="toggleMenu()">
-    <span></span>
-    <span></span>
-    <span></span>
-</div>
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 
-    
     <nav>
         <div class="menu-voce"><a href="index.html">Home</a></div>
         <div class="menu-voce"><a href="azienda.html">Azienda</a></div>
@@ -28,12 +26,10 @@
 
         <div class="menu-voce menu-negozio">
             <a href="negozio.html">Negozio</a>
-
             <div class="mega-negozio">
-
                 <!-- COLONNA 1: NASTRI TRASPORTATORI -->
                 <div class="colonna">
-<h4>Galleria immagini</h4>
+                    <h4>Galleria immagini</h4>
                     <a href="prodotto-nastro-pvc.html">Nastro in PVC</a>
                     <a href="prodotto-nastro-pu.html">Nastro in PU</a>
                     <a href="prodotto-nastro-gomma.html">Nastro in gomma</a>
@@ -58,57 +54,33 @@
                     <a href="prodotto-rulli.html">Rulli</a>
                     <a href="prodotto-tamburi.html">Tamburi e mototamburi</a>
                 </div>
-
             </div>
         </div>
 
         <div class="menu-voce"><a href="portfolio.html">Portfolio</a></div>
-<a href="contatti.html" class="active">Contatti</a>
+        <div class="menu-voce"><a href="contatti.html" class="active">Contatti</a></div>
         
-        <!-- ⭐ BOTTONE CHE APRE IL POPUP -->
         <div class="menu-voce">
             <a href="#" class="btn-preventivo-nav" onclick="apriPopup()">Richiedi preventivo</a>
         </div>
     </nav>
 </header>
 
-<!-- ============================
-     TITOLO PAGINA
-============================ -->
+<!-- TITOLO PAGINA -->
 <section class="section" style="padding-top:60px;">
-
-    <!-- SOLO IL TITOLO A SINISTRA -->
     <div style="text-align:left; margin-bottom:10px;">
         <h1 class="titolo-pagina">Contatti</h1>
     </div>
-
-    <!-- TESTO DESCRITTIVO CENTRATO -->
-    <p style="
-        text-align:center;
-        color:var(--text-muted);
-        max-width:900px;
-        margin:0 auto;
-        font-size:16px;
-        line-height:1.7;
-        margin-top:10px;
-    ">
+    <p class="sottotitolo-pagina">
         Parla con il nostro team tecnico per informazioni, assistenza e richieste commerciali.
     </p>
-
 </section>
-    
 
-<!-- ============================
-     SEZIONE CONTATTI
-============================ -->
+<!-- SEZIONE CONTATTI -->
 <section class="contatti-wrapper">
-
-    <!-- COLONNA SINISTRA CON SVG -->
     <div class="contatti-left">
-
         <div class="contatto-item">
             <span class="contatto-icona">
-                <!-- TELEFONO -->
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="#00aa55">
                     <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V21a1 1 0 01-1 1C10.07 22 2 13.93 2 3a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.2 2.2z"/>
                 </svg>
@@ -121,7 +93,6 @@
 
         <div class="contatto-item">
             <span class="contatto-icona">
-                <!-- EMAIL -->
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="#00aa55">
                     <path d="M20 4H4a2 2 0 00-2 2v1l10 6 10-6V6a2 2 0 00-2-2zm0 4.236l-8.445 5.067a1 1 0 01-1.11 0L4 8.236V18a2 2 0 002 2h12a2 2 0 002-2V8.236z"/>
                 </svg>
@@ -134,7 +105,6 @@
 
         <div class="contatto-item">
             <span class="contatto-icona">
-                <!-- SEDE -->
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="#00aa55">
                     <path d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 119.5 9 2.5 2.5 0 0112 11.5z"/>
                 </svg>
@@ -151,7 +121,6 @@
 
         <div class="contatto-item">
             <span class="contatto-icona">
-                <!-- OROLOGIO -->
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="#00aa55">
                     <path d="M12 1a11 11 0 1011 11A11.013 11.013 0 0012 1zm1 11h4a1 1 0 000-2h-3V6a1 1 0 00-2 0v6a1 1 0 001 1z"/>
                 </svg>
@@ -165,15 +134,11 @@
                 </p>
             </div>
         </div>
-
-
     </div>
 
-    <!-- COLONNA DESTRA: FORM -->
+    <!-- FORM CONTATTI -->
     <div class="contatti-right">
-
         <form class="contatti-form">
-
             <label>Nome *</label>
             <input type="text" required>
 
@@ -189,32 +154,24 @@
             <label>Messaggio</label>
             <textarea rows="5"></textarea>
 
-          <!-- CAMPO ALLEGA FILE -->
-<label for="allegato">Allega un file</label>
-
-<div class="file-drop" onclick="document.getElementById('allegato').click()">
-    Clicca qui per selezionare un file
-</div>
-
-<input type="file" id="allegato" name="allegato" style="display:none;">
+            <label for="allegato">Allega un file</label>
+            <div class="file-drop" onclick="document.getElementById('allegato').click()">
+                Clicca qui per selezionare un file
+            </div>
+            <input type="file" id="allegato" name="allegato" style="display:none;">
             
-<div class="filebox-privacy" style="margin-top:10px;">
-    <input type="checkbox" id="privacy" required>
-    <label for="privacy">Accetto l’informativa sulla privacy</label>
-</div>
+            <div class="filebox-privacy" style="margin-top:10px;">
+                <input type="checkbox" id="privacy" required>
+                <label for="privacy">Accetto l’informativa sulla privacy</label>
+            </div>
 
-
-            <button class="btn btn-primary">Invia</button>
-
+            <button type="submit" class="btn btn-primary">Invia</button>
         </form>
-
     </div>
-
 </section>
 
 <section class="mappa-google">
     <h2>Dove siamo</h2>
-
     <iframe 
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2849.676040983682!2d7.560998!3d45.067640!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47886d8c2c2f0f3f%3A0x8e3b9e2b2d4c3f4!2sVia%20Carlo%20Leone%2C%2048%2C%2010098%20Rivoli%20TO!5e0!3m2!1sit!2sit!4v0000000000000"
         width="100%" 
@@ -225,25 +182,16 @@
     </iframe>
 </section>
 
-<!-- ============================
-     POPUP COMPLETO
-============================ -->
+<!-- POPUP -->
 <div class="popup-overlay" id="popup-overlay">
-
     <div class="popup-box" id="popup-preventivo">
-
         <span class="popup-close" onclick="chiudiPopup()">&times;</span>
-
-        <div class="popup-content" style="display:flex; gap:40px;">
-
-            <!-- SINISTRA -->
-            <div class="popup-col popup-left" style="flex:1;">
+        <div class="popup-content">
+            <div class="popup-col popup-left">
                 <h2>Richiedi Preventivo</h2>
-
                 <p class="popup-desc">
                     Un nostro tecnico ti risponderà entro 24 ore con una soluzione su misura per la tua linea produttiva.
                 </p>
-
                 <h3>Perché contattarci</h3>
                 <ul class="popup-points">
                     <li>Consulenza tecnica gratuita</li>
@@ -252,17 +200,14 @@
                     <li>Supporto diretto con un progettista</li>
                     <li>Risposta rapida e professionale</li>
                 </ul>
-
                 <h3>Chi ti risponderà</h3>
                 <p>
                     Il nostro team tecnico analizzerà la tua richiesta e ti guiderà nella scelta del nastro o del trasportatore più adatto.
                 </p>
             </div>
 
-            <!-- DESTRA FORM -->
-            <div class="popup-col popup-right" style="flex:1;">
+            <div class="popup-col popup-right">
                 <form class="popup-form">
-
                     <input type="text" class="popup-input" placeholder="Azienda">
                     <input type="text" class="popup-input" placeholder="Nome *" required>
                     <input type="text" class="popup-input" placeholder="Cognome *" required>
@@ -272,72 +217,36 @@
 
                     <div class="filebox">
                         <label class="filebox-title">Allega un file</label>
-
                         <div class="filebox-area">
                             <p>Fai clic o trascina il file su quest'area per caricarlo.</p>
                             <input type="file" class="filebox-input">
                         </div>
-
                         <div class="filebox-privacy">
-                            <input type="checkbox" id="privacy-check">
+                            <input type="checkbox" id="privacy-check" required>
                             <label for="privacy-check">Accetto la Privacy Policy</label>
                         </div>
                     </div>
 
                     <button type="submit" class="popup-btn">Invia richiesta</button>
-
                 </form>
             </div>
-
         </div>
-
     </div>
 </div>
 
-<script>
-function apriPopup() {
-    document.getElementById("popup-preventivo").classList.add("active");
-    document.getElementById("popup-overlay").classList.add("active");
-}
-
-function chiudiPopup() {
-    document.getElementById("popup-preventivo").classList.remove("active");
-    document.getElementById("popup-overlay").classList.remove("active");
-}
-
-document.querySelectorAll(".btn-preventivo-nav, .btn-preventivo").forEach(btn => {
-    btn.addEventListener("click", function(e) {
-        e.preventDefault();
-        apriPopup();
-    });
-});
-</script>
-
-    <footer class="footer-sirio">
-
+<footer class="footer-sirio">
     <div class="footer-top">
-
-        <!-- COLONNA 1: LOGO + DESCRIZIONE + CONTATTI -->
         <div class="footer-col">
-<div class="footer-logo">
-    <img src="img/logo.jpg" alt="Sirio Nastri Trasportatori">
-</div>
+            <div class="footer-logo">
+                <img src="img/logo.jpg" alt="Sirio Nastri Trasportatori">
+            </div>
             <p class="footer-desc">
                 Produzione di nastri trasportatori, trasportatori completi e sistemi di movimentazione industriale.
             </p>
-
-            <p class="footer-contact">📞 (+39) 011 953 9492 </p>
+            <p class="footer-contact">📞 (+39) 011 953 9492</p>
             <p class="footer-contact">✉️ info@sirionastri.it</p>
-
-            <div class="footer-social">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-            </div>
         </div>
 
-        <!-- COLONNA 2: MENU PRINCIPALE -->
         <div class="footer-col">
             <h4>Menu</h4>
             <a href="index.html">Home</a>
@@ -348,7 +257,6 @@ document.querySelectorAll(".btn-preventivo-nav, .btn-preventivo").forEach(btn =>
             <a href="contatti.html">Contatti</a>
         </div>
 
-        <!-- COLONNA 3: NASTRI TRASPORTATORI -->
         <div class="footer-col">
             <h4>Nastri trasportatori</h4>
             <a href="prodotto-nastro-pvc.html">Nastro in PVC</a>
@@ -359,7 +267,6 @@ document.querySelectorAll(".btn-preventivo-nav, .btn-preventivo").forEach(btn =>
             <a href="prodotto-nastro-modulare.html">Nastro modulare in plastica</a>
         </div>
 
-        <!-- COLONNA 4: TRASPORTATORI + COMPONENTI -->
         <div class="footer-col">
             <h4>Trasportatori</h4>
             <a href="prodotto-trasportatore-nastro.html">Lineari</a>
@@ -372,28 +279,36 @@ document.querySelectorAll(".btn-preventivo-nav, .btn-preventivo").forEach(btn =>
             <a href="prodotto-rulli.html">Rulli</a>
             <a href="prodotto-tamburi.html">Tamburi e mototamburi</a>
         </div>
-
     </div>
 
     <div class="footer-bottom">
         © 2026 SIRIO Nastri Trasportatori S.r.L. — P.IVA 07016110012 — Tutti i diritti riservati
     </div>
-
 </footer>
 
-    <script>
+<script>
+function apriPopup() {
+    document.getElementById("popup-preventivo").classList.add("active");
+    document.getElementById("popup-overlay").classList.add("active");
+}
+
+function chiudiPopup() {
+    document.getElementById("popup-preventivo").classList.remove("active");
+    document.getElementById("popup-overlay").classList.remove("active");
+}
+
 function toggleMenu() {
     document.querySelector('.hamburger').classList.toggle('active');
     document.querySelector('nav').classList.toggle('open');
 }
+
+document.querySelectorAll(".btn-preventivo-nav, .btn-preventivo").forEach(btn => {
+    btn.addEventListener("click", function(e) {
+        e.preventDefault();
+        apriPopup();
+    });
+});
 </script>
 
-    
 </body>
-    
 </html>
-
-
-
-
-
