@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Azienda - Sirio Nastri Trasportatori</title>
-    <link rel="stylesheet" href="css/style.css?v=3">
+    <title>Azienda | Sirio Nastri Trasportatori</title>
+    <meta name="description" content="Scopri Sirio Nastri Trasportatori: eccellenza ingegneristica nella progettazione e produzione di nastri trasportatori industriali e impianti di movimentazione su misura.">
+    <link rel="canonical" href="https://sirionastri.github.io/sirio-sito/azienda.html">
+    <link rel="stylesheet" href="css/style.css?v=5">
 </head>
 
 <body>
@@ -12,10 +14,11 @@
 <header>
     <div class="logo">
         <a href="index.html">
-            <img src="img/logo.jpg" alt="Sirio Nastri Trasportatori">
+            <img src="img/logo.jpg" alt="Sirio Nastri Trasportatori Industriali">
         </a>
     </div>
 
+    <!-- HAMBURGER MENU -->
     <div class="hamburger" onclick="toggleMenu()">
         <span></span>
         <span></span>
@@ -27,10 +30,11 @@
         <div class="menu-voce"><a href="azienda.html" class="active">Azienda</a></div>
         <div class="menu-voce"><a href="prodotti.html">Prodotti</a></div>
 
-        <div class="menu-voce menu-negozio">
-            <a href="negozio.html">Negozio</a>
+        <!-- DROPDOWN CATALOGO TECNICO / NEGOZIO -->
+        <div class="menu-voce menu-dropdown">
+            <a href="catalogo.html" class="link-diretto">Catalogo Tecnico</a>
 
-            <div class="mega-negozio">
+            <div class="mega-menu">
                 <div class="colonna">
                     <h4>Galleria Nastri</h4>
                     <a href="prodotto-nastro-pvc.html">Nastro in PVC</a>
@@ -57,199 +61,169 @@
         <div class="menu-voce"><a href="contatti.html">Contatti</a></div>
 
         <div class="menu-voce">
-            <a href="#" class="btn-preventivo-nav" onclick="apriPopup(event)">Richiedi preventivo</a>
+            <a href="#" class="btn-preventivo-nav" onclick="apriPopup(event)">Richiedi preventivo (RFQ)</a>
         </div>
     </nav>
 </header>
 
-
-<!-- BLOCCO TESTO INTRO -->
-<section class="section" style="padding-top:60px;">
-    <div style="text-align:left;">
-        <h1 class="titolo-pagina">Azienda</h1>
+<!-- INTRODUZIONE AZIENDALE -->
+<section class="section container" style="padding-top: 60px; text-align: center;">
+    <div style="margin-bottom: 20px;">
+        <span style="color: var(--accent, #a2ff00); font-weight: 700; text-transform: uppercase; font-size: 13px; letter-spacing: 1.5px; display: block; margin-bottom: 8px;">Profilo Corporativo</span>
+        <h1 class="titolo-pagina" style="margin: 0 auto;">Sirio Nastri Trasportatori</h1>
     </div>
 
-    <h3>Innovazione e Qualità</h3>
+    <h2 class="sottotitolo-bianco" style="text-align: center; margin-bottom: 25px;">Innovazione, Qualità e Ingegneria di Processo</h2>
 
-    <p style="max-width:850px; margin:0 auto; color:var(--text-muted); font-size:17px; line-height:1.7;">
-        Sirio Nastri Trasportatori opera con un approccio orientato alla qualità, alla sicurezza e alla massima efficienza.
-        Ogni soluzione è progettata per garantire prestazioni elevate e affidabilità nel tempo, grazie a materiali selezionati
-        e tecnologie avanzate.
+    <p style="max-width: 850px; margin: 0 auto; color: #a0aab8; font-size: 18px; line-height: 1.7; text-align: center;">
+        Sirio Nastri Trasportatori opera con un approccio orientato alla qualità, alla sicurezza e alla massima efficienza. Ogni nastro, struttura o componente è progettato per eliminare i colli di bottiglia nei flussi produttivi, ridurre i tempi di fermo macchina e garantire la massima rispondenza alle normative vigenti.
     </p>
 </section>
 
-
-<!-- IMMAGINI A TRE LIVELLI -->
+<!-- IMMAGINI A TRE LIVELLI E VISION -->
 <section class="azienda-images">
     <div class="azienda-images-stack">
-        <img src="img/azienda1.jpg" class="azienda-img left" alt="Azienda Sirio 1">
-        <img src="img/azienda2.jpg" class="azienda-img center" alt="Azienda Sirio 2">
-        <img src="img/azienda3.jpg" class="azienda-img right" alt="Azienda Sirio 3">
+        <img src="img/azienda1.jpg" alt="Progettazione CAD nastri trasportatori" class="azienda-img left">
+        <img src="img/azienda2.jpg" alt="Stabilimento di produzione Sirio Nastri" class="azienda-img center">
+        <img src="img/azienda3.jpg" alt="Assemblaggio e collaudo meccanico" class="azienda-img right">
     </div>
 
     <p class="azienda-text-long">
-        Sirio Nastri Trasportatori è un’azienda specializzata nella progettazione e realizzazione di sistemi di trasporto industriale. 
-        Da anni mettiamo al centro del nostro lavoro innovazione, precisione e affidabilità, offrendo soluzioni moderne e performanti 
-        per ogni settore produttivo. Grazie all’esperienza maturata nel tempo e alla cura per ogni dettaglio, realizziamo nastri 
-        trasportatori robusti, durevoli e completamente personalizzabili, pensati per rispondere alle esigenze specifiche di ogni cliente.
+        Dal nostro stabilimento di Rivoli (TO), gestiamo l'intero ciclo del valore: dalla consulenza preventiva al rilievo dimensionale, fino alla produzione e giunzione in opera. Affianchiamo uffici tecnici, responsabili di manutenzione e OEM con soluzioni custom realizzate in alluminio, acciaio verniciato e acciaio inox AISI 304/316, mettendo sempre al centro precisione, affidabilità e personalizzazione.
     </p>
 </section>
 
-
-<!-- SERVIZI -->
-<section class="azienda-services" style="text-align:center;">
-    <h1>Servizi</h1>
-    <h2 class="sottotitolo-bianco titolo-bianco">Soluzioni Personalizzate</h2>
+<!-- SERVIZI E COMPETENZE ESTESE -->
+<section class="azienda-services" style="text-align: center;">
+    <h1 class="titolo-verde">Servizi e Capacità</h1>
+    <h2 class="sottotitolo-bianco titolo-bianco" style="margin-bottom: 15px;">Soluzioni Personalizzate & Performance Industriale</h2>
 
     <p class="azienda-services-desc">
-        Offriamo una vasta gamma di servizi personalizzati per soddisfare le esigenze specifiche dei nostri clienti.
-        Dalla progettazione alla produzione, garantiamo soluzioni su misura per ogni progetto.
+        Offriamo una vasta gamma di servizi personalizzati per soddisfare le esigenze specifiche dei nostri clienti. Dalla progettazione CAD 2D/3D alla produzione, garantiamo risposte immediate e integrazione perfetta sulle linee operative.
     </p>
 
     <div class="azienda-services-grid">
-
         <div class="azienda-service">
             <div class="asterisk">*</div>
-            <h3>Design</h3>
-            <h4 class="sottotitolo-bianco">Progettazione su Misura</h4>
+            <h3>Design & Progettazione</h3>
+            <h4 class="sottotitolo-bianco">Progettazione CAD 2D/3D su Misura</h4>
             <p>
-                Il nostro team tecnico sviluppa soluzioni personalizzate per ogni esigenza industriale. 
-                Con un approccio orientato alla funzionalità e all’efficienza, progettiamo nastri trasportatori 
-                che si integrano perfettamente nei processi produttivi, garantendo prestazioni elevate e affidabilità nel tempo.
+                Il nostro team tecnico sviluppa modellazioni tridimensionali su misura per l'integrazione millimetrica nei layout di impianto esistenti, ottimizzando ingombri, cinematiche ed efficienza operativa.
             </p>
         </div>
 
         <div class="azienda-service">
             <div class="asterisk">*</div>
-            <h3>Produzione</h3>
-            <h4 class="sottotitolo-bianco">Qualità e precisione</h4>
+            <h3>Produzione & Lavorazioni</h3>
+            <h4 class="sottotitolo-bianco">Qualità, Precisione e Carpenteria</h4>
             <p>
-                La produzione Sirio segue standard rigorosi per assicurare robustezza, durata e sicurezza. 
-                Ogni nastro trasportatore è realizzato con materiali selezionati e lavorazioni accurate, 
-                per offrire un prodotto solido, efficiente e pronto a resistere alle sfide dell’ambiente industriale.
+                Costruzione di carpenterie ad alta rigidità, lavorazione rulli e tamburi con tolleranze ristrette. Ogni nastro è realizzato con materiali selezionati e lavorazioni accurate per resistere alle sfide industriali.
             </p>
         </div>
 
         <div class="azienda-service">
             <div class="asterisk">*</div>
-            <h3>Assistenza</h3>
-            <h4 class="sottotitolo-bianco">Supporto Tecnico Dedicato</h4>
+            <h3>Assistenza & Vulcanizzazione</h3>
+            <h4 class="sottotitolo-bianco">Giunzioni e Supporto In Opera</h4>
             <p>
-                Il nostro impegno non si ferma alla progettazione e produzione. Offriamo un servizio di assistenza tecnica qualificata 
-                che accompagna il cliente in ogni fase: dalla scelta del nastro più adatto, all’installazione, fino alla manutenzione. 
-                Siamo sempre disponibili per garantire continuità operativa e soluzioni rapide.
+                Interventi tecnici specializzati di giunzione a caldo/freddo e vulcanizzazione in opera per minimizzare i tempi di inattività. Un servizio di assistenza qualificata che ti accompagna dall'installazione alla manutenzione.
             </p>
         </div>
 
         <div class="azienda-service">
             <div class="asterisk">*</div>
-            <h3>Innovazione</h3>
-            <h4 class="sottotitolo-bianco">Ricerca e Sviluppo Costante</h4>
+            <h3>Innovazione & Selezioni FDA</h3>
+            <h4 class="sottotitolo-bianco">Materiali Avanzati e R&S Costante</h4>
             <p>
-                In Sirio investiamo continuamente in ricerca e sviluppo per migliorare i nostri prodotti e anticipare le esigenze del mercato. 
-                L’innovazione è al centro del nostro lavoro: studiamo nuove soluzioni, materiali e tecnologie per offrire nastri trasportatori 
-                sempre più efficienti, sicuri e performanti.
+                Investiamo in ricerca per applicare soluzioni all'avanguardia: poliuretani, PVC, silicone e plastiche modulari certificate per il contatto alimentare diretto (FDA) e contesti ad alta usura o alte temperature.
             </p>
         </div>
-
     </div>
 </section>
 
-
-<!-- TEAM -->
+<!-- SEZIONE TEAM COMPLETA -->
 <section class="info-team">
-    <h1 class="team-title">Team</h1>
-    <h2 class="team-subtitle-white">Esperti nel settore</h2>
+    <h1 class="team-title">Ingegneria & Campo</h1>
+    <h2 class="team-subtitle-white">Esperti nel Settore — Competenza Tecnica e Operativa</h2>
 
     <div class="team-desc">
         <p>
-            Il nostro team è composto da professionisti con una lunga esperienza nella progettazione e realizzazione 
-            di sistemi di trasporto industriale. Ogni membro porta competenze tecniche specifiche, maturate in anni 
-            di lavoro sul campo.
+            Il nostro team è composto da professionisti con una lunga esperienza nella progettazione e realizzazione di sistemi di trasporto industriale. Ogni membro porta competenze tecniche specifiche, maturate in anni di lavoro direttamente sul campo installativo e manutentivo.
+        </p>
+        <p>
+            Dalla progettazione meccanica alla produzione, dal montaggio all’assistenza post-vendita, operiamo come un’unica squadra. Non forniamo semplici componenti, ma un supporto metodologico continuo: dal dimensionamento delle motorizzazioni alla scelta della mescola idonea, garantendo stabilità strutturale nel tempo.
         </p>
 
         <p>
-            Dalla progettazione meccanica alla produzione, dal montaggio all’assistenza post‑vendita, operiamo come 
-            un’unica squadra orientata alla qualità, alla precisione e alla massima affidabilità.
+            Investiamo costantemente in formazione e innovazione per offrire soluzioni sempre più efficienti, sicure e performanti. La nostra forza è l’unione tra esperienza artigianale e tecnologia moderna.
         </p>
 
         <p>
-            Investiamo costantemente in formazione e innovazione per offrire soluzioni sempre più efficienti, sicure 
-            e performanti. La nostra forza è l’unione tra esperienza artigianale e tecnologia moderna.
-        </p>
-
-        <p>
-            Il risultato è un team rapido nelle risposte, competente e capace di accompagnare il cliente in ogni fase 
-            del progetto, garantendo supporto tecnico dedicato e soluzioni su misura.
+            Il risultato è un team rapido nelle risposte, competente e capace di accompagnare il cliente in ogni fase del progetto, garantendo supporto tecnico dedicato e risposte trasparenti.
         </p>
     </div>
 </section>
 
-
-<!-- OVERLAY & POPUP -->
+<!-- POPUP COMPLETO PREVENTIVO (RFQ) -->
 <div class="popup-overlay" id="popup-overlay" onclick="chiudiPopupEsterno(event)">
     <div class="popup-box" id="popup-preventivo">
         <span class="popup-close" onclick="chiudiPopup()">&times;</span>
 
-        <div class="popup-content" style="display:flex; gap:40px;">
-
-            <!-- SINISTRA COMPLETA -->
-            <div class="popup-col popup-left" style="flex:1;">
-                <h2>Richiedi Preventivo</h2>
-
+        <div class="popup-content">
+            <div class="popup-col popup-left">
+                <h2>Richiesta Preventivo Tecnico (RFQ)</h2>
                 <p class="popup-desc">
-                    Un nostro tecnico ti risponderà entro 24 ore con una soluzione su misura per la tua linea produttiva.
+                    Ricevi una valutazione di fattibilità ed un preventivo personalizzato entro 24 ore lavorative.
                 </p>
 
                 <h3>Perché contattarci</h3>
                 <ul class="popup-points">
-                    <li>Consulenza tecnica gratuita</li>
-                    <li>Preventivi chiari e senza impegno</li>
-                    <li>Soluzioni personalizzate per ogni settore</li>
-                    <li>Supporto diretto con un progettista</li>
-                    <li>Risposta rapida e professionale</li>
+                    <li>Consulenza e analisi tecnica con un ingegnere dedicato</li>
+                    <li>Soluzioni idonee per spazi ed ingombri ridotti</li>
+                    <li>Conformità alle direttive Macchine CE e certificazioni FDA</li>
+                    <li>Preventivi chiari e dettagliati senza costi nascosti</li>
+                    <li>Supporto diretto dalla progettazione all'installazione</li>
                 </ul>
 
                 <h3>Chi ti risponderà</h3>
                 <p>
-                    Il nostro team tecnico analizzerà la tua richiesta e ti guiderà nella scelta del nastro o del trasportatore più adatto.
+                    Il nostro team tecnico analizzerà il tuo progetto, i layout allegati e le specifiche ambientali per guidarti verso la scelta della mescola o della struttura più idonea.
                 </p>
             </div>
 
-            <!-- DESTRA FORM -->
-            <div class="popup-col popup-right" style="flex:1;">
-                <form class="popup-form">
-                    <input type="text" class="popup-input" placeholder="Azienda">
-                    <input type="text" class="popup-input" placeholder="Nome *" required>
-                    <input type="text" class="popup-input" placeholder="Cognome *" required>
-                    <input type="email" class="popup-input" placeholder="Email *" required>
-                    <input type="text" class="popup-input" placeholder="Telefono">
-                    <textarea class="popup-input" placeholder="Messaggio" rows="4"></textarea>
+            <div class="popup-col popup-right">
+                <form action="https://formsubmit.co/info@sirionastri.it" method="POST" enctype="multipart/form-data" class="popup-form">
+                    <input type="hidden" name="_subject" value="Richiesta Preventivo RFQ da Pagina Azienda">
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <input type="text" name="Azienda" class="popup-input" placeholder="Ragione Sociale Azienda">
+                    <input type="text" name="Nome" class="popup-input" placeholder="Nome *" required>
+                    <input type="text" name="Cognome" class="popup-input" placeholder="Cognome *" required>
+                    <input type="email" name="Email" class="popup-input" placeholder="Email Aziendale *" required>
+                    <input type="text" name="Telefono" class="popup-input" placeholder="Telefono Diretto">
+                    <textarea name="Messaggio" class="popup-input" placeholder="Specifiche del progetto (Dimensioni, materiali, velocità richieste)..." rows="4"></textarea>
 
                     <div class="filebox">
-                        <label class="filebox-title">Allega un file</label>
-
+                        <label class="filebox-title">Allega Layout / Disegno Tecnico (PDF, DWG, PNG)</label>
                         <div class="filebox-area">
-                            <p>Fai clic o trascina il file su quest'area per caricarlo.</p>
-                            <input type="file" class="filebox-input">
+                            <p>Trascina il file qui o clicca per caricarlo</p>
+                            <input type="file" name="Allegato" class="filebox-input">
                         </div>
 
                         <div class="filebox-privacy">
-                            <input type="checkbox" id="privacy-check" required>
-                            <label for="privacy-check">Accetto la Privacy Policy</label>
+                            <input type="checkbox" id="privacy-check" name="Privacy" value="Accettata" required>
+                            <label for="privacy-check">Autorizzo il trattamento dei dati personali secondo la Privacy Policy *</label>
                         </div>
                     </div>
 
-                    <button type="submit" class="popup-btn">Invia richiesta</button>
+                    <button type="submit" class="popup-btn">Invia Specifiche Tecniche</button>
                 </form>
             </div>
-
         </div>
     </div>
 </div>
 
-
-<!-- FOOTER (ESATTAMENTE UGUALE ALL'INDEX) -->
+<!-- FOOTER (ESATTAMENTE UGUALE ALL'INDEX DA SCREENSHOT) -->
 <footer class="footer-sirio">
     <div class="footer-top">
 
