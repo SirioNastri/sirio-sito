@@ -6,7 +6,7 @@
     <title>Nastri Trasportatori Industriali e Soluzioni di Movimentazione | Sirio Nastri</title>
     <meta name="description" content="Progettazione, produzione e manutenzione di nastri trasportatori industriali su misura, rulliere e sistemi di movimentazione per ogni settore produttivo.">
     <link rel="canonical" href="https://sirionastri.github.io/sirio-sito/index.html">
-    <link rel="stylesheet" href="css/style.css?v=4">
+    <link rel="stylesheet" href="css/style.css?v=5">
 </head>
 
 <body>
@@ -30,11 +30,11 @@
         <div class="menu-voce"><a href="azienda.html">Azienda</a></div>
         <div class="menu-voce"><a href="prodotti.html">Prodotti</a></div>
 
-        <!-- VOCE REPOSIZIONATA STRATEGICAMENTE -->
-        <div class="menu-voce menu-negozio">
-            <a href="prodotti.html">Catalogo Tecnico</a>
+        <!-- DROPDOWN CATALOGO TECNICO CORRETTO -->
+        <div class="menu-voce menu-dropdown">
+            <a href="catalogo.html">Catalogo Tecnico</a>
 
-            <div class="mega-negozio">
+            <div class="mega-menu">
                 <!-- COLONNA 1: NASTRI TRASPORTATORI -->
                 <div class="colonna">
                     <h4>Nastri Trasportatori</h4>
@@ -69,31 +69,18 @@
         <div class="menu-voce"><a href="contatti.html">Contatti</a></div>
 
         <div class="menu-voce">
-            <a href="#" class="btn-preventivo-nav">Richiedi Preventivo (RFQ)</a>
+            <a href="#" class="btn-preventivo-nav" onclick="apriPopup()">Richiedi Preventivo (RFQ)</a>
         </div>
     </nav>
 </header>
 
-<!-- HERO SECTION (PAGINAZIONE E GRIGLIA BLOCCATE) -->
-<section class="hero" style="padding: 40px 0;">
-
-    <h1 style="
-        font-size: 42px; 
-        margin-bottom: 25px; 
-        color: var(--accent, #a2ff00); 
-        text-align: left;
-    ">
+<!-- HERO SECTION -->
+<section class="hero" style="padding: 60px 0;">
+    <h1 style="font-size: 42px; margin-bottom: 25px; color: var(--accent, #a2ff00); text-align: left;">
         SIRIO NASTRI TRASPORTATORI
     </h1>
 
-    <div style="
-        display: grid; 
-        grid-template-columns: 1fr 1fr; 
-        gap: 40px; 
-        align-items: center;
-    ">
-
-        <!-- TESTO A SINISTRA -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
         <div>
             <p class="hero-text" style="font-size: 18px; line-height: 1.6; margin-bottom: 25px;">
                 <span class="hero-title" style="font-weight: bold; color: #ffffff;">
@@ -102,26 +89,17 @@
                 Progettabili su misura, costruiti per durare. Ottimizziamo l'efficienza delle tue linee produttive con impianti ad elevate prestazioni.
             </p>
 
-            <a href="#" class="btn btn-primary btn-preventivo">
+            <a href="#" class="btn btn-primary btn-preventivo" onclick="apriPopup()">
                 Richiedi Progetto Custom
             </a>
         </div>
 
-        <!-- IMMAGINE A DESTRA (DIMENSIONE LIMITATA) -->
         <div style="text-align: right;">
             <img src="img/nastro-sirio.jpg" 
                  alt="Impianto di trasporto industriale Sirio" 
-                 style="
-                    max-width: 420px; 
-                    width: 100%; 
-                    height: auto; 
-                    border-radius: 8px; 
-                    border: 1px solid rgba(255,255,255,0.1);
-                 ">
+                 style="max-width: 420px; width: 100%; height: auto; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
         </div>
-
     </div>
-
 </section>
 
 <!-- CHI SIAMO -->
@@ -215,44 +193,7 @@
     </div>
 </section>
 
-<!-- CONTATTI -->
-<section class="contact-wrapper">
-    <div class="contact-card">
-        <div class="contact-left">
-            <h2 class="contact-title">Richiedi una Valutazione Tecnica</h2>
-            <p class="contact-text">
-                I nostri ingegneri sono a disposizione per analizzare il tuo lay-out produttivo e formulare un'offerta su misura.
-            </p>
-
-            <div class="contact-details">
-                <p><strong>Centrale Operativa:</strong> (+39) 011 953 94 92</p>
-                <p><strong>Sede Legale e Produttiva:</strong> Via Carlo Leone, 48 - 10098 Rivoli (TO) – Italia</p>
-                <p><strong>Email Ufficio Tecnico:</strong> info@sirionastri.it</p>
-            </div>
-        </div>
-
-        <div class="contact-right">
-            <!-- FORM CORRETTO E PROTETTO DA SPAM -->
-            <form action="https://formsubmit.co/info@sirionastri.it" method="POST">
-                <input type="hidden" name="_subject" value="Nuovo Contatto Diretto da Sito Web (Home)">
-                <input type="hidden" name="_captcha" value="false">
-
-                <label for="nome-contatto">Nome e Cognome *</label>
-                <input type="text" id="nome-contatto" name="Nome" placeholder="Ing. Mario Rossi" required>
-
-                <label for="email-contatto">Email Aziendale *</label>
-                <input type="email" id="email-contatto" name="Email" placeholder="mario.rossi@azienda.com" required>
-
-                <label for="messaggio-contatto">Specifiche della richiesta *</label>
-                <textarea id="messaggio-contatto" name="Messaggio" placeholder="Descrivi le caratteristiche del nastro o dell'impianto (es. larghezza, interasse, materiale trasportato)..." rows="4" required></textarea>
-
-                <button type="submit" class="btn-primary contact-btn">Invia Richiesta Tecnica</button>
-            </form>
-        </div>
-    </div>
-</section>
-
-<!-- POPUP COMPLETO PREVENTIVO (RFQ) -->
+<!-- POPUP PREVENTIVO -->
 <div class="popup-overlay" id="popup-overlay">
     <div class="popup-box" id="popup-preventivo">
         <span class="popup-close" onclick="chiudiPopup()">&times;</span>
@@ -324,6 +265,7 @@
             <a href="index.html">Home</a>
             <a href="azienda.html">Azienda</a>
             <a href="prodotti.html">Prodotti</a>
+            <a href="catalogo.html">Catalogo Tecnico</a>
             <a href="portfolio.html">Portfolio Impianti</a>
             <a href="contatti.html">Contatti</a>
         </div>
