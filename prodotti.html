@@ -6,7 +6,7 @@
     <title>Nastri Trasportatori Industriali: PVC, PU, Gomma e Silicone | Sirio Nastri</title>
     <meta name="description" content="Catalogo prodotti Sirio Nastri Trasportatori: nastri in PVC, Poliuretano (FDA), Gomma, Silicone, moduli in plastica e trasportatori completi per ogni settore industriale.">
     <link rel="canonical" href="https://sirionastri.github.io/sirio-sito/prodotti.html">
-    <link rel="stylesheet" href="css/style.css?v=4">
+    <link rel="stylesheet" href="css/style.css?v=5">
 </head>
 
 <body>
@@ -30,11 +30,11 @@
         <div class="menu-voce"><a href="azienda.html">Azienda</a></div>
         <div class="menu-voce"><a href="prodotti.html" class="active">Prodotti</a></div>
 
-        <!-- CATALOGO TECNICO B2B -->
-        <div class="menu-voce menu-negozio">
-            <a href="prodotti.html">Catalogo Tecnico</a>
+        <!-- CATALOGO TECNICO B2B DROPDOWN CORRETTO -->
+        <div class="menu-voce menu-dropdown">
+            <a href="catalogo.html">Catalogo Tecnico</a>
 
-            <div class="mega-negozio">
+            <div class="mega-menu">
                 <!-- COLONNA 1: NASTRI TRASPORTATORI -->
                 <div class="colonna">
                     <h4>Nastri Trasportatori</h4>
@@ -69,26 +69,27 @@
         <div class="menu-voce"><a href="contatti.html">Contatti</a></div>
 
         <div class="menu-voce">
-            <a href="#" class="btn-preventivo-nav">Richiedi Preventivo (RFQ)</a>
+            <a href="#" class="btn-preventivo-nav" onclick="apriPopup()">Richiedi Preventivo (RFQ)</a>
         </div>
     </nav>
 </header>
 
 <!-- HERO PRODOTTI -->
-<section class="section" style="padding-top:60px;">
-    <div style="text-align:left;">
-        <h1 class="titolo-pagina">Gamma Prodotti</h1>
+<section class="section container" style="padding-top:60px;">
+    <div style="text-align:left; margin-bottom: 20px;">
+        <span style="color: var(--accent, #a2ff00); font-weight: 700; text-transform: uppercase; font-size: 13px; letter-spacing: 1.5px;">Sistemi di Movimentazione</span>
+        <h1 class="titolo-pagina" style="margin-top: 5px;">Gamma Prodotti</h1>
     </div>
 
-    <h2 class="sottotitolo-bianco">Qualità Ingegneristica Garantita</h2>
+    <h2 class="sottotitolo-bianco" style="text-align: left; margin-bottom: 25px;">Qualità Ingegneristica Garantita per la Continuità Operativa</h2>
 
-    <p style="max-width:850px; margin:0 auto; color:var(--text-muted, #a0a0a0); font-size:17px; line-height:1.7; text-align:center;">
-        Sirio Nastri Trasportatori realizza nastri e sistemi di movimentazione industriale ad elevate prestazioni. Utilizziamo mescole certificate, tessuti ad alta tenuta e soluzioni meccaniche avanzate per assicurare massima affidabilità operativa e riduzione dei fermi impianto.
+    <p style="max-width:900px; color: #a0aab8; font-size:18px; line-height:1.7; text-align:left;">
+        Sirio Nastri Trasportatori realizza nastri e sistemi di movimentazione industriale ad elevate prestazioni. Utilizziamo mescole certificate, tessuti ad alta tenuta e soluzioni meccaniche avanzate per assicurare massima affidabilità operativa e azzerare i fermi impianto imprevisti.
     </p>
 </section>
 
 <!-- SEZIONE MATERIALI DISPONIBILI -->
-<section class="section" style="text-align:center;">
+<section class="section container" style="text-align:center;">
     <h2 class="section-title">Materiali & Mescole Tecniche</h2>
 
     <p style="max-width:850px; margin:0 auto 40px; color:var(--text-muted, #a0a0a0);">
@@ -153,11 +154,11 @@
 </section>
 
 <!-- SETTORI INDUSTRIALI -->
-<section class="section" style="text-align:center; padding-bottom:10px;">
+<section class="section container" style="text-align:center; padding-bottom:10px;">
     <h2 class="section-title">Settori Industriali Serviti</h2>
 </section>
 
-<section class="info-grid">
+<section class="info-grid container">
     <div class="info-grid-img">
         <img src="img/alimentare.jpg" alt="Nastri trasportatori per industria alimentare FDA">
     </div>
@@ -170,7 +171,7 @@
     </div>
 </section>
 
-<section class="info-grid">
+<section class="info-grid container">
     <div class="info-grid-img">
         <img src="img/chimica.jpg" alt="Nastri trasportatori per industria chimica">
     </div>
@@ -183,7 +184,7 @@
     </div>
 </section>
 
-<section class="info-grid">
+<section class="info-grid container">
     <div class="info-grid-img">
         <img src="img/farmaceutica.jpg" alt="Sistemi di trasporto per settore farmaceutico">
     </div>
@@ -196,7 +197,7 @@
     </div>
 </section>
 
-<section class="info-grid">
+<section class="info-grid container">
     <div class="info-grid-img">
         <img src="img/automotive.jpg" alt="Nastri per movimentazione pezzi automotive">
     </div>
@@ -209,7 +210,7 @@
     </div>
 </section>
 
-<section class="info-grid">
+<section class="info-grid container">
     <div class="info-grid-img">
         <img src="img/robotica.jpg" alt="Integrazione nastri con isole robotiche">
     </div>
@@ -223,13 +224,13 @@
 </section>
 
 <!-- PERCHÉ SCEGLIERE SIRIO -->
-<section class="section">
+<section class="section container">
     <h2 class="section-title" style="text-align:center;">Perché Scegliere i Nostri Prodotti</h2>
 
     <div style="display:grid; grid-template-columns:1fr 1fr; gap:40px;">
         <div>
             <h3 class="sottotitolo-bianco" style="margin-bottom:10px;">Consulenza Ingegneristica</h3>
-            <p style="color:var(--text-muted, #a0a0a0);">Valutiamo velocitá, attrito, carichi e agenti chimici per consigliare la mescola esatta.</p>
+            <p style="color:var(--text-muted, #a0a0a0);">Valutiamo velocità, attrito, carichi e agenti chimici per consigliare la mescola esatta.</p>
 
             <h3 class="sottotitolo-bianco" style="margin:20px 0 10px;">Materiali Certificati</h3>
             <p style="color:var(--text-muted, #a0a0a0);">Schede tecniche di prodotto e certificazioni idoneità sempre disponibili.</p>
@@ -252,7 +253,7 @@
 </section>
 
 <!-- PROCESSO PRODUTTIVO -->
-<section class="section" style="text-align:center;">
+<section class="section container" style="text-align:center;">
     <h2 class="section-title">Dal Disegno al Prodotto Finito</h2>
 
     <div style="max-width:700px; margin:0 auto; text-align:left;">
@@ -284,12 +285,12 @@
 </section>
 
 <!-- CTA FINALE -->
-<section class="section" style="text-align:center; background: rgba(255,255,255,0.02); border-radius:10px; padding:50px 20px;">
+<section class="section container" style="text-align:center; background: rgba(255,255,255,0.02); border-radius:10px; padding:50px 20px;">
     <h2 class="section-title">Hai Bisogno di un Nastro Speciale o Fuori Standard?</h2>
     <p style="color:var(--text-muted, #a0a0a0); max-width:700px; margin:0 auto 30px;">
         I nostri ingegneri sono a disposizione per analizzare i disegni del tuo impianto o effettuare un sopralluogo tecnico.
     </p>
-    <a href="#" class="btn btn-primary btn-preventivo">Richiedi Valutazione Tecnica (RFQ)</a>
+    <a href="#" class="btn btn-primary btn-preventivo" onclick="apriPopup()">Richiedi Valutazione Tecnica (RFQ)</a>
 </section>
 
 <!-- POPUP COMPLETO PREVENTIVO (RFQ) -->
@@ -333,8 +334,8 @@
                         </div>
 
                         <div class="filebox-privacy">
-                            <input type="checkbox" id="privacy-check-prodotti" name="Privacy" value="Accettata" required>
-                            <label for="privacy-check-prodotti">Autorizzo il trattamento dei dati personali secondo la Privacy Policy *</label>
+                            <input type="checkbox" id="privacy-check" name="Privacy" value="Accettata" required>
+                            <label for="privacy-check">Autorizzo il trattamento dei dati personali secondo la Privacy Policy *</label>
                         </div>
                     </div>
 
@@ -364,6 +365,7 @@
             <a href="index.html">Home</a>
             <a href="azienda.html">Azienda</a>
             <a href="prodotti.html">Prodotti</a>
+            <a href="catalogo.html">Catalogo Tecnico</a>
             <a href="portfolio.html">Portfolio Impianti</a>
             <a href="contatti.html">Contatti</a>
         </div>
