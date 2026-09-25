@@ -1,18 +1,19 @@
 /* ==========================================================================
-   1. VARIABILI ROOT, RESET GLOBALE & UTILITY
+   SIRIO NASTRI TRASPORTATORI - MASTER STYLE SHEET (COMPLETO E UNIFICATO)
    ========================================================================== */
 
+/* 1. VARIABILI ROOT & RESET GLOBALE */
 :root {
     --primary: #00aa55;
     --primary-hover: #008844;
-    --primary-glow: rgba(0, 170, 85, 0.25);
+    --primary-glow: rgba(0, 170, 85, 0.2);
     --bg-dark: #0a0a0a;
     --bg-card: #141414;
     --bg-input: #1a1a1a;
     --text-light: #ffffff;
     --text-muted: #a0a0a0;
-    --border-color: #262626;
-    --border-focus: #00aa55;
+    --border-color: #242424;
+    --border-hover: #00aa55;
     --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -42,8 +43,9 @@ a {
     transition: var(--transition);
 }
 
+/* CONTENIMENTO RIGIDO IMMAGINI (Previene ingrandimenti anomali) */
 img {
-    max-width: 100%;
+    max-width: 100% !important;
     height: auto;
     display: block;
 }
@@ -55,7 +57,7 @@ img {
 }
 
 .titolo-pagina {
-    font-size: 40px;
+    font-size: 38px;
     font-weight: 800;
     color: var(--text-light);
     letter-spacing: -0.5px;
@@ -68,12 +70,12 @@ img {
     line-height: 1.7;
 }
 
-/* BOTTONI GENERALE */
+/* BOTTONI GENERALI */
 .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 14px 28px;
+    padding: 12px 26px;
     border-radius: 6px;
     font-weight: 600;
     font-size: 15px;
@@ -85,12 +87,12 @@ img {
 .btn-primary {
     background: var(--primary);
     color: #ffffff;
-    box-shadow: 0 4px 14px var(--primary-glow);
+    box-shadow: 0 4px 12px var(--primary-glow);
 }
 
 .btn-primary:hover {
     background: var(--primary-hover);
-    transform: translateY(-1px);
+    transform: translateY(-2px);
 }
 
 .btn-outline {
@@ -102,6 +104,19 @@ img {
 .btn-outline:hover {
     border-color: var(--primary);
     color: var(--primary);
+}
+
+/* BADGE & TAGS */
+.badge, .tag-soluzione, .tag-gamma {
+    display: inline-block;
+    background: rgba(0, 170, 85, 0.15);
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    width: fit-content;
 }
 
 /* ==========================================================================
@@ -208,7 +223,6 @@ nav {
     transform: translateX(3px);
 }
 
-/* HAMBURGER */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -224,21 +238,21 @@ nav {
 }
 
 /* ==========================================================================
-   3. HERO, GRIGLIE & SCHEDE PRODOTTI
+   3. HERO & SYSTEM GRIGLIE (HOME, AZIENDA, PRODOTTI, PORTFOLIO)
    ========================================================================== */
 
 .hero {
     position: relative;
-    padding: 110px 20px;
-    background: radial-gradient(circle at top, #151515 0%, var(--bg-dark) 100%);
+    padding: 100px 20px;
+    background: radial-gradient(circle at top, #161616 0%, var(--bg-dark) 100%);
     text-align: center;
     border-bottom: 1px solid var(--border-color);
 }
 
 .hero h1 {
-    font-size: 50px;
+    font-size: 48px;
     font-weight: 800;
-    max-width: 920px;
+    max-width: 900px;
     margin: 0 auto 20px auto;
     line-height: 1.15;
 }
@@ -247,16 +261,10 @@ nav {
     font-size: 18px;
     color: var(--text-muted);
     max-width: 720px;
-    margin: 0 auto 32px auto;
+    margin: 0 auto 30px auto;
 }
 
-.grid-3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin-top: 40px;
-}
-
+/* LAYOUT A GRIGLIA GENERALI */
 .grid-2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -264,57 +272,153 @@ nav {
     align-items: center;
 }
 
-.card {
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* CARDS STANDARD & SCHEDE PRODOTTO */
+.card, .prodotto-card, .portfolio-card {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
-    padding: 30px;
+    padding: 24px;
     border-radius: 8px;
     transition: var(--transition);
+    display: flex;
+    flex-direction: column;
 }
 
-.card:hover {
-    border-color: var(--primary);
+.card:hover, .prodotto-card:hover, .portfolio-card:hover {
+    border-color: var(--border-hover);
     transform: translateY(-4px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.5);
 }
 
-.card img {
+.card img, 
+.prodotto-card img, 
+.portfolio-card img, 
+.portfolio-img, 
+.azienda-img {
+    width: 100% !important;
+    height: 220px !important;
+    object-fit: cover !important;
     border-radius: 6px;
-    margin-bottom: 20px;
-    width: 100%;
-    height: 210px;
-    object-fit: cover;
+    margin-bottom: 18px;
 }
 
-.card h3 {
+.card h3, .prodotto-card h3, .portfolio-card h3 {
     font-size: 20px;
     margin-bottom: 10px;
+    color: var(--text-light);
 }
 
-.card p {
+.card p, .prodotto-card p, .portfolio-card p {
     color: var(--text-muted);
     font-size: 14px;
+    line-height: 1.6;
 }
 
 /* ==========================================================================
-   4. PAGINA CONTATTI (LAYOUT COMPLETO & STYLING FORM)
+   4. SEZIONI SPECIFICHE "GAMMA", "SOLUZIONI" E RIQUADRI
+   ========================================================================== */
+
+.grid-gamma, 
+.gamma-grid, 
+.grid-soluzioni, 
+.soluzioni-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+}
+
+/* RIQUADRI CON ACCENTO VERDE SIRIO SUL LATO SINISTRO */
+.box-gamma, 
+.box-soluzione, 
+.card-soluzione, 
+.riquadro, 
+.gamma-card,
+.soluzione-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--primary);
+    border-radius: 8px;
+    padding: 26px;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.box-gamma:hover, 
+.box-soluzione:hover, 
+.card-soluzione:hover, 
+.riquadro:hover, 
+.gamma-card:hover,
+.soluzione-card:hover {
+    border-color: var(--primary);
+    border-left-color: var(--primary);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 170, 85, 0.15);
+}
+
+.box-gamma img, 
+.box-soluzione img, 
+.card-soluzione img, 
+.riquadro img {
+    width: 100% !important;
+    height: 180px !important;
+    object-fit: cover !important;
+    border-radius: 6px;
+    margin-bottom: 16px;
+}
+
+.box-gamma h3, 
+.box-soluzione h3, 
+.card-soluzione h3, 
+.riquadro h3 {
+    font-size: 19px;
+    color: var(--text-light);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.box-gamma p, 
+.box-soluzione p, 
+.card-soluzione p, 
+.riquadro p {
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   5. PAGINA CONTATTI (LAYOUT COMPLETO E FORM)
    ========================================================================== */
 
 .contatti-wrapper {
     max-width: 1200px;
-    margin: 50px auto 80px auto;
+    margin: 40px auto 80px auto;
     padding: 0 20px;
     display: grid;
     grid-template-columns: 1fr 1.1fr;
-    gap: 60px;
+    gap: 50px;
     align-items: start;
 }
 
-/* COLONNA SINISTRA CONTATTI */
 .contatti-left {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 20px;
 }
 
 .contatto-item {
@@ -323,8 +427,8 @@ nav {
     gap: 20px;
     background: var(--bg-card);
     border: 1px solid var(--border-color);
-    padding: 24px;
-    border-radius: 10px;
+    padding: 22px;
+    border-radius: 8px;
     transition: var(--transition);
 }
 
@@ -336,7 +440,7 @@ nav {
 .contatto-icona {
     background: #0f1c14;
     border: 1px solid rgba(0, 170, 85, 0.3);
-    padding: 14px;
+    padding: 12px;
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -344,28 +448,23 @@ nav {
     flex-shrink: 0;
 }
 
-.contatto-icona svg {
-    display: block;
-}
-
 .contatto-item h2 {
     font-size: 18px;
     font-weight: 700;
     color: var(--text-light);
-    margin-bottom: 6px;
+    margin-bottom: 4px;
 }
 
 .contatto-item p {
     color: var(--text-muted);
-    font-size: 15px;
+    font-size: 14.5px;
     line-height: 1.6;
 }
 
-/* COLONNA DESTRA: FORM */
 .contatti-right {
     background: var(--bg-card);
-    padding: 40px;
-    border-radius: 12px;
+    padding: 35px;
+    border-radius: 10px;
     border: 1px solid var(--border-color);
     box-shadow: 0 15px 35px rgba(0,0,0,0.4);
 }
@@ -373,14 +472,13 @@ nav {
 .contatti-form {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 16px;
 }
 
 .contatti-form label {
     font-size: 13.5px;
     color: var(--text-light);
     font-weight: 600;
-    letter-spacing: 0.2px;
 }
 
 .contatti-form input[type="text"],
@@ -389,7 +487,7 @@ nav {
     width: 100%;
     background: var(--bg-input);
     border: 1px solid var(--border-color);
-    padding: 14px 16px;
+    padding: 12px 14px;
     border-radius: 6px;
     color: #ffffff;
     font-family: inherit;
@@ -400,22 +498,20 @@ nav {
 .contatti-form input:focus,
 .contatti-form textarea:focus {
     outline: none;
-    border-color: var(--border-focus);
-    background: #222222;
+    border-color: var(--primary);
+    background: #202020;
     box-shadow: 0 0 0 3px var(--primary-glow);
 }
 
-/* CARICAMENTO FILE DROPBOX */
 .file-drop {
-    border: 2px dashed #383838;
+    border: 2px dashed #333333;
     background: #111111;
-    padding: 25px;
+    padding: 22px;
     text-align: center;
     color: var(--text-muted);
     border-radius: 8px;
     cursor: pointer;
     font-size: 14px;
-    font-weight: 500;
     transition: var(--transition);
 }
 
@@ -429,19 +525,15 @@ nav {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 13.5px;
+    font-size: 13px;
     color: var(--text-muted);
-    cursor: pointer;
 }
 
 .filebox-privacy input[type="checkbox"] {
-    width: 16px;
-    height: 16px;
     accent-color: var(--primary);
     cursor: pointer;
 }
 
-/* MAPPA GOOGLE */
 .mappa-google {
     max-width: 1200px;
     margin: 40px auto 80px auto;
@@ -455,16 +547,15 @@ nav {
 }
 
 .mappa-google iframe {
-    border-radius: 12px;
+    border-radius: 10px;
     border: 1px solid var(--border-color) !important;
     filter: grayscale(100%) invert(92%) contrast(110%);
 }
 
 /* ==========================================================================
-   5. POPUP PREVENTIVO, FOOTER & MEDIA QUERIES RESPONSIVE
+   6. POPUP PREVENTIVO MODAL
    ========================================================================== */
 
-/* POPUP OVERLAY & BOX */
 .popup-overlay {
     position: fixed;
     top: 0;
@@ -489,12 +580,12 @@ nav {
 .popup-box {
     background: #121212;
     border: 1px solid var(--border-color);
-    width: 92%;
-    max-width: 920px;
+    width: 90%;
+    max-width: 900px;
     max-height: 90vh;
     overflow-y: auto;
-    padding: 40px;
-    border-radius: 12px;
+    padding: 35px;
+    border-radius: 10px;
     position: relative;
     box-shadow: 0 25px 60px rgba(0,0,0,0.9);
 }
@@ -503,11 +594,10 @@ nav {
     position: absolute;
     top: 20px;
     right: 25px;
-    font-size: 34px;
+    font-size: 32px;
     color: var(--text-muted);
     cursor: pointer;
     line-height: 1;
-    transition: var(--transition);
 }
 
 .popup-close:hover {
@@ -516,7 +606,7 @@ nav {
 
 .popup-content {
     display: flex;
-    gap: 40px;
+    gap: 35px;
 }
 
 .popup-col {
@@ -524,31 +614,26 @@ nav {
 }
 
 .popup-left h2 {
-    font-size: 26px;
+    font-size: 24px;
     color: var(--primary);
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .popup-desc {
     color: var(--text-muted);
     font-size: 14px;
-    margin-bottom: 24px;
-}
-
-.popup-left h3 {
-    font-size: 16px;
-    margin: 20px 0 12px 0;
-    color: var(--text-light);
+    margin-bottom: 20px;
 }
 
 .popup-points {
     list-style: none;
+    margin-bottom: 20px;
 }
 
 .popup-points li {
     font-size: 13.5px;
     color: var(--text-muted);
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     position: relative;
     padding-left: 20px;
 }
@@ -564,14 +649,14 @@ nav {
 .popup-form {
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 12px;
 }
 
 .popup-input {
     width: 100%;
     background: var(--bg-input);
     border: 1px solid var(--border-color);
-    padding: 12px 14px;
+    padding: 11px 14px;
     border-radius: 6px;
     color: #ffffff;
     font-size: 13.5px;
@@ -584,13 +669,13 @@ nav {
 
 .filebox-area {
     border: 1px dashed #333333;
-    padding: 18px;
+    padding: 15px;
     text-align: center;
     font-size: 12.5px;
     color: var(--text-muted);
     position: relative;
     border-radius: 6px;
-    margin-top: 6px;
+    margin-top: 5px;
 }
 
 .filebox-input {
@@ -607,9 +692,9 @@ nav {
     background: var(--primary);
     color: #ffffff;
     border: none;
-    padding: 14px;
+    padding: 13px;
     border-radius: 6px;
-    font-weight: 700;
+    font-weight: 600;
     cursor: pointer;
     margin-top: 10px;
     transition: var(--transition);
@@ -619,12 +704,15 @@ nav {
     background: var(--primary-hover);
 }
 
-/* FOOTER */
+/* ==========================================================================
+   7. FOOTER & MEDIA QUERIES RESPONSIVE
+   ========================================================================== */
+
 .footer-sirio {
     background: #040404;
-    padding: 70px 40px 30px 40px;
+    padding: 60px 40px 30px 40px;
     border-top: 1px solid var(--border-color);
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 .footer-top {
@@ -637,20 +725,20 @@ nav {
 }
 
 .footer-logo img {
-    max-height: 42px;
-    margin-bottom: 18px;
+    max-height: 40px;
+    margin-bottom: 16px;
 }
 
 .footer-desc, .footer-contact {
     color: var(--text-muted);
     font-size: 13.5px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .footer-col h4 {
     color: #ffffff;
     font-size: 15px;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
     font-weight: 700;
 }
 
@@ -658,7 +746,7 @@ nav {
     display: block;
     color: var(--text-muted);
     font-size: 13.5px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .footer-col a:hover {
@@ -670,27 +758,24 @@ nav {
     max-width: 1200px;
     margin: 0 auto;
     border-top: 1px solid #181818;
-    padding-top: 25px;
+    padding-top: 20px;
     text-align: center;
     font-size: 12.5px;
     color: var(--text-muted);
 }
 
-/* BREAKPOINTS MOBILE & TABLET */
+/* MEDIA QUERIES RESPONSIVE */
 @media (max-width: 992px) {
-    .contatti-wrapper {
+    .contatti-wrapper, .grid-3, .grid-4 {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 30px;
     }
-
-    .grid-3 {
+    .grid-2 {
         grid-template-columns: 1fr;
     }
-
     .footer-top {
         grid-template-columns: 1fr 1fr;
     }
-
     .popup-content {
         flex-direction: column;
         gap: 20px;
@@ -701,11 +786,9 @@ nav {
     header {
         padding: 15px 20px;
     }
-
     .hamburger {
         display: flex;
     }
-
     nav {
         display: none;
         position: absolute;
@@ -714,16 +797,14 @@ nav {
         width: 100%;
         background: #000000;
         flex-direction: column;
-        padding: 25px 20px;
+        padding: 20px;
         border-bottom: 1px solid var(--border-color);
-        gap: 18px;
+        gap: 15px;
         align-items: flex-start;
     }
-
     nav.open {
         display: flex;
     }
-
     .mega-negozio {
         position: static;
         transform: none;
@@ -732,12 +813,10 @@ nav {
         box-shadow: none;
         background: #080808;
     }
-
     .footer-top {
         grid-template-columns: 1fr;
     }
-
     .hero h1 {
-        font-size: 34px;
+        font-size: 32px;
     }
 }
