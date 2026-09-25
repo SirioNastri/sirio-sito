@@ -19,8 +19,7 @@
         </a>
     </div>
 
-    <!-- HAMBURGER MENU MOBILE -->
-    <div class="hamburger" onclick="toggleMenu()">
+    <div class="hamburger" onclick="toggleMenu()" aria-label="Menu di navigazione">
         <span></span>
         <span></span>
         <span></span>
@@ -31,10 +30,8 @@
         <div class="menu-voce"><a href="azienda.html">Azienda</a></div>
         <div class="menu-voce"><a href="prodotti.html">Prodotti</a></div>
 
-        <!-- MEGA MENU CATALOGO TECNICO -->
         <div class="menu-voce menu-negozio">
             <a href="negozio.html">Catalogo Tecnico</a>
-
             <div class="mega-negozio">
                 <div class="colonna">
                     <h4>Nastri Trasportatori</h4>
@@ -45,7 +42,6 @@
                     <a href="prodotto-nastro-alte-temperature.html">Nastro per alte temperature</a>
                     <a href="prodotto-nastro-modulare.html">Nastro modulare in plastica</a>
                 </div>
-
                 <div class="colonna">
                     <h4>Trasportatori Completi</h4>
                     <a href="prodotto-trasportatore-nastro.html">Lineari</a>
@@ -54,7 +50,6 @@
                     <a href="prodotto-trasportatore-rulli.html">Acciaio Inox / Rulliere</a>
                     <a href="prodotto-trasportatore-custom.html">Personalizzati & Custom</a>
                 </div>
-
                 <div class="colonna">
                     <h4>Componenti & Ricambi</h4>
                     <a href="prodotto-rulli.html">Rulli</a>
@@ -72,113 +67,113 @@
     </nav>
 </header>
 
-<!-- HERO PORTFOLIO -->
-<section class="section" style="padding-top:60px;">
-    <div style="text-align:left; margin-bottom:10px;">
-        <h1 class="titolo-pagina">Portfolio Realizzazioni</h1>
-    </div>
-
-    <h2 style="color:var(--accent, #e63946); font-size:22px; margin-top:0; margin-bottom:15px; text-align:center;">
-        Case History e Impianti di Movimentazione Su Misura
-    </h2>
-
-    <p style="max-width:850px; margin:10px auto 0; font-size:16px; line-height:1.7; color:var(--text-muted, #a0a0a0); text-align:center;">
-        Analisi delle soluzioni ingegneristiche sviluppate per linee di produzione, automazione intralogistica e ambienti critici. Ogni installazione è progettata su specifiche dimensionali e operative del cliente.
-    </p>
-</section>
-
-<!-- GRIGLIA 3 COLONNE (PROGETTI SETTORIALI) -->
-<section class="section">
-    <div class="grid-3">
-
-        <div class="card-servizio">
-            <img src="img/progetto1.jpg" alt="Nastro trasportatore alimentare per linea imbottigliamento">
-            <h3>Nastro Alimentare Certificato FDA</h3>
-            <p>Installazione di un nastro continuo lavabile ad alta sanificazione per il confezionamento primario in ambito alimentare.</p>
+<main>
+    <!-- HERO PORTFOLIO -->
+    <section class="section section-hero-portfolio">
+        <div class="hero-content">
+            <h1 class="titolo-pagina">Portfolio Realizzazioni</h1>
+            <p class="sottotitolo-evidenza">Case History e Impianti di Movimentazione Su Misura</p>
+            <p class="hero-description">
+                Analisi delle soluzioni ingegneristiche sviluppate per linee di produzione, automazione intralogistica e ambienti critici. Ogni installazione è progettata su specifiche dimensionali e operative del cliente.
+            </p>
         </div>
+    </section>
 
-        <div class="card-servizio">
-            <img src="img/progetto2.jpg" alt="Rulliera motorizzata per intralogistica pacchi">
-            <h3>Rulliera Motorizzata Intralogistica</h3>
-            <p>Sistema di movimentazione e smistamento imballaggi con rulli frizionati per Hub di spedizione e magazzini automatizzati.</p>
+    <!-- GRIGLIA 3 COLONNE -->
+    <section class="section">
+        <div class="grid-3">
+            <article class="card-servizio">
+                <img src="img/progetto1.jpg" alt="Nastro trasportatore alimentare certificato FDA per linee di imbottigliamento">
+                <h3>Nastro Alimentare Certificato FDA</h3>
+                <p>Installazione di un nastro continuo lavabile ad alta sanificazione per il confezionamento primario in ambito alimentare.</p>
+                <ul class="card-specs">
+                    <li><strong>Sanificazione:</strong> Lavaggio ad alta pressione</li>
+                    <li><strong>Conformità:</strong> Regolamento CE 1935/2004, FDA</li>
+                </ul>
+            </article>
+
+            <article class="card-servizio">
+                <img src="img/progetto2.jpg" alt="Rulliera motorizzata per intralogistica pacchi e smistamento">
+                <h3>Rulliera Motorizzata Intralogistica</h3>
+                <p>Sistema di movimentazione e smistamento imballaggi con rulli frizionati per Hub di spedizione e magazzini automatizzati.</p>
+                <ul class="card-specs">
+                    <li><strong>Capacità:</strong> Fino a 1.200 colli/ora</li>
+                    <li><strong>Controllo:</strong> Integrazione PLC / Sensori optoelettronici</li>
+                </ul>
+            </article>
+
+            <article class="card-servizio">
+                <img src="img/progetto3.jpg" alt="Separatore magnetico trucioli per centri di lavoro CNC">
+                <h3>Separatore Magnetico Trucioli</h3>
+                <p>Impianto di evacuazione scarti di lavorazione con tappeto magnetico rinforzato per centri di lavoro CNC.</p>
+                <ul class="card-specs">
+                    <li><strong>Applicazione:</strong> Trucioli metallici ferrosi / Frequenza intensiva</li>
+                    <li><strong>Resistenza:</strong> Tappeto ad alta usura anti-incastro</li>
+                </ul>
+            </article>
         </div>
+    </section>
 
-        <div class="card-servizio">
-            <img src="img/progetto3.jpg" alt="Evacuatore trucioli magnetico per settore meccanico">
-            <h3>Separatore Magnetico Trucioli</h3>
-            <p>Impianto di evacuazione scarti di lavorazione con tappeto magnetico rinforzato per centri di lavoro CNC.</p>
+    <!-- CASE STUDIES DETTAGLIATI -->
+    <section class="info-grid">
+        <div class="info-grid-img">
+            <img src="img/progetto4.jpg" alt="Sistema integrato di trasporto a curva con tapparelle metalliche">
         </div>
+        <div class="info-grid-text">
+            <h2>Linea Integrata ad Alta Capacità</h2>
+            <h3 class="sottotitolo-bianco">Impianto Automotive & Heavy Duty</h3>
+            <p>
+                Ingegnerizzazione di una linea di trasporto complessa costituita da curve a nastro a 90°, trasportatori a tapparelle in acciaio e stazioni di smistamento automatico trasversale. Progetto sviluppato per sostenere carichi gravosi fino a 800 kg/m con manutenzione ridotta.
+            </p>
+        </div>
+    </section>
 
-    </div>
-</section>
+    <section class="info-grid info-grid-reverse">
+        <div class="info-grid-img">
+            <img src="img/farmaceutica.jpg" alt="Nastro trasportatore in acciaio Inox per uso farmaceutico cleanroom">
+        </div>
+        <div class="info-grid-text">
+            <h2>Ambiente Sterile e Cleanroom</h2>
+            <h3 class="sottotitolo-bianco">Linea Confezionamento Farmaceutico</h3>
+            <p>
+                Progettazione di nastri in poliuretano con strutture portanti in acciaio Inox AISI 316L, idonei al lavaggio ad alta pressione e conformi alle direttive GMP/FDA per ambienti a contaminazione controllata ISO Class 7.
+            </p>
+        </div>
+    </section>
 
-<!-- CASE STUDY IN EVIDENZA -->
-<section class="info-grid">
-    <div class="info-grid-img">
-        <img src="img/progetto4.jpg" alt="Sistema integrato di trasporto a curva con tapparelle metalliche">
-    </div>
+    <section class="info-grid">
+        <div class="info-grid-img">
+            <img src="img/progetto6.jpg" alt="Impianto evacuazione trucioli e riciclo refrigerante">
+        </div>
+        <div class="info-grid-text">
+            <h2>Evacuazione Scarti di Fresatura</h2>
+            <h3 class="sottotitolo-bianco">Settore Metalmeccanico Pesante</h3>
+            <p>
+                Nastro trasportatore a cerniera metallica rinforzata con sistema integrato di filtrazione e recupero del liquido refrigerante, ideato per resistere all'azione di elementi abrasivi e trucioli incandescenti fino a 300°C.
+            </p>
+        </div>
+    </section>
 
-    <div class="info-grid-text">
-        <h2>Linea Integrata ad Alta Capacità</h2>
-        <h3 class="sottotitolo-bianco" style="margin-bottom:15px;">Impianto Automotive & Heavy Duty</h3>
-
-        <p>
-            Ingegnerizzazione di una linea di trasporto complessa costituita da curve a nastro a 90°, trasportatori a tapparelle in acciaio e stazioni di smistamento automatico trasversale. Progetto sviluppato per sostenere carichi gravosi con manutenzione ridotta.
+    <!-- CTA FINALE -->
+    <section class="section section-cta">
+        <h2 class="section-title">Hai un Problema di Movimentazione da Risolvere?</h2>
+        <p class="cta-desc">
+            Contatta il nostro ufficio tecnico per richiedere un sopralluogo in cantiere o un'analisi di fattibilità basata sui tuoi layout CAD (STEP, DWG, DXF).
         </p>
-    </div>
-</section>
-
-<!-- CASE STUDY ALTERNATI -->
-<section class="info-grid">
-    <div class="info-grid-text">
-        <h2>Ambiente Sterile e Cleanroom</h2>
-        <h3 class="sottotitolo-bianco" style="margin-bottom:15px;">Linea Confezionamento Farmaceutico</h3>
-
-        <p>
-            Progettazione di nastri in poliuretano con strutture portanti in acciaio Inox AISI 316L, idonei al lavaggio ad alta pressione e conformi alle direttive GMP/FDA per ambienti a contaminazione controllata.
-        </p>
-    </div>
-
-    <div class="info-grid-img">
-        <img src="img/farmaceutica.jpg" alt="Nastro trasportatore in acciaio Inox per uso farmaceutico">
-    </div>
-</section>
-
-<section class="info-grid">
-    <div class="info-grid-img">
-        <img src="img/progetto6.jpg" alt="Impianto evacuazione trucioli e riciclo refrigerante">
-    </div>
-
-    <div class="info-grid-text">
-        <h2>Evacuazione Scarti di Fresatura</h2>
-        <h3 class="sottotitolo-bianco" style="margin-bottom:15px;">Settore Metalmeccanico Pesante</h3>
-
-        <p>
-            Nastro trasportatore a cerniera metallica rinforzata con sistema integrato di filtrazione e recupero del liquido refrigerante, ideato per resistere all'azione di elementi abrasivi e trucioli incandescenti.
-        </p>
-    </div>
-</section>
-
-<!-- CTA FINALE -->
-<section class="section" style="text-align:center;">
-    <h2 class="section-title">Hai un Problema di Movimentazione da Risolvere?</h2>
-    <p style="color:var(--text-muted, #a0a0a0); max-width:700px; margin:0 auto 30px;">
-        Contatta il nostro ufficio tecnico per richiedere un sopralluogo in cantiere o un'analisi di fattibilità basata sui tuoi layout CAD.
-    </p>
-
-    <a href="#" class="btn btn-primary btn-preventivo">Richiedi Sopralluogo Tecnico</a>
-</section>
+        <a href="#" class="btn btn-primary btn-preventivo">Richiedi Sopralluogo Tecnico</a>
+    </section>
+</main>
 
 <!-- POPUP RIGENERATO PREVENTIVO / RFQ -->
-<div class="popup-overlay" id="popup-overlay">
-    <div class="popup-box" id="popup-preventivo">
-        <span class="popup-close" onclick="chiudiPopup()">&times;</span>
+<div class="popup-overlay" id="popup-overlay" aria-hidden="true">
+    <div class="popup-box" id="popup-preventivo" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button type="button" class="popup-close" onclick="chiudiPopup()" aria-label="Chiudi finestra">&times;</button>
 
         <div class="popup-content">
             <div class="popup-col popup-left">
-                <h2>Richiedi Preventivo Tecnico</h2>
+                <h2 id="modal-title">Richiedi Preventivo Tecnico</h2>
                 <p class="popup-desc">
-                    Un nostro ingegnere esaminerà i parametri della tua linea per fornirti un'offerta dedicata entro 24 ore.
+                    Un nostro ingegnere esaminerà i parametri della tua linea per fornirti un'offerta dedicata entro 24 ore lavorative.
                 </p>
 
                 <h3>Servizi Tecnici Inclusi</h3>
@@ -199,14 +194,14 @@
                     <input type="text" name="Nome" class="popup-input" placeholder="Nome *" required>
                     <input type="text" name="Cognome" class="popup-input" placeholder="Cognome *" required>
                     <input type="email" name="Email" class="popup-input" placeholder="Email Aziendale *" required>
-                    <input type="text" name="Telefono" class="popup-input" placeholder="Telefono">
+                    <input type="tel" name="Telefono" class="popup-input" placeholder="Telefono">
                     <textarea name="Messaggio" class="popup-input" placeholder="Descrivi il progetto (Settore, tipo materiale, ingombri, layout)..." rows="4"></textarea>
 
                     <div class="filebox">
-                        <label class="filebox-title">Allega Layout o Disegno Tecnico (PDF, DWG, ZIP)</label>
+                        <label for="file-upload" class="filebox-title">Allega Layout o Disegno Tecnico (PDF, DWG, DXF, ZIP - Max 10MB)</label>
                         <div class="filebox-area">
                             <p>Fai clic o trascina il file per caricarlo</p>
-                            <input type="file" name="Allegato" class="filebox-input">
+                            <input type="file" id="file-upload" name="Allegato" class="filebox-input" accept=".pdf,.dwg,.dxf,.zip,.rar,.step,.stp">
                         </div>
 
                         <div class="filebox-privacy">
@@ -286,19 +281,34 @@ function toggleMenu() {
 }
 
 function apriPopup() {
-    document.getElementById("popup-preventivo").classList.add("active");
-    document.getElementById("popup-overlay").classList.add("active");
+    const popup = document.getElementById("popup-preventivo");
+    const overlay = document.getElementById("popup-overlay");
+    popup.classList.add("active");
+    overlay.classList.add("active");
+    overlay.setAttribute("aria-hidden", "false");
 }
 
 function chiudiPopup() {
-    document.getElementById("popup-preventivo").classList.remove("active");
-    document.getElementById("popup-overlay").classList.remove("active");
+    const popup = document.getElementById("popup-preventivo");
+    const overlay = document.getElementById("popup-overlay");
+    popup.classList.remove("active");
+    overlay.classList.remove("active");
+    overlay.setAttribute("aria-hidden", "true");
 }
 
-document.querySelectorAll(".btn-preventivo-nav, .btn-preventivo").forEach(btn => {
-    btn.addEventListener("click", function(e) {
-        e.preventDefault();
-        apriPopup();
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll(".btn-preventivo-nav, .btn-preventivo").forEach(btn => {
+        btn.addEventListener("click", function(e) {
+            e.preventDefault();
+            apriPopup();
+        });
+    });
+
+    // Chiusura modal con tasto ESC
+    document.addEventListener("keydown", function(e) {
+        if (e.key === "Escape") {
+            chiudiPopup();
+        }
     });
 });
 </script>
