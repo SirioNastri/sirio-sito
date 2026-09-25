@@ -30,14 +30,14 @@
         <div class="menu-voce"><a href="azienda.html" class="active">Azienda</a></div>
         <div class="menu-voce"><a href="prodotti.html">Prodotti</a></div>
 
-        <!-- DROPDOWN CATALOGO TECNICO CORRETTO -->
+        <!-- DROPDOWN CATALOGO TECNICO CON GALLERIA -->
         <div class="menu-voce menu-dropdown">
-            <a href="catalogo.html">Catalogo Tecnico</a>
+            <a href="catalogo.html" class="link-diretto">Catalogo Tecnico</a>
 
             <div class="mega-menu">
-                <!-- COLONNA 1: NASTRI TRASPORTATORI -->
+                <!-- COLONNA 1: GALLERIA -->
                 <div class="colonna">
-                    <h4>Nastri Trasportatori</h4>
+                    <h4>Galleria</h4>
                     <a href="prodotto-nastro-pvc.html">Nastro in PVC</a>
                     <a href="prodotto-nastro-pu.html">Nastro in PU</a>
                     <a href="prodotto-nastro-gomma.html">Nastro in gomma</a>
@@ -213,7 +213,7 @@
     </div>
 </div>
 
-<!-- FOOTER -->
+<!-- FOOTER CON GALLERIA -->
 <footer class="footer-sirio">
     <div class="footer-top">
         <div class="footer-col">
@@ -238,7 +238,7 @@
         </div>
 
         <div class="footer-col">
-            <h4>Nastri Trasportatori</h4>
+            <h4>Galleria</h4>
             <a href="prodotto-nastro-pvc.html">Nastro in PVC</a>
             <a href="prodotto-nastro-pu.html">Nastro in PU</a>
             <a href="prodotto-nastro-gomma.html">Nastro in gomma</a>
@@ -284,6 +284,16 @@ document.querySelectorAll(".btn-preventivo-nav, .btn-preventivo").forEach(btn =>
         e.preventDefault();
         apriPopup();
     });
+});
+
+// Forzatura navigazione Catalogo Tecnico
+document.addEventListener("DOMContentLoaded", function() {
+    const linkCatalogo = document.querySelector('.menu-dropdown > a');
+    if (linkCatalogo) {
+        linkCatalogo.addEventListener('click', function(e) {
+            window.location.href = this.getAttribute('href');
+        });
+    }
 });
 </script>
 
