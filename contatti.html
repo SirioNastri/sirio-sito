@@ -240,12 +240,12 @@
         <div class="menu-voce"><a href="azienda.html">Azienda</a></div>
         <div class="menu-voce"><a href="prodotti.html">Prodotti</a></div>
 
-        <!-- CATALOGO TEKNICO CON LINK DIRETTO E MEGA MENU -->
-        <div class="menu-voce menu-negozio">
-            <a href="catalogo.html" class="link-catalogo-main">Catalogo Tecnico</a>
-            <div class="mega-negozio">
+        <!-- CATALOGO TECNICO CON LINK DIRETTO E MEGA MENU -->
+        <div class="menu-voce menu-dropdown">
+            <a href="catalogo.html" class="link-diretto">Catalogo Tecnico</a>
+            <div class="mega-menu">
                 <div class="colonna">
-                    <h4>Nastri Trasportatori</h4>
+                    <h4>Galleria</h4>
                     <a href="prodotto-nastro-pvc.html">Nastro in PVC</a>
                     <a href="prodotto-nastro-pu.html">Nastro in PU</a>
                     <a href="prodotto-nastro-gomma.html">Nastro in gomma</a>
@@ -263,7 +263,7 @@
                 </div>
                 <div class="colonna">
                     <h4>Componenti & Ricambi</h4>
-                    <a href="prodotto-rulli.html">Rulli</a>
+                    <a href="prodotto-rulli.html">Rulli di Trascinamento</a>
                     <a href="prodotto-tamburi.html">Tamburi e Mototamburi</a>
                 </div>
             </div>
@@ -273,7 +273,7 @@
         <div class="menu-voce"><a href="contatti.html" class="active">Contatti</a></div>
 
         <div class="menu-voce">
-            <a href="#" class="btn-preventivo-nav">Richiedi Preventivo (RFQ)</a>
+            <a href="#" class="btn-preventivo-nav" onclick="apriPopup()">Richiedi Preventivo (RFQ)</a>
         </div>
     </nav>
 </header>
@@ -459,7 +459,6 @@
             </p>
             <p class="footer-contact">📞 (+39) 011 953 9492</p>
             <p class="footer-contact">✉️ info@sirionastri.it</p>
-
         </div>
 
         <div class="footer-col">
@@ -473,7 +472,7 @@
         </div>
 
         <div class="footer-col">
-            <h4>Nastri Trasportatori</h4>
+            <h4>Galleria</h4>
             <a href="prodotto-nastro-pvc.html">Nastro in PVC</a>
             <a href="prodotto-nastro-pu.html">Nastro in PU</a>
             <a href="prodotto-nastro-gomma.html">Nastro in gomma</a>
@@ -521,11 +520,11 @@ function chiudiPopup() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Garantisce che il link a Catalogo Tecnico sia sempre cliccabile
-    const linkCatalogo = document.querySelector('.link-catalogo-main');
+    // Forzatura navigazione diretta per Catalogo Tecnico
+    const linkCatalogo = document.querySelector('.menu-dropdown > a');
     if (linkCatalogo) {
         linkCatalogo.addEventListener('click', function(e) {
-            window.location.href = 'catalogo.html';
+            window.location.href = this.getAttribute('href');
         });
     }
 
