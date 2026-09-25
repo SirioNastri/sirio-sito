@@ -245,24 +245,24 @@
             <a href="catalogo.html" class="link-diretto">Catalogo Tecnico</a>
             <div class="mega-menu">
                 <div class="colonna">
-                    <h4>Galleria</h4>
+                    <h4>GALLERIA NASTRI</h4>
                     <a href="prodotto-nastro-pvc.html">Nastro in PVC</a>
                     <a href="prodotto-nastro-pu.html">Nastro in PU</a>
-                    <a href="prodotto-nastro-gomma.html">Nastro in gomma</a>
-                    <a href="prodotto-nastro-alimentare.html">Nastro alimentare (FDA)</a>
-                    <a href="prodotto-nastro-alte-temperature.html">Nastro per alte temperature</a>
-                    <a href="prodotto-nastro-modulare.html">Nastro modulare in plastica</a>
+                    <a href="prodotto-nastro-gomma.html">Nastro in Gomma</a>
+                    <a href="prodotto-nastro-alimentare.html">Nastro Alimentare (FDA)</a>
+                    <a href="prodotto-nastro-alte-temperature.html">Nastro Alte Temperature</a>
+                    <a href="prodotto-nastro-modulare.html">Nastro Modulare</a>
                 </div>
                 <div class="colonna">
-                    <h4>Trasportatori Completi</h4>
+                    <h4>TRASPORTATORI COMPLETI</h4>
                     <a href="prodotto-trasportatore-nastro.html">Lineari</a>
                     <a href="prodotto-trasportatore-inclinato.html">Inclinati</a>
                     <a href="prodotto-trasportatore-curva.html">Curvi</a>
                     <a href="prodotto-trasportatore-rulli.html">Acciaio Inox / Rulliere</a>
-                    <a href="prodotto-trasportatore-custom.html">Personalizzati & Custom</a>
+                    <a href="portfolio.html">Personalizzati & Custom</a>
                 </div>
                 <div class="colonna">
-                    <h4>Componenti & Ricambi</h4>
+                    <h4>COMPONENTI & RICAMBI</h4>
                     <a href="prodotto-rulli.html">Rulli di Trascinamento</a>
                     <a href="prodotto-tamburi.html">Tamburi e Mototamburi</a>
                 </div>
@@ -450,13 +450,15 @@
 <!-- FOOTER -->
 <footer class="footer-sirio">
     <div class="footer-top">
+
         <div class="footer-col">
             <div class="footer-logo">
                 <img src="img/logo.jpg" alt="Sirio Nastri Trasportatori Logo">
             </div>
             <p class="footer-desc">
-                Progettazione e produzione di nastri trasportatori industriali, rulliere e sistemi completi di movimentazione.
+                Produzione di nastri trasportatori, trasportatori completi e sistemi di movimentazione industriale.
             </p>
+
             <p class="footer-contact">📞 (+39) 011 953 9492</p>
             <p class="footer-contact">✉️ info@sirionastri.it</p>
         </div>
@@ -472,24 +474,28 @@
         </div>
 
         <div class="footer-col">
-            <h4>Galleria</h4>
+            <h4>Galleria Nastri</h4>
             <a href="prodotto-nastro-pvc.html">Nastro in PVC</a>
             <a href="prodotto-nastro-pu.html">Nastro in PU</a>
-            <a href="prodotto-nastro-gomma.html">Nastro in gomma</a>
-            <a href="prodotto-nastro-alimentare.html">Nastro alimentare (FDA)</a>
-            <a href="prodotto-nastro-alte-temperature.html">Nastro alte temperature</a>
-            <a href="prodotto-nastro-modulare.html">Nastro modulare</a>
+            <a href="prodotto-nastro-gomma.html">Nastro in Gomma</a>
+            <a href="prodotto-nastro-alimentare.html">Nastro Alimentare (FDA)</a>
+            <a href="prodotto-nastro-alte-temperature.html">Nastro Alte Temperature</a>
+            <a href="prodotto-nastro-modulare.html">Nastro Modulare</a>
         </div>
 
         <div class="footer-col">
             <h4>Trasportatori & Componenti</h4>
-            <a href="prodotto-trasportatore-nastro.html">Trasportatori Lineari</a>
-            <a href="prodotto-trasportatore-inclinato.html">Trasportatori Inclinati</a>
-            <a href="prodotto-trasportatore-curva.html">Trasportatori Curvi</a>
-            <a href="prodotto-trasportatore-rulli.html">Rulliere & Inox</a>
+            <a href="prodotto-trasportatore-nastro.html">Lineari</a>
+            <a href="prodotto-trasportatore-inclinato.html">Inclinati</a>
+            <a href="prodotto-trasportatore-curva.html">Curvi</a>
+            <a href="prodotto-trasportatore-rulli.html">Acciaio Inox / Rulliere</a>
+            <a href="portfolio.html">Personalizzati & Custom</a>
+
+            <h4 style="margin-top:20px;">Componenti</h4>
             <a href="prodotto-rulli.html">Rulli</a>
             <a href="prodotto-tamburi.html">Tamburi e Mototamburi</a>
         </div>
+
     </div>
 
     <div class="footer-bottom">
@@ -512,6 +518,7 @@ function apriPopup() {
 }
 
 function chiudiPopup() {
+    document.getElementById("popup-preventivo");
     const popup = document.getElementById("popup-preventivo");
     const overlay = document.getElementById("popup-overlay");
     popup.classList.remove("active");
@@ -520,7 +527,6 @@ function chiudiPopup() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Forzatura navigazione diretta per Catalogo Tecnico
     const linkCatalogo = document.querySelector('.menu-dropdown > a');
     if (linkCatalogo) {
         linkCatalogo.addEventListener('click', function(e) {
