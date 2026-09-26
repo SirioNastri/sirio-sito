@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Impianti e Installazioni | Sirio Nastri</title>
-    <meta name="description" content="Esplora la galleria delle nostre realizzazioni: nastri trasportatori industriali, rulliere e sistemi di movimentazione su misura installati per clienti leader di settore.">
+    <title>Portfolio e Installazioni Industriali | Sirio Nastri</title>
+    <meta name="description" content="Scopri il portfolio dei nostri impianti industriali, nastri trasportatori su misura e sistemi di movimentazione installati.">
     <link rel="canonical" href="https://sirionastri.github.io/sirio-sito/portfolio.html">
     <link rel="stylesheet" href="css/style.css?v=9">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -19,6 +19,7 @@
         </a>
     </div>
 
+    <!-- HAMBURGER MENU ACCESSIBILE -->
     <button class="hamburger" aria-label="Apri menu navigazione" aria-expanded="false" onclick="toggleMenu()">
         <span></span>
         <span></span>
@@ -30,9 +31,12 @@
         <div class="menu-voce"><a href="azienda.html">Azienda</a></div>
         <div class="menu-voce"><a href="prodotti.html">Prodotti</a></div>
 
+        <!-- MEGA MENU CATALOGO TECNICO -->
         <div class="menu-voce menu-negozio">
             <a href="catalogo.html">Catalogo Tecnico</a>
+
             <div class="mega-negozio">
+                <!-- COLONNA 1: NASTRI TRASPORTATORI -->
                 <div class="colonna">
                     <h4>Galleria Nastri</h4>
                     <a href="prodotto-nastro-pvc.html">Nastro in PVC</a>
@@ -43,6 +47,7 @@
                     <a href="prodotto-nastro-modulare.html">Nastro modulare in plastica</a>
                 </div>
 
+                <!-- COLONNA 2: TRASPORTATORI COMPLETI -->
                 <div class="colonna">
                     <h4>Trasportatori Completi</h4>
                     <a href="prodotto-trasportatore-nastro.html">Lineari</a>
@@ -52,6 +57,7 @@
                     <a href="prodotto-trasportatore-nastro.html">Personalizzati</a>
                 </div>
 
+                <!-- COLONNA 3: COMPONENTI -->
                 <div class="colonna">
                     <h4>Componenti &amp; Ricambi</h4>
                     <a href="prodotto-rulli.html">Rulli</a>
@@ -71,83 +77,61 @@
 
 <main>
     <!-- HERO PORTFOLIO -->
-    <section class="hero">
-        <h1>PORTFOLIO INSTALLAZIONI</h1>
-        <div class="hero-grid">
-            <div class="hero-content">
-                <p class="hero-text">
-                    <span class="hero-title">Soluzioni Realizzate sul Campo.</span>
-                    Una panoramica dei nostri impianti di movimentazione industriale, linee di trasporto personalizzate e integrazioni custom installate presso stabilimenti produttivi e centri logistici.
-                </p>
-                <a href="#" class="btn btn-primary btn-preventivo">Richiedi Progetto Custom</a>
+    <section class="hero-portfolio">
+        <div class="container">
+            <h1>Portfolio Installazioni &amp; Impianti</h1>
+            <p class="hero-subtitle">Soluzioni di movimentazione industriale progettate, prodotte e collaudate per i nostri clienti.</p>
+        </div>
+    </section>
+
+    <!-- SEZIONE PROGETTI REALIZZATI -->
+    <section class="portfolio-grid-section container">
+        <div class="portfolio-grid">
+            <!-- Progetto 1 -->
+            <div class="portfolio-item">
+                <img src="img/nastro-sirio.jpg" alt="Impianto nastro trasportatore industriale" loading="lazy">
+                <div class="portfolio-content">
+                    <h3>Linea di Trasporto Continuo - Settore Automotive</h3>
+                    <p>Impianto personalizzato ad alta resistenza per la movimentazione di componenti meccanici pesanti lungo la catena di montaggio.</p>
+                </div>
             </div>
-            <div class="hero-image">
-                <img src="img/nastro-sirio.jpg" alt="Impianti industriali realizzati da Sirio Nastri" loading="lazy">
+
+            <!-- Progetto 2 -->
+            <div class="portfolio-item">
+                <img src="img/index3.jpg" alt="Nastro trasportatore alimentare FDA" loading="lazy">
+                <div class="portfolio-content">
+                    <h3>Sistema di Nastri Alimentari (Normative FDA)</h3>
+                    <p>Installazione in acciaio inox AISI 304 con nastro in PU certificato per il settore agroalimentare, predisposto per cicli di sanificazione intensiva.</p>
+                </div>
+            </div>
+
+            <!-- Progetto 3 -->
+            <div class="portfolio-item">
+                <img src="img/progettazione.jpg" alt="Progettazione 3D e rulliere" loading="lazy">
+                <div class="portfolio-content">
+                    <h3>Rulliere Motorizzate per Centro Logistico</h3>
+                    <p>Integrazione di rulliere folli e motorizzate per l'ottimizzazione dei flussi di smistamento colli in un magazzino ad alto volume.</p>
+                </div>
+            </div>
+
+            <!-- Progetto 4 -->
+            <div class="portfolio-item">
+                <img src="img/installazione.jpg" alt="Installazione in cantiere di un nastro inclinato" loading="lazy">
+                <div class="portfolio-content">
+                    <h3>Nastro Trasportatore Inclinato con Listelli</h3>
+                    <p>Soluzione progettata per il sollevamento verticale di prodotti sfusi all'interno di un impianto di packaging industriale.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- SEZIONE GALLERIA PROGETTI -->
-    <section class="section container">
-        <h2 class="section-title titolo-verde">I Nostri Casi Studio</h2>
-        <h3 class="sottotitolo-bianco">Eccellenza Operativa Applicata</h3>
-        <p class="section-desc">
-            Ogni impianto è frutto di un'attenta analisi ingegneristica, progettato per integrarsi perfettamente nei flussi di lavoro esistenti, riducendo al minimo i costi di manutenzione e i fermi linea.
-        </p>
-
-        <!-- Griglia Portfolio -->
-        <div class="grid-3" style="margin-top: 40px;">
-            <div class="card-servizio">
-                <img src="img/progettazione.jpg" alt="Linea di trasporto automatizzata per settore food" loading="lazy">
-                <h3 class="sottotitolo-bianco">Linea Modulare Settore Food (FDA)</h3>
-                <p style="color: #ccc; font-size: 0.95rem; margin: 10px 0 15px 0;">Nastro modulare in plastica con struttura in acciaio inox AISI 304 per lavaggi frequenti ad alta pressione.</p>
-                <span class="btn-ghost" style="border: none; padding: 0; color: #4da6ff;">Settore: Agroalimentare</span>
-            </div>
-
-            <div class="card-servizio">
-                <img src="img/installazione.jpg" alt="Sistema di rulliere motorizzate per logistica" loading="lazy">
-                <h3 class="sottotitolo-bianco">Rulliere Motorizzate per Smistamento</h3>
-                <p style="color: #ccc; font-size: 0.95rem; margin: 10px 0 15px 0;">Impianto completo di rulliere folli e motorizzate per centri di distribuzione e logistica integrata pesante.</p>
-                <span class="btn-ghost" style="border: none; padding: 0; color: #4da6ff;">Settore: Logistica &amp; E-commerce</span>
-            </div>
-
-            <div class="card-servizio">
-                <img src="img/realizzazione-collaudo.jpg" alt="Nastro inclinato custom per packaging" loading="lazy">
-                <h3 class="sottotitolo-bianco">Nastro Inclinato con Listelli</h3>
-                <p style="color: #ccc; font-size: 0.95rem; margin: 10px 0 15px 0;">Soluzione custom con sponde laterali e listelli di presa per il sollevamento verticale di componenti plastici stampati.</p>
-                <span class="btn-ghost" style="border: none; padding: 0; color: #4da6ff;">Settore: Stampaggio &amp; Packaging</span>
-            </div>
-
-            <div class="card-servizio">
-                <img src="img/sopralluogo-tecnico.jpg" alt="Trasportatore curvo per ottimizzazione spazi" loading="lazy">
-                <h3 class="sottotitolo-bianco">Trasportatore Curvo a 90°</h3>
-                <p style="color: #ccc; font-size: 0.95rem; margin: 10px 0 15px 0;">Nastro di rinvio in curva progettato su misura per raccordare linee di produzione in spazi ristretti e vincolati.</p>
-                <span class="btn-ghost" style="border: none; padding: 0; color: #4da6ff;">Settore: Manifatturiero</span>
-            </div>
-
-            <div class="card-servizio">
-                <img src="img/vendita.jpg" alt="Impianto pesante per settore automotive" loading="lazy">
-                <h3 class="sottotitolo-bianco>Nastro in Gomma per Carichi Pesanti</h3>
-                <p style="color: #ccc; font-size: 0.95rem; margin: 10px 0 15px 0;">Tappeto gommato antiusura ad alta resistenza meccanica per il trasporto continuo di materiali inerti e metallici.</p>
-                <span class="btn-ghost" style="border: none; padding: 0; color: #4da6ff;">Settore: Automotive &amp; Pesante</span>
-            </div>
-
-            <div class="card-servizio">
-                <img src="img/assistenza-post-vendita.jpg" alt="Manutenzione e revamping impianti" loading="lazy">
-                <h3 class="sottotitolo-bianco">Revamping e Manutenzione Straordinaria</h3>
-                <p style="color: #ccc; font-size: 0.95rem; margin: 10px 0 15px 0;">Intervento di sostituzione teli in opera, vulcanizzazione e upgrade tecnologico di motorizzazioni obsolete.</p>
-                <span class="btn-ghost" style="border: none; padding: 0; color: #4da6ff;">Settore: Service Industriale</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTATTI -->
+    <!-- SEZIONE CTA / CONTATTI PORTFOLIO -->
     <section class="contact-wrapper">
         <div class="contact-card">
             <div class="contact-left">
-                <h2 class="contact-title">Hai un progetto complesso da realizzare?</h2>
+                <h2 class="contact-title">Hai un progetto specifico in mente?</h2>
                 <p class="contact-text">
-                    I nostri ingegneri sono a disposizione per analizzare il tuo layout produttivo e formulare un'offerta su misura.
+                    Il nostro ufficio tecnico è pronto a studiare la soluzione su misura per il tuo impianto produttivo.
                 </p>
 
                 <div class="contact-details">
@@ -160,7 +144,7 @@
             <div class="contact-right">
                 <form action="https://formsubmit.co/info@sirionastri.it" method="POST">
                     <input type="hidden" name="_next" value="https://sirionastri.github.io/sirio-sito/grazie.html">
-                    <input type="hidden" name="_subject" value="Nuovo Contatto Diretto da Portfolio">
+                    <input type="hidden" name="_subject" value="Nuovo Contatto da Pagina Portfolio">
                     <input type="hidden" name="_captcha" value="false">
 
                     <label for="nome-contatto">Nome e Cognome *</label>
@@ -170,7 +154,7 @@
                     <input type="email" id="email-contatto" name="Email" placeholder="mario.rossi@azienda.com" required>
 
                     <label for="messaggio-contatto">Specifiche della richiesta *</label>
-                    <textarea id="messaggio-contatto" name="Messaggio" placeholder="Descrivi le caratteristiche del nastro o dell'impianto..." rows="4" required></textarea>
+                    <textarea id="messaggio-contatto" name="Messaggio" placeholder="Descrivi le caratteristiche dell'impianto o del progetto..." rows="4" required></textarea>
 
                     <button type="submit" class="btn-primary contact-btn">Invia Richiesta Tecnica</button>
                 </form>
@@ -203,7 +187,7 @@
             <div class="popup-col popup-right">
                 <form action="https://formsubmit.co/info@sirionastri.it" method="POST" enctype="multipart/form-data" class="popup-form">
                     <input type="hidden" name="_next" value="https://sirionastri.github.io/sirio-sito/grazie.html">
-                    <input type="hidden" name="_subject" value="Nuova Richiesta RFQ dal Popup Portfolio">
+                    <input type="hidden" name="_subject" value="Richiesta Preventivo RFQ dal Popup Portfolio">
                     <input type="hidden" name="_captcha" value="false">
 
                     <input type="text" name="Azienda" class="popup-input" placeholder="Ragione Sociale Azienda *" required>
@@ -235,7 +219,7 @@
     </div>
 </div>
 
-<!-- FOOTER IDENTICO ALL'INDEX -->
+<!-- FOOTER IDENTICO ALLA HOME (INDEX) -->
 <footer class="footer-sirio">
     <div class="footer-top">
 
@@ -331,12 +315,6 @@ function gestisciFile(input) {
         labelText.textContent = 'Trascina qui il file o fai clic per selezionare';
     }
 }
-
-document.querySelectorAll(".btn-preventivo").forEach(btn => {
-    btn.addEventListener("click", function(e) {
-        apriPopup(e);
-    });
-});
 </script>
 
 </body>
