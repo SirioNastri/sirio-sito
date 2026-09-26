@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sopralluogo Tecnico | Sirio Nastri Trasportatori</title>
+    <title>Progettazione 3D | Sirio Nastri Trasportatori</title>
     <link rel="stylesheet" href="css/style.css?v=9">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -120,7 +120,7 @@
         <div class="menu-voce"><a href="contatti.html">Contatti</a></div>
 
         <div class="menu-voce">
-            <a href="#" class="btn-preventivo-nav" onclick="apriPopup(event)">Richiedi preventivo</a>
+            <a href="#" class="btn-preventivo-nav" onclick="apriPopup(event)">Richiedi Preventivo (RFQ)</a>
         </div>
     </nav>
 </header>
@@ -128,66 +128,55 @@
 
 <section class="section" style="padding-top: 10px;">
 
-    <!-- SOLO QUESTO TASTO VA A SINISTRA -->
+    <!-- TASTO TORNA INDIETRO A SINISTRA -->
     <div class="back-wrapper-left">
         <a href="javascript:history.back()" class="btn btn-primary back-btn">← Torna indietro</a>
     </div>
 
-    <!-- IL RESTO TORNA IN MEZZO -->
+    <!-- TITOLO CENTRATO -->
     <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-        <h1 class="page-title-custom">Sopralluogo tecnico</h1>
+        <h1 class="page-title-custom">Progettazione 3D</h1>
     </div>
 
     <div class="info-grid" style="margin-top: 0;">
 
         <div class="info-grid-text">
 
-            <h2>Analisi dell’ambiente e studio delle esigenze reali</h2>
+            <h2>Modellazione 3D avanzata per impianti su misura</h2>
 
             <p>
-                Ogni impianto di movimentazione nasce da un sopralluogo accurato.  
-                Entriamo in azienda per osservare da vicino il ciclo produttivo, analizzare gli spazi,
-                valutare i materiali da trasportare e comprendere le reali necessità operative.
+                Dopo il sopralluogo tecnico, ogni progetto passa alla fase di progettazione 3D.
+                Utilizziamo software professionali per modellare nastri trasportatori, rulliere,
+                mototamburi e strutture di supporto con precisione millimetrica.
             </p>
 
-            <p>Il nostro obiettivo è progettare un sistema che:</p>
+            <p>La progettazione 3D ci permette di:</p>
 
             <ul>
-                <li>Ottimizzi i flussi produttivi</li>
-                <li>Migliori la sicurezza degli operatori</li>
-                <li>Si integri perfettamente con macchinari e layout esistenti</li>
-                <li>Riduca tempi morti, sprechi e movimentazioni inutili</li>
+                <li>Visualizzare l’impianto prima della costruzione</li>
+                <li>Verificare ingombri, altezze e compatibilità con macchinari esistenti</li>
+                <li>Ottimizzare il percorso del materiale</li>
+                <li>Ridurre errori e tempi di installazione</li>
+                <li>Garantire un risultato finale perfettamente aderente alle esigenze del cliente</li>
             </ul>
 
-            <h3>Cosa valutiamo durante il sopralluogo</h3>
-
-            <ul>
-                <li>Tipologia di materiale da movimentare (sfuso, confezionato, alimentare, abrasivo)</li>
-                <li>Portata richiesta e velocità del nastro</li>
-                <li>Spazi disponibili e vincoli strutturali</li>
-                <li>Condizioni ambientali: temperatura, umidità, presenza di oli o polveri</li>
-                <li>Compatibilità con linee produttive già presenti</li>
-                <li>Normative di sicurezza e requisiti del settore</li>
-            </ul>
-
-            <h3>Perché il sopralluogo è fondamentale</h3>
+            <h3>Precisione e controllo totale</h3>
 
             <p>
-                Un’analisi accurata ci permette di scegliere il tipo di nastro più adatto  
-                (PVC, PU, gomma, modulare, alimentare, alta temperatura)  
-                e di progettare un trasportatore che garantisca affidabilità, durata e facilità di manutenzione.
+                Ogni componente viene modellato in 3D: telaio, rulli, tamburi, mototamburi,
+                supporti, guide laterali, tappeti in PVC/PU/gomma e accessori.
+                Questo ci permette di simulare il comportamento del nastro e prevedere eventuali criticità.
             </p>
 
             <p>
-                Grazie all’esperienza maturata in diversi settori — alimentare, logistico, metalmeccanico,
-                packaging, agricolo — siamo in grado di individuare rapidamente le soluzioni più efficaci
-                per migliorare la produttività e ridurre i costi operativi.
+                Il cliente può visualizzare il progetto completo prima della realizzazione,
+                con viste esplose, sezioni tecniche e rendering fotorealistici.
             </p>
 
         </div>
 
         <div class="info-grid-img">
-            <img src="img/sopralluogo-tecnico-sirio.jpg" alt="Sopralluogo tecnico Sirio" onerror="this.src='img/logo.jpg'" loading="lazy">
+            <img src="img/immagine-3d.jpg" alt="Progettazione 3D Sirio" onerror="this.src='img/logo.jpg'" loading="lazy">
         </div>
 
     </div>
@@ -199,14 +188,14 @@
 </section>
 
 
-<!-- POPUP PREVENTIVO / RFQ (Con gestione anti-bug e feedback file) -->
+<!-- POPUP PREVENTIVO / RFQ -->
 <div class="popup-overlay" id="popup-overlay" onclick="chiudiPopupEsterno(event)">
     <div class="popup-box" id="popup-preventivo" role="dialog" aria-modal="true" aria-labelledby="modal-title">
         <button type="button" class="popup-close" onclick="chiudiPopup()" aria-label="Chiudi popup">&times;</button>
         
         <div class="popup-content">
             <div class="popup-col popup-left">
-                <h2 id="modal-title">Richiedi Preventivo</h2>
+                <h2 id="modal-title">Richiedi Preventivo (RFQ)</h2>
                 <p class="popup-desc">
                     Un nostro tecnico ti risponderà entro 24 ore con una soluzione su misura per la tua linea produttiva.
                 </p>
@@ -226,7 +215,7 @@
 
             <div class="popup-col popup-right">
                 <form action="https://formsubmit.co/info@sirionastri.it" method="POST" enctype="multipart/form-data" class="popup-form">
-                    <input type="hidden" name="_subject" value="Nuova Richiesta RFQ da Sopralluogo Tecnico">
+                    <input type="hidden" name="_subject" value="Nuova Richiesta RFQ da Progettazione 3D">
                     <input type="hidden" name="_captcha" value="false">
 
                     <input type="text" name="Azienda" class="popup-input" placeholder="Azienda">
