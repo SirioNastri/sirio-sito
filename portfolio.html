@@ -3,16 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio e Installazioni Industriali | Sirio Nastri</title>
-    <meta name="description" content="Scopri il portfolio dei nostri impianti industriali, nastri trasportatori su misura e sistemi di movimentazione installati.">
+    <title>Portfolio Realizzazioni | Sirio Nastri Trasportatori</title>
+    <meta name="description" content="Scopri i progetti realizzati da Sirio Nastri Trasportatori: linee di movimentazione industriali, rulliere, impianti per il settore alimentare, farmaceutico e metalmeccanico.">
     <link rel="canonical" href="https://sirionastri.github.io/sirio-sito/portfolio.html">
-    <link rel="stylesheet" href="css/style.css?v=9">
+    <link rel="stylesheet" href="css/style.css?v=5">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- JSON-LD: Schema.org per Pagina Portfolio / Case Studies -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Portfolio Realizzazioni - Sirio Nastri Trasportatori",
+      "description": "Case histories e installazioni di sistemi di movimentazione industriale su misura.",
+      "url": "https://sirionastri.github.io/sirio-sito/portfolio.html"
+    }
+    </script>
+
+    <style>
+        /* ============================================================
+            MEGACUSTOM ELEVATION STYLE (PORTFOLIO SPECIFIC)
+            ============================================================ */
+        
+        /* Hero Styling */
+        .hero-portfolio-wrapper {
+            padding: 70px 20px 40px;
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .badge-subtle {
+            display: inline-block;
+            padding: 5px 14px;
+            background: rgba(162, 255, 0, 0.08);
+            border: 1px solid rgba(162, 255, 0, 0.3);
+            color: #a2ff00;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        /* Card Servizi (Grid 3) Custom Upgrade */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .card-servizio {
+            background: #11141a;
+            border: 1px solid #222834;
+            border-radius: 16px;
+            padding: 0;
+            overflow: hidden;
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-servizio:hover {
+            border-color: #a2ff00;
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 15px rgba(162, 255, 0, 0.15);
+        }
+
+        .card-servizio img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-bottom: 1px solid #222834;
+            transition: transform 0.5s ease;
+        }
+
+        .card-servizio:hover img {
+            transform: scale(1.04);
+        }
+
+        .card-servizio h3 {
+            font-size: 20px;
+            color: #ffffff;
+            margin: 20px 20px 10px;
+            font-weight: 700;
+        }
+
+        .card-servizio p {
+            color: #a0aab8;
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0 20px 24px;
+            flex-grow: 1;
+        }
+
+        /* Info Grid (Sezioni Alternata 2 Colonne) Upgrade */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 30px 20px;
+            background: #11141a;
+            border: 1px solid #222834;
+            border-radius: 20px;
+            transition: border-color 0.3s ease;
+        }
+
+        .info-grid:hover {
+            border-color: rgba(162, 255, 0, 0.4);
+        }
+
+        @media (max-width: 850px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+        }
+
+        .info-grid-img {
+            border-radius: 12px;
+            overflow: hidden;
+            height: 300px;
+            border: 1px solid #2a313e;
+            position: relative;
+        }
+
+        .info-grid-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .info-grid-text {
+            padding: 10px 15px;
+        }
+
+        .info-grid-text h2 {
+            font-size: 14px;
+            color: #a2ff00;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .info-grid-text h3 {
+            font-size: 26px;
+            font-weight: 800;
+            color: #ffffff;
+        }
+
+        .info-grid-text p {
+            color: #a0aab8;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        /* CTA Section Modern */
+        .cta-section-custom {
+            background: linear-gradient(180deg, #11141a 0%, #080a0d 100%);
+            border: 1px solid #222834;
+            border-radius: 20px;
+            max-width: 1200px;
+            margin: 70px auto;
+            padding: 50px 20px;
+        }
+    </style>
 </head>
 
 <body>
 
-<header class="header-main">
+<header>
     <div class="logo">
         <a href="index.html">
             <img src="img/logo.jpg" alt="Sirio Nastri Trasportatori Industriali">
@@ -36,7 +203,6 @@
             <a href="catalogo.html">Catalogo Tecnico</a>
 
             <div class="mega-negozio">
-                <!-- COLONNA 1: NASTRI TRASPORTATORI -->
                 <div class="colonna">
                     <h4>Galleria Nastri</h4>
                     <a href="prodotto-nastro-pvc.html">Nastro in PVC</a>
@@ -47,7 +213,6 @@
                     <a href="prodotto-nastro-modulare.html">Nastro modulare in plastica</a>
                 </div>
 
-                <!-- COLONNA 2: TRASPORTATORI COMPLETI -->
                 <div class="colonna">
                     <h4>Trasportatori Completi</h4>
                     <a href="prodotto-trasportatore-nastro.html">Lineari</a>
@@ -57,7 +222,6 @@
                     <a href="prodotto-trasportatore-nastro.html">Personalizzati</a>
                 </div>
 
-                <!-- COLONNA 3: COMPONENTI -->
                 <div class="colonna">
                     <h4>Componenti &amp; Ricambi</h4>
                     <a href="prodotto-rulli.html">Rulli</a>
@@ -75,95 +239,112 @@
     </nav>
 </header>
 
-<main>
-    <!-- HERO PORTFOLIO -->
-    <section class="hero-portfolio">
-        <div class="container">
-            <h1>Portfolio Installazioni &amp; Impianti</h1>
-            <p class="hero-subtitle">Soluzioni di movimentazione industriale progettate, prodotte e collaudate per i nostri clienti.</p>
+<!-- HERO PORTFOLIO -->
+<section class="section hero-portfolio-wrapper">
+    <span class="badge-subtle">Case Histories &amp; Ingegneria</span>
+
+    <div style="text-align:center; margin-bottom:10px;">
+        <h1 class="titolo-pagina" style="font-size: 2.8rem; font-weight: 800; text-align: center;">Portfolio Realizzazioni</h1>
+    </div>
+
+    <h2 class="sottotitolo-bianco" style="color:#a2ff00; font-size:22px; margin-top:10px; margin-bottom:15px; text-align:center; font-weight:700;">
+        Sistemi di Movimentazione Installati sul Campo
+    </h2>
+
+    <p style="max-width:850px; margin:0 auto; font-size:16px; line-height:1.7; color:#a0aab8; margin-top:10px;">
+        Una selezione dei lavori svolti per aziende di diversi settori industriali. Ogni progetto rappresenta la nostra attenzione alla qualità, alla precisione meccanica e alla personalizzazione su misura.
+    </p>
+</section>
+
+<!-- GRIGLIA 3 COLONNE (PROGETTI 1–3) -->
+<section class="section">
+    <div class="grid-3">
+
+        <div class="card-servizio">
+            <div style="overflow:hidden;">
+                <img src="img/progetto1.jpg" alt="Progetto Linea Alimentare" onerror="this.src='img/logo.jpg'" loading="lazy">
+            </div>
+            <h3>Progetto 1</h3>
+            <p>Installazione nastro trasportatore su misura per linea produttiva alimentare.</p>
         </div>
-    </section>
 
-    <!-- SEZIONE PROGETTI REALIZZATI -->
-    <section class="portfolio-grid-section container">
-        <div class="portfolio-grid">
-            <!-- Progetto 1 -->
-            <div class="portfolio-item">
-                <img src="img/nastro-sirio.jpg" alt="Impianto nastro trasportatore industriale" loading="lazy">
-                <div class="portfolio-content">
-                    <h3>Linea di Trasporto Continuo - Settore Automotive</h3>
-                    <p>Impianto personalizzato ad alta resistenza per la movimentazione di componenti meccanici pesanti lungo la catena di montaggio.</p>
-                </div>
+        <div class="card-servizio">
+            <div style="overflow:hidden;">
+                <img src="img/progetto2.jpg" alt="Rulliera Motorizzata Logistica" onerror="this.src='img/logo.jpg'" loading="lazy">
             </div>
-
-            <!-- Progetto 2 -->
-            <div class="portfolio-item">
-                <img src="img/index3.jpg" alt="Nastro trasportatore alimentare FDA" loading="lazy">
-                <div class="portfolio-content">
-                    <h3>Sistema di Nastri Alimentari (Normative FDA)</h3>
-                    <p>Installazione in acciaio inox AISI 304 con nastro in PU certificato per il settore agroalimentare, predisposto per cicli di sanificazione intensiva.</p>
-                </div>
-            </div>
-
-            <!-- Progetto 3 -->
-            <div class="portfolio-item">
-                <img src="img/progettazione.jpg" alt="Progettazione 3D e rulliere" loading="lazy">
-                <div class="portfolio-content">
-                    <h3>Rulliere Motorizzate per Centro Logistico</h3>
-                    <p>Integrazione di rulliere folli e motorizzate per l'ottimizzazione dei flussi di smistamento colli in un magazzino ad alto volume.</p>
-                </div>
-            </div>
-
-            <!-- Progetto 4 -->
-            <div class="portfolio-item">
-                <img src="img/installazione.jpg" alt="Installazione in cantiere di un nastro inclinato" loading="lazy">
-                <div class="portfolio-content">
-                    <h3>Nastro Trasportatore Inclinato con Listelli</h3>
-                    <p>Soluzione progettata per il sollevamento verticale di prodotti sfusi all'interno di un impianto di packaging industriale.</p>
-                </div>
-            </div>
+            <h3>Progetto 2</h3>
+            <p>Rulliera motorizzata per movimentazione imballaggi in ambiente logistico.</p>
         </div>
-    </section>
 
-    <!-- SEZIONE CTA / CONTATTI PORTFOLIO -->
-    <section class="contact-wrapper">
-        <div class="contact-card">
-            <div class="contact-left">
-                <h2 class="contact-title">Hai un progetto specifico in mente?</h2>
-                <p class="contact-text">
-                    Il nostro ufficio tecnico è pronto a studiare la soluzione su misura per il tuo impianto produttivo.
-                </p>
-
-                <div class="contact-details">
-                    <p><strong>Centrale Operativa:</strong> (+39) 011 953 94 92</p>
-                    <p><strong>Sede Legale e Produttiva:</strong> Via Carlo Leone, 48 - 10098 Rivoli (TO) – Italia</p>
-                    <p><strong>Email Ufficio Tecnico:</strong> info@sirionastri.it</p>
-                </div>
+        <div class="card-servizio">
+            <div style="overflow:hidden;">
+                <img src="img/progetto3.jpg" alt="Nastro Magnetico Trucioli" onerror="this.src='img/logo.jpg'" loading="lazy">
             </div>
-
-            <div class="contact-right">
-                <form action="https://formsubmit.co/info@sirionastri.it" method="POST">
-                    <input type="hidden" name="_next" value="https://sirionastri.github.io/sirio-sito/grazie.html">
-                    <input type="hidden" name="_subject" value="Nuovo Contatto da Pagina Portfolio">
-                    <input type="hidden" name="_captcha" value="false">
-
-                    <label for="nome-contatto">Nome e Cognome *</label>
-                    <input type="text" id="nome-contatto" name="Nome" placeholder="Ing. Mario Rossi" required>
-
-                    <label for="email-contatto">Email Aziendale *</label>
-                    <input type="email" id="email-contatto" name="Email" placeholder="mario.rossi@azienda.com" required>
-
-                    <label for="messaggio-contatto">Specifiche della richiesta *</label>
-                    <textarea id="messaggio-contatto" name="Messaggio" placeholder="Descrivi le caratteristiche dell'impianto o del progetto..." rows="4" required></textarea>
-
-                    <button type="submit" class="btn-primary contact-btn">Invia Richiesta Tecnica</button>
-                </form>
-            </div>
+            <h3>Progetto 3</h3>
+            <p>Nastro magnetico per separazione trucioli in settore metalmeccanico.</p>
         </div>
-    </section>
-</main>
 
-<!-- POPUP MODALE RFQ -->
+    </div>
+</section>
+
+<!-- PROGETTO IN EVIDENZA (PROGETTO 4) -->
+<section class="info-grid">
+    <div class="info-grid-img">
+        <img src="img/progetto4.jpg" alt="Progetto Speciale Smistamento" onerror="this.src='img/logo.jpg'" loading="lazy">
+    </div>
+
+    <div class="info-grid-text">
+        <h2>Progetto 4</h2>
+        <h3 class="sottotitolo-bianco" style="margin-bottom:15px;">Impianto di Smistamento Automatico</h3>
+
+        <p>
+            Realizzazione di un sistema completo di trasporto con curve a nastro, tapparelle in acciaio e stazioni di smistamento automatico. Un progetto complesso che ha richiesto precisione, coordinamento e materiali ad alte prestazioni.
+        </p>
+    </div>
+</section>
+
+<!-- GRIGLIA ALTERNATA (PROGETTI 5–6) -->
+<section class="info-grid">
+    <div class="info-grid-text">
+        <h2>Progetto 5</h2>
+        <h3 class="sottotitolo-bianco" style="margin-bottom:15px;">Linea Farmaceutica ISO</h3>
+
+        <p>
+            Installazione di nastri certificati per ambienti sterili, con materiali idonei al contatto e superfici facili da sanificare. Progetto realizzato rispettando rigorosamente le normative igienico-sanitarie di settore.
+        </p>
+    </div>
+
+    <div class="info-grid-img">
+        <img src="img/farmaceutica.jpg" alt="Linea Farmaceutica" onerror="this.src='img/logo.jpg'" loading="lazy">
+    </div>
+</section>
+
+<section class="info-grid">
+    <div class="info-grid-img">
+        <img src="img/progetto6.jpg" alt="Evacuazione Trucioli" onerror="this.src='img/logo.jpg'" loading="lazy">
+    </div>
+
+    <div class="info-grid-text">
+        <h2>Progetto 6</h2>
+        <h3 class="sottotitolo-bianco" style="margin-bottom:15px;">Evacuazione Trucioli Pesanti</h3>
+
+        <p>
+            Sistema di evacuazione trucioli con nastro magnetico rinforzato, progettato per resistere a cicli intensivi e materiali fortemente abrasivi. Soluzione robusta e affidabile per officine meccaniche ad alta produttività.
+        </p>
+    </div>
+</section>
+
+<!-- CTA FINALE -->
+<section class="section cta-section-custom" style="text-align:center;">
+    <h2 class="section-title" style="font-size: 2rem; color: #ffffff; margin-bottom: 10px;">Vuoi vedere altri progetti?</h2>
+    <p style="color:#a0aab8; max-width:700px; margin:0 auto 30px; font-size: 16px;">
+        Contattaci per ricevere case histories specifiche per il tuo settore industriale o per richiedere un sopralluogo tecnico in sede.
+    </p>
+
+    <a href="contatti.html" class="btn btn-primary" style="padding: 14px 32px; font-weight: 800; letter-spacing: 0.5px;">Contattaci Ora</a>
+</section>
+
+<!-- POPUP RFQ MODALE ACCESSIBILE -->
 <div class="popup-overlay" id="popup-overlay" onclick="chiudiPopupEsterno(event)">
     <div class="popup-box" id="popup-preventivo" role="dialog" aria-modal="true" aria-labelledby="modal-title">
         <button type="button" class="popup-close" onclick="chiudiPopup()" aria-label="Chiudi popup">&times;</button>
@@ -172,47 +353,50 @@
             <div class="popup-col popup-left">
                 <h2 id="modal-title">Richiedi Preventivo Tecnico (RFQ)</h2>
                 <p class="popup-desc">
-                    Un nostro ingegnerizzatore analizzerà le tue specifiche e ti fornirà un riscontro entro 24 ore lavorative.
+                    Un nostro tecnico ti risponderà entro 24 ore lavorative con una soluzione su misura per la tua linea produttiva.
                 </p>
 
-                <h3>Vantaggi del Servizio Ingegneristico</h3>
+                <h3>Perché Contattarci</h3>
                 <ul class="popup-points">
-                    <li><i class="fa-solid fa-check"></i> Studio di fattibilità e dimensionamento dedicato</li>
-                    <li><i class="fa-solid fa-check"></i> Preventivazione dettagliata e trasparente</li>
-                    <li><i class="fa-solid fa-check"></i> Disegni CAD e specifiche dei materiali inclusi</li>
-                    <li><i class="fa-solid fa-check"></i> Conformità alle Direttive Macchine e Standard FDA/ISO</li>
+                    <li>Consulenza tecnica gratuita</li>
+                    <li>Preventivi chiari e senza impegno</li>
+                    <li>Soluzioni personalizzate per ogni settore</li>
+                    <li>Supporto diretto con un progettista</li>
+                    <li>Risposta rapida e professionale</li>
                 </ul>
+
+                <h3>Chi Ti Risponderà</h3>
+                <p>
+                    Il nostro team tecnico analizzerà la tua richiesta e ti guiderà nella scelta del nastro o del trasportatore più adatto.
+                </p>
             </div>
 
             <div class="popup-col popup-right">
                 <form action="https://formsubmit.co/info@sirionastri.it" method="POST" enctype="multipart/form-data" class="popup-form">
-                    <input type="hidden" name="_next" value="https://sirionastri.github.io/sirio-sito/grazie.html">
-                    <input type="hidden" name="_subject" value="Richiesta Preventivo RFQ dal Popup Portfolio">
+                    <input type="hidden" name="_subject" value="Richiesta Preventivo RFQ dal Portfolio">
                     <input type="hidden" name="_captcha" value="false">
 
-                    <input type="text" name="Azienda" class="popup-input" placeholder="Ragione Sociale Azienda *" required>
-                    <div class="form-row">
-                        <input type="text" name="Nome" class="popup-input" placeholder="Nome *" required>
-                        <input type="text" name="Cognome" class="popup-input" placeholder="Cognome *" required>
-                    </div>
+                    <input type="text" name="Azienda" class="popup-input" placeholder="Ragione Sociale Azienda">
+                    <input type="text" name="Nome" class="popup-input" placeholder="Nome *" required>
+                    <input type="text" name="Cognome" class="popup-input" placeholder="Cognome *" required>
                     <input type="email" name="Email" class="popup-input" placeholder="Email Aziendale *" required>
-                    <input type="tel" name="Telefono" class="popup-input" placeholder="Telefono Diretto *" required>
-                    <textarea name="Messaggio" class="popup-input" placeholder="Dettagli applicativi (Interasse, larghezza nastro, velocità, carico utile kg/m)..." rows="4" required></textarea>
+                    <input type="text" name="Telefono" class="popup-input" placeholder="Telefono Diretto">
+                    <textarea name="Messaggio" class="popup-input" placeholder="Dettagli richiesta (Dimensioni nastro, interasse, velocità, materiale trasportato)..." rows="4"></textarea>
 
                     <div class="filebox">
-                        <label for="file-upload" class="filebox-title">Allega Layout / Lay-out CAD (PDF, DWG, STEP, PNG)</label>
+                        <label for="file-upload" class="filebox-title">Allega un file (PDF, DWG, PNG)</label>
                         <div class="filebox-area" id="drop-area">
-                            <p id="file-label-text">Trascina qui il file o fai clic per selezionare</p>
+                            <p id="file-label-text">Fai clic o trascina il file su quest'area per caricarlo</p>
                             <input type="file" id="file-upload" name="Allegato" class="filebox-input" onchange="gestisciFile(this)">
                         </div>
 
                         <div class="filebox-privacy">
                             <input type="checkbox" id="privacy-check" name="Privacy" value="Accettata" required>
-                            <label for="privacy-check">Dichiaro di aver preso visione della Privacy Policy e acconsento al trattamento dei dati *</label>
+                            <label for="privacy-check">Autorizzo il trattamento dei dati personali secondo la Privacy Policy *</label>
                         </div>
                     </div>
 
-                    <button type="submit" class="popup-btn">Invia Richiesta di Preventivo</button>
+                    <button type="submit" class="popup-btn">Invia Richiesta</button>
                 </form>
             </div>
         </div>
@@ -310,9 +494,9 @@ function gestisciEsc(e) {
 function gestisciFile(input) {
     const labelText = document.getElementById('file-label-text');
     if (input.files && input.files[0]) {
-        labelText.textContent = `File allegato: ${input.files[0].name}`;
+        labelText.textContent = `File selezionato: ${input.files[0].name}`;
     } else {
-        labelText.textContent = 'Trascina qui il file o fai clic per selezionare';
+        labelText.textContent = 'Fai clic o trascina il file su quest\'area per caricarlo';
     }
 }
 </script>
