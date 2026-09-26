@@ -3,9 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Sirio Nastri Trasportatori</title>
+    <title>Portfolio Realizzazioni | Sirio Nastri Trasportatori</title>
     <link rel="stylesheet" href="css/style.css?v=5">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* ============================================================
+           MEGACUSTOM ELEVATION STYLE (SENZA ALTERARE LA STRUTTURA)
+           ============================================================ */
+        
+        /* Hero Styling */
+        .hero-portfolio-wrapper {
+            padding: 70px 20px 40px;
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .badge-subtle {
+            display: inline-block;
+            padding: 5px 14px;
+            background: rgba(162, 255, 0, 0.08);
+            border: 1px solid rgba(162, 255, 0, 0.3);
+            color: #a2ff00;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        /* Card Servizi (Grid 3) Custom Upgrade */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .card-servizio {
+            background: #11141a;
+            border: 1px solid #222834;
+            border-radius: 16px;
+            padding: 0;
+            overflow: hidden;
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-servizio:hover {
+            border-color: #a2ff00;
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 15px rgba(162, 255, 0, 0.15);
+        }
+
+        .card-servizio img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-bottom: 1px solid #222834;
+            transition: transform 0.5s ease;
+        }
+
+        .card-servizio:hover img {
+            transform: scale(1.04);
+        }
+
+        .card-servizio h3 {
+            font-size: 20px;
+            color: #ffffff;
+            margin: 20px 20px 10px;
+            font-weight: 700;
+        }
+
+        .card-servizio p {
+            color: #a0aab8;
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0 20px 24px;
+            flex-grow: 1;
+        }
+
+        /* Info Grid (Sezioni Alternata 2 Colonne) Upgrade */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 30px 20px;
+            background: #11141a;
+            border: 1px solid #222834;
+            border-radius: 20px;
+            transition: border-color 0.3s ease;
+        }
+
+        .info-grid:hover {
+            border-color: rgba(162, 255, 0, 0.4);
+        }
+
+        @media (max-width: 850px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+        }
+
+        .info-grid-img {
+            border-radius: 12px;
+            overflow: hidden;
+            height: 300px;
+            border: 1px solid #2a313e;
+            position: relative;
+        }
+
+        .info-grid-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .info-grid-text {
+            padding: 10px 15px;
+        }
+
+        .info-grid-text h2 {
+            font-size: 14px;
+            color: #a2ff00;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .info-grid-text h3 {
+            font-size: 26px;
+            font-weight: 800;
+            color: #ffffff;
+        }
+
+        .info-grid-text p {
+            color: #a0aab8;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        /* CTA Section Modern */
+        .cta-section-custom {
+            background: linear-gradient(180deg, #11141a 0%, #080a0d 100%);
+            border: 1px solid #222834;
+            border-radius: 20px;
+            max-width: 1200px;
+            margin: 70px auto;
+            padding: 50px 20px;
+        }
+    </style>
 </head>
 
 <body>
@@ -28,12 +184,11 @@
         <div class="menu-voce"><a href="azienda.html">Azienda</a></div>
         <div class="menu-voce"><a href="prodotti.html">Prodotti</a></div>
 
-        <!-- CATALOGO TECNICO (COME SU INDEX) -->
+        <!-- CATALOGO TECNICO CON MEGA MENU -->
         <div class="menu-voce menu-dropdown">
             <a href="catalogo.html" class="link-diretto">Catalogo Tecnico</a>
             <div class="mega-menu">
 
-                <!-- COLONNA 1 -->
                 <div class="colonna">
                     <h4>Galleria immagini</h4>
                     <a href="prodotto-nastro-pvc.html">Nastro in PVC</a>
@@ -44,7 +199,6 @@
                     <a href="prodotto-nastro-modulare.html">Nastro modulare in plastica</a>
                 </div>
 
-                <!-- COLONNA 2 -->
                 <div class="colonna">
                     <h4>Trasportatori completi</h4>
                     <a href="prodotto-trasportatore-nastro.html">Lineari</a>
@@ -54,7 +208,6 @@
                     <a href="portfolio.html">Personalizzati</a>
                 </div>
 
-                <!-- COLONNA 3 -->
                 <div class="colonna">
                     <h4>Componenti</h4>
                     <a href="prodotto-rulli.html">Rulli</a>
@@ -77,32 +230,29 @@
 <!-- ============================
      HERO PORTFOLIO
 ============================ -->
-<section class="section" style="padding-top:60px;">
+<section class="section hero-portfolio-wrapper">
+    <span class="badge-subtle">Case Histories & Ingegneria</span>
 
-    <!-- SOLO IL TITOLO A SINISTRA -->
-    <div style="text-align:left; margin-bottom:10px;">
-        <h1 class="titolo-pagina">Portfolio</h1>
+    <div style="text-align:center; margin-bottom:10px;">
+        <h1 class="titolo-pagina" style="font-size: 2.8rem; font-weight: 800; text-align: center;">Portfolio</h1>
     </div>
 
-    <!-- SOTTOTITOLO CENTRATO -->
-    <h3 style="color:var(--accent); font-size:22px; margin-top:0; margin-bottom:15px; text-align:center;">
+    <h3 style="color:#a2ff00; font-size:22px; margin-top:10px; margin-bottom:15px; text-align:center; font-weight:700;">
         I nostri progetti realizzati
     </h3>
 
-    <!-- TESTO DESCRITTIVO CENTRATO -->
     <p style="
         max-width:850px;
         margin:0 auto;
         font-size:16px;
         line-height:1.7;
-        color:var(--text-muted);
+        color:#a0aab8;
         margin-top:10px;
     ">
         Una selezione dei lavori svolti per aziende di diversi settori industriali.
         Ogni progetto rappresenta la nostra attenzione alla qualità, alla precisione
         e alla personalizzazione.
     </p>
-
 </section>
 
 
@@ -113,19 +263,25 @@
     <div class="grid-3">
 
         <div class="card-servizio">
-            <img src="img/progetto1.jpg" alt="">
+            <div style="overflow:hidden;">
+                <img src="img/progetto1.jpg" alt="Progetto Linea Alimentare" onerror="this.src='img/logo.jpg'">
+            </div>
             <h3>Progetto 1</h3>
             <p>Installazione nastro trasportatore su misura per linea produttiva alimentare.</p>
         </div>
 
         <div class="card-servizio">
-            <img src="img/progetto2.jpg" alt="">
+            <div style="overflow:hidden;">
+                <img src="img/progetto2.jpg" alt="Rulliera Motorizzata Logistica" onerror="this.src='img/logo.jpg'">
+            </div>
             <h3>Progetto 2</h3>
             <p>Rulliera motorizzata per movimentazione imballaggi in ambiente logistico.</p>
         </div>
 
         <div class="card-servizio">
-            <img src="img/progetto3.jpg" alt="">
+            <div style="overflow:hidden;">
+                <img src="img/progetto3.jpg" alt="Nastro Magnetico Trucioli" onerror="this.src='img/logo.jpg'">
+            </div>
             <h3>Progetto 3</h3>
             <p>Nastro magnetico per separazione trucioli in settore metalmeccanico.</p>
         </div>
@@ -138,7 +294,7 @@
 ============================ -->
 <section class="info-grid">
     <div class="info-grid-img">
-        <img src="img/progetto4.jpg" alt="">
+        <img src="img/progetto4.jpg" alt="Progetto Speciale Smistamento" onerror="this.src='img/logo.jpg'">
     </div>
 
     <div class="info-grid-text">
@@ -169,13 +325,13 @@
     </div>
 
     <div class="info-grid-img">
-        <img src="img/farmaceutica.jpg" alt="">
+        <img src="img/farmaceutica.jpg" alt="Linea Farmaceutica" onerror="this.src='img/logo.jpg'">
     </div>
 </section>
 
 <section class="info-grid">
     <div class="info-grid-img">
-        <img src="img/progetto6.jpg" alt="">
+        <img src="img/progetto6.jpg" alt="Evacuazione Trucioli" onerror="this.src='img/logo.jpg'">
     </div>
 
     <div class="info-grid-text">
@@ -193,13 +349,13 @@
 <!-- ============================
      CTA FINALE
 ============================ -->
-<section class="section" style="text-align:center;">
-    <h2 class="section-title">Vuoi vedere altri progetti?</h2>
-    <p style="color:var(--text-muted); max-width:700px; margin:0 auto 30px;">
+<section class="section cta-section-custom" style="text-align:center;">
+    <h2 class="section-title" style="font-size: 2rem; color: #ffffff; margin-bottom: 10px;">Vuoi vedere altri progetti?</h2>
+    <p style="color:#a0aab8; max-width:700px; margin:0 auto 30px; font-size: 16px;">
         Contattaci per ricevere esempi specifici per il tuo settore o per richiedere un sopralluogo tecnico.
     </p>
 
-    <a href="contatti.html" class="btn btn-primary">Contattaci</a>
+    <a href="contatti.html" class="btn btn-primary" style="padding: 14px 32px; font-weight: 800; letter-spacing: 0.5px;">Contattaci</a>
 </section>
 
 <!-- ============================
@@ -272,7 +428,7 @@
 </div>
 
 <!-- ============================
-     FOOTER (COME SU INDEX)
+     FOOTER
 ============================ -->
 <footer class="footer-sirio">
 
