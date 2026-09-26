@@ -19,164 +19,7 @@
       "url": "https://sirionastri.github.io/sirio-sito/portfolio.html"
     }
     </script>
-
-    <style>
-        /* ============================================================
-            MEGACUSTOM ELEVATION STYLE (PORTFOLIO SPECIFIC)
-            ============================================================ */
-        
-        /* Hero Styling */
-        .hero-portfolio-wrapper {
-            padding: 70px 20px 40px;
-            max-width: 1100px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .badge-subtle {
-            display: inline-block;
-            padding: 5px 14px;
-            background: rgba(162, 255, 0, 0.08);
-            border: 1px solid rgba(162, 255, 0, 0.3);
-            color: #a2ff00;
-            border-radius: 20px;
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            margin-bottom: 15px;
-        }
-
-        /* Card Servizi (Grid 3) Custom Upgrade */
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .card-servizio {
-            background: #11141a;
-            border: 1px solid #222834;
-            border-radius: 16px;
-            padding: 0;
-            overflow: hidden;
-            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .card-servizio:hover {
-            border-color: #a2ff00;
-            transform: translateY(-6px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 15px rgba(162, 255, 0, 0.15);
-        }
-
-        .card-servizio img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            border-bottom: 1px solid #222834;
-            transition: transform 0.5s ease;
-        }
-
-        .card-servizio:hover img {
-            transform: scale(1.04);
-        }
-
-        .card-servizio h3 {
-            font-size: 20px;
-            color: #ffffff;
-            margin: 20px 20px 10px;
-            font-weight: 700;
-        }
-
-        .card-servizio p {
-            color: #a0aab8;
-            font-size: 14px;
-            line-height: 1.6;
-            margin: 0 20px 24px;
-            flex-grow: 1;
-        }
-
-        /* Info Grid (Sezioni Alternata 2 Colonne) Upgrade */
-        .info-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
-            max-width: 1200px;
-            margin: 60px auto;
-            padding: 30px 20px;
-            background: #11141a;
-            border: 1px solid #222834;
-            border-radius: 20px;
-            transition: border-color 0.3s ease;
-        }
-
-        .info-grid:hover {
-            border-color: rgba(162, 255, 0, 0.4);
-        }
-
-        @media (max-width: 850px) {
-            .info-grid {
-                grid-template-columns: 1fr;
-                gap: 25px;
-            }
-        }
-
-        .info-grid-img {
-            border-radius: 12px;
-            overflow: hidden;
-            height: 300px;
-            border: 1px solid #2a313e;
-            position: relative;
-        }
-
-        .info-grid-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .info-grid-text {
-            padding: 10px 15px;
-        }
-
-        .info-grid-text h2 {
-            font-size: 14px;
-            color: #a2ff00;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 5px;
-        }
-
-        .info-grid-text h3 {
-            font-size: 26px;
-            font-weight: 800;
-            color: #ffffff;
-        }
-
-        .info-grid-text p {
-            color: #a0aab8;
-            font-size: 15px;
-            line-height: 1.7;
-        }
-
-        /* CTA Section Modern */
-        .cta-section-custom {
-            background: linear-gradient(180deg, #11141a 0%, #080a0d 100%);
-            border: 1px solid #222834;
-            border-radius: 20px;
-            max-width: 1200px;
-            margin: 70px auto;
-            padding: 50px 20px;
-        }
-    </style>
 </head>
-
 <body>
 
 <header>
@@ -239,110 +82,120 @@
     </nav>
 </header>
 
-<!-- HERO PORTFOLIO -->
-<section class="section hero-portfolio-wrapper">
-    <span class="badge-subtle">Case Histories &amp; Ingegneria</span>
-
-    <div style="text-align:center; margin-bottom:10px;">
-        <h1 class="titolo-pagina" style="font-size: 2.8rem; font-weight: 800; text-align: center;">Portfolio Realizzazioni</h1>
-    </div>
-
-    <h2 class="sottotitolo-bianco" style="color:#a2ff00; font-size:22px; margin-top:10px; margin-bottom:15px; text-align:center; font-weight:700;">
-        Sistemi di Movimentazione Installati sul Campo
-    </h2>
-
-    <p style="max-width:850px; margin:0 auto; font-size:16px; line-height:1.7; color:#a0aab8; margin-top:10px;">
-        Una selezione dei lavori svolti per aziende di diversi settori industriali. Ogni progetto rappresenta la nostra attenzione alla qualità, alla precisione meccanica e alla personalizzazione su misura.
-    </p>
-</section>
-
-<!-- GRIGLIA 3 COLONNE (PROGETTI 1–3) -->
-<section class="section">
-    <div class="grid-3">
-
-        <div class="card-servizio">
-            <div style="overflow:hidden;">
-                <img src="img/progetto1.jpg" alt="Progetto Linea Alimentare" onerror="this.src='img/logo.jpg'" loading="lazy">
-            </div>
-            <h3>Progetto 1</h3>
-            <p>Installazione nastro trasportatore su misura per linea produttiva alimentare.</p>
+<main>
+    <!-- HERO PORTFOLIO -->
+    <section class="hero-portfolio">
+        <div class="container">
+            <span class="badge-subtle">Case Histories &amp; Ingegneria</span>
+            <h1>Portfolio Realizzazioni</h1>
+            <p class="subtitle">Sistemi di movimentazione installati sul campo</p>
+            <p class="hero-desc">
+                Una selezione dei lavori svolti per aziende di diversi settori industriali. Ogni progetto rappresenta la nostra attenzione alla qualità, alla precisione meccanica e alla personalizzazione su misura.
+            </p>
         </div>
+    </section>
 
-        <div class="card-servizio">
-            <div style="overflow:hidden;">
-                <img src="img/progetto2.jpg" alt="Rulliera Motorizzata Logistica" onerror="this.src='img/logo.jpg'" loading="lazy">
+    <!-- GRIGLIA PROGETTI (1 - 3) -->
+    <section class="section-portfolio-grid">
+        <div class="container">
+            <div class="grid-3">
+                <div class="card-progetto">
+                    <div class="img-wrapper">
+                        <img src="img/progetto1.jpg" alt="Progetto Linea Alimentare" onerror="this.src='img/logo.jpg'" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3>Progetto 1</h3>
+                        <p>Installazione nastro trasportatore su misura per linea produttiva alimentare.</p>
+                    </div>
+                </div>
+
+                <div class="card-progetto">
+                    <div class="img-wrapper">
+                        <img src="img/progetto2.jpg" alt="Rulliera Motorizzata Logistica" onerror="this.src='img/logo.jpg'" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3>Progetto 2</h3>
+                        <p>Rulliera motorizzata per movimentazione imballaggi in ambiente logistico.</p>
+                    </div>
+                </div>
+
+                <div class="card-progetto">
+                    <div class="img-wrapper">
+                        <img src="img/progetto3.jpg" alt="Nastro Magnetico Trucioli" onerror="this.src='img/logo.jpg'" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3>Progetto 3</h3>
+                        <p>Nastro magnetico per separazione trucioli in settore metalmeccanico.</p>
+                    </div>
+                </div>
             </div>
-            <h3>Progetto 2</h3>
-            <p>Rulliera motorizzata per movimentazione imballaggi in ambiente logistico.</p>
         </div>
+    </section>
 
-        <div class="card-servizio">
-            <div style="overflow:hidden;">
-                <img src="img/progetto3.jpg" alt="Nastro Magnetico Trucioli" onerror="this.src='img/logo.jpg'" loading="lazy">
+    <!-- PROGETTO IN EVIDENZA / ALTERNATO (PROGETTO 4) -->
+    <section class="section-portfolio-row">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-grid-img">
+                    <img src="img/progetto4.jpg" alt="Progetto Speciale Smistamento" onerror="this.src='img/logo.jpg'" loading="lazy">
+                </div>
+                <div class="info-grid-text">
+                    <span class="sub-tag">Progetto 4</span>
+                    <h2>Impianto di Smistamento Automatico</h2>
+                    <p>
+                        Realizzazione di un sistema completo di trasporto con curve a nastro, tapparelle in acciaio e stazioni di smistamento automatico. Un progetto complesso che ha richiesto precisione, coordinamento e materiali ad alte prestazioni.
+                    </p>
+                </div>
             </div>
-            <h3>Progetto 3</h3>
-            <p>Nastro magnetico per separazione trucioli in settore metalmeccanico.</p>
         </div>
+    </section>
 
-    </div>
-</section>
+    <!-- GRIGLIA ALTERNATA (PROGETTI 5 - 6) -->
+    <section class="section-portfolio-row">
+        <div class="container">
+            <div class="info-grid reverse">
+                <div class="info-grid-text">
+                    <span class="sub-tag">Progetto 5</span>
+                    <h2>Linea Farmaceutica ISO</h2>
+                    <p>
+                        Installazione di nastri certificati per ambienti sterili, con materiali idonei al contatto e superfici facili da sanificare. Progetto realizzato rispettando rigorosamente le normative igienico-sanitarie di settore.
+                    </p>
+                </div>
+                <div class="info-grid-img">
+                    <img src="img/farmaceutica.jpg" alt="Linea Farmaceutica" onerror="this.src='img/logo.jpg'" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- PROGETTO IN EVIDENZA (PROGETTO 4) -->
-<section class="info-grid">
-    <div class="info-grid-img">
-        <img src="img/progetto4.jpg" alt="Progetto Speciale Smistamento" onerror="this.src='img/logo.jpg'" loading="lazy">
-    </div>
+    <section class="section-portfolio-row">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-grid-img">
+                    <img src="img/progetto6.jpg" alt="Evacuazione Trucioli" onerror="this.src='img/logo.jpg'" loading="lazy">
+                </div>
+                <div class="info-grid-text">
+                    <span class="sub-tag">Progetto 6</span>
+                    <h2>Evacuazione Trucioli Pesanti</h2>
+                    <p>
+                        Sistema di evacuazione trucioli con nastro magnetico rinforzato, progettato per resistere a cicli intensivi e materiali fortemente abrasivi. Soluzione robusta e affidabile per officine meccaniche ad alta produttività.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="info-grid-text">
-        <h2>Progetto 4</h2>
-        <h3 class="sottotitolo-bianco" style="margin-bottom:15px;">Impianto di Smistamento Automatico</h3>
-
-        <p>
-            Realizzazione di un sistema completo di trasporto con curve a nastro, tapparelle in acciaio e stazioni di smistamento automatico. Un progetto complesso che ha richiesto precisione, coordinamento e materiali ad alte prestazioni.
-        </p>
-    </div>
-</section>
-
-<!-- GRIGLIA ALTERNATA (PROGETTI 5–6) -->
-<section class="info-grid">
-    <div class="info-grid-text">
-        <h2>Progetto 5</h2>
-        <h3 class="sottotitolo-bianco" style="margin-bottom:15px;">Linea Farmaceutica ISO</h3>
-
-        <p>
-            Installazione di nastri certificati per ambienti sterili, con materiali idonei al contatto e superfici facili da sanificare. Progetto realizzato rispettando rigorosamente le normative igienico-sanitarie di settore.
-        </p>
-    </div>
-
-    <div class="info-grid-img">
-        <img src="img/farmaceutica.jpg" alt="Linea Farmaceutica" onerror="this.src='img/logo.jpg'" loading="lazy">
-    </div>
-</section>
-
-<section class="info-grid">
-    <div class="info-grid-img">
-        <img src="img/progetto6.jpg" alt="Evacuazione Trucioli" onerror="this.src='img/logo.jpg'" loading="lazy">
-    </div>
-
-    <div class="info-grid-text">
-        <h2>Progetto 6</h2>
-        <h3 class="sottotitolo-bianco" style="margin-bottom:15px;">Evacuazione Trucioli Pesanti</h3>
-
-        <p>
-            Sistema di evacuazione trucioli con nastro magnetico rinforzato, progettato per resistere a cicli intensivi e materiali fortemente abrasivi. Soluzione robusta e affidabile per officine meccaniche ad alta produttività.
-        </p>
-    </div>
-</section>
-
-<!-- CTA FINALE -->
-<section class="section cta-section-custom" style="text-align:center;">
-    <h2 class="section-title" style="font-size: 2rem; color: #ffffff; margin-bottom: 10px;">Vuoi vedere altri progetti?</h2>
-    <p style="color:#a0aab8; max-width:700px; margin:0 auto 30px; font-size: 16px;">
-        Contattaci per ricevere case histories specifiche per il tuo settore industriale o per richiedere un sopralluogo tecnico in sede.
-    </p>
-
-    <a href="contatti.html" class="btn btn-primary" style="padding: 14px 32px; font-weight: 800; letter-spacing: 0.5px;">Contattaci Ora</a>
-</section>
+    <!-- CTA FINALE PORTFOLIO -->
+    <section class="section cta-section-custom" style="text-align:center; max-width:1200px; margin:70px auto; padding:50px 20px;">
+        <div class="container">
+            <h2 class="section-title" style="font-size: 2rem; color: #ffffff; margin-bottom: 10px;">Vuoi vedere altri progetti?</h2>
+            <p style="color:#a0aab8; max-width:700px; margin:0 auto 30px; font-size: 16px;">
+                Contattaci per ricevere case histories specifiche per il tuo settore industriale o per richiedere un sopralluogo tecnico in sede.
+            </p>
+            <a href="contatti.html" class="btn btn-primary" style="padding: 14px 32px; font-weight: 800; letter-spacing: 0.5px;">Contattaci Ora</a>
+        </div>
+    </section>
+</main>
 
 <!-- POPUP RFQ MODALE ACCESSIBILE -->
 <div class="popup-overlay" id="popup-overlay" onclick="chiudiPopupEsterno(event)">
