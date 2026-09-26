@@ -4,25 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sopralluogo Tecnico | Sirio Nastri Trasportatori</title>
-    <link rel="stylesheet" href="css/style.css?v=7">
+    <link rel="stylesheet" href="css/style.css?v=8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
+        /* TASTO INDIETRO ISOLATO A SINISTRA */
         .back-wrapper-left {
             max-width: 1200px;
             margin: 20px auto 10px auto;
             padding: 0 20px;
-            text-align: left !important;
-            display: flex;
-            justify-content: flex-start;
+            text-align: left;
         }
 
+        /* TITOLO E CONTENUTO RI-ALLINEATI AL CENTRO / LAYOUT ORIGINALE */
         .page-title-custom {
             color: var(--accent, #a2ff00);
             font-size: 36px;
             font-weight: 800;
             margin: 10px 0 30px;
-            text-align: left;
+            text-align: center;
         }
 
         .info-grid-text ul {
@@ -58,7 +58,7 @@
             max-width: 1200px;
             margin: 40px auto 60px;
             padding: 0 20px;
-            text-align: left;
+            text-align: center;
         }
     </style>
 </head>
@@ -128,11 +128,12 @@
 
 <section class="section" style="padding-top: 10px;">
 
-    <!-- BOTTONE TORNA INDIETRO (ALLINEATO A SINISTRA IN ALTO) -->
+    <!-- SOLO QUESTO TASTO VA A SINISTRA -->
     <div class="back-wrapper-left">
-        <a href="javascript:history.back()" class="btn btn-primary back-btn" style="margin:0;">← Torna indietro</a>
+        <a href="javascript:history.back()" class="btn btn-primary back-btn">← Torna indietro</a>
     </div>
 
+    <!-- IL RESTO TORNA IN MEZZO -->
     <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
         <h1 class="page-title-custom">Sopralluogo tecnico</h1>
     </div>
@@ -169,7 +170,7 @@
                 <li>Normative di sicurezza e requisiti del settore</li>
             </ul>
 
-            <h3>Perché il sopralluogo è fondamentale</h3>
+            <h3>Perché il sopralluogo è fundamental</h3>
 
             <p>
                 Un’analisi accurata ci permette di scegliere il tipo di nastro più adatto  
