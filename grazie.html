@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richiesta Ricevuta | Sirio Nastri Trasportatori</title>
+    <meta name="robots" content="noindex, follow"> <!-- Evita che i motori di ricerca indicizzino la pagina di grazie -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css?v=5">
+    <style>
+        .thankyou-wrapper {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .thankyou-card {
+            background: #11141a;
+            border: 1px solid #222834;
+            border-radius: 20px;
+            padding: 50px 40px;
+            max-width: 650px;
+            width: 100%;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .thankyou-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #a2ff00, #4d8000);
+        }
+
+        .check-icon-circle {
+            width: 80px;
+            height: 80px;
+            background: rgba(162, 255, 0, 0.12);
+            border: 2px solid #a2ff00;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+        }
+
+        .thankyou-card h1 {
+            font-size: 2.2rem;
+            color: #ffffff;
+            font-weight: 800;
+            margin-bottom: 15px;
+            letter-spacing: -0.5px;
+        }
+
+        .thankyou-card p {
+            color: #a0aab8;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .time-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid #2a313e;
+            padding: 8px 16px;
+            border-radius: 8px;
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 35px;
+        }
+
+        .thankyou-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-main-action {
+            background: #a2ff00;
+            color: #000000;
+            font-weight: 800;
+            padding: 14px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-main-action:hover {
+            background: #b5ff24;
+            box-shadow: 0 0 20px rgba(162, 255, 0, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .btn-sec-action {
+            background: transparent;
+            color: #ffffff;
+            border: 1px solid #2a313e;
+            font-weight: 700;
+            padding: 14px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-sec-action:hover {
+            border-color: #a2ff00;
+            color: #a2ff00;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <a href="index.html">
+            <img src="img/logo.jpg" alt="Sirio Nastri Trasportatori Industriali">
+        </a>
+    </div>
+
+    <div class="hamburger" onclick="toggleMenu()" aria-label="Menu di navigazione">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <nav>
+        <div class="menu-voce"><a href="index.html">Home</a></div>
+        <div class="menu-voce"><a href="azienda.html">Azienda</a></div>
+        <div class="menu-voce"><a href="prodotti.html">Prodotti</a></div>
+        <div class="menu-voce"><a href="catalogo.html">Catalogo Tecnico</a></div>
+        <div class="menu-voce"><a href="portfolio.html">Portfolio</a></div>
+        <div class="menu-voce"><a href="contatti.html">Contatti</a></div>
+    </nav>
+</header>
+
+<main>
+    <section class="thankyou-wrapper">
+        <div class="thankyou-card">
+            <div class="check-icon-circle">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#a2ff00" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+            </div>
+
+            <h1>Richiesta Inviata con Successo!</h1>
+            
+            <p>
+                Grazie per aver contattato **Sirio Nastri Trasportatori**.<br>
+                I dettagli tecnici del tuo messaggio sono stati presi in carico dal nostro ufficio commerciale ed ingegneristico.
+            </p>
+
+            <div class="time-badge">
+                ⏱️ Tempo medio di risposta: <strong>entro 24 ore lavorative</strong>
+            </div>
+
+            <div class="thankyou-actions">
+                <a href="catalogo.html" class="btn-main-action">Sfoglia il Catalogo Tecnico</a>
+                <a href="index.html" class="btn-sec-action">Torna alla Home</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer-sirio">
+    <div class="footer-bottom">
+        © 2026 SIRIO Nastri Trasportatori S.r.l. — P.IVA 07016110012 — Via Carlo Leone 48, Rivoli (TO)
+    </div>
+</footer>
+
+<script>
+function toggleMenu() {
+    document.querySelector('.hamburger').classList.toggle('active');
+    document.querySelector('nav').classList.toggle('open');
+}
+</script>
+
+</body>
+</html>
