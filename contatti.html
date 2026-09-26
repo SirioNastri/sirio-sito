@@ -260,7 +260,7 @@
                     <a href="prodotto-trasportatore-inclinato.html">Inclinati</a>
                     <a href="prodotto-trasportatore-curva.html">Curvi</a>
                     <a href="prodotto-trasportatore-rulli.html">Acciaio Inox / Rulliere</a>
-                    <a href="portfolio.html">Personalizzati & Custom</a>
+                    <a href="prodotto-trasportatore-custom.html">Personalizzati & Custom</a>
                 </div>
                 <div class="colonna">
                     <h4>COMPONENTI & RICAMBI</h4>
@@ -330,10 +330,10 @@
         <!-- FORM PAGINA CONTATTI -->
         <div class="form-box-pro">
             <form action="https://formsubmit.co/info@sirionastri.it" method="POST" enctype="multipart/form-data">
-                <!-- CAMPO HONEYPOT ANTI-SPAM (invisibile agli utenti) -->
                 <input type="text" name="_honey" style="display:none">
                 <input type="hidden" name="_subject" value="Nuovo Messaggio da Pagina Contatti">
                 <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://sirionastri.github.io/sirio-sito/grazie.html">
 
                 <div class="form-grid-2">
                     <div class="field-group">
@@ -420,10 +420,10 @@
 
             <div class="popup-col popup-right">
                 <form action="https://formsubmit.co/info@sirionastri.it" method="POST" enctype="multipart/form-data" class="popup-form">
-                    <!-- HONEYPOT ANTI-SPAM -->
                     <input type="text" name="_honey" style="display:none">
                     <input type="hidden" name="_subject" value="Richiesta Preventivo RFQ dal Popup Contatti">
                     <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://sirionastri.github.io/sirio-sito/grazie.html">
 
                     <input type="text" name="Azienda" class="popup-input" placeholder="Ragione Sociale Azienda">
                     <input type="text" name="Nome" class="popup-input" placeholder="Nome *" required>
@@ -494,7 +494,7 @@
             <a href="prodotto-trasportatore-inclinato.html">Inclinati</a>
             <a href="prodotto-trasportatore-curva.html">Curvi</a>
             <a href="prodotto-trasportatore-rulli.html">Acciaio Inox / Rulliere</a>
-            <a href="portfolio.html">Personalizzati & Custom</a>
+            <a href="prodotto-trasportatore-custom.html">Personalizzati & Custom</a>
 
             <h4 style="margin-top:20px;">Componenti</h4>
             <a href="prodotto-rulli.html">Rulli</a>
@@ -535,7 +535,7 @@ function chiudiPopup() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Gestione Drag & Drop e Feedback Nome File (sia per il form in pagina che nel popup)
+    // Gestione Drag & Drop e Feedback Nome File
     const dropContainers = document.querySelectorAll('.file-dropzone, .filebox-area');
 
     dropContainers.forEach(container => {
