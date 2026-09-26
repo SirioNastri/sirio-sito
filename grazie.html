@@ -4,42 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Richiesta Ricevuta | Sirio Nastri Trasportatori</title>
-    <meta name="robots" content="noindex, follow"> <!-- Evita che i motori di ricerca indicizzino la pagina di grazie -->
+    <meta name="robots" content="noindex, follow">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css?v=5">
     <style>
-        .thankyou-wrapper {
-            min-height: 70vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 60px 20px;
+        .thankyou-hero {
+            padding: 80px 20px 40px;
             text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
-        .thankyou-card {
-            background: #11141a;
-            border: 1px solid #222834;
-            border-radius: 20px;
-            padding: 50px 40px;
-            max-width: 650px;
-            width: 100%;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .thankyou-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, #a2ff00, #4d8000);
-        }
-
-        .check-icon-circle {
+        .success-icon-wrapper {
             width: 80px;
             height: 80px;
             background: rgba(162, 255, 0, 0.12);
@@ -49,77 +25,172 @@
             align-items: center;
             justify-content: center;
             margin: 0 auto 25px;
+            box-shadow: 0 0 30px rgba(162, 255, 0, 0.25);
         }
 
-        .thankyou-card h1 {
-            font-size: 2.2rem;
-            color: #ffffff;
+        .success-icon-wrapper i {
+            font-size: 38px;
+            color: #a2ff00;
+        }
+
+        .thankyou-title {
+            font-size: 2.5rem;
             font-weight: 800;
+            color: #ffffff;
             margin-bottom: 15px;
             letter-spacing: -0.5px;
         }
 
-        .thankyou-card p {
+        .thankyou-sub {
             color: #a0aab8;
-            font-size: 16px;
+            font-size: 18px;
             line-height: 1.6;
-            margin-bottom: 30px;
+            max-width: 680px;
+            margin: 0 auto 30px;
         }
 
-        .time-badge {
+        .timing-box {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: #11141a;
+            border: 1px solid #222834;
+            padding: 12px 24px;
+            border-radius: 30px;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 50px;
+        }
+
+        .timing-box i {
+            color: #a2ff00;
+        }
+
+        /* GRID AZIONI SUCCESSIVE */
+        .next-steps-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            max-width: 1100px;
+            margin: 0 auto 80px;
+            padding: 0 20px;
+        }
+
+        @media (max-width: 900px) {
+            .next-steps-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .step-card {
+            background: #11141a;
+            border: 1px solid #222834;
+            border-radius: 16px;
+            padding: 30px 25px;
+            text-align: left;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .step-card:hover {
+            border-color: #a2ff00;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .step-card-header {
+            margin-bottom: 20px;
+        }
+
+        .step-card-icon {
+            font-size: 24px;
+            color: #a2ff00;
+            margin-bottom: 15px;
+        }
+
+        .step-card h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .step-card p {
+            font-size: 14px;
+            color: #a0aab8;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .step-btn {
             display: inline-block;
-            background: rgba(255, 255, 255, 0.05);
+            margin-top: 25px;
+            padding: 12px 20px;
+            background: transparent;
             border: 1px solid #2a313e;
-            padding: 8px 16px;
             border-radius: 8px;
             color: #ffffff;
+            text-decoration: none;
             font-size: 13px;
-            font-weight: 600;
-            margin-bottom: 35px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-align: center;
+            transition: all 0.2s ease;
         }
 
-        .thankyou-actions {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn-main-action {
+        .step-card:hover .step-btn {
             background: #a2ff00;
             color: #000000;
-            font-weight: 800;
-            padding: 14px 28px;
-            border-radius: 8px;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 14px;
-            transition: all 0.3s ease;
+            border-color: #a2ff00;
         }
 
-        .btn-main-action:hover {
-            background: #b5ff24;
-            box-shadow: 0 0 20px rgba(162, 255, 0, 0.4);
-            transform: translateY(-2px);
+        .urgent-card {
+            border-color: rgba(162, 255, 0, 0.3);
+            background: linear-gradient(180deg, #151a22 0%, #11141a 100%);
         }
 
-        .btn-sec-action {
-            background: transparent;
-            color: #ffffff;
-            border: 1px solid #2a313e;
-            font-weight: 700;
-            padding: 14px 28px;
-            border-radius: 8px;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 14px;
-            transition: all 0.3s ease;
-        }
-
-        .btn-sec-action:hover {
+        .urgent-card .step-btn {
+            background: rgba(162, 255, 0, 0.15);
             border-color: #a2ff00;
             color: #a2ff00;
-            transform: translateY(-2px);
+        }
+
+        .urgent-card:hover .step-btn {
+            background: #a2ff00;
+            color: #000000;
+        }
+
+        /* BANNER ASSICURAZIONE QUALITA */
+        .trust-banner-thanks {
+            max-width: 1100px;
+            margin: 0 auto 70px;
+            padding: 25px;
+            background: #0d1015;
+            border: 1px dashed #222834;
+            border-radius: 12px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .trust-item-thanks {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #c5d1e0;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .trust-item-thanks i {
+            color: #a2ff00;
+            font-size: 18px;
         }
     </style>
 </head>
@@ -143,41 +214,163 @@
         <div class="menu-voce"><a href="index.html">Home</a></div>
         <div class="menu-voce"><a href="azienda.html">Azienda</a></div>
         <div class="menu-voce"><a href="prodotti.html">Prodotti</a></div>
-        <div class="menu-voce"><a href="catalogo.html">Catalogo Tecnico</a></div>
+
+        <div class="menu-voce menu-dropdown">
+            <a href="catalogo.html" class="link-diretto">Catalogo Tecnico</a>
+            <div class="mega-menu">
+                <div class="colonna">
+                    <h4>GALLERIA NASTRI</h4>
+                    <a href="prodotto-nastro-pvc.html">Nastro in PVC</a>
+                    <a href="prodotto-nastro-pu.html">Nastro in PU</a>
+                    <a href="prodotto-nastro-gomma.html">Nastro in Gomma</a>
+                    <a href="prodotto-nastro-alimentare.html">Nastro Alimentare (FDA)</a>
+                    <a href="prodotto-nastro-alte-temperature.html">Nastro Alte Temperature</a>
+                    <a href="prodotto-nastro-modulare.html">Nastro Modulare</a>
+                </div>
+                <div class="colonna">
+                    <h4>TRASPORTATORI COMPLETI</h4>
+                    <a href="prodotto-trasportatore-nastro.html">Lineari</a>
+                    <a href="prodotto-trasportatore-inclinato.html">Inclinati</a>
+                    <a href="prodotto-trasportatore-curva.html">Curvi</a>
+                    <a href="prodotto-trasportatore-rulli.html">Acciaio Inox / Rulliere</a>
+                    <a href="prodotto-trasportatore-custom.html">Personalizzati & Custom</a>
+                </div>
+                <div class="colonna">
+                    <h4>COMPONENTI & RICAMBI</h4>
+                    <a href="prodotto-rulli.html">Rulli di Trascinamento</a>
+                    <a href="prodotto-tamburi.html">Tamburi e Mototamburi</a>
+                </div>
+            </div>
+        </div>
+
         <div class="menu-voce"><a href="portfolio.html">Portfolio</a></div>
         <div class="menu-voce"><a href="contatti.html">Contatti</a></div>
+
+        <div class="menu-voce">
+            <a href="contatti.html" class="btn-preventivo-nav">Richiedi Preventivo (RFQ)</a>
+        </div>
     </nav>
 </header>
 
 <main>
-    <section class="thankyou-wrapper">
-        <div class="thankyou-card">
-            <div class="check-icon-circle">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#a2ff00" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                </svg>
-            </div>
+    <section class="thankyou-hero">
+        <div class="success-icon-wrapper">
+            <i class="fa-solid fa-check"></i>
+        </div>
+        <h1 class="thankyou-title">Richiesta Ricevuta con Successo!</h1>
+        <p class="thankyou-sub">
+            Grazie per aver contattato Sirio Nastri Trasportatori. I dettagli della tua richiesta sono stati inoltrati direttamente al nostro ufficio tecnico per l'analisi di fattibilità.
+        </p>
 
-            <h1>Richiesta Inviata con Successo!</h1>
-            
-            <p>
-                Grazie per aver contattato **Sirio Nastri Trasportatori**.<br>
-                I dettagli tecnici del tuo messaggio sono stati presi in carico dal nostro ufficio commerciale ed ingegneristico.
-            </p>
-
-            <div class="time-badge">
-                ⏱️ Tempo medio di risposta: <strong>entro 24 ore lavorative</strong>
-            </div>
-
-            <div class="thankyou-actions">
-                <a href="catalogo.html" class="btn-main-action">Sfoglia il Catalogo Tecnico</a>
-                <a href="index.html" class="btn-sec-action">Torna alla Home</a>
-            </div>
+        <div class="timing-box">
+            <i class="fa-regular fa-clock"></i>
+            <span>Tempo medio di presa in carico: <strong>entro 24 ore lavorative</strong></span>
         </div>
     </section>
+
+    <!-- SECONDA AZIONE E OPZIONI -->
+    <section class="next-steps-grid">
+        
+        <!-- CARD URGENZA -->
+        <div class="step-card urgent-card">
+            <div class="step-card-header">
+                <div class="step-card-icon"><i class="fa-solid fa-phone-volume"></i></div>
+                <h3>Hai un'urgenza bloccante?</h3>
+                <p>Se hai un fermo impianto imminente o una richiesta con scadenza prioritaria, contatta subito la nostra assistenza diretta.</p>
+            </div>
+            <a href="tel:+390119539492" class="step-btn">Chiama 011 953 9492</a>
+        </div>
+
+        <!-- CARD CATALOGO -->
+        <div class="step-card">
+            <div class="step-card-header">
+                <div class="step-card-icon"><i class="fa-solid fa-book-open"></i></div>
+                <h3>Esplora il Catalogo Tecnico</h3>
+                <p>Mentre analizziamo i tuoi dati, consulta le schede tecniche, le tolleranze e le opzioni dei nostri nastri e sistemi completi.</p>
+            </div>
+            <a href="catalogo.html" class="step-btn">Vai al Catalogo</a>
+        </div>
+
+        <!-- CARD CUSTOM -->
+        <div class="step-card">
+            <div class="step-card-header">
+                <div class="step-card-icon"><i class="fa-solid fa-gears"></i></div>
+                <h3>Sistemi Personalizzati</h3>
+                <p>Scopri le nostre soluzioni su misura per spazi ridotti, ambienti alimentari FDA e linee automatizzate ad alta velocità.</p>
+            </div>
+            <a href="prodotto-trasportatore-custom.html" class="step-btn">Progetti Custom</a>
+        </div>
+
+    </section>
+
+    <!-- TRUST STRIP -->
+    <div class="trust-banner-thanks">
+        <div class="trust-item-thanks">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span>Conformità CE e Standard FDA</span>
+        </div>
+        <div class="trust-item-thanks">
+            <i class="fa-solid fa-industry"></i>
+            <span>Produzione 100% Italiana</span>
+        </div>
+        <div class="trust-item-thanks">
+            <i class="fa-solid fa-headset"></i>
+            <span>Supporto Tecnico Progettuale</span>
+        </div>
+    </div>
 </main>
 
+<!-- FOOTER STANDARD -->
 <footer class="footer-sirio">
+    <div class="footer-top">
+
+        <div class="footer-col">
+            <div class="footer-logo">
+                <img src="img/logo.jpg" alt="Sirio Nastri Trasportatori Logo">
+            </div>
+            <p class="footer-desc">
+                Produzione di nastri trasportatori, trasportatori completi e sistemi di movimentazione industriale.
+            </p>
+
+            <p class="footer-contact">📞 (+39) 011 953 9492</p>
+            <p class="footer-contact">✉️ info@sirionastri.it</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Navigazione</h4>
+            <a href="index.html">Home</a>
+            <a href="azienda.html">Azienda</a>
+            <a href="prodotti.html">Prodotti</a>
+            <a href="catalogo.html">Catalogo Tecnico</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contatti.html">Contatti</a>
+        </div>
+
+        <div class="footer-col">
+            <h4>Galleria Nastri</h4>
+            <a href="prodotto-nastro-pvc.html">Nastro in PVC</a>
+            <a href="prodotto-nastro-pu.html">Nastro in PU</a>
+            <a href="prodotto-nastro-gomma.html">Nastro in Gomma</a>
+            <a href="prodotto-nastro-alimentare.html">Nastro Alimentare (FDA)</a>
+            <a href="prodotto-nastro-alte-temperature.html">Nastro Alte Temperature</a>
+            <a href="prodotto-nastro-modulare.html">Nastro Modulare</a>
+        </div>
+
+        <div class="footer-col">
+            <h4>Trasportatori & Componenti</h4>
+            <a href="prodotto-trasportatore-nastro.html">Lineari</a>
+            <a href="prodotto-trasportatore-inclinato.html">Inclinati</a>
+            <a href="prodotto-trasportatore-curva.html">Curvi</a>
+            <a href="prodotto-trasportatore-rulli.html">Acciaio Inox / Rulliere</a>
+            <a href="prodotto-trasportatore-custom.html">Personalizzati & Custom</a>
+
+            <h4 style="margin-top:20px;">Componenti</h4>
+            <a href="prodotto-rulli.html">Rulli</a>
+            <a href="prodotto-tamburi.html">Tamburi e Mototamburi</a>
+        </div>
+
+    </div>
+
     <div class="footer-bottom">
         © 2026 SIRIO Nastri Trasportatori S.r.l. — P.IVA 07016110012 — Via Carlo Leone 48, Rivoli (TO)
     </div>
@@ -188,6 +381,15 @@ function toggleMenu() {
     document.querySelector('.hamburger').classList.toggle('active');
     document.querySelector('nav').classList.toggle('open');
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    const linkCatalogo = document.querySelector('.menu-dropdown > a');
+    if (linkCatalogo) {
+        linkCatalogo.addEventListener('click', function(e) {
+            window.location.href = this.getAttribute('href');
+        });
+    }
+});
 </script>
 
 </body>
