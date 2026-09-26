@@ -7,6 +7,91 @@
     <meta name="description" content="Scopri Sirio Nastri Trasportatori: eccellenza ingegneristica nella progettazione e produzione di nastri trasportatori industriali e impianti di movimentazione su misura.">
     <link rel="canonical" href="https://sirionastri.github.io/sirio-sito/azienda.html">
     <link rel="stylesheet" href="css/style.css?v=5">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* POPUP REGOLATO SULLO STILE HOME PAGE */
+        .popup-box {
+            max-width: 650px;
+            width: 90%;
+            background: #0d0d0d;
+            border: 1px solid #222;
+            padding: 30px;
+            border-radius: 8px;
+            position: relative;
+            color: #fff;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .popup-title-rfq {
+            color: var(--accent, #a2ff00);
+            font-size: 26px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .popup-sub-rfq {
+            color: #ccc;
+            font-size: 14px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .popup-sec-title {
+            color: var(--accent, #a2ff00);
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .popup-list-rfq {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 25px;
+        }
+
+        .popup-list-rfq li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            color: #ddd;
+            font-size: 14px;
+        }
+
+        .popup-list-rfq li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .popup-form-rfq {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .popup-form-rfq input,
+        .popup-form-rfq textarea {
+            width: 100%;
+            background: #000;
+            border: 1px solid #333;
+            color: #fff;
+            padding: 12px 15px;
+            border-radius: 5px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        .popup-form-rfq input:focus,
+        .popup-form-rfq textarea:focus {
+            outline: none;
+            border-color: var(--accent, #a2ff00);
+        }
+    </style>
 </head>
 
 <body>
@@ -164,66 +249,51 @@
     </div>
 </section>
 
-<!-- POPUP COMPLETO PREVENTIVO (RFQ) -->
+<!-- POPUP PREVENTIVO UNIFICATO (RFQ) -->
 <div class="popup-overlay" id="popup-overlay" onclick="chiudiPopupEsterno(event)">
     <div class="popup-box" id="popup-preventivo">
         <span class="popup-close" onclick="chiudiPopup()">&times;</span>
+        
+        <h2 class="popup-title-rfq">Richiesta Preventivo Tecnico (RFQ)</h2>
+        <p class="popup-sub-rfq">Ricevi una fattibilità tecnica ed un'offerta economica personalizzata entro 24 ore lavorative.</p>
+        
+        <h3 class="popup-sec-title">Perché scegliere Sirio</h3>
+        <ul class="popup-list-rfq">
+            <li>Analisi di fattibilità con progettista dedicato</li>
+            <li>Preventivi trasparenti senza costi nascosti</li>
+            <li>Sviluppo di soluzioni custom per spazi ridotti</li>
+            <li>Rispetto rigoroso delle normative di sicurezza CE e FDA</li>
+        </ul>
 
-        <div class="popup-content">
-            <div class="popup-col popup-left">
-                <h2>Richiesta Preventivo Tecnico (RFQ)</h2>
-                <p class="popup-desc">
-                    Ricevi una valutazione di fattibilità ed un preventivo personalizzato entro 24 ore lavorative.
-                </p>
+        <form action="https://formsubmit.co/info@sirionastri.it" method="POST" enctype="multipart/form-data" class="popup-form-rfq">
+            <input type="hidden" name="_subject" value="Richiesta Preventivo RFQ da Pagina Azienda">
+            <input type="hidden" name="_captcha" value="false">
 
-                <h3>Perché contattarci</h3>
-                <ul class="popup-points">
-                    <li>Consulenza e analisi tecnica con un ingegnere dedicato</li>
-                    <li>Soluzioni idonee per spazi ed ingombri ridotti</li>
-                    <li>Conformità alle direttive Macchine CE e certificazioni FDA</li>
-                    <li>Preventivi chiari e dettagliati senza costi nascosti</li>
-                    <li>Supporto diretto dalla progettazione all'installazione</li>
-                </ul>
+            <input type="text" name="Azienda" placeholder="Ragione Sociale Azienda">
+            <input type="text" name="Nome" placeholder="Nome *" required>
+            <input type="text" name="Cognome" placeholder="Cognome *" required>
+            <input type="email" name="Email" placeholder="Email Aziendale *" required>
+            <input type="text" name="Telefono" placeholder="Telefono">
+            <textarea name="Messaggio" placeholder="Descrizione della richiesta / Note tecniche" rows="3"></textarea>
 
-                <h3>Chi ti risponderà</h3>
-                <p>
-                    Il nostro team tecnico analizzerà il tuo progetto, i layout allegati e le specifiche ambientali per guidarti verso la scelta della mescola o della struttura più idonea.
-                </p>
+            <div class="filebox" style="margin-top: 10px;">
+                <label class="filebox-title">Allega un file (Layout, disegni CAD, foto)</label>
+                <div class="filebox-area">
+                    <p>Fai clic o trascina il file su quest'area per caricarlo.</p>
+                    <input type="file" name="Allegato" class="filebox-input">
+                </div>
+                <div class="filebox-privacy" style="margin-top: 10px;">
+                    <input type="checkbox" id="privacy-check" name="Privacy" value="Accettata" required>
+                    <label for="privacy-check">Accetto la Privacy Policy *</label>
+                </div>
             </div>
 
-            <div class="popup-col popup-right">
-                <form action="https://formsubmit.co/info@sirionastri.it" method="POST" enctype="multipart/form-data" class="popup-form">
-                    <input type="hidden" name="_subject" value="Richiesta Preventivo RFQ da Pagina Azienda">
-                    <input type="hidden" name="_captcha" value="false">
-
-                    <input type="text" name="Azienda" class="popup-input" placeholder="Ragione Sociale Azienda">
-                    <input type="text" name="Nome" class="popup-input" placeholder="Nome *" required>
-                    <input type="text" name="Cognome" class="popup-input" placeholder="Cognome *" required>
-                    <input type="email" name="Email" class="popup-input" placeholder="Email Aziendale *" required>
-                    <input type="text" name="Telefono" class="popup-input" placeholder="Telefono Diretto">
-                    <textarea name="Messaggio" class="popup-input" placeholder="Specifiche del progetto (Dimensioni, materiali, velocità richieste)..." rows="4"></textarea>
-
-                    <div class="filebox">
-                        <label class="filebox-title">Allega Layout / Disegno Tecnico (PDF, DWG, PNG)</label>
-                        <div class="filebox-area">
-                            <p>Trascina il file qui o clicca per caricarlo</p>
-                            <input type="file" name="Allegato" class="filebox-input">
-                        </div>
-
-                        <div class="filebox-privacy">
-                            <input type="checkbox" id="privacy-check" name="Privacy" value="Accettata" required>
-                            <label for="privacy-check">Autorizzo il trattamento dei dati personali secondo la Privacy Policy *</label>
-                        </div>
-                    </div>
-
-                    <button type="submit" class="popup-btn">Invia Specifiche Tecniche</button>
-                </form>
-            </div>
-        </div>
+            <button type="submit" class="popup-btn" style="margin-top: 15px;">Invia richiesta RFQ</button>
+        </form>
     </div>
 </div>
 
-<!-- FOOTER (ESATTAMENTE UGUALE ALL'INDEX DA SCREENSHOT) -->
+<!-- FOOTER -->
 <footer class="footer-sirio">
     <div class="footer-top">
 
@@ -261,13 +331,18 @@
             <a href="prodotto-nastro-modulare.html">Nastro modulare</a>
         </div>
 
-        <!-- COLONNA 4: TRASPORTATORI & COMPONENTI -->
+        <!-- COLONNA 4: TRASPORTATORI -->
         <div class="footer-col">
-            <h4>Trasportatori & Componenti</h4>
+            <h4>Trasportatori</h4>
             <a href="prodotto-trasportatore-nastro.html">Trasportatori Lineari</a>
             <a href="prodotto-trasportatore-inclinato.html">Trasportatori Inclinati</a>
             <a href="prodotto-trasportatore-curva.html">Trasportatori Curvi</a>
             <a href="prodotto-trasportatore-rulli.html">Rulliere & Inox</a>
+        </div>
+
+        <!-- COLONNA 5: COMPONENTI -->
+        <div class="footer-col">
+            <h4>Componenti</h4>
             <a href="prodotto-rulli.html">Rulli</a>
             <a href="prodotto-tamburi.html">Tamburi</a>
         </div>
