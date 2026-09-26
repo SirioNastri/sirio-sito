@@ -9,14 +9,22 @@
     <link rel="stylesheet" href="css/style.css?v=5">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- JSON-LD: Schema.org per Catalogo Industriale -->
+    <!-- JSON-LD OTTMIZZATO E COMPLETO PER GOOGLE -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "CollectionPage",
       "name": "Catalogo Tecnico Prodotti - Sirio Nastri Trasportatori",
       "description": "Nastri trasportatori industriali, trasportatori completi e componenti per la movimentazione.",
-      "url": "https://sirionastri.github.io/sirio-sito/catalogo.html"
+      "url": "https://sirionastri.github.io/sirio-sito/catalogo.html",
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Nastri Trasportatori", "url": "https://sirionastri.github.io/sirio-sito/catalogo.html#nastri" },
+          { "@type": "ListItem", "position": 2, "name": "Trasportatori Completi", "url": "https://sirionastri.github.io/sirio-sito/catalogo.html#trasportatori" },
+          { "@type": "ListItem", "position": 3, "name": "Componenti e Ricambi", "url": "https://sirionastri.github.io/sirio-sito/catalogo.html#componenti" }
+        ]
+      }
     }
     </script>
 </head>
@@ -63,7 +71,7 @@
                     <a href="prodotto-trasportatore-inclinato.html">Inclinati</a>
                     <a href="prodotto-trasportatore-curva.html">Curvi</a>
                     <a href="prodotto-trasportatore-rulli.html">Acciaio Inox / Rulliere</a>
-                    <a href="prodotto-trasportatore-nastro.html">Personalizzati</a>
+                    <a href="contatti.html">Soluzioni Personalizzate</a>
                 </div>
 
                 <div class="colonna">
@@ -78,7 +86,7 @@
         <div class="menu-voce"><a href="contatti.html">Contatti</a></div>
 
         <div class="menu-voce">
-            <a href="#" class="btn-preventivo-nav" onclick="apriPopup(event)">Richiedi Preventivo (RFQ)</a>
+            <a href="#" class="btn-preventivo-nav" aria-haspopup="dialog" onclick="apriPopup(event)">Richiedi Preventivo (RFQ)</a>
         </div>
     </nav>
 </header>
@@ -105,50 +113,44 @@
     </p>
 
     <div class="grid-3">
-        <!-- Nastro PVC -->
         <a href="prodotto-nastro-pvc.html" class="card-prodotto">
             <div class="card-prodotto-img">
-                <img src="img/nastro-pvc.jpg" alt="Nastro trasportatore industriale in PVC" loading="lazy">
+                <img src="img/nastro-pvc.jpg" alt="Nastro trasportatore industriale in PVC" loading="lazy" width="400" height="300">
             </div>
             <h3 class="card-prodotto-title">Nastro in PVC</h3>
         </a>
 
-        <!-- Nastro PU -->
         <a href="prodotto-nastro-pu.html" class="card-prodotto">
             <div class="card-prodotto-img">
-                <img src="img/nastro-pu.jpg" alt="Nastro trasportatore in Poliuretano PU" loading="lazy">
+                <img src="img/nastro-pu.jpg" alt="Nastro trasportatore in Poliuretano PU" loading="lazy" width="400" height="300">
             </div>
             <h3 class="card-prodotto-title">Nastro in PU</h3>
         </a>
 
-        <!-- Nastro Gomma -->
         <a href="prodotto-nastro-gomma.html" class="card-prodotto">
             <div class="card-prodotto-img">
-                <img src="img/nastro-gomma.jpg" alt="Nastro trasportatore in gomma antiabrasiva" loading="lazy">
+                <img src="img/nastro-gomma.jpg" alt="Nastro trasportatore in gomma antiabrasiva" loading="lazy" width="400" height="300">
             </div>
             <h3 class="card-prodotto-title">Nastro in Gomma</h3>
         </a>
 
-        <!-- Nastro Alimentare -->
         <a href="prodotto-nastro-alimentare.html" class="card-prodotto">
             <div class="card-prodotto-img">
-                <img src="img/nastro-alimentare.jpg" alt="Nastro trasportatore alimentare certificato FDA" loading="lazy">
+                <img src="img/nastro-alimentare.jpg" alt="Nastro trasportatore alimentare certificato FDA" loading="lazy" width="400" height="300">
             </div>
             <h3 class="card-prodotto-title">Nastro Alimentare (FDA)</h3>
         </a>
 
-        <!-- Nastro Alte Temperature -->
         <a href="prodotto-nastro-alte-temperature.html" class="card-prodotto">
             <div class="card-prodotto-img">
-                <img src="img/nastro-alte-temperature.jpg" alt="Nastro per alte temperature in Silicone PTFE" loading="lazy">
+                <img src="img/nastro-alte-temperature.jpg" alt="Nastro per alte temperature in Silicone PTFE" loading="lazy" width="400" height="300">
             </div>
             <h3 class="card-prodotto-title">Nastro per Alte Temperature</h3>
         </a>
 
-        <!-- Nastro Modulare -->
         <a href="prodotto-nastro-modulare.html" class="card-prodotto">
             <div class="card-prodotto-img">
-                <img src="img/nastro-modulare-plastica.jpg" alt="Nastro modulare in plastica ad alta resistenza" loading="lazy">
+                <img src="img/nastro-modulare-plastica.jpg" alt="Nastro modulare in plastica ad alta resistenza" loading="lazy" width="400" height="300">
             </div>
             <h3 class="card-prodotto-title">Nastro Modulare in Plastica</h3>
         </a>
@@ -163,34 +165,30 @@
     </p>
 
     <div class="grid-3">
-        <!-- Trasportatore Lineare -->
         <a href="prodotto-trasportatore-nastro.html" class="card-prodotto">
             <div class="card-prodotto-img">
-                <img src="img/trasportatore-nastro.jpg" alt="Trasportatore a nastro lineare" loading="lazy">
+                <img src="img/trasportatore-nastro.jpg" alt="Trasportatore a nastro lineare" loading="lazy" width="400" height="300">
             </div>
             <h3 class="card-prodotto-title">Trasportatore a Nastro</h3>
         </a>
 
-        <!-- Rulliere -->
         <a href="prodotto-trasportatore-rulli.html" class="card-prodotto">
             <div class="card-prodotto-img">
-                <img src="img/trasportatore-rulli.jpg" alt="Trasportatore a rulli folli e motorizzati" loading="lazy">
+                <img src="img/trasportatore-rulli.jpg" alt="Trasportatore a rulli folli e motorizzati" loading="lazy" width="400" height="300">
             </div>
             <h3 class="card-prodotto-title">Trasportatore a Rulli</h3>
         </a>
 
-        <!-- Trasportatore Inclinato -->
         <a href="prodotto-trasportatore-inclinato.html" class="card-prodotto">
             <div class="card-prodotto-img">
-                <img src="img/trasportatore-inclinato.jpg" alt="Trasportatore inclinato e a Z con listelli" loading="lazy">
+                <img src="img/trasportatore-inclinato.jpg" alt="Trasportatore inclinato e a Z con listelli" loading="lazy" width="400" height="300">
             </div>
             <h3 class="card-prodotto-title">Trasportatore Inclinato / Z</h3>
         </a>
 
-        <!-- Trasportatore Curvo -->
         <a href="prodotto-trasportatore-curva.html" class="card-prodotto">
             <div class="card-prodotto-img">
-                <img src="img/trasportatore-curva.jpg" alt="Trasportatore a nastro curvo" loading="lazy">
+                <img src="img/trasportatore-curva.jpg" alt="Trasportatore a nastro curvo" loading="lazy" width="400" height="300">
             </div>
             <h3 class="card-prodotto-title">Trasportatore a Curva</h3>
         </a>
@@ -205,18 +203,16 @@
     </p>
 
     <div class="grid-3">
-        <!-- Rulli -->
         <a href="prodotto-rulli.html" class="card-prodotto">
             <div class="card-prodotto-img">
-                <img src="img/rulli.jpg" alt="Rulli per trasportatori industriali" loading="lazy">
+                <img src="img/rulli.jpg" alt="Rulli per trasportatori industriali" loading="lazy" width="400" height="300">
             </div>
             <h3 class="card-prodotto-title">Rulli</h3>
         </a>
 
-        <!-- Tamburi -->
         <a href="prodotto-tamburi.html" class="card-prodotto">
             <div class="card-prodotto-img">
-                <img src="img/tamburi.jpg" alt="Tamburi e mototamburi per nastri trasportatori" loading="lazy">
+                <img src="img/tamburi.jpg" alt="Tamburi e mototamburi per nastri trasportatori" loading="lazy" width="400" height="300">
             </div>
             <h3 class="card-prodotto-title">Tamburi e Mototamburi</h3>
         </a>
@@ -229,13 +225,13 @@
     <p style="color:var(--text-muted, #a0a0a0); max-width:700px; margin:0 auto 30px;">
         Possiamo realizzare soluzioni su misura e progetti personalizzati per il tuo impianto.
     </p>
-    <a href="#" class="btn btn-primary btn-preventivo" onclick="apriPopup(event)">Richiedi Informazioni (RFQ)</a>
+    <a href="#" class="btn btn-primary btn-preventivo" aria-haspopup="dialog" onclick="apriPopup(event)">Richiedi Informazioni (RFQ)</a>
 </section>
 
 <!-- POPUP RFQ MODALE ACCESSIBILE -->
 <div class="popup-overlay" id="popup-overlay" onclick="chiudiPopupEsterno(event)">
     <div class="popup-box" id="popup-preventivo" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-        <button type="button" class="popup-close" onclick="chiudiPopup()" aria-label="Chiudi popup">&times;</button>
+        <button type="button" class="popup-close" onclick="chiudiPopup()" aria-label="Chiudi finestra di dialogo">&times;</button>
 
         <div class="popup-content">
             <div class="popup-col popup-left">
@@ -263,19 +259,22 @@
                 <form action="https://formsubmit.co/info@sirionastri.it" method="POST" enctype="multipart/form-data" class="popup-form">
                     <input type="hidden" name="_subject" value="Richiesta Preventivo RFQ dal Catalogo Tecnico">
                     <input type="hidden" name="_captcha" value="false">
+                    
+                    <!-- CAMPO HONEYPOT ANTI-SPAM (Nascosto agli utenti reali) -->
+                    <input type="text" name="_honey" style="display:none">
 
                     <input type="text" name="Azienda" class="popup-input" placeholder="Ragione Sociale Azienda">
                     <input type="text" name="Nome" class="popup-input" placeholder="Nome *" required>
                     <input type="text" name="Cognome" class="popup-input" placeholder="Cognome *" required>
                     <input type="email" name="Email" class="popup-input" placeholder="Email Aziendale *" required>
-                    <input type="text" name="Telefono" class="popup-input" placeholder="Telefono Diretto">
+                    <input type="tel" name="Telefono" class="popup-input" placeholder="Telefono Diretto">
                     <textarea name="Messaggio" class="popup-input" placeholder="Dettagli richiesta (Dimensioni nastro, interasse, velocità, materiale trasportato)..." rows="4"></textarea>
 
                     <div class="filebox">
                         <label for="file-upload" class="filebox-title">Allega un file (PDF, DWG, PNG)</label>
                         <div class="filebox-area" id="drop-area">
                             <p id="file-label-text">Fai clic o trascina il file su quest'area per caricarlo</p>
-                            <input type="file" id="file-upload" name="Allegato" class="filebox-input" onchange="gestisciFile(this)">
+                            <input type="file" id="file-upload" name="Allegato" class="filebox-input" onchange="gestisciFile(this)" accept=".pdf,.dwg,.dxf,.png,.jpg,.jpeg">
                         </div>
 
                         <div class="filebox-privacy">
@@ -295,20 +294,18 @@
 <footer class="footer-sirio">
     <div class="footer-top">
 
-        <!-- COLONNA 1: LOGO E CONTATTI -->
         <div class="footer-col">
             <div class="footer-logo">
-                <img src="img/logo.jpg" alt="Sirio Nastri Trasportatori" loading="lazy">
+                <img src="img/logo.jpg" alt="Sirio Nastri Trasportatori" loading="lazy" width="180" height="60">
             </div>
             <p class="footer-desc">
                 Produzione di nastri trasportatori, trasportatori completi e sistemi di movimentazione industriale.
             </p>
 
-            <p class="footer-contact">📞 (+39) 011 953 9492</p>
-            <p class="footer-contact">✉️ info@sirionastri.it</p>
+            <p class="footer-contact">📞 <a href="tel:+390119539492" style="color:inherit; text-decoration:none;">(+39) 011 953 9492</a></p>
+            <p class="footer-contact">✉️ <a href="mailto:info@sirionastri.it" style="color:inherit; text-decoration:none;">info@sirionastri.it</a></p>
         </div>
 
-        <!-- COLONNA 2: NAVIGAZIONE -->
         <div class="footer-col">
             <h4>Navigazione</h4>
             <a href="index.html">Home</a>
@@ -319,7 +316,6 @@
             <a href="contatti.html">Contatti</a>
         </div>
 
-        <!-- COLONNA 3: GALLERIA NASTRI -->
         <div class="footer-col">
             <h4>Galleria Nastri</h4>
             <a href="prodotto-nastro-pvc.html">Nastro in PVC</a>
@@ -330,14 +326,13 @@
             <a href="prodotto-nastro-modulare.html">Nastro modulare in plastica</a>
         </div>
 
-        <!-- COLONNA 4: TRASPORTATORI & COMPONENTI -->
         <div class="footer-col">
             <h4>Trasportatori</h4>
             <a href="prodotto-trasportatore-nastro.html">Lineari</a>
             <a href="prodotto-trasportatore-inclinato.html">Inclinati</a>
             <a href="prodotto-trasportatore-curva.html">Curvi</a>
             <a href="prodotto-trasportatore-rulli.html">Acciaio Inox / Rulliere</a>
-            <a href="prodotto-trasportatore-nastro.html">Personalizzati</a>
+            <a href="contatti.html">Soluzioni Personalizzate</a>
 
             <h4 style="margin-top: 20px;">Componenti</h4>
             <a href="prodotto-rulli.html">Rulli</a>
