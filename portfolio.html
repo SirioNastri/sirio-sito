@@ -3,33 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Realizzazioni | Sirio Nastri Trasportatori</title>
-    <meta name="description" content="Scopri i progetti realizzati da Sirio Nastri Trasportatori: linee di movimentazione industriali, rulliere, impianti per il settore alimentare, farmaceutico e metalmeccanico.">
+    <title>Portfolio Realizzazioni & Case Histories | Sirio Nastri Trasportatori</title>
+    <meta name="description" content="Scopri i progetti e le installazioni su misura realizzate da Sirio Nastri Trasportatori: linee alimentari FDA, rulliere per logistica, nastri magnetici e impianti di smistamento.">
     <link rel="canonical" href="https://sirionastri.github.io/sirio-sito/portfolio.html">
-    <link rel="stylesheet" href="css/style.css?v=5">
+    <link rel="stylesheet" href="css/style.css?v=9">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- JSON-LD: Schema.org per Pagina Portfolio / Case Studies -->
+    <!-- JSON-LD SCHEMA.ORG ESTESO PER SEO B2B -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "CollectionPage",
-      "name": "Portfolio Realizzazioni - Sirio Nastri Trasportatori",
-      "description": "Case histories e installazioni di sistemi di movimentazione industriale su misura.",
-      "url": "https://sirionastri.github.io/sirio-sito/portfolio.html"
+      "@id": "https://sirionastri.github.io/sirio-sito/portfolio.html#webpage",
+      "name": "Portfolio Realizzazioni e Case Histories Industriali",
+      "description": "Installazioni reali di nastri trasportatori, rulliere e impianti di movimentazione per settori alimentare, farmaceutico, logistico e metalmeccanico.",
+      "url": "https://sirionastri.github.io/sirio-sito/portfolio.html",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Sirio Nastri Trasportatori S.r.L.",
+        "url": "https://sirionastri.github.io/sirio-sito/"
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Linea di Trasporto FDA per Confezionamento Alimentare",
+            "description": "Nastro in poliuretano FDA ad alta sanificabilità per la movimentazione di prodotti alimentari confezionati."
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Sistema a Rulliere Motorizzate per Hub Logistico",
+            "description": "Linea di movimentazione e smistamento colli ad alta velocità con rulliere comandate."
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Separatore Magnetico per Evacuazione Trucioli",
+            "description": "Impianto di separazione e scarico trucioli metallici per centri di lavoro a controllo numerico."
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Impianto Integrato di Smistamento Automatico",
+            "description": "Sito ad alta produttività con deviatrici automatiche, curve a nastro e tapparelle in acciaio."
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Nastro Trasportatore Igienico per Linee Farmaceutiche ISO",
+            "description": "Sistemi certificati per camera bianca e linee di confezionamento farmaceutico conforme ISO."
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "name": "Evacuatore a Tapparella Rinforzata per Truciolo Pesante",
+            "description": "Nastro trasportatore ad alta resistenza abrasiva per carpenterie e lavorazioni meccaniche pesanti."
+          }
+        ]
+      }
     }
     </script>
 </head>
+
 <body>
 
-<header>
+<header class="header-main">
     <div class="logo">
         <a href="index.html">
             <img src="img/logo.jpg" alt="Sirio Nastri Trasportatori Industriali">
         </a>
     </div>
 
-    <!-- HAMBURGER MENU ACCESSIBILE -->
     <button class="hamburger" aria-label="Apri menu navigazione" aria-expanded="false" onclick="toggleMenu()">
         <span></span>
         <span></span>
@@ -41,10 +88,8 @@
         <div class="menu-voce"><a href="azienda.html">Azienda</a></div>
         <div class="menu-voce"><a href="prodotti.html">Prodotti</a></div>
 
-        <!-- MEGA MENU CATALOGO TECNICO -->
         <div class="menu-voce menu-negozio">
             <a href="catalogo.html">Catalogo Tecnico</a>
-
             <div class="mega-negozio">
                 <div class="colonna">
                     <h4>Galleria Nastri</h4>
@@ -84,120 +129,116 @@
 
 <main>
     <!-- HERO PORTFOLIO -->
-    <section class="hero-portfolio">
-        <div class="container">
-            <span class="badge-subtle">Case Histories &amp; Ingegneria</span>
-            <h1>Portfolio Realizzazioni</h1>
-            <p class="subtitle">Sistemi di movimentazione installati sul campo</p>
-            <p class="hero-desc">
-                Una selezione dei lavori svolti per aziende di diversi settori industriali. Ogni progetto rappresenta la nostra attenzione alla qualità, alla precisione meccanica e alla personalizzazione su misura.
+    <section class="section hero-portfolio-wrapper">
+        <span class="badge-subtle">Case Histories &amp; Ingegneria Applicata</span>
+        <h1 class="titolo-pagina">Portfolio Realizzazioni Industriali</h1>
+        <p class="sottotitolo-evidenza">Sistemi di Movimentazione Progettati e Installati sul Campo</p>
+        <p class="hero-description">
+            Analisi delle soluzioni ingegneristiche sviluppate per la grande industria e le PMI. Ogni realizzazione rappresenta l'integrazione tra progettazione su misura, efficienza di processo e rispetto delle normative di settore.
+        </p>
+    </section>
+
+    <!-- GRIGLIA PROGETTI SETTORIALI (1-3) -->
+    <section class="section container-grid">
+        <div class="grid-3">
+
+            <article class="card-servizio">
+                <div class="card-media">
+                    <img src="img/progetto1.jpg" alt="Linea di trasporto alimenti in acciaio Inox e nastro FDA" onerror="this.src='img/logo.jpg'" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <span class="card-tag">Settore Alimentare</span>
+                    <h3>Linea di Trasporto FDA per Confezionamento</h3>
+                    <p>Progettazione e installazione di nastri trasportatori in sponda d'acciaio Inox AISI 304 con tappeto in poliuretano alimentare FDA. Ideato per garantire cicli di sanificazione rapida ed eliminare i rischi di contaminazione incrociata.</p>
+                </div>
+            </article>
+
+            <article class="card-servizio">
+                <div class="card-media">
+                    <img src="img/progetto2.jpg" alt="Rulliera motorizzata per movimentazione colli in hub logistico" onerror="this.src='img/logo.jpg'" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <span class="card-tag">Logistica &amp; Imballaggio</span>
+                    <h3>Rulliera Motorizzata per Impianti di Smistamento</h3>
+                    <p>Integrazione di rulliere comandate a zone d'accumulo a zero pressione (ZAP) per l'instradamento automatico di scatole e colli ad alta frequenza. Ottimizzazione della velocità di transito ed efficienza energetica.</p>
+                </div>
+            </article>
+
+            <article class="card-servizio">
+                <div class="card-media">
+                    <img src="img/progetto3.jpg" alt="Nastro magnetico per estrazione e separazione trucioli metallici" onerror="this.src='img/logo.jpg'" loading="lazy">
+                </div>
+                <div class="card-content">
+                    <span class="card-tag">Metalmeccanica</span>
+                    <h3>Separatore Magnetico per Evacuazione Trucioli</h3>
+                    <p>Sviluppo di un evacuatore magnetico compatto per l'estrazione continua di sfridi e trucioli ferrosi da macchine utensili CNC. Riduzione azzerata dei tempi di fermo macchina per manutenzione pulizia vasca.</p>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- PROGETTO APPROFONDITO 4 -->
+    <section class="info-grid container-wide">
+        <div class="info-grid-img">
+            <img src="img/progetto4.jpg" alt="Impianto di smistamento automatico industriale con curve a nastro" onerror="this.src='img/logo.jpg'" loading="lazy">
+        </div>
+
+        <div class="info-grid-text">
+            <span class="card-tag">Automazione Processi</span>
+            <h3 class="sottotitolo-bianco">Impianto Integrato di Smistamento e Deviazione Automatico</h3>
+            <p>
+                Realizzazione di un'architettura completa di movimentazione che integra curve a nastro ad angolo retto, nastri a tapparelle metalliche ad alta tenuta e deviatori pneumatici ad alta velocità.
+            </p>
+            <p>
+                L'impianto ha consentito al cliente di incrementare la capacità produttiva del 35%, garantendo la tracciabilità dei pezzi e l'interfacciamento diretto con il sistema gestionale di fabbrica (PLC / MES).
             </p>
         </div>
     </section>
 
-    <!-- GRIGLIA PROGETTI (1 - 3) -->
-    <section class="section-portfolio-grid">
-        <div class="container">
-            <div class="grid-3">
-                <div class="card-progetto">
-                    <div class="img-wrapper">
-                        <img src="img/progetto1.jpg" alt="Progetto Linea Alimentare" onerror="this.src='img/logo.jpg'" loading="lazy">
-                    </div>
-                    <div class="card-content">
-                        <h3>Progetto 1</h3>
-                        <p>Installazione nastro trasportatore su misura per linea produttiva alimentare.</p>
-                    </div>
-                </div>
-
-                <div class="card-progetto">
-                    <div class="img-wrapper">
-                        <img src="img/progetto2.jpg" alt="Rulliera Motorizzata Logistica" onerror="this.src='img/logo.jpg'" loading="lazy">
-                    </div>
-                    <div class="card-content">
-                        <h3>Progetto 2</h3>
-                        <p>Rulliera motorizzata per movimentazione imballaggi in ambiente logistico.</p>
-                    </div>
-                </div>
-
-                <div class="card-progetto">
-                    <div class="img-wrapper">
-                        <img src="img/progetto3.jpg" alt="Nastro Magnetico Trucioli" onerror="this.src='img/logo.jpg'" loading="lazy">
-                    </div>
-                    <div class="card-content">
-                        <h3>Progetto 3</h3>
-                        <p>Nastro magnetico per separazione trucioli in settore metalmeccanico.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PROGETTO IN EVIDENZA / ALTERNATO (PROGETTO 4) -->
-    <section class="section-portfolio-row">
-        <div class="container">
-            <div class="info-grid">
-                <div class="info-grid-img">
-                    <img src="img/progetto4.jpg" alt="Progetto Speciale Smistamento" onerror="this.src='img/logo.jpg'" loading="lazy">
-                </div>
-                <div class="info-grid-text">
-                    <span class="sub-tag">Progetto 4</span>
-                    <h2>Impianto di Smistamento Automatico</h2>
-                    <p>
-                        Realizzazione di un sistema completo di trasporto con curve a nastro, tapparelle in acciaio e stazioni di smistamento automatico. Un progetto complesso che ha richiesto precisione, coordinamento e materiali ad alte prestazioni.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- GRIGLIA ALTERNATA (PROGETTI 5 - 6) -->
-    <section class="section-portfolio-row">
-        <div class="container">
-            <div class="info-grid reverse">
-                <div class="info-grid-text">
-                    <span class="sub-tag">Progetto 5</span>
-                    <h2>Linea Farmaceutica ISO</h2>
-                    <p>
-                        Installazione di nastri certificati per ambienti sterili, con materiali idonei al contatto e superfici facili da sanificare. Progetto realizzato rispettando rigorosamente le normative igienico-sanitarie di settore.
-                    </p>
-                </div>
-                <div class="info-grid-img">
-                    <img src="img/farmaceutica.jpg" alt="Linea Farmaceutica" onerror="this.src='img/logo.jpg'" loading="lazy">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section-portfolio-row">
-        <div class="container">
-            <div class="info-grid">
-                <div class="info-grid-img">
-                    <img src="img/progetto6.jpg" alt="Evacuazione Trucioli" onerror="this.src='img/logo.jpg'" loading="lazy">
-                </div>
-                <div class="info-grid-text">
-                    <span class="sub-tag">Progetto 6</span>
-                    <h2>Evacuazione Trucioli Pesanti</h2>
-                    <p>
-                        Sistema di evacuazione trucioli con nastro magnetico rinforzato, progettato per resistere a cicli intensivi e materiali fortemente abrasivi. Soluzione robusta e affidabile per officine meccaniche ad alta produttività.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA FINALE PORTFOLIO -->
-    <section class="section cta-section-custom" style="text-align:center; max-width:1200px; margin:70px auto; padding:50px 20px;">
-        <div class="container">
-            <h2 class="section-title" style="font-size: 2rem; color: #ffffff; margin-bottom: 10px;">Vuoi vedere altri progetti?</h2>
-            <p style="color:#a0aab8; max-width:700px; margin:0 auto 30px; font-size: 16px;">
-                Contattaci per ricevere case histories specifiche per il tuo settore industriale o per richiedere un sopralluogo tecnico in sede.
+    <!-- PROGETTO APPROFONDITO 5 -->
+    <section class="info-grid container-wide">
+        <div class="info-grid-text">
+            <span class="card-tag">Settore Farmaceutico</span>
+            <h3 class="sottotitolo-bianco">Linea Farmaceutica per Ambiente Controllato (ISO)</h3>
+            <p>
+                Installazione di sistemi di trasporto a struttura chiusa e nastri ad altissima resistenza chimica, privi di fessurazioni per prevenire il deposito particellare. Concepiti per operare in ambienti sterili e camere bianche, con conformità rigorosa alle normative igienico-sanitarie internazionali.
             </p>
-            <a href="contatti.html" class="btn btn-primary" style="padding: 14px 32px; font-weight: 800; letter-spacing: 0.5px;">Contattaci Ora</a>
+        </div>
+
+        <div class="info-grid-img">
+            <img src="img/farmaceutica.jpg" alt="Linea di trasporto per confezionamento farmaceutico in camera bianca" onerror="this.src='img/logo.jpg'" loading="lazy">
+        </div>
+    </section>
+
+    <!-- PROGETTO APPROFONDITO 6 -->
+    <section class="info-grid container-wide">
+        <div class="info-grid-img">
+            <img src="img/progetto6.jpg" alt="Evacuatore trucioli pesante con nastro metallico per carpenteria" onerror="this.src='img/logo.jpg'" loading="lazy">
+        </div>
+
+        <div class="info-grid-text">
+            <span class="card-tag">Meccanica Pesante</span>
+            <h3 class="sottotitolo-bianco">Evacuatore a Tapparella Rinforzata per Trucioli Abrasivi</h3>
+            <p>
+                Progettazione di un sistema di evacuazione pesante con catena di trazione rinforzata e tapparelle in acciaio anti-usura. Realizzato per resistere al trasporto di spezzoni di punzonatura, pezzi stampati caldi e lubrorefrigeranti altamente aggressivi.
+            </p>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION STRATEGICA -->
+    <section class="section cta-section-custom">
+        <h2 class="section-title">Hai una sfida di movimentazione da risolvere?</h2>
+        <p class="cta-description">
+            I nostri ingegneri analizzano le specifiche della tua linea per sviluppare la soluzione con il miglior rapporto efficienza/costo. Richiedi un sopralluogo tecnico o uno studio di fattibilità gratuito.
+        </p>
+        <div class="cta-action-wrapper">
+            <a href="contatti.html" class="btn btn-primary">Richiedi Consulenza Tecnica</a>
         </div>
     </section>
 </main>
 
-<!-- POPUP RFQ MODALE ACCESSIBILE -->
+<!-- POPUP MODALE RFQ -->
 <div class="popup-overlay" id="popup-overlay" onclick="chiudiPopupEsterno(event)">
     <div class="popup-box" id="popup-preventivo" role="dialog" aria-modal="true" aria-labelledby="modal-title">
         <button type="button" class="popup-close" onclick="chiudiPopup()" aria-label="Chiudi popup">&times;</button>
@@ -206,57 +247,53 @@
             <div class="popup-col popup-left">
                 <h2 id="modal-title">Richiedi Preventivo Tecnico (RFQ)</h2>
                 <p class="popup-desc">
-                    Un nostro tecnico ti risponderà entro 24 ore lavorative con una soluzione su misura per la tua linea produttiva.
+                    Un nostro ingegnerizzatore analizzerà le tue specifiche e ti fornirà un riscontro entro 24 ore lavorative.
                 </p>
 
-                <h3>Perché Contattarci</h3>
+                <h3>Vantaggi del Servizio Ingegneristico</h3>
                 <ul class="popup-points">
-                    <li>Consulenza tecnica gratuita</li>
-                    <li>Preventivi chiari e senza impegno</li>
-                    <li>Soluzioni personalizzate per ogni settore</li>
-                    <li>Supporto diretto con un progettista</li>
-                    <li>Risposta rapida e professionale</li>
+                    <li><i class="fa-solid fa-check"></i> Studio di fattibilità e dimensionamento dedicato</li>
+                    <li><i class="fa-solid fa-check"></i> Preventivazione dettagliata e trasparente</li>
+                    <li><i class="fa-solid fa-check"></i> Disegni CAD e specifiche dei materiali inclusi</li>
+                    <li><i class="fa-solid fa-check"></i> Conformità alle Direttive Macchine e Standard FDA/ISO</li>
                 </ul>
-
-                <h3>Chi Ti Risponderà</h3>
-                <p>
-                    Il nostro team tecnico analizzerà la tua richiesta e ti guiderà nella scelta del nastro o del trasportatore più adatto.
-                </p>
             </div>
 
             <div class="popup-col popup-right">
                 <form action="https://formsubmit.co/info@sirionastri.it" method="POST" enctype="multipart/form-data" class="popup-form">
-                    <input type="hidden" name="_subject" value="Richiesta Preventivo RFQ dal Portfolio">
+                    <input type="hidden" name="_subject" value="Nuova Richiesta RFQ dal Portfolio Realizzazioni">
                     <input type="hidden" name="_captcha" value="false">
 
-                    <input type="text" name="Azienda" class="popup-input" placeholder="Ragione Sociale Azienda">
-                    <input type="text" name="Nome" class="popup-input" placeholder="Nome *" required>
-                    <input type="text" name="Cognome" class="popup-input" placeholder="Cognome *" required>
+                    <input type="text" name="Azienda" class="popup-input" placeholder="Ragione Sociale Azienda *" required>
+                    <div class="form-row">
+                        <input type="text" name="Nome" class="popup-input" placeholder="Nome *" required>
+                        <input type="text" name="Cognome" class="popup-input" placeholder="Cognome *" required>
+                    </div>
                     <input type="email" name="Email" class="popup-input" placeholder="Email Aziendale *" required>
-                    <input type="text" name="Telefono" class="popup-input" placeholder="Telefono Diretto">
-                    <textarea name="Messaggio" class="popup-input" placeholder="Dettagli richiesta (Dimensioni nastro, interasse, velocità, materiale trasportato)..." rows="4"></textarea>
+                    <input type="tel" name="Telefono" class="popup-input" placeholder="Telefono Diretto *" required>
+                    <textarea name="Messaggio" class="popup-input" placeholder="Dettagli applicativi (Interasse, larghezza nastro, velocità, carico utile kg/m, ambiente de lavoro)..." rows="4" required></textarea>
 
                     <div class="filebox">
-                        <label for="file-upload" class="filebox-title">Allega un file (PDF, DWG, PNG)</label>
+                        <label for="file-upload" class="filebox-title">Allega Layout / Lay-out CAD (PDF, DWG, STEP, PNG)</label>
                         <div class="filebox-area" id="drop-area">
-                            <p id="file-label-text">Fai clic o trascina il file su quest'area per caricarlo</p>
+                            <p id="file-label-text">Trascina qui il file o fai clic per selezionare</p>
                             <input type="file" id="file-upload" name="Allegato" class="filebox-input" onchange="gestisciFile(this)">
                         </div>
 
                         <div class="filebox-privacy">
                             <input type="checkbox" id="privacy-check" name="Privacy" value="Accettata" required>
-                            <label for="privacy-check">Autorizzo il trattamento dei dati personali secondo la Privacy Policy *</label>
+                            <label for="privacy-check">Dichiaro di aver preso visione della Privacy Policy e acconsento al trattamento dei dati *</label>
                         </div>
                     </div>
 
-                    <button type="submit" class="popup-btn">Invia Richiesta</button>
+                    <button type="submit" class="popup-btn">Invia Richiesta di Preventivo</button>
                 </form>
             </div>
         </div>
     </div>
 </div>
 
-<!-- FOOTER IDENTICO ALLA HOME (INDEX) -->
+<!-- FOOTER -->
 <footer class="footer-sirio">
     <div class="footer-top">
 
@@ -347,9 +384,9 @@ function gestisciEsc(e) {
 function gestisciFile(input) {
     const labelText = document.getElementById('file-label-text');
     if (input.files && input.files[0]) {
-        labelText.textContent = `File selezionato: ${input.files[0].name}`;
+        labelText.textContent = `File allegato: ${input.files[0].name}`;
     } else {
-        labelText.textContent = 'Fai clic o trascina il file su quest\'area per caricarlo';
+        labelText.textContent = 'Trascina qui il file o fai clic per selezionare';
     }
 }
 </script>
