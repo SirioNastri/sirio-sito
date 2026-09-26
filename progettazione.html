@@ -4,27 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Progettazione 3D - Sirio Nastri Trasportatori</title>
-    <link rel="stylesheet" href="css/style.css?v=3">
+    <meta name="description" content="Modellazione 3D avanzata per impianti su misura: visualizza il tuo nastro trasportatore prima della costruzione con rendering e precisione millimetrica.">
+    <link rel="canonical" href="https://sirionastri.github.io/sirio-sito/progettazione-3d.html">
+    <link rel="stylesheet" href="css/style.css?v=4">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
 
-<header>
-<div class="logo">
-    <img src="img/logo.jpg" alt="Sirio Nastri Trasportatori">
-</div>
+<header class="header-main">
+    <div class="logo">
+        <a href="index.html">
+            <img src="img/logo.jpg" alt="Sirio Nastri Trasportatori">
+        </a>
+    </div>
 
-    <nav>
+    <button class="hamburger" aria-label="Apri menu navigazione" aria-expanded="false" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 
+    <nav id="main-nav">
         <div class="menu-voce"><a href="index.html">Home</a></div>
         <div class="menu-voce"><a href="azienda.html">Azienda</a></div>
         <div class="menu-voce"><a href="prodotti.html">Prodotti</a></div>
 
-        <div class="menu-voce menu-negozio">
-            <a href="negozio.html">Negozio</a>
-
-            <div class="mega-negozio">
-
+        <div class="menu-voce menu-dropdown">
+            <a href="catalogo.html" class="link-diretto">Catalogo Tecnico</a>
+            <div class="mega-menu">
                 <div class="colonna">
                     <h4>Nastri trasportatori</h4>
                     <a href="prodotto-nastro-pvc.html">Nastro in PVC</a>
@@ -49,7 +57,6 @@
                     <a href="prodotto-rulli.html">Rulli</a>
                     <a href="prodotto-tamburi.html">Tamburi e mototamburi</a>
                 </div>
-
             </div>
         </div>
 
@@ -57,76 +64,135 @@
         <div class="menu-voce"><a href="contatti.html">Contatti</a></div>
 
         <div class="menu-voce">
-            <a href="#" class="btn-preventivo-nav">Richiedi preventivo</a>
+            <a href="#" class="btn-preventivo-nav" onclick="apriPopup(event)">Richiedi preventivo</a>
         </div>
-
     </nav>
 </header>
 
+<main>
+    <section class="section">
 
-<section class="section">
-
-    <!-- TASTO TORNA INDIETRO -->
-    <div class="back-wrapper">
-        <a href="index.html#servizi" class="back-btn">← Torna indietro</a>
-    </div>
-
-    <h1>Progettazione 3D</h1>
-
-    <div class="info-grid">
-
-        <div class="info-grid-text">
-
-            <h2>Modellazione 3D avanzata per impianti su misura</h2>
-
-            <p>
-                Dopo il sopralluogo tecnico, ogni progetto passa alla fase di progettazione 3D.
-                Utilizziamo software professionali per modellare nastri trasportatori, rulliere,
-                mototamburi e strutture di supporto con precisione millimetrica.
-            </p>
-
-            <p>
-                La progettazione 3D ci permette di:
-            </p>
-
-            <ul>
-                <li>visualizzare l’impianto prima della costruzione</li>
-                <li>verificare ingombri, altezze e compatibilità con macchinari esistenti</li>
-                <li>ottimizzare il percorso del materiale</li>
-                <li>ridurre errori e tempi di installazione</li>
-                <li>garantire un risultato finale perfettamente aderente alle esigenze del cliente</li>
-            </ul>
-
-            <h3>Precisione e controllo totale</h3>
-
-            <p>
-                Ogni componente viene modellato in 3D: telaio, rulli, tamburi, mototamburi,
-                supporti, guide laterali, tappeti in PVC/PU/gomma e accessori.
-                Questo ci permette di simulare il comportamento del nastro e prevedere eventuali criticità.
-            </p>
-
-            <p>
-                Il cliente può visualizzare il progetto completo prima della realizzazione,
-                con viste esplose, sezioni tecniche e rendering fotorealistici.
-            </p>
-
+        <!-- TASTO TORNA INDIETRO -->
+        <div class="back-wrapper">
+            <a href="index.html#servizi" class="back-btn">← Torna indietro</a>
         </div>
 
-      <div class="info-grid-img">
-            <img src="img/immagine-3d.jpg" alt="Progettazione 3D Sirio">
-        </div>
+        <h1>Progettazione 3D</h1>
 
-    </div>
+        <div class="info-grid">
+
+            <div class="info-grid-text">
+
+                <h2>Modellazione 3D avanzata per impianti su misura</h2>
+
+                <p>
+                    Dopo il sopralluogo tecnico, ogni progetto passa alla fase di progettazione 3D.
+                    Utilizziamo software professionali per modellare nastri trasportatori, rulliere,
+                    mototamburi e strutture di supporto con precisione millimetrica.
+                </p>
+
+                <p>
+                    La progettazione 3D ci permette di:
+                </p>
+
+                <ul>
+                    <li>visualizzare l’impianto prima della costruzione</li>
+                    <li>verificare ingombri, altezze e compatibilità con macchinari esistenti</li>
+                    <li>ottimizzare il percorso del materiale</li>
+                    <li>ridurre errori e tempi di installazione</li>
+                    <li>garantire un risultato finale perfettamente aderente alle esigenze del cliente</li>
+                </ul>
+
+                <h3>Precisione e controllo totale</h3>
+
+                <p>
+                    Ogni componente viene modellato in 3D: telaio, rulli, tamburi, mototamburi,
+                    supporti, guide laterali, tappeti in PVC/PU/gomma e accessori.
+                    Questo ci permette di simulare il comportamento del nastro e prevedere eventuali criticità.
+                </p>
+
+                <p>
+                    Il cliente può visualizzare il progetto completo prima della realizzazione,
+                    con viste esplose, sezioni tecniche e rendering fotorealistici.
+                </p>
+
+            </div>
+
+            <div class="info-grid-img">
+                <img src="img/immagine-3d.jpg" alt="Progettazione 3D Sirio" onerror="this.src='img/logo.jpg'" loading="lazy">
+            </div>
+
+        </div>
 
         <div class="mt-40">
-        <a href="contatti.html" class="btn btn-primary">Contattaci per assistenza →</a>
+            <a href="contatti.html" class="btn btn-primary">Contattaci per assistenza →</a>
+        </div>
+
+    </section>
+</main>
+
+<!-- POPUP MODALE RFQ (Standardizzato con gestione bug e feedback file) -->
+<div class="popup-overlay" id="popup-overlay" onclick="chiudiPopupEsterno(event)">
+    <div class="popup-box" id="popup-preventivo" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button type="button" class="popup-close" onclick="chiudiPopup()" aria-label="Chiudi popup">&times;</button>
+
+        <div class="popup-content">
+            <div class="popup-col popup-left">
+                <h2 id="modal-title">Richiedi Preventivo Tecnico</h2>
+                <p class="popup-desc">
+                    Un nostro tecnico ti risponderà entro 24 ore con una soluzione su misura per la tua linea produttiva.
+                </p>
+
+                <h3>Perché contattarci</h3>
+                <ul class="popup-points">
+                    <li><i class="fa-solid fa-check"></i> Consulenza tecnica gratuita</li>
+                    <li><i class="fa-solid fa-check"></i> Preventivi chiari e senza impegno</li>
+                    <li><i class="fa-solid fa-check"></i> Soluzioni personalizzate per ogni settore</li>
+                    <li><i class="fa-solid fa-check"></i> Supporto diretto con un progettista</li>
+                    <li><i class="fa-solid fa-check"></i> Risposta rapida e professionale</li>
+                </ul>
+
+                <h3>Chi ti risponderà</h3>
+                <p>
+                    Il nostro team tecnico analizzerà la tua richiesta e ti guiderà nella scelta del nastro o del trasportatore più adatto.
+                </p>
+            </div>
+
+            <div class="popup-col popup-right">
+                <form action="https://formsubmit.co/info@sirionastri.it" method="POST" enctype="multipart/form-data" class="popup-form">
+                    <input type="hidden" name="_subject" value="Nuova Richiesta RFQ da Progettazione 3D">
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <input type="text" name="Azienda" class="popup-input" placeholder="Azienda">
+                    <div class="form-row">
+                        <input type="text" name="Nome" class="popup-input" placeholder="Nome *" required>
+                        <input type="text" name="Cognome" class="popup-input" placeholder="Cognome *" required>
+                    </div>
+                    <input type="email" name="Email" class="popup-input" placeholder="Email *" required>
+                    <input type="tel" name="Telefono" class="popup-input" placeholder="Telefono">
+                    <textarea name="Messaggio" class="popup-input" placeholder="Messaggio..." rows="4"></textarea>
+
+                    <div class="filebox">
+                        <label for="file-upload" class="filebox-title">Allega un file</label>
+                        <div class="filebox-area" id="drop-area">
+                            <p id="file-label-text">Fai clic o trascina il file su quest'area per caricarlo.</p>
+                            <input type="file" id="file-upload" name="Allegato" class="filebox-input" onchange="gestisciFile(this)">
+                        </div>
+
+                        <div class="filebox-privacy">
+                            <input type="checkbox" id="privacy-check" name="Privacy" value="Accettata" required>
+                            <label for="privacy-check">Accetto la Privacy Policy *</label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="popup-btn">Invia richiesta</button>
+                </form>
+            </div>
+        </div>
     </div>
-
-</section>
-
+</div>
 
 <footer class="footer-sirio">
-
     <div class="footer-top">
 
         <!-- COLONNA 1: LOGO + DESCRIZIONE + CONTATTI -->
@@ -155,7 +221,7 @@
             <a href="index.html">Home</a>
             <a href="azienda.html">Azienda</a>
             <a href="prodotti.html">Prodotti</a>
-            <a href="negozio.html">Negozio</a>
+            <a href="catalogo.html">Catalogo Tecnico</a>
             <a href="portfolio.html">Portfolio</a>
             <a href="contatti.html">Contatti</a>
         </div>
@@ -165,7 +231,7 @@
             <h4>Nastri trasportatori</h4>
             <a href="prodotto-nastro-pvc.html">Nastro in PVC</a>
             <a href="prodotto-nastro-pu.html">Nastro in PU</a>
-            <a href="prodotto-nastri-gomma.html">Nastro in gomma</a>
+            <a href="prodotto-nastro-gomma.html">Nastro in gomma</a>
             <a href="prodotto-nastro-alimentare.html">Nastro alimentare (FDA)</a>
             <a href="prodotto-nastro-alte-temperature.html">Nastro per alte temperature</a>
             <a href="prodotto-nastro-modulare.html">Nastro modulare in plastica</a>
@@ -190,5 +256,68 @@
     <div class="footer-bottom">
         © 2026 SIRIO Nastri Trasportatori S.r.L. — P.IVA 07016110012 — Tutti i diritti riservati
     </div>
-
 </footer>
+
+<script>
+function toggleMenu() {
+    const btn = document.querySelector('.hamburger');
+    const nav = document.getElementById('main-nav');
+    const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+    
+    btn.classList.toggle('active');
+    btn.setAttribute('aria-expanded', !isExpanded);
+    nav.classList.toggle('open');
+}
+
+function apriPopup(e) {
+    if(e) e.preventDefault();
+    document.getElementById("popup-preventivo").classList.add("active");
+    document.getElementById("popup-overlay").classList.add("active");
+    document.body.style.overflow = "hidden";
+    document.addEventListener('keydown', gestisciEsc);
+}
+
+function chiudiPopup() {
+    document.getElementById("popup-preventivo").classList.remove("active");
+    document.getElementById("popup-overlay").classList.remove("active");
+    document.body.style.overflow = "";
+    document.removeEventListener('keydown', gestisciEsc);
+}
+
+function chiudiPopupEsterno(e) {
+    if (e.target.id === "popup-overlay") {
+        chiudiPopup();
+    }
+}
+
+function gestisciEsc(e) {
+    if (e.key === 'Escape') chiudiPopup();
+}
+
+function gestisciFile(input) {
+    const labelText = document.getElementById('file-label-text');
+    if (input.files && input.files[0]) {
+        labelText.textContent = `File allegato: ${input.files[0].name}`;
+    } else {
+        labelText.textContent = 'Fai clic o trascina il file su quest\'area per caricarlo.';
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    const linkCatalogo = document.querySelector('.menu-dropdown > a');
+    if (linkCatalogo) {
+        linkCatalogo.addEventListener('click', function(e) {
+            window.location.href = this.getAttribute('href');
+        });
+    }
+
+    document.querySelectorAll(".btn-preventivo-nav, .btn-preventivo").forEach(btn => {
+        btn.addEventListener("click", function(e) {
+            apriPopup(e);
+        });
+    });
+});
+</script>
+
+</body>
+</html>
