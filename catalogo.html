@@ -7,6 +7,17 @@
     <meta name="description" content="Catalogo prodotti Sirio Nastri Trasportatori: nastri in PVC, Poliuretano (FDA), Gomma, Silicone, moduli in plastica, rulli e trasportatori completi.">
     <link rel="canonical" href="https://sirionastri.github.io/sirio-sito/catalogo.html">
     <link rel="stylesheet" href="css/style.css?v=5">
+
+    <!-- JSON-LD: Schema.org per Catalogo Industriale -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Catalogo Tecnico Prodotti - Sirio Nastri Trasportatori",
+      "description": "Nastri trasportatori industriali, trasportatori completi e componenti per la movimentazione.",
+      "url": "https://sirionastri.github.io/sirio-sito/catalogo.html"
+    }
+    </script>
 </head>
 
 <body>
@@ -18,18 +29,17 @@
         </a>
     </div>
 
-    <!-- HAMBURGER MENU MOBILE -->
-    <div class="hamburger" onclick="toggleMenu()">
+    <!-- HAMBURGER MENU ACCESSIBILE -->
+    <button class="hamburger" aria-label="Apri menu navigazione" aria-expanded="false" onclick="toggleMenu()">
         <span></span>
         <span></span>
         <span></span>
-    </div>
+    </button>
 
-    <nav>
+    <nav id="main-nav">
         <div class="menu-voce"><a href="index.html">Home</a></div>
         <div class="menu-voce"><a href="azienda.html">Azienda</a></div>
 
-        <!-- MEGA MENU CATALOGO TECNICO -->
         <div class="menu-voce menu-dropdown">
             <a href="catalogo.html" class="link-diretto active">Catalogo Tecnico</a>
 
@@ -70,7 +80,6 @@
     </nav>
 </header>
 
-<!-- HERO CATALOGO -->
 <section class="section container" style="padding-top: 60px; text-align: center;">
     <div style="margin-bottom: 20px;">
         <span style="color: var(--accent, #a2ff00); font-weight: 700; text-transform: uppercase; font-size: 13px; letter-spacing: 1.5px; display: block; margin-bottom: 8px;">Sistemi di Movimentazione & Ricambistica</span>
@@ -84,9 +93,6 @@
     </p>
 </section>
 
-<!-- ==========================================
-     CATEGORIA 1: NASTRI TRASPORTATORI (SOLO PRODOTTI ORIGINALI CON IMMAGINE)
-========================================== -->
 <section class="section container" id="nastri">
     <h2 class="section-title">Nastri Trasportatori</h2>
     <p style="max-width: 700px; margin: 0 auto 40px; text-align:center; color: var(--text-muted, #a0a0a0);">
@@ -94,59 +100,50 @@
     </p>
 
     <div class="grid-3">
-        <!-- Nastro PVC -->
         <a href="prodotto-nastro-pvc.html" class="card-prodotto">
             <div class="card-prodotto-img">
-                <img src="img/nastro-pvc.jpg" alt="Nastro trasportatore industriale in PVC">
+                <img src="img/nastro-pvc.jpg" alt="Nastro trasportatore industriale in PVC" loading="lazy">
             </div>
             <h3 class="card-prodotto-title">Nastro in PVC</h3>
         </a>
 
-        <!-- Nastro PU -->
         <a href="prodotto-nastro-pu.html" class="card-prodotto">
             <div class="card-prodotto-img">
-                <img src="img/nastro-pu.jpg" alt="Nastro trasportatore in Poliuretano PU">
+                <img src="img/nastro-pu.jpg" alt="Nastro trasportatore in Poliuretano PU" loading="lazy">
             </div>
             <h3 class="card-prodotto-title">Nastro in PU</h3>
         </a>
 
-        <!-- Nastro Gomma -->
         <a href="prodotto-nastro-gomma.html" class="card-prodotto">
             <div class="card-prodotto-img">
-                <img src="img/nastro-gomma.jpg" alt="Nastro trasportatore in gomma antiabrasiva">
+                <img src="img/nastro-gomma.jpg" alt="Nastro trasportatore in gomma antiabrasiva" loading="lazy">
             </div>
             <h3 class="card-prodotto-title">Nastro in Gomma</h3>
         </a>
 
-        <!-- Nastro Alimentare -->
         <a href="prodotto-nastro-alimentare.html" class="card-prodotto">
             <div class="card-prodotto-img">
-                <img src="img/nastro-alimentare.jpg" alt="Nastro trasportatore alimentare certificato FDA">
+                <img src="img/nastro-alimentare.jpg" alt="Nastro trasportatore alimentare certificato FDA" loading="lazy">
             </div>
             <h3 class="card-prodotto-title">Nastro Alimentare (FDA)</h3>
         </a>
 
-        <!-- Nastro Alte Temperature -->
         <a href="prodotto-nastro-alte-temperature.html" class="card-prodotto">
             <div class="card-prodotto-img">
-                <img src="img/nastro-alte-temperature.jpg" alt="Nastro per alte temperature in Silicone PTFE">
+                <img src="img/nastro-alte-temperature.jpg" alt="Nastro per alte temperature in Silicone PTFE" loading="lazy">
             </div>
             <h3 class="card-prodotto-title">Nastro per Alte Temperature</h3>
         </a>
 
-        <!-- Nastro Modulare -->
         <a href="prodotto-nastro-modulare.html" class="card-prodotto">
             <div class="card-prodotto-img">
-                <img src="img/nastro-modulare-plastica.jpg" alt="Nastro modulare in plastica ad alta resistenza">
+                <img src="img/nastro-modulare-plastica.jpg" alt="Nastro modulare in plastica ad alta resistenza" loading="lazy">
             </div>
             <h3 class="card-prodotto-title">Nastro Modulare in Plastica</h3>
         </a>
     </div>
 </section>
 
-<!-- ==========================================
-     CATEGORIA 2: TRASPORTATORI COMPLETI (SOLO PRODOTTI ORIGINALI CON IMMAGINE)
-========================================== -->
 <section class="section container" id="trasportatori">
     <h2 class="section-title">Trasportatori Completi</h2>
     <p style="max-width: 700px; margin: 0 auto 40px; text-align:center; color: var(--text-muted, #a0a0a0);">
@@ -154,51 +151,44 @@
     </p>
 
     <div class="grid-3">
-        <!-- Trasportatore Lineare -->
         <a href="prodotto-trasportatore-nastro.html" class="card-prodotto">
             <div class="card-prodotto-img">
-                <img src="img/trasportatore-nastro.jpg" alt="Trasportatore a nastro lineare">
+                <img src="img/trasportatore-nastro.jpg" alt="Trasportatore a nastro lineare" loading="lazy">
             </div>
             <h3 class="card-prodotto-title">Trasportatore a Nastro Lineare</h3>
         </a>
 
-        <!-- Rulliere -->
         <a href="prodotto-trasportatore-rulli.html" class="card-prodotto">
             <div class="card-prodotto-img">
-                <img src="img/trasportatore-rulli.jpg" alt="Trasportatore a rulli folli e motorizzati">
+                <img src="img/trasportatore-rulli.jpg" alt="Trasportatore a rulli folli e motorizzati" loading="lazy">
             </div>
             <h3 class="card-prodotto-title">Rulliere & Trasportatori a Rulli</h3>
         </a>
 
-        <!-- Trasportatore Inclinato -->
         <a href="prodotto-trasportatore-inclinato.html" class="card-prodotto">
             <div class="card-prodotto-img">
-                <img src="img/trasportatore-inclinato.jpg" alt="Trasportatore inclinato e a Z con listelli">
+                <img src="img/trasportatore-inclinato.jpg" alt="Trasportatore inclinato e a Z con listelli" loading="lazy">
             </div>
             <h3 class="card-prodotto-title">Trasportatore Inclinato / a Z</h3>
         </a>
 
-        <!-- Trasportatore Curvo -->
         <a href="prodotto-trasportatore-curva.html" class="card-prodotto">
             <div class="card-prodotto-img">
-                <img src="img/trasportatore-curva.jpg" alt="Trasportatore a nastro curvo">
+                <img src="img/trasportatore-curva.jpg" alt="Trasportatore a nastro curvo" loading="lazy">
             </div>
             <h3 class="card-prodotto-title">Trasportatore a Curva</h3>
         </a>
 
-        <!-- Custom -->
         <a href="portfolio.html" class="card-prodotto">
             <div class="card-prodotto-img">
-                <img src="img/trasportatore-nastro.jpg" alt="Trasportatore industriale personalizzato su misura">
+                <!-- Sostituita immagine duplicata con un asset custom/portfolio dedicato se disponibile -->
+                <img src="img/trasportatore-custom.jpg" alt="Trasportatore industriale personalizzato su misura" loading="lazy">
             </div>
             <h3 class="card-prodotto-title">Sistemi Personalizzati & Custom</h3>
         </a>
     </div>
 </section>
 
-<!-- ==========================================
-     CATEGORIA 3: COMPONENTI & RICAMBI (SOLO PRODOTTI ORIGINALI CON IMMAGINE)
-========================================== -->
 <section class="section container" id="componenti">
     <h2 class="section-title">Componenti & Ricambi</h2>
     <p style="max-width: 700px; margin: 0 auto 40px; text-align:center; color: var(--text-muted, #a0a0a0);">
@@ -206,25 +196,22 @@
     </p>
 
     <div class="grid-3">
-        <!-- Rulli -->
         <a href="prodotto-rulli.html" class="card-prodotto">
             <div class="card-prodotto-img">
-                <img src="img/rulli.jpg" alt="Rulli per trasportatori industriali">
+                <img src="img/rulli.jpg" alt="Rulli per trasportatori industriali" loading="lazy">
             </div>
             <h3 class="card-prodotto-title">Rulli di Trascinamento & Rinvio</h3>
         </a>
 
-        <!-- Tamburi -->
         <a href="prodotto-tamburi.html" class="card-prodotto">
             <div class="card-prodotto-img">
-                <img src="img/tamburi.jpg" alt="Tamburi e mototamburi per nastri trasportatori">
+                <img src="img/tamburi.jpg" alt="Tamburi e mototamburi per nastri trasportatori" loading="lazy">
             </div>
             <h3 class="card-prodotto-title">Tamburi e Mototamburi</h3>
         </a>
     </div>
 </section>
 
-<!-- CTA FINALE -->
 <section class="section container" style="text-align:center; background: rgba(255,255,255,0.02); border-radius:10px; padding:50px 20px;">
     <h2 class="section-title">Hai Bisogno di un Nastro Speciale o Fuori Standard?</h2>
     <p style="color:var(--text-muted, #a0a0a0); max-width:700px; margin:0 auto 30px;">
@@ -233,14 +220,14 @@
     <a href="#" class="btn btn-primary btn-preventivo" onclick="apriPopup(event)">Richiedi Studio di Fattibilità (RFQ)</a>
 </section>
 
-<!-- POPUP RFQ -->
+<!-- POPUP RFQ MODALE ACCESSIBILE -->
 <div class="popup-overlay" id="popup-overlay" onclick="chiudiPopupEsterno(event)">
-    <div class="popup-box" id="popup-preventivo">
-        <span class="popup-close" onclick="chiudiPopup()">&times;</span>
+    <div class="popup-box" id="popup-preventivo" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button type="button" class="popup-close" onclick="chiudiPopup()" aria-label="Chiudi popup">&times;</button>
 
         <div class="popup-content">
             <div class="popup-col popup-left">
-                <h2>Richiesta Preventivo Tecnico (RFQ)</h2>
+                <h2 id="modal-title">Richiesta Preventivo Tecnico (RFQ)</h2>
                 <p class="popup-desc">
                     Ricevi una valutazione di fattibilità ed un preventivo personalizzato entro 24 ore lavorative.
                 </p>
@@ -267,10 +254,10 @@
                     <textarea name="Messaggio" class="popup-input" placeholder="Dettagli richiesta (Dimensioni nastro, interasse, velocità, materiale trasportato)..." rows="4"></textarea>
 
                     <div class="filebox">
-                        <label class="filebox-title">Allega Scheda Tecnica / Disegno (PDF, DWG, PNG)</label>
-                        <div class="filebox-area">
-                            <p>Trascina il file qui o clicca per caricarlo</p>
-                            <input type="file" name="Allegato" class="filebox-input">
+                        <label for="file-upload" class="filebox-title">Allega Scheda Tecnica / Disegno (PDF, DWG, PNG)</label>
+                        <div class="filebox-area" id="drop-area">
+                            <p id="file-label-text">Trascina il file qui o clicca per caricarlo</p>
+                            <input type="file" id="file-upload" name="Allegato" class="filebox-input" onchange="gestisciFile(this)">
                         </div>
 
                         <div class="filebox-privacy">
@@ -286,18 +273,15 @@
     </div>
 </div>
 
-<!-- FOOTER -->
 <footer class="footer-sirio">
     <div class="footer-top">
-
         <div class="footer-col">
             <div class="footer-logo">
-                <img src="img/logo.jpg" alt="Sirio Nastri Trasportatori">
+                <img src="img/logo.jpg" alt="Sirio Nastri Trasportatori" loading="lazy">
             </div>
             <p class="footer-desc">
                 Progettazione e produzione di nastri trasportatori industriali, rulliere e sistemi completi di movimentazione.
             </p>
-
             <p class="footer-contact">📞 (+39) 011 953 9492</p>
             <p class="footer-contact">✉️ info@sirionastri.it</p>
         </div>
@@ -326,11 +310,10 @@
             <a href="prodotto-trasportatore-nastro.html">Trasportatori Lineari</a>
             <a href="prodotto-trasportatore-inclinato.html">Trasportatori Inclinati</a>
             <a href="prodotto-trasportatore-curva.html">Trasportatori Curvi</a>
-            <a href="prodotto-trasportatore-rulli.html">Rulliere & Inox</a>
+            <a href="prodotto-trasportatore-rulli.html">Acciaio Inox / Rulliere</a>
             <a href="prodotto-rulli.html">Rulli</a>
             <a href="prodotto-tamburi.html">Tamburi</a>
         </div>
-
     </div>
 
     <div class="footer-bottom">
@@ -340,24 +323,44 @@
 
 <script>
 function toggleMenu() {
-    document.querySelector('.hamburger').classList.toggle('active');
-    document.querySelector('nav').classList.toggle('open');
+    const btn = document.querySelector('.hamburger');
+    const nav = document.getElementById('main-nav');
+    const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+    
+    btn.classList.toggle('active');
+    btn.setAttribute('aria-expanded', !isExpanded);
+    nav.classList.toggle('open');
 }
 
 function apriPopup(e) {
     if(e) e.preventDefault();
     document.getElementById("popup-preventivo").classList.add("active");
     document.getElementById("popup-overlay").classList.add("active");
+    document.addEventListener('keydown', gestisciEsc);
 }
 
 function chiudiPopup() {
     document.getElementById("popup-preventivo").classList.remove("active");
     document.getElementById("popup-overlay").classList.remove("active");
+    document.removeEventListener('keydown', gestisciEsc);
 }
 
 function chiudiPopupEsterno(e) {
     if (e.target.id === "popup-overlay") {
         chiudiPopup();
+    }
+}
+
+function gestisciEsc(e) {
+    if (e.key === 'Escape') chiudiPopup();
+}
+
+function gestisciFile(input) {
+    const labelText = document.getElementById('file-label-text');
+    if (input.files && input.files[0]) {
+        labelText.textContent = `File selezionato: ${input.files[0].name}`;
+    } else {
+        labelText.textContent = 'Trascina il file qui o clicca per caricarlo';
     }
 }
 </script>
