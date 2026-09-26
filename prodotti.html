@@ -19,19 +19,19 @@
         </a>
     </div>
 
-    <!-- HAMBURGER MENU MOBILE -->
-    <div class="hamburger" onclick="toggleMenu()">
+    <!-- HAMBURGER MENU ACCESSIBILE -->
+    <button class="hamburger" aria-label="Apri menu navigazione" aria-expanded="false" onclick="toggleMenu()">
         <span></span>
         <span></span>
         <span></span>
-    </div>
+    </button>
 
     <nav>
         <div class="menu-voce"><a href="index.html">Home</a></div>
         <div class="menu-voce"><a href="azienda.html">Azienda</a></div>
         <div class="menu-voce"><a href="prodotti.html" class="active">Prodotti</a></div>
 
-        <!-- MEGA MENU CATALOGO TECNICO (3 COLONNE) -->
+        <!-- MEGA MENU CATALOGO TECNICO -->
         <div class="menu-voce menu-negozio">
             <a href="catalogo.html">Catalogo Tecnico</a>
 
@@ -54,13 +54,13 @@
                     <a href="prodotto-trasportatore-inclinato.html">Inclinati</a>
                     <a href="prodotto-trasportatore-curva.html">Curvi</a>
                     <a href="prodotto-trasportatore-rulli.html">Acciaio Inox / Rulliere</a>
-                    <a href="prodotto-trasportatore-custom.html">Personalizzati & Custom</a>
+                    <a href="prodotto-trasportatore-nastro.html">Personalizzati</a>
                 </div>
 
                 <!-- COLONNA 3: COMPONENTI -->
                 <div class="colonna">
                     <h4>Componenti & Ricambi</h4>
-                    <a href="prodotto-rulli.html">Rulli di Trascinamento</a>
+                    <a href="prodotto-rulli.html">Rulli</a>
                     <a href="prodotto-tamburi.html">Tamburi e Mototamburi</a>
                 </div>
             </div>
@@ -70,7 +70,7 @@
         <div class="menu-voce"><a href="contatti.html">Contatti</a></div>
 
         <div class="menu-voce">
-            <a href="#" class="btn-preventivo-nav" onclick="apriPopup(event)">Richiedi Preventivo (RFQ)</a>
+            <a href="#" class="btn-preventivo-nav">Richiedi Preventivo (RFQ)</a>
         </div>
     </nav>
 </header>
@@ -291,13 +291,13 @@
     <p style="color:var(--text-muted, #a0a0a0); max-width:700px; margin:0 auto 30px;">
         I nostri ingegneri sono a disposizione per analizzare i disegni del tuo impianto o effettuare un sopralluogo tecnico.
     </p>
-    <a href="#" class="btn btn-primary btn-preventivo" onclick="apriPopup(event)">Richiedi Valutazione Tecnica (RFQ)</a>
+    <a href="#" class="btn btn-primary btn-preventivo">Richiedi Valutazione Tecnica (RFQ)</a>
 </section>
 
 <!-- POPUP COMPLETO PREVENTIVO (RFQ) -->
 <div class="popup-overlay" id="popup-overlay" onclick="chiudiPopupEsterno(event)">
     <div class="popup-box" id="popup-preventivo">
-        <span class="popup-close" onclick="chiudiPopup()">&times;</span>
+        <button class="popup-close" aria-label="Chiudi finestra" onclick="chiudiPopup()">&times;</button>
 
         <div class="popup-content">
             <div class="popup-col popup-left">
@@ -347,7 +347,7 @@
     </div>
 </div>
 
-<!-- FOOTER -->
+<!-- FOOTER (SINCRONIZZATO CON INDEX E AZIENDA) -->
 <footer class="footer-sirio">
     <div class="footer-top">
 
@@ -369,6 +369,7 @@
             <h4>Navigazione</h4>
             <a href="index.html">Home</a>
             <a href="azienda.html">Azienda</a>
+            <a href="prodotti.html">Prodotti</a>
             <a href="catalogo.html">Catalogo Tecnico</a>
             <a href="portfolio.html">Portfolio</a>
             <a href="contatti.html">Contatti</a>
@@ -379,24 +380,24 @@
             <h4>Galleria Nastri</h4>
             <a href="prodotto-nastro-pvc.html">Nastro in PVC</a>
             <a href="prodotto-nastro-pu.html">Nastro in PU</a>
-            <a href="prodotto-nastro-gomma.html">Nastro in Gomma</a>
-            <a href="prodotto-nastro-alimentare.html">Nastro Alimentare (FDA)</a>
-            <a href="prodotto-nastro-alte-temperature.html">Nastro Alte Temperature</a>
-            <a href="prodotto-nastro-modulare.html">Nastro Modulare</a>
+            <a href="prodotto-nastro-gomma.html">Nastro in gomma</a>
+            <a href="prodotto-nastro-alimentare.html">Nastro alimentare (FDA)</a>
+            <a href="prodotto-nastro-alte-temperature.html">Nastro per alte temperature</a>
+            <a href="prodotto-nastro-modulare.html">Nastro modulare in plastica</a>
         </div>
 
         <!-- COLONNA 4: TRASPORTATORI & COMPONENTI -->
         <div class="footer-col">
-            <h4>Trasportatori & Componenti</h4>
+            <h4>Trasportatori</h4>
             <a href="prodotto-trasportatore-nastro.html">Lineari</a>
             <a href="prodotto-trasportatore-inclinato.html">Inclinati</a>
             <a href="prodotto-trasportatore-curva.html">Curvi</a>
             <a href="prodotto-trasportatore-rulli.html">Acciaio Inox / Rulliere</a>
-            <a href="prodotto-trasportatore-custom.html">Personalizzati & Custom</a>
+            <a href="prodotto-trasportatore-nastro.html">Personalizzati</a>
 
             <h4 style="margin-top:20px;">Componenti</h4>
             <a href="prodotto-rulli.html">Rulli</a>
-            <a href="prodotto-tamburi.html">Tamburi e Mototamburi</a>
+            <a href="prodotto-tamburi.html">Tamburi e mototamburi</a>
         </div>
 
     </div>
@@ -408,19 +409,25 @@
 
 <script>
 function toggleMenu() {
-    document.querySelector('.hamburger').classList.toggle('active');
-    document.querySelector('nav').classList.toggle('open');
+    const btn = document.querySelector('.hamburger');
+    const nav = document.querySelector('nav');
+    btn.classList.toggle('active');
+    nav.classList.toggle('open');
+    
+    const isOpen = nav.classList.contains('open');
+    btn.setAttribute('aria-expanded', isOpen);
 }
 
-function apriPopup(e) {
-    if(e) e.preventDefault();
+function apriPopup() {
     document.getElementById("popup-preventivo").classList.add("active");
     document.getElementById("popup-overlay").classList.add("active");
+    document.body.style.overflow = "hidden";
 }
 
 function chiudiPopup() {
     document.getElementById("popup-preventivo").classList.remove("active");
     document.getElementById("popup-overlay").classList.remove("active");
+    document.body.style.overflow = "";
 }
 
 function chiudiPopupEsterno(e) {
@@ -431,7 +438,8 @@ function chiudiPopupEsterno(e) {
 
 document.querySelectorAll(".btn-preventivo-nav, .btn-preventivo").forEach(btn => {
     btn.addEventListener("click", function(e) {
-        apriPopup(e);
+        e.preventDefault();
+        apriPopup();
     });
 });
 </script>
