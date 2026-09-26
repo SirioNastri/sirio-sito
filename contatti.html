@@ -147,6 +147,7 @@
 
         .field-group input[type="text"],
         .field-group input[type="email"],
+        .field-group input[type="tel"],
         .field-group textarea {
             width: 100%;
             background: #080a0d;
@@ -329,6 +330,8 @@
         <!-- FORM PAGINA CONTATTI -->
         <div class="form-box-pro">
             <form action="https://formsubmit.co/info@sirionastri.it" method="POST" enctype="multipart/form-data">
+                <!-- CAMPO HONEYPOT ANTI-SPAM (invisibile agli utenti) -->
+                <input type="text" name="_honey" style="display:none">
                 <input type="hidden" name="_subject" value="Nuovo Messaggio da Pagina Contatti">
                 <input type="hidden" name="_captcha" value="false">
 
@@ -350,7 +353,7 @@
                     </div>
                     <div class="field-group">
                         <label for="tel-page">Telefono *</label>
-                        <input type="text" id="tel-page" name="Telefono" placeholder="+39 011 000000" required>
+                        <input type="tel" id="tel-page" name="Telefono" placeholder="+39 011 000000" pattern="[0-9+\s\-]+" required>
                     </div>
                 </div>
 
@@ -362,9 +365,9 @@
                 <div class="field-group">
                     <label>Layout / PDF / DWG (Opzionale)</label>
                     <div class="file-dropzone" onclick="document.getElementById('file-input-page').click()">
-                        <p style="margin:0; font-size: 13px; color: #a0aab8;">📁 Clicca per selezionare o trascina il file</p>
+                        <p style="margin:0; font-size: 13px; color: #a0aab8;">📁 Clicca per selezionare o trascina il file qui</p>
+                        <input type="file" name="Allegato" id="file-input-page" style="display:none;" accept=".pdf,.dwg,.dxf,.zip,.rar,.step,.stp">
                     </div>
-                    <input type="file" name="Allegato" id="file-input-page" style="display:none;" accept=".pdf,.dwg,.dxf,.zip,.rar,.step,.stp">
                 </div>
 
                 <div style="display:flex; align-items:center; gap:8px; margin-bottom: 20px;">
@@ -417,6 +420,8 @@
 
             <div class="popup-col popup-right">
                 <form action="https://formsubmit.co/info@sirionastri.it" method="POST" enctype="multipart/form-data" class="popup-form">
+                    <!-- HONEYPOT ANTI-SPAM -->
+                    <input type="text" name="_honey" style="display:none">
                     <input type="hidden" name="_subject" value="Richiesta Preventivo RFQ dal Popup Contatti">
                     <input type="hidden" name="_captcha" value="false">
 
@@ -424,14 +429,14 @@
                     <input type="text" name="Nome" class="popup-input" placeholder="Nome *" required>
                     <input type="text" name="Cognome" class="popup-input" placeholder="Cognome *" required>
                     <input type="email" name="Email" class="popup-input" placeholder="Email Aziendale *" required>
-                    <input type="tel" name="Telefono" class="popup-input" placeholder="Telefono Diretto">
+                    <input type="tel" name="Telefono" class="popup-input" placeholder="Telefono Diretto *" pattern="[0-9+\s\-]+" required>
                     <textarea name="Messaggio" class="popup-input" placeholder="Dettagli tecnici (Dimensioni, Portata, Velocità, Materiale)..." rows="4"></textarea>
 
                     <div class="filebox">
                         <label for="file-upload-popup" class="filebox-title">Allega Layout / Disegno Tecnico (PDF, DWG, PNG)</label>
-                        <div class="filebox-area">
-                            <p>Trascina il file qui o clicca per caricarlo</p>
-                            <input type="file" id="file-upload-popup" name="Allegato" class="filebox-input" accept=".pdf,.dwg,.dxf,.zip,.rar,.step,.stp">
+                        <div class="filebox-area" onclick="document.getElementById('file-upload-popup').click()">
+                            <p style="margin:0;">Trascina il file qui o clicca per caricarlo</p>
+                            <input type="file" id="file-upload-popup" name="Allegato" class="filebox-input" accept=".pdf,.dwg,.dxf,.zip,.rar,.step,.stp" style="display:none;">
                         </div>
 
                         <div class="filebox-privacy">
@@ -512,21 +517,66 @@ function toggleMenu() {
 function apriPopup() {
     const popup = document.getElementById("popup-preventivo");
     const overlay = document.getElementById("popup-overlay");
-    popup.classList.add("active");
-    overlay.classList.add("active");
-    overlay.setAttribute("aria-hidden", "false");
+    if (popup && overlay) {
+        popup.classList.add("active");
+        overlay.classList.add("active");
+        overlay.setAttribute("aria-hidden", "false");
+    }
 }
 
 function chiudiPopup() {
-    document.getElementById("popup-preventivo");
     const popup = document.getElementById("popup-preventivo");
     const overlay = document.getElementById("popup-overlay");
-    popup.classList.remove("active");
-    overlay.classList.remove("active");
-    overlay.setAttribute("aria-hidden", "true");
+    if (popup && overlay) {
+        popup.classList.remove("active");
+        overlay.classList.remove("active");
+        overlay.setAttribute("aria-hidden", "true");
+    }
 }
 
 document.addEventListener("DOMContentLoaded", function() {
+    // Gestione Drag & Drop e Feedback Nome File (sia per il form in pagina che nel popup)
+    const dropContainers = document.querySelectorAll('.file-dropzone, .filebox-area');
+
+    dropContainers.forEach(container => {
+        const fileInput = container.querySelector('input[type="file"]');
+        const textElement = container.querySelector('p');
+
+        if (container && fileInput) {
+            ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+                container.addEventListener(eventName, (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                }, false);
+            });
+
+            ['dragenter', 'dragover'].forEach(eventName => {
+                container.addEventListener(eventName, () => container.style.borderColor = '#a2ff00', false);
+            });
+
+            ['dragleave', 'drop'].forEach(eventName => {
+                container.addEventListener(eventName, () => container.style.borderColor = '#2a313e', false);
+            });
+
+            container.addEventListener('drop', (e) => {
+                const files = e.dataTransfer.files;
+                if (files.length > 0) {
+                    fileInput.files = files;
+                    if (textElement) {
+                        textElement.innerHTML = `📄 File selezionato: <strong style="color:#a2ff00">${files[0].name}</strong>`;
+                    }
+                }
+            });
+
+            fileInput.addEventListener('change', () => {
+                if (fileInput.files.length > 0 && textElement) {
+                    textElement.innerHTML = `📄 File selezionato: <strong style="color:#a2ff00">${fileInput.files[0].name}</strong>`;
+                }
+            });
+        }
+    });
+
+    // Fix click sul link catalogo
     const linkCatalogo = document.querySelector('.menu-dropdown > a');
     if (linkCatalogo) {
         linkCatalogo.addEventListener('click', function(e) {
@@ -534,6 +584,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
+    // Apertura Popup da tutti i bottoni dedicati
     document.querySelectorAll(".btn-preventivo-nav, .btn-preventivo").forEach(btn => {
         btn.addEventListener("click", function(e) {
             e.preventDefault();
@@ -541,6 +592,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
+    // Chiusura Popup con tasto ESC
     document.addEventListener("keydown", function(e) {
         if (e.key === "Escape") {
             chiudiPopup();
