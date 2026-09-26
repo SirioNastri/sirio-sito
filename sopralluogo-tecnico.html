@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sopralluogo Tecnico | Sirio Nastri Trasportatori</title>
-    <link rel="stylesheet" href="css/style.css?v=8">
+    <link rel="stylesheet" href="css/style.css?v=9">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
@@ -65,20 +65,20 @@
 
 <body>
 
-<header>
+<header class="header-main">
     <div class="logo">
         <a href="index.html">
             <img src="img/logo.jpg" alt="Sirio Nastri Trasportatori">
         </a>
     </div>
 
-    <div class="hamburger" onclick="toggleMenu()">
+    <button class="hamburger" aria-label="Apri menu navigazione" aria-expanded="false" onclick="toggleMenu()">
         <span></span>
         <span></span>
         <span></span>
-    </div>
+    </button>
 
-    <nav>
+    <nav id="main-nav">
         <div class="menu-voce"><a href="index.html">Home</a></div>
         <div class="menu-voce"><a href="azienda.html">Azienda</a></div>
         <div class="menu-voce"><a href="prodotti.html">Prodotti</a></div>
@@ -120,7 +120,7 @@
         <div class="menu-voce"><a href="contatti.html">Contatti</a></div>
 
         <div class="menu-voce">
-            <a href="#" class="btn-preventivo-nav" onclick="apriPopup()">Richiedi preventivo</a>
+            <a href="#" class="btn-preventivo-nav" onclick="apriPopup(event)">Richiedi preventivo</a>
         </div>
     </nav>
 </header>
@@ -170,7 +170,7 @@
                 <li>Normative di sicurezza e requisiti del settore</li>
             </ul>
 
-            <h3>Perché il sopralluogo è fundamental</h3>
+            <h3>Perché il sopralluogo è fondamentale</h3>
 
             <p>
                 Un’analisi accurata ci permette di scegliere il tipo di nastro più adatto  
@@ -187,7 +187,7 @@
         </div>
 
         <div class="info-grid-img">
-            <img src="img/sopralluogo-tecnico-sirio.jpg" alt="Sopralluogo tecnico Sirio" onerror="this.src='img/logo.jpg'">
+            <img src="img/sopralluogo-tecnico-sirio.jpg" alt="Sopralluogo tecnico Sirio" onerror="this.src='img/logo.jpg'" loading="lazy">
         </div>
 
     </div>
@@ -199,24 +199,24 @@
 </section>
 
 
-<!-- POPUP PREVENTIVO -->
-<div class="popup-overlay" id="popup-overlay">
-    <div class="popup-box" id="popup-preventivo">
-        <span class="popup-close" onclick="chiudiPopup()">&times;</span>
-        <div class="popup-content" style="display:flex; gap:40px;">
-
-            <div class="popup-col popup-left" style="flex:1;">
-                <h2>Richiedi Preventivo</h2>
+<!-- POPUP PREVENTIVO / RFQ (Con gestione anti-bug e feedback file) -->
+<div class="popup-overlay" id="popup-overlay" onclick="chiudiPopupEsterno(event)">
+    <div class="popup-box" id="popup-preventivo" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button type="button" class="popup-close" onclick="chiudiPopup()" aria-label="Chiudi popup">&times;</button>
+        
+        <div class="popup-content">
+            <div class="popup-col popup-left">
+                <h2 id="modal-title">Richiedi Preventivo</h2>
                 <p class="popup-desc">
                     Un nostro tecnico ti risponderà entro 24 ore con una soluzione su misura per la tua linea produttiva.
                 </p>
                 <h3>Perché contattarci</h3>
                 <ul class="popup-points">
-                    <li>Consulenza tecnica gratuita</li>
-                    <li>Preventivi chiari e senza impegno</li>
-                    <li>Soluzioni personalizzate per ogni settore</li>
-                    <li>Supporto diretto con un progettista</li>
-                    <li>Risposta rapida e professionale</li>
+                    <li><i class="fa-solid fa-check"></i> Consulenza tecnica gratuita</li>
+                    <li><i class="fa-solid fa-check"></i> Preventivi chiari e senza impegno</li>
+                    <li><i class="fa-solid fa-check"></i> Soluzioni personalizzate per ogni settore</li>
+                    <li><i class="fa-solid fa-check"></i> Supporto diretto con un progettista</li>
+                    <li><i class="fa-solid fa-check"></i> Risposta rapida e professionale</li>
                 </ul>
                 <h3>Chi ti risponderà</h3>
                 <p>
@@ -224,31 +224,35 @@
                 </p>
             </div>
 
-            <div class="popup-col popup-right" style="flex:1;">
-                <form class="popup-form">
-                    <input type="text" class="popup-input" placeholder="Azienda">
-                    <input type="text" class="popup-input" placeholder="Nome *" required>
-                    <input type="text" class="popup-input" placeholder="Cognome *" required>
-                    <input type="email" class="popup-input" placeholder="Email *" required>
-                    <input type="text" class="popup-input" placeholder="Telefono">
-                    <textarea class="popup-input" placeholder="Messaggio" rows="4"></textarea>
+            <div class="popup-col popup-right">
+                <form action="https://formsubmit.co/info@sirionastri.it" method="POST" enctype="multipart/form-data" class="popup-form">
+                    <input type="hidden" name="_subject" value="Nuova Richiesta RFQ da Sopralluogo Tecnico">
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <input type="text" name="Azienda" class="popup-input" placeholder="Azienda">
+                    <div class="form-row">
+                        <input type="text" name="Nome" class="popup-input" placeholder="Nome *" required>
+                        <input type="text" name="Cognome" class="popup-input" placeholder="Cognome *" required>
+                    </div>
+                    <input type="email" name="Email" class="popup-input" placeholder="Email *" required>
+                    <input type="tel" name="Telefono" class="popup-input" placeholder="Telefono">
+                    <textarea name="Messaggio" class="popup-input" placeholder="Messaggio..." rows="4"></textarea>
 
                     <div class="filebox">
-                        <label class="filebox-title">Allega un file</label>
-                        <div class="filebox-area">
-                            <p>Fai clic o trascina il file su quest'area per caricarlo.</p>
-                            <input type="file" class="filebox-input">
+                        <label for="file-upload" class="filebox-title">Allega un file</label>
+                        <div class="filebox-area" id="drop-area">
+                            <p id="file-label-text">Fai clic o trascina il file su quest'area per caricarlo.</p>
+                            <input type="file" id="file-upload" name="Allegato" class="filebox-input" onchange="gestisciFile(this)">
                         </div>
                         <div class="filebox-privacy">
-                            <input type="checkbox" id="privacy-check">
-                            <label for="privacy-check">Accetto la Privacy Policy</label>
+                            <input type="checkbox" id="privacy-check" name="Privacy" value="Accettata" required>
+                            <label for="privacy-check">Accetto la Privacy Policy *</label>
                         </div>
                     </div>
 
                     <button type="submit" class="popup-btn">Invia richiesta</button>
                 </form>
             </div>
-
         </div>
     </div>
 </div>
@@ -312,18 +316,47 @@
 
 <script>
 function toggleMenu() {
-    document.querySelector('.hamburger').classList.toggle('active');
-    document.querySelector('nav').classList.toggle('open');
+    const btn = document.querySelector('.hamburger');
+    const nav = document.getElementById('main-nav');
+    const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+    
+    btn.classList.toggle('active');
+    btn.setAttribute('aria-expanded', !isExpanded);
+    nav.classList.toggle('open');
 }
 
-function apriPopup() {
+function apriPopup(e) {
+    if(e) e.preventDefault();
     document.getElementById("popup-preventivo").classList.add("active");
     document.getElementById("popup-overlay").classList.add("active");
+    document.body.style.overflow = "hidden";
+    document.addEventListener('keydown', gestisciEsc);
 }
 
 function chiudiPopup() {
     document.getElementById("popup-preventivo").classList.remove("active");
     document.getElementById("popup-overlay").classList.remove("active");
+    document.body.style.overflow = "";
+    document.removeEventListener('keydown', gestisciEsc);
+}
+
+function chiudiPopupEsterno(e) {
+    if (e.target.id === "popup-overlay") {
+        chiudiPopup();
+    }
+}
+
+function gestisciEsc(e) {
+    if (e.key === 'Escape') chiudiPopup();
+}
+
+function gestisciFile(input) {
+    const labelText = document.getElementById('file-label-text');
+    if (input.files && input.files[0]) {
+        labelText.textContent = `File allegato: ${input.files[0].name}`;
+    } else {
+        labelText.textContent = 'Fai clic o trascina il file su quest\'area per caricarlo.';
+    }
 }
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -336,8 +369,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     document.querySelectorAll(".btn-preventivo-nav, .btn-preventivo").forEach(btn => {
         btn.addEventListener("click", function(e) {
-            e.preventDefault();
-            apriPopup();
+            apriPopup(e);
         });
     });
 });
