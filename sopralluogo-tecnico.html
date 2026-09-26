@@ -4,28 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sopralluogo Tecnico | Sirio Nastri Trasportatori</title>
-    <link rel="stylesheet" href="css/style.css?v=9">
+    <link rel="stylesheet" href="css/style.css?v=8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* CONTENITORE UNICO PER ALINEARE TASTO, TITOLO E GRIGLIA SULLO STESSO ASSE */
-        .page-container {
+        /* TASTO INDIETRO ISOLATO A SINISTRA */
+        .back-wrapper-left {
             max-width: 1200px;
-            margin: 0 auto;
+            margin: 20px auto 10px auto;
             padding: 0 20px;
+            text-align: left;
         }
 
-        .back-wrapper {
-            margin-top: 20px;
-            margin-bottom: 15px;
-        }
-
+        /* TITOLO E CONTENUTO RI-ALLINEATI AL CENTRO / LAYOUT ORIGINALE */
         .page-title-custom {
             color: var(--accent, #a2ff00);
             font-size: 36px;
             font-weight: 800;
-            margin: 0 0 30px 0;
-            text-align: left;
+            margin: 10px 0 30px;
+            text-align: center;
         }
 
         .info-grid-text ul {
@@ -58,8 +55,10 @@
         }
 
         .cta-bottom-wrapper {
-            margin-top: 40px;
-            margin-bottom: 60px;
+            max-width: 1200px;
+            margin: 40px auto 60px;
+            padding: 0 20px;
+            text-align: center;
         }
     </style>
 </head>
@@ -128,74 +127,73 @@
 
 
 <section class="section" style="padding-top: 10px;">
-    
-    <div class="page-container">
-        
-        <!-- BOTTONE INDIETRO PERFETTAMENTE ALLINEATO CON IL TESTO SOTTO -->
-        <div class="back-wrapper">
-            <a href="javascript:history.back()" class="btn btn-primary back-btn">← Torna indietro</a>
-        </div>
 
+    <!-- SOLO QUESTO TASTO VA A SINISTRA -->
+    <div class="back-wrapper-left">
+        <a href="javascript:history.back()" class="btn btn-primary back-btn">← Torna indietro</a>
+    </div>
+
+    <!-- IL RESTO TORNA IN MEZZO -->
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
         <h1 class="page-title-custom">Sopralluogo tecnico</h1>
+    </div>
 
-        <div class="info-grid" style="margin-top: 0;">
+    <div class="info-grid" style="margin-top: 0;">
 
-            <div class="info-grid-text">
+        <div class="info-grid-text">
 
-                <h2>Analisi dell’ambiente e studio delle esigenze reali</h2>
+            <h2>Analisi dell’ambiente e studio delle esigenze reali</h2>
 
-                <p>
-                    Ogni impianto di movimentazione nasce da un sopralluogo accurato.  
-                    Entriamo in azienda per osservare da vicino il ciclo produttivo, analizzare gli spazi,
-                    valutare i materiali da trasportare e comprendere le reali necessità operative.
-                </p>
+            <p>
+                Ogni impianto di movimentazione nasce da un sopralluogo accurato.  
+                Entriamo in azienda per osservare da vicino il ciclo produttivo, analizzare gli spazi,
+                valutare i materiali da trasportare e comprendere le reali necessità operative.
+            </p>
 
-                <p>Il nostro obiettivo è progettare un sistema che:</p>
+            <p>Il nostro obiettivo è progettare un sistema che:</p>
 
-                <ul>
-                    <li>Ottimizzi i flussi produttivi</li>
-                    <li>Migliori la sicurezza degli operatori</li>
-                    <li>Si integri perfettamente con macchinari e layout esistenti</li>
-                    <li>Riduca tempi morti, sprechi e movimentazioni inutili</li>
-                </ul>
+            <ul>
+                <li>Ottimizzi i flussi produttivi</li>
+                <li>Migliori la sicurezza degli operatori</li>
+                <li>Si integri perfettamente con macchinari e layout esistenti</li>
+                <li>Riduca tempi morti, sprechi e movimentazioni inutili</li>
+            </ul>
 
-                <h3>Cosa valutiamo durante il sopralluogo</h3>
+            <h3>Cosa valutiamo durante il sopralluogo</h3>
 
-                <ul>
-                    <li>Tipologia di materiale da movimentare (sfuso, confezionato, alimentare, abrasivo)</li>
-                    <li>Portata richiesta e velocità del nastro</li>
-                    <li>Spazi disponibili e vincoli strutturali</li>
-                    <li>Condizioni ambientali: temperatura, umidità, presenza di oli o polveri</li>
-                    <li>Compatibilità con linee produttive già presenti</li>
-                    <li>Normative di sicurezza e requisiti del settore</li>
-                </ul>
+            <ul>
+                <li>Tipologia di materiale da movimentare (sfuso, confezionato, alimentare, abrasivo)</li>
+                <li>Portata richiesta e velocità del nastro</li>
+                <li>Spazi disponibili e vincoli strutturali</li>
+                <li>Condizioni ambientali: temperatura, umidità, presenza di oli o polveri</li>
+                <li>Compatibilità con linee produttive già presenti</li>
+                <li>Normative di sicurezza e requisiti del settore</li>
+            </ul>
 
-                <h3>Perché il sopralluogo è fondamentale</h3>
+            <h3>Perché il sopralluogo è fundamental</h3>
 
-                <p>
-                    Un’analisi accurata ci permette di scegliere il tipo di nastro più adatto  
-                    (PVC, PU, gomma, modulare, alimentare, alta temperatura)  
-                    e di progettare un trasportatore che garantisca affidabilità, durata e facilità di manutenzione.
-                </p>
+            <p>
+                Un’analisi accurata ci permette di scegliere il tipo di nastro più adatto  
+                (PVC, PU, gomma, modulare, alimentare, alta temperatura)  
+                e di progettare un trasportatore che garantisca affidabilità, durata e facilità di manutenzione.
+            </p>
 
-                <p>
-                    Grazie all’esperienza maturata in diversi settori — alimentare, logistico, metalmeccanico,
-                    packaging, agricolo — siamo in grado di individuare rapidamente le soluzioni più efficaci
-                    per migliorare la produttività e ridurre i costi operativi.
-                </p>
-
-            </div>
-
-            <div class="info-grid-img">
-                <img src="img/sopralluogo-tecnico-sirio.jpg" alt="Sopralluogo tecnico Sirio" onerror="this.src='img/logo.jpg'">
-            </div>
+            <p>
+                Grazie all’esperienza maturata in diversi settori — alimentare, logistico, metalmeccanico,
+                packaging, agricolo — siamo in grado di individuare rapidamente le soluzioni più efficaci
+                per migliorare la produttività e ridurre i costi operativi.
+            </p>
 
         </div>
 
-        <div class="cta-bottom-wrapper">
-            <a href="contatti.html" class="btn btn-primary">Contattaci per assistenza →</a>
+        <div class="info-grid-img">
+            <img src="img/sopralluogo-tecnico-sirio.jpg" alt="Sopralluogo tecnico Sirio" onerror="this.src='img/logo.jpg'">
         </div>
 
+    </div>
+
+    <div class="cta-bottom-wrapper">
+        <a href="contatti.html" class="btn btn-primary">Contattaci per assistenza →</a>
     </div>
 
 </section>
@@ -256,7 +254,7 @@
 </div>
 
 
-<!-- FOOTER SENTO SOCIAL E CON CATALOGO TECNICO -->
+<!-- FOOTER -->
 <footer class="footer-sirio">
     <div class="footer-top">
 
