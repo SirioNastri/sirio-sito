@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nastro in PU - Sirio Nastri Trasportatori</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -12,81 +13,76 @@
 <header>
     <div class="logo">✦ SIRIO NASTRI TRASPORTATORI</div>
 
-    <nav>
+    <button class="hamburger" aria-label="Apri menu navigazione" aria-expanded="false" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 
+    <nav>
         <div class="menu-voce"><a href="index.html">Home</a></div>
-<div class="menu-voce"><a href="azienda.html">Azienda</a></div>
+        <div class="menu-voce"><a href="azienda.html">Azienda</a></div>
         <div class="menu-voce"><a href="prodotti.html">Prodotti</a></div>
 
         <div class="menu-voce menu-negozio">
-            <a href="negozio.html"class="active">Negozio</a>
+            <a href="negozio.html" class="active">Negozio</a>
 
             <div class="mega-negozio">
-
                 <!-- COLONNA 1: NASTRI TRASPORTATORI -->
                 <div class="colonna">
-<h4>Galleria immagini</h4>
-<a href="prodotto-nastro-pvc.html">Nastro in PVC</a>
-<a href="prodotto-nastro-pu.html">Nastro in PU</a>
-<a href="prodotto-nastro-gomma.html">Nastro in gomma</a>
-<a href="prodotto-nastro-alimentare.html">Nastro alimentare (FDA)</a>
-<a href="prodotto-nastro-alte-temperature.html">Nastro per alte temperature</a>
-<a href="prodotto-nastro-modulare.html">Nastro modulare in plastica</a>
-
+                    <h4>Nastri trasportatori</h4>
+                    <a href="prodotto-nastro-pvc.html">Nastro in PVC</a>
+                    <a href="prodotto-nastro-pu.html">Nastro in PU</a>
+                    <a href="prodotto-nastro-gomma.html">Nastro in gomma</a>
+                    <a href="prodotto-nastro-alimentare.html">Nastro alimentare (FDA)</a>
+                    <a href="prodotto-nastro-alte-temperature.html">Nastro per alte temperature</a>
+                    <a href="prodotto-nastro-modulare.html">Nastro modulare in plastica</a>
                 </div>
 
                 <!-- COLONNA 2: TRASPORTATORI COMPLETI -->
                 <div class="colonna">
                    <h4>Trasportatori completi</h4>
-<a href="prodotto-trasportatore-nastro.html">Lineari</a>
-<a href="prodotto-trasportatore-inclinato.html">Inclinati</a>
-<a href="prodotto-trasportatore-curva.html">Curvi</a>
-<a href="prodotto-trasportatore-rulli.html">Acciaio inox / Rulliere</a>
-<a href="prodotto-trasportatore-nastro.html">Personalizzati</a>
-
+                    <a href="prodotto-trasportatore-nastro.html">Lineari</a>
+                    <a href="prodotto-trasportatore-inclinato.html">Inclinati</a>
+                    <a href="prodotto-trasportatore-curva.html">Curvi</a>
+                    <a href="prodotto-trasportatore-rulli.html">Acciaio inox / Rulliere</a>
+                    <a href="prodotto-trasportatore-nastro.html">Personalizzati</a>
                 </div>
 
                 <!-- COLONNA 3: COMPONENTI -->
                 <div class="colonna">
-                  <h4>Componenti</h4>
-<a href="prodotto-rulli.html">Rulli</a>
-<a href="prodotto-tamburi.html">Tamburi e mototamburi</a>
-
+                    <h4>Componenti</h4>
+                    <a href="prodotto-rulli.html">Rulli</a>
+                    <a href="prodotto-tamburi.html">Tamburi e mototamburi</a>
                 </div>
-
             </div>
         </div>
 
         <div class="menu-voce"><a href="portfolio.html">Portfolio</a></div>
         <div class="menu-voce"><a href="contatti.html">Contatti</a></div>
 
-        <!-- ⭐ NUOVO BOTTONE SEMPRE VISIBILE -->
         <div class="menu-voce">
-<a href="#" class="btn-preventivo-nav">Richiedi preventivo</a>
+            <a href="#" class="btn-preventivo-nav">Richiedi preventivo</a>
         </div>
-
     </nav>
 </header>
 
 <a href="negozio.html" class="back-btn">← Torna al Negozio</a>
 
-<section class="blog-hero">
+<section class="blog-hero" style="text-align: center;">
     <h1 class="section-title">Nastro trasportatore in PU</h1>
     <p class="blog-subtitle">Codice interno: <strong>PU-01</strong></p>
 </section>
 
 <section class="info-grid">
     <div class="info-grid-img">
-        <img src="img/nastro-pu.jpg" alt="Nastro in PU">
+        <img src="img/nastro-pu.jpg" alt="Nastro in PU" onerror="this.src='img/logo.jpg'">
     </div>
 
     <div class="info-grid-text">
         <h2>Descrizione tecnica</h2>
         <p>
-            I nastri in PU (poliuretano) sono ideali per applicazioni che richiedono elevata resistenza 
-            meccanica, durata nel tempo e ottima igiene. Sono particolarmente indicati per il settore 
-            alimentare e farmaceutico grazie alla loro superficie liscia, impermeabile e facilmente 
-            sanificabile.
+            I nastri in PU (poliuretano) sono ideali per applicazioni che richiedono elevata resistenza meccanica, durata nel tempo e ottima igiene. Sono particolarmente indicati per il settore alimentare e farmaceutico grazie alla loro superficie liscia, impermeabile e facilmente sanificabile.
         </p>
 
         <h3>Caratteristiche principali</h3>
@@ -105,7 +101,7 @@
             <li>Movimentazione prodotti delicati</li>
         </ul>
 
-        <a href="contatti.html" class="btn btn-primary" style="margin-top: 20px;">
+        <a href="#" class="btn btn-primary btn-preventivo" style="margin-top: 20px;">
             Richiedi preventivo
         </a>
     </div>
@@ -114,28 +110,23 @@
 <section class="blog-cta">
     <h2>Serve una versione personalizzata?</h2>
     <p>Realizziamo nastri in PU su misura per ogni impianto.</p>
-    <a href="contatti.html" class="btn btn-primary">Contattaci</a>
+    <a href="#" class="btn btn-primary btn-preventivo">Contattaci</a>
 </section>
 
-     <!-- ============================
-     POPUP COMPLETO
+<!-- ============================
+     POPUP COMPLETO RFQ
 ============================ -->
-<div class="popup-overlay" id="popup-overlay">
-
-    <div class="popup-box" id="popup-preventivo">
-
+<div class="popup-overlay" id="popup-overlay" onclick="chiudiPopupEsterno(event)">
+    <div class="popup-box" id="popup-preventivo" role="dialog" aria-modal="true" aria-labelledby="modal-title">
         <span class="popup-close" onclick="chiudiPopup()">&times;</span>
 
         <div class="popup-content" style="display:flex; gap:40px;">
-
             <!-- SINISTRA -->
             <div class="popup-col popup-left" style="flex:1;">
-                <h2>Richiedi Preventivo</h2>
-
+                <h2 id="modal-title">Richiedi Preventivo (RFQ)</h2>
                 <p class="popup-desc">
                     Un nostro tecnico ti risponderà entro 24 ore con una soluzione su misura per la tua linea produttiva.
                 </p>
-
                 <h3>Perché contattarci</h3>
                 <ul class="popup-points">
                     <li>Consulenza tecnica gratuita</li>
@@ -144,120 +135,60 @@
                     <li>Supporto diretto con un progettista</li>
                     <li>Risposta rapida e professionale</li>
                 </ul>
-
                 <h3>Chi ti risponderà</h3>
                 <p>
                     Il nostro team tecnico analizzerà la tua richiesta e ti guiderà nella scelta del nastro o del trasportatore più adatto.
                 </p>
             </div>
 
-            <!-- DESTRA FORM -->
+            <!-- DESTRA FORM CON ANTISPAM -->
             <div class="popup-col popup-right" style="flex:1;">
-                <form class="popup-form">
+                <form action="https://formsubmit.co/info@sirionastri.it" method="POST" enctype="multipart/form-data" class="popup-form">
+                    <input type="hidden" name="_subject" value="Nuova Richiesta RFQ da Nastro in PU (Codice: PU-01)">
+                    <input type="hidden" name="_captcha" value="false">
+                    <!-- Campo Honeypot Anti-Spam -->
+                    <input type="text" name="_honey" style="display:none">
 
-                    <input type="text" class="popup-input" placeholder="Azienda">
-                    <input type="text" class="popup-input" placeholder="Nome *" required>
-                    <input type="text" class="popup-input" placeholder="Cognome *" required>
-                    <input type="email" class="popup-input" placeholder="Email *" required>
-                    <input type="text" class="popup-input" placeholder="Telefono">
-                    <textarea class="popup-input" placeholder="Messaggio" rows="4"></textarea>
+                    <input type="text" name="Azienda" class="popup-input" placeholder="Azienda">
+                    <div style="display: flex; gap: 10px;">
+                        <input type="text" name="Nome" class="popup-input" placeholder="Nome *" required style="flex:1;">
+                        <input type="text" name="Cognome" class="popup-input" placeholder="Cognome *" required style="flex:1;">
+                    </div>
+                    <input type="email" name="Email" class="popup-input" placeholder="Email *" required>
+                    <input type="tel" name="Telefono" class="popup-input" placeholder="Telefono">
+                    <textarea name="Messaggio" class="popup-input" placeholder="Messaggio..." rows="4"></textarea>
 
                     <div class="filebox">
-                        <label class="filebox-title">Allega un file</label>
-
-                        <div class="filebox-area">
-                            <p>Fai clic o trascina il file su quest'area per caricarlo.</p>
-                            <input type="file" class="filebox-input">
+                        <label for="file-upload" class="filebox-title">Allega un file</label>
+                        <div class="filebox-area" id="drop-area">
+                            <p id="file-label-text">Fai clic o trascina il file su quest'area per caricarlo.</p>
+                            <input type="file" id="file-upload" name="Allegato" class="filebox-input" onchange="gestisciFile(this)">
                         </div>
-
                         <div class="filebox-privacy">
-                            <input type="checkbox" id="privacy-check">
-                            <label for="privacy-check">Accetto la Privacy Policy</label>
+                            <input type="checkbox" id="privacy-check" name="Privacy" value="Accettata" required>
+                            <label for="privacy-check">Accetto la Privacy Policy *</label>
                         </div>
                     </div>
 
                     <button type="submit" class="popup-btn">Invia richiesta</button>
-
                 </form>
             </div>
-
         </div>
-
     </div>
 </div>
-    
-      <!-- ============================
-     POPUP PAGINE INTERNE
-============================ -->
-<div class="popup-overlay" id="popup-interno-overlay">
 
-    <div class="popup-box" id="popup-interno-box">
-
-        <span class="popup-close" onclick="chiudiPopupInterno()">&times;</span>
-
-        <div id="popup-interno-content">
-            <!-- Qui dentro verrà caricata la pagina interna -->
-        </div>
-
-    </div>
-</div>
-    
-<script>
-function apriPopup() {
-    document.getElementById("popup-preventivo").classList.add("active");
-    document.getElementById("popup-overlay").classList.add("active");
-}
-
-function chiudiPopup() {
-    document.getElementById("popup-preventivo").classList.remove("active");
-    document.getElementById("popup-overlay").classList.remove("active");
-}
-
-document.querySelectorAll(".btn-preventivo-nav, .btn-preventivo").forEach(btn => {
-    btn.addEventListener("click", function(e) {
-        e.preventDefault();
-        apriPopup();
-    });
-});
-</script> 
-
-    <script>
-function apriPopupInterno(url) {
-    fetch(url)
-        .then(res => res.text())
-        .then(html => {
-            document.getElementById("popup-interno-content").innerHTML = html;
-            document.getElementById("popup-interno-overlay").classList.add("active");
-        });
-}
-
-function chiudiPopupInterno() {
-    document.getElementById("popup-interno-overlay").classList.remove("active");
-}
-</script>
-
-    <footer class="footer-sirio">
-
+<footer class="footer-sirio">
     <div class="footer-top">
-
         <!-- COLONNA 1: LOGO + DESCRIZIONE + CONTATTI -->
         <div class="footer-col">
-           <div class="footer-logo">
-    <img src="img/logo.jpg" alt="Sirio Nastri Trasportatori">
-</div>
+            <div class="footer-logo">
+                <img src="img/logo.jpg" alt="Sirio Nastri Trasportatori">
+            </div>
             <p class="footer-desc">
                 Produzione di nastri trasportatori, trasportatori completi e sistemi di movimentazione industriale.
             </p>
-
             <p class="footer-contact">📞 (+39) 011 953 9492 </p>
             <p class="footer-contact">✉️ info@sirionastri.it</p>
-
-            <div class="footer-social">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-            </div>
         </div>
 
         <!-- COLONNA 2: MENU PRINCIPALE -->
@@ -295,21 +226,59 @@ function chiudiPopupInterno() {
             <a href="prodotto-rulli.html">Rulli</a>
             <a href="prodotto-tamburi.html">Tamburi e mototamburi</a>
         </div>
-
     </div>
 
     <div class="footer-bottom">
         © 2026 SIRIO Nastri Trasportatori S.r.L. — P.IVA 07016110012 — Tutti i diritti riservati
     </div>
-
 </footer>
 
-    <script>
+<script>
 function toggleMenu() {
     document.querySelector('.hamburger').classList.toggle('active');
     document.querySelector('nav').classList.toggle('open');
 }
+
+function apriPopup(e) {
+    if(e) e.preventDefault();
+    document.getElementById("popup-preventivo").classList.add("active");
+    document.getElementById("popup-overlay").classList.add("active");
+    document.body.style.overflow = "hidden";
+    document.addEventListener('keydown', gestisciEsc);
+}
+
+function chiudiPopup() {
+    document.getElementById("popup-preventivo").classList.remove("active");
+    document.getElementById("popup-overlay").classList.remove("active");
+    document.body.style.overflow = "";
+    document.removeEventListener('keydown', gestisciEsc);
+}
+
+function chiudiPopupEsterno(e) {
+    if (e.target.id === "popup-overlay") {
+        chiudiPopup();
+    }
+}
+
+function gestisciEsc(e) {
+    if (e.key === 'Escape') chiudiPopup();
+}
+
+function gestisciFile(input) {
+    const labelText = document.getElementById('file-label-text');
+    if (input.files && input.files[0]) {
+        labelText.textContent = `File allegato: ${input.files[0].name}`;
+    } else {
+        labelText.textContent = 'Fai clic o trascina il file su quest\'area per caricarlo.';
+    }
+}
+
+document.querySelectorAll(".btn-preventivo-nav, .btn-preventivo").forEach(btn => {
+    btn.addEventListener("click", function(e) {
+        apriPopup(e);
+    });
+});
 </script>
 
-        </body>
+</body>
 </html>
