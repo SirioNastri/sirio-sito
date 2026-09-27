@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nastro in gomma | Sirio Nastri Trasportatori</title>
-    <link rel="stylesheet" href="css/style.css?v=14">
+    <link rel="stylesheet" href="css/style.css?v=15">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* TASTO INDIETRO ISOLATO A SINISTRA */
+        /* TASTO INDIETRO ANCORATO AL CATALOGO */
         .back-wrapper-left {
             max-width: 1200px;
             margin: 20px auto 10px auto;
@@ -41,6 +41,28 @@
         .product-internal-code span {
             color: #ffffff;
             font-weight: 700;
+        }
+
+        /* OTTIMIZZAZIONE ADATTAMENTO IMMAGINE SENZA TAGLI (CROP) */
+        .info-grid-img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 15px;
+            overflow: hidden;
+            min-height: 350px;
+        }
+
+        .info-grid-img img {
+            width: 100%;
+            height: 100%;
+            max-height: 420px;
+            object-fit: contain; /* Garantisce che l'immagine sia visibile al 100% senza essere tagliata */
+            border-radius: 8px;
+            display: block;
         }
 
         .info-grid-text ul {
@@ -141,9 +163,9 @@
 
 <section class="section" style="padding-top: 10px;">
 
-    <!-- TASTO TORNA INDIETRO ISOLATO A SINISTRA -->
+    <!-- TASTO ANCORATO STRUTTURALMENTE AL CATALOGO -->
     <div class="back-wrapper-left">
-        <a href="javascript:history.back()" class="btn btn-primary back-btn">← Torna indietro</a>
+        <a href="catalogo.html" class="btn btn-primary back-btn">← Torna al Catalogo</a>
     </div>
 
     <!-- TITOLO E CODICE INTERNO CENTRATI -->
@@ -245,7 +267,7 @@
     </div>
 </div>
 
-<!-- FOOTER (SENZA SOCIAL) -->
+<!-- FOOTER -->
 <footer class="footer-sirio">
     <div class="footer-top">
         <div class="footer-col">
