@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* TASTO INDIETRO ANCORATO AL CATALOGO */
         .back-wrapper-left {
             max-width: 1200px;
             margin: 20px auto 10px auto;
@@ -16,7 +15,6 @@
             text-align: left;
         }
 
-        /* INTESTAZIONE PRODOTTO CENTRATA */
         .product-header-center {
             max-width: 1200px;
             margin: 10px auto 35px;
@@ -41,28 +39,6 @@
         .product-internal-code span {
             color: #ffffff;
             font-weight: 700;
-        }
-
-        /* OTTIMIZZAZIONE ADATTAMENTO IMMAGINE SENZA TAGLI (CROP) */
-        .info-grid-img {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 12px;
-            padding: 15px;
-            overflow: hidden;
-            min-height: 350px;
-        }
-
-        .info-grid-img img {
-            width: 100%;
-            height: 100%;
-            max-height: 420px;
-            object-fit: contain; /* Garantisce che l'immagine sia visibile al 100% senza essere tagliata */
-            border-radius: 8px;
-            display: block;
         }
 
         .info-grid-text ul {
@@ -123,7 +99,6 @@
         <div class="menu-voce"><a href="azienda.html">Azienda</a></div>
         <div class="menu-voce"><a href="prodotti.html">Prodotti</a></div>
 
-        <!-- CATALOGO TECNICO MENU PRINCIPALE -->
         <div class="menu-voce menu-dropdown">
             <a href="catalogo.html" class="link-diretto">Catalogo Tecnico</a>
             <div class="mega-menu">
@@ -163,12 +138,11 @@
 
 <section class="section" style="padding-top: 10px;">
 
-    <!-- TASTO ANCORATO STRUTTURALMENTE AL CATALOGO -->
+    <!-- TASTO ANCORATO AL CATALOGO (GERARCHIA FISSA) -->
     <div class="back-wrapper-left">
         <a href="catalogo.html" class="btn btn-primary back-btn">← Torna al Catalogo</a>
     </div>
 
-    <!-- TITOLO E CODICE INTERNO CENTRATI -->
     <div class="product-header-center">
         <h1 class="page-title-custom">Nastro in gomma</h1>
         <div class="product-internal-code">Codice interno: <span>GOM-01</span></div>
@@ -236,7 +210,6 @@
                 <form action="https://formsubmit.co/info@sirionastri.it" method="POST" enctype="multipart/form-data" class="popup-form">
                     <input type="hidden" name="_subject" value="Nuova Richiesta RFQ da Nastro in Gomma (Codice: GOM-01)">
                     <input type="hidden" name="_captcha" value="false">
-                    <!-- Campo Honeypot Anti-Spam -->
                     <input type="text" name="_honey" style="display:none">
 
                     <input type="text" name="Azienda" class="popup-input" placeholder="Azienda">
@@ -267,7 +240,6 @@
     </div>
 </div>
 
-<!-- FOOTER -->
 <footer class="footer-sirio">
     <div class="footer-top">
         <div class="footer-col">
