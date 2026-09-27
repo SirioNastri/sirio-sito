@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Realizzazione e Collaudo | Sirio Nastri Trasportatori</title>
+    <meta name="description" content="Realizzazione, assemblaggio e collaudo interno di nastri trasportatori e impianti di movimentazione industriale su misura con test funzionali rigorosi.">
+    <link rel="canonical" href="https://sirionastri.github.io/sirio-sito/realizzazione-collaudo.html">
     <link rel="stylesheet" href="css/style.css?v=10">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -171,7 +173,7 @@
         </div>
 
         <div class="info-grid-img">
-            <img src="img/collaudo.jpg" alt="Fase di realizzazione e collaudo banchi e nastri trasportatori Sirio" loading="lazy">
+            <img src="img/collaudo.jpg" alt="Realizzazione e collaudo Sirio" loading="lazy">
         </div>
 
     </div>
@@ -210,8 +212,11 @@
 
             <div class="popup-col popup-right">
                 <form action="https://formsubmit.co/info@sirionastri.it" method="POST" enctype="multipart/form-data" class="popup-form">
+                    <!-- REINDIRIZZAMENTO A THANKYOU.HTML E PROTEZIONE SPAM (HONEYPOT) -->
+                    <input type="hidden" name="_next" value="https://sirionastri.github.io/sirio-sito/thankyou.html">
                     <input type="hidden" name="_subject" value="Nuova Richiesta RFQ da Realizzazione e Collaudo">
                     <input type="hidden" name="_captcha" value="false">
+                    <input type="text" name="_honey" style="display:none">
 
                     <input type="text" name="Azienda" class="popup-input" placeholder="Azienda">
                     <div class="form-row">
@@ -220,10 +225,10 @@
                     </div>
                     <input type="email" name="Email" class="popup-input" placeholder="Email *" required>
                     <input type="tel" name="Telefono" class="popup-input" placeholder="Telefono">
-                    <textarea name="Messaggio" class="popup-input" placeholder="Messaggio..." rows="4"></textarea>
+                    <textarea name="Messaggio" class="popup-input" placeholder="Messaggio o specifiche tecniche..." rows="4"></textarea>
 
                     <div class="filebox">
-                        <label for="file-upload" class="filebox-title">Allega un file</label>
+                        <label for="file-upload" class="filebox-title">Allega Layout / Disegno Tecnico</label>
                         <div class="filebox-area" id="drop-area">
                             <p id="file-label-text">Fai clic o trascina il file su quest'area per caricarlo.</p>
                             <input type="file" id="file-upload" name="Allegato" class="filebox-input" onchange="gestisciFile(this)">
