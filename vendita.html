@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fornitura Diretto Fabbrica | Sirio Nastri Trasportatori</title>
+    <meta name="description" content="Fornitura diretta da fabbrica di nastri trasportatori, rulliere e sistemi di movimentazione industriale su misura con consulenza tecnica dedicata.">
+    <link rel="canonical" href="https://sirionastri.github.io/sirio-sito/fornitura-diretto-fabbrica.html">
     <link rel="stylesheet" href="css/style.css?v=9">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -125,68 +127,68 @@
     </nav>
 </header>
 
+<main>
+    <section class="section" style="padding-top: 10px;">
 
-<section class="section" style="padding-top: 10px;">
+        <!-- TASTO TORNA INDIETRO A SINISTRA -->
+        <div class="back-wrapper-left">
+            <a href="javascript:history.back()" class="btn btn-primary back-btn">← Torna indietro</a>
+        </div>
 
-    <!-- TASTO TORNA INDIETRO A SINISTRA -->
-    <div class="back-wrapper-left">
-        <a href="javascript:history.back()" class="btn btn-primary back-btn">← Torna indietro</a>
-    </div>
+        <!-- TITOLO CENTRATO -->
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <h1 class="page-title-custom">Fornitura Diretto Fabbrica</h1>
+        </div>
 
-    <!-- TITOLO CENTRATO -->
-    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-        <h1 class="page-title-custom">Fornitura Diretto Fabbrica</h1>
-    </div>
+        <div class="info-grid" style="margin-top: 0;">
 
-    <div class="info-grid" style="margin-top: 0;">
+            <div class="info-grid-text">
 
-        <div class="info-grid-text">
+                <h2>Consulenza tecnica e soluzioni su misura</h2>
 
-            <h2>Consulenza tecnica e soluzioni su misura</h2>
+                <p>
+                    La fase di fornitura non è una semplice proposta commerciale: è un percorso tecnico
+                    in cui analizziamo le esigenze del cliente e proponiamo la soluzione più adatta
+                    tra nastri trasportatori, rulliere, mototamburi e sistemi di movimentazione completi.
+                </p>
 
-            <p>
-                La fase di fornitura non è una semplice proposta commerciale: è un percorso tecnico
-                in cui analizziamo le esigenze del cliente e proponiamo la soluzione più adatta
-                tra nastri trasportatori, rulliere, mototamburi e sistemi di movimentazione completi.
-            </p>
+                <p>Ogni impianto viene configurato in base a:</p>
 
-            <p>Ogni impianto viene configurato in base a:</p>
+                <ul>
+                    <li>Materiale da movimentare (sfuso, confezionato, alimentare, abrasivo)</li>
+                    <li>Portata richiesta e velocità del nastro</li>
+                    <li>Dimensioni e layout dell’ambiente produttivo</li>
+                    <li>Normative del settore e requisiti di sicurezza</li>
+                    <li>Integrazione con linee esistenti</li>
+                </ul>
 
-            <ul>
-                <li>Materiale da movimentare (sfuso, confezionato, alimentare, abrasivo)</li>
-                <li>Portata richiesta e velocità del nastro</li>
-                <li>Dimensioni e layout dell’ambiente produttivo</li>
-                <li>Normative del settore e requisiti di sicurezza</li>
-                <li>Integrazione con linee esistenti</li>
-            </ul>
+                <h3>Trasparenza e supporto in ogni fase</h3>
 
-            <h3>Trasparenza e supporto in ogni fase</h3>
+                <p>
+                    Forniamo preventivi chiari, dettagliati e senza sorprese.
+                    Ogni proposta include schede tecniche, materiali utilizzati,
+                    tempi di consegna e possibilità di personalizzazione.
+                </p>
 
-            <p>
-                Forniamo preventivi chiari, dettagliati e senza sorprese.
-                Ogni proposta include schede tecniche, materiali utilizzati,
-                tempi di consegna e possibilità di personalizzazione.
-            </p>
+                <p>
+                    Il nostro obiettivo è garantire un impianto affidabile, duraturo
+                    e perfettamente calibrato sulle esigenze produttive del cliente.
+                </p>
 
-            <p>
-                Il nostro obiettivo è garantire un impianto affidabile, duraturo
-                e perfettamente calibrato sulle esigenze produttive del cliente.
-            </p>
+            </div>
+
+            <div class="info-grid-img">
+                <img src="img/vend.jpg" alt="Fornitura diretto fabbrica Sirio" onerror="this.src='img/logo.jpg'" loading="lazy">
+            </div>
 
         </div>
 
-        <div class="info-grid-img">
-            <img src="img/vend.jpg" alt="Fornitura diretto fabbrica Sirio" onerror="this.src='img/logo.jpg'" loading="lazy">
+        <div class="cta-bottom-wrapper">
+            <a href="contatti.html" class="btn btn-primary">Contattaci per assistenza →</a>
         </div>
 
-    </div>
-
-    <div class="cta-bottom-wrapper">
-        <a href="contatti.html" class="btn btn-primary">Contattaci per assistenza →</a>
-    </div>
-
-</section>
-
+    </section>
+</main>
 
 <!-- POPUP PREVENTIVO / RFQ -->
 <div class="popup-overlay" id="popup-overlay" onclick="chiudiPopupEsterno(event)">
@@ -215,8 +217,11 @@
 
             <div class="popup-col popup-right">
                 <form action="https://formsubmit.co/info@sirionastri.it" method="POST" enctype="multipart/form-data" class="popup-form">
+                    <!-- REINDIRIZZAMENTO A THANKYOU.HTML E PROTEZIONE SPAM -->
+                    <input type="hidden" name="_next" value="https://sirionastri.github.io/sirio-sito/thankyou.html">
                     <input type="hidden" name="_subject" value="Nuova Richiesta RFQ da Fornitura Diretto Fabbrica">
                     <input type="hidden" name="_captcha" value="false">
+                    <input type="text" name="_honey" style="display:none">
 
                     <input type="text" name="Azienda" class="popup-input" placeholder="Azienda">
                     <div class="form-row">
@@ -225,10 +230,10 @@
                     </div>
                     <input type="email" name="Email" class="popup-input" placeholder="Email *" required>
                     <input type="tel" name="Telefono" class="popup-input" placeholder="Telefono">
-                    <textarea name="Messaggio" class="popup-input" placeholder="Messaggio..." rows="4"></textarea>
+                    <textarea name="Messaggio" class="popup-input" placeholder="Messaggio o specifiche tecniche..." rows="4"></textarea>
 
                     <div class="filebox">
-                        <label for="file-upload" class="filebox-title">Allega un file</label>
+                        <label for="file-upload" class="filebox-title">Allega Layout / Disegno Tecnico</label>
                         <div class="filebox-area" id="drop-area">
                             <p id="file-label-text">Fai clic o trascina il file su quest'area per caricarlo.</p>
                             <input type="file" id="file-upload" name="Allegato" class="filebox-input" onchange="gestisciFile(this)">
@@ -246,7 +251,6 @@
     </div>
 </div>
 
-
 <!-- FOOTER -->
 <footer class="footer-sirio">
     <div class="footer-top">
@@ -259,7 +263,7 @@
                 Produzione di nastri trasportatori, trasportatori completi e sistemi di movimentazione industriale.
             </p>
 
-            <p class="footer-contact">📞 (+39) 011 953 9492 </p>
+            <p class="footer-contact">📞 (+39) 011 953 9492</p>
             <p class="footer-contact">✉️ info@sirionastri.it</p>
         </div>
 
