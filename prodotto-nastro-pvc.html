@@ -3,17 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manutenzione e Post Vendita | Sirio Nastri Trasportatori</title>
+    <title>Nastro in PVC | Sirio Nastri Trasportatori</title>
     <link rel="stylesheet" href="css/style.css?v=11">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         /* TASTO INDIETRO ISOLATO A SINISTRA */
         .back-wrapper-left {
-            max-width: 900px;
-            margin: 20px auto 0 auto;
+            max-width: 1200px;
+            margin: 20px auto 10px auto;
             padding: 0 20px;
             text-align: left;
+        }
+
+        /* TITOLO E CONTENUTO PERSONALIZZATI */
+        .page-title-custom {
+            color: var(--accent, #a2ff00);
+            font-size: 36px;
+            font-weight: 800;
+            margin: 10px 0 30px;
+            text-align: center;
+        }
+
+        .info-grid-text ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 15px 0 25px;
+        }
+
+        .info-grid-text ul li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+            color: var(--text-muted, #a0aab8);
+            line-height: 1.6;
+        }
+
+        .info-grid-text ul li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            color: var(--accent, #a2ff00);
+            font-weight: bold;
+        }
+
+        .info-grid-text h3 {
+            color: #ffffff;
+            font-size: 20px;
+            margin-top: 25px;
+            margin-bottom: 12px;
+        }
+
+        .cta-bottom-wrapper {
+            max-width: 1200px;
+            margin: 40px auto 60px;
+            padding: 0 20px;
+            text-align: center;
         }
     </style>
 </head>
@@ -76,34 +121,48 @@
     </nav>
 </header>
 
-<!-- TASTO TORNA INDIETRO -->
-<div class="back-wrapper-left">
-    <a href="javascript:history.back()" class="btn btn-primary back-btn">← Torna indietro</a>
-</div>
+<section class="section" style="padding-top: 10px;">
 
-<section class="blog-hero">
-    <h1 class="section-title">Manutenzione e Post Vendita</h1>
-    <p class="blog-subtitle">Procedure consigliate per ridurre i fermi impianto.</p>
-</section>
+    <!-- TASTO TORNA INDIETRO ISOLATO A SINISTRA -->
+    <div class="back-wrapper-left">
+        <a href="javascript:history.back()" class="btn btn-primary back-btn">← Torna indietro</a>
+    </div>
 
-<section class="section">
-    <h2 class="section-title">Controlli Periodici</h2>
-    <p>Verifica tensionamento, allineamento, stato dei rulli e condizioni del nastro.</p>
-</section>
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <h1 class="page-title-custom">Nastro in PVC</h1>
+    </div>
 
-<section class="section">
-    <h2 class="section-title">Pulizia</h2>
-    <p>La pulizia regolare evita accumuli, usura precoce e contaminazioni.</p>
-</section>
+    <div class="info-grid" style="margin-top: 0;">
+        <div class="info-grid-text">
+            <h2>Versatilità e resistenza per la movimentazione generale</h2>
+            <p>
+                I nastri trasportatori in PVC rappresentano la soluzione ideale e più diffusa per un'ampia gamma di applicazioni industriali. Grazie alla loro eccellente flessibilità, resistenza all'usura e alle proprietà chimiche bilanciate, garantiscono alte prestazioni nella movimentazione di colli, scatole, prodotti sfusi e linee di montaggio.
+            </p>
 
-<section class="section">
-    <h2 class="section-title">Sostituzione Preventiva</h2>
-    <p>Intervenire prima del guasto riduce i costi e aumenta la produttività.</p>
-</section>
+            <h3>Caratteristiche principali</h3>
+            <ul>
+                <li>Ottima resistenza all'abrasione e ai carichi di lavoro continuativi.</li>
+                <li>Disponibili con differenti coperture superficiali (liscia, goffrata, rugosa) a seconda dell'inclinazione della linea.</li>
+                <li>Trattamenti antistatici e resistenze a oli e grassi su richiesta.</li>
+                <li>Facilità di giunzione, manutenzione e pulizia.</li>
+            </ul>
 
-<section class="blog-cta">
-    <h2>Vuoi un piano di manutenzione?</h2>
-    <a href="#" class="btn btn-primary btn-preventivo" onclick="apriPopup(event)">Contattaci</a>
+            <h3>Settori di applicazione</h3>
+            <p>
+                Imballaggio e fine linea, logistica e magazzinaggio, industria meccanica, smistamento postale e linee di assemblaggio generale.
+            </p>
+        </div>
+
+        <div class="info-grid-img">
+            <img src="img/nastro-pvc.jpg" alt="Nastro in PVC Sirio Nastri" onerror="this.src='img/logo.jpg'">
+        </div>
+    </div>
+
+    <div class="cta-bottom-wrapper">
+        <h2 style="color: #fff; margin-bottom: 20px; font-size: 24px;">Hai bisogno di un nastro in PVC su misura?</h2>
+        <a href="#" class="btn btn-primary btn-preventivo" onclick="apriPopup(event)">Richiedi Preventivo</a>
+    </div>
+
 </section>
 
 <!-- POPUP PREVENTIVO / RFQ -->
@@ -133,8 +192,10 @@
 
             <div class="popup-col popup-right">
                 <form action="https://formsubmit.co/info@sirionastri.it" method="POST" enctype="multipart/form-data" class="popup-form">
-                    <input type="hidden" name="_subject" value="Nuova Richiesta RFQ da Manutenzione e Post Vendita">
+                    <input type="hidden" name="_subject" value="Nuova Richiesta RFQ da Nastro in PVC">
                     <input type="hidden" name="_captcha" value="false">
+                    <!-- Campo Honeypot Anti-Spam -->
+                    <input type="text" name="_honey" style="display:none">
 
                     <input type="text" name="Azienda" class="popup-input" placeholder="Azienda">
                     <div class="form-row">
