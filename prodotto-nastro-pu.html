@@ -3,15 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nastro in PU - Sirio Nastri Trasportatori</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Nastro in PU | Sirio Nastri Trasportatori</title>
+    <link rel="stylesheet" href="css/style.css?v=13">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* TASTO INDIETRO ISOLATO A SINISTRA */
+        .back-wrapper-left {
+            max-width: 1200px;
+            margin: 20px auto 10px auto;
+            padding: 0 20px;
+            text-align: left;
+        }
+
+        /* INTESTAZIONE PRODOTTO CENTRATA */
+        .product-header-center {
+            max-width: 1200px;
+            margin: 10px auto 35px;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .page-title-custom {
+            color: var(--accent, #a2ff00);
+            font-size: 38px;
+            font-weight: 800;
+            margin: 0 0 10px 0;
+            line-height: 1.2;
+        }
+
+        .product-internal-code {
+            color: var(--text-muted, #a0aab8);
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .product-internal-code span {
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        .info-grid-text ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 15px 0 25px;
+        }
+
+        .info-grid-text ul li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+            color: var(--text-muted, #a0aab8);
+            line-height: 1.6;
+        }
+
+        .info-grid-text ul li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            color: var(--accent, #a2ff00);
+            font-weight: bold;
+        }
+
+        .info-grid-text h3 {
+            color: #ffffff;
+            font-size: 20px;
+            margin-top: 25px;
+            margin-bottom: 12px;
+        }
+
+        .cta-bottom-wrapper {
+            max-width: 1200px;
+            margin: 40px auto 60px;
+            padding: 0 20px;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
-    <div class="logo">✦ SIRIO NASTRI TRASPORTATORI</div>
+<header class="header-main">
+    <div class="logo">
+        <a href="index.html">
+            <img src="img/logo.jpg" alt="Sirio Nastri Trasportatori">
+        </a>
+    </div>
 
     <button class="hamburger" aria-label="Apri menu navigazione" aria-expanded="false" onclick="toggleMenu()">
         <span></span>
@@ -19,18 +96,17 @@
         <span></span>
     </button>
 
-    <nav>
+    <nav id="main-nav">
         <div class="menu-voce"><a href="index.html">Home</a></div>
         <div class="menu-voce"><a href="azienda.html">Azienda</a></div>
         <div class="menu-voce"><a href="prodotti.html">Prodotti</a></div>
 
-        <div class="menu-voce menu-negozio">
-            <a href="negozio.html" class="active">Negozio</a>
-
-            <div class="mega-negozio">
-                <!-- COLONNA 1: NASTRI TRASPORTATORI -->
+        <!-- CATALOGO TECNICO MENU PRINCIPALE -->
+        <div class="menu-voce menu-dropdown">
+            <a href="catalogo.html" class="link-diretto">Catalogo Tecnico</a>
+            <div class="mega-menu">
                 <div class="colonna">
-                    <h4>Nastri trasportatori</h4>
+                    <h4>Nastri Trasportatori</h4>
                     <a href="prodotto-nastro-pvc.html">Nastro in PVC</a>
                     <a href="prodotto-nastro-pu.html">Nastro in PU</a>
                     <a href="prodotto-nastro-gomma.html">Nastro in gomma</a>
@@ -38,18 +114,14 @@
                     <a href="prodotto-nastro-alte-temperature.html">Nastro per alte temperature</a>
                     <a href="prodotto-nastro-modulare.html">Nastro modulare in plastica</a>
                 </div>
-
-                <!-- COLONNA 2: TRASPORTATORI COMPLETI -->
                 <div class="colonna">
-                   <h4>Trasportatori completi</h4>
+                    <h4>Trasportatori completi</h4>
                     <a href="prodotto-trasportatore-nastro.html">Lineari</a>
                     <a href="prodotto-trasportatore-inclinato.html">Inclinati</a>
                     <a href="prodotto-trasportatore-curva.html">Curvi</a>
                     <a href="prodotto-trasportatore-rulli.html">Acciaio inox / Rulliere</a>
-                    <a href="prodotto-trasportatore-nastro.html">Personalizzati</a>
+                    <a href="portfolio.html">Personalizzati</a>
                 </div>
-
-                <!-- COLONNA 3: COMPONENTI -->
                 <div class="colonna">
                     <h4>Componenti</h4>
                     <a href="prodotto-rulli.html">Rulli</a>
@@ -62,87 +134,83 @@
         <div class="menu-voce"><a href="contatti.html">Contatti</a></div>
 
         <div class="menu-voce">
-            <a href="#" class="btn-preventivo-nav">Richiedi preventivo</a>
+            <a href="#" class="btn-preventivo-nav" onclick="apriPopup(event)">Richiedi Preventivo (RFQ)</a>
         </div>
     </nav>
 </header>
 
-<a href="negozio.html" class="back-btn">← Torna al Negozio</a>
+<section class="section" style="padding-top: 10px;">
 
-<section class="blog-hero" style="text-align: center;">
-    <h1 class="section-title">Nastro trasportatore in PU</h1>
-    <p class="blog-subtitle">Codice interno: <strong>PU-01</strong></p>
-</section>
-
-<section class="info-grid">
-    <div class="info-grid-img">
-        <img src="img/nastro-pu.jpg" alt="Nastro in PU" onerror="this.src='img/logo.jpg'">
+    <!-- TASTO TORNA INDIETRO ISOLATO A SINISTRA -->
+    <div class="back-wrapper-left">
+        <a href="javascript:history.back()" class="btn btn-primary back-btn">← Torna indietro</a>
     </div>
 
-    <div class="info-grid-text">
-        <h2>Descrizione tecnica</h2>
-        <p>
-            I nastri in PU (poliuretano) sono ideali per applicazioni che richiedono elevata resistenza meccanica, durata nel tempo e ottima igiene. Sono particolarmente indicati per il settore alimentare e farmaceutico grazie alla loro superficie liscia, impermeabile e facilmente sanificabile.
-        </p>
-
-        <h3>Caratteristiche principali</h3>
-        <ul>
-            <li>Superficie liscia e igienica</li>
-            <li>Alta resistenza a taglio e abrasione</li>
-            <li>Ottima durata nel tempo</li>
-            <li>Compatibile con ambienti alimentari</li>
-        </ul>
-
-        <h3>Applicazioni</h3>
-        <ul>
-            <li>Industria alimentare</li>
-            <li>Farmaceutico</li>
-            <li>Confezionamento</li>
-            <li>Movimentazione prodotti delicati</li>
-        </ul>
-
-        <a href="#" class="btn btn-primary btn-preventivo" style="margin-top: 20px;">
-            Richiedi preventivo
-        </a>
+    <!-- TITOLO E CODICE INTERNO CENTRATI -->
+    <div class="product-header-center">
+        <h1 class="page-title-custom">Nastro in PU</h1>
+        <div class="product-internal-code">Codice interno: <span>PU-01</span></div>
     </div>
+
+    <div class="info-grid" style="margin-top: 0;">
+        <div class="info-grid-text">
+            <h2>Resistenza meccanica e igiene per l'industria alimentare e farmaceutica</h2>
+            <p>
+                I nastri in PU (poliuretano) sono ideali per applicazioni che richiedono elevata resistenza meccanica, durata nel tempo e ottima igiene. Sono particolarmente indicati per il settore alimentare e farmaceutico grazie alla loro superficie liscia, impermeabile e facilmente sanificabile.
+            </p>
+
+            <h3>Caratteristiche principali</h3>
+            <ul>
+                <li>Superficie liscia, impermeabile e perfettamente igienica.</li>
+                <li>Alta resistenza a taglio, usura e abrasione.</li>
+                <li>Ottima durata nel tempo anche con cicli di lavoro gravosi.</li>
+                <li>Piena compatibilità con ambienti alimentari e farmaceutici.</li>
+            </ul>
+
+            <h3>Settori di applicazione</h3>
+            <p>
+                Industria alimentare, farmaceutico, confezionamento, linee di smistamento e movimentazione di prodotti delicati.
+            </p>
+        </div>
+
+        <div class="info-grid-img">
+            <img src="img/nastro-pu.jpg" alt="Nastro in PU Sirio Nastri" onerror="this.src='img/logo.jpg'">
+        </div>
+    </div>
+
+    <div class="cta-bottom-wrapper">
+        <h2 style="color: #fff; margin-bottom: 20px; font-size: 24px;">Hai bisogno di un nastro in PU su misura?</h2>
+        <a href="#" class="btn btn-primary btn-preventivo" onclick="apriPopup(event)">Richiedi Preventivo</a>
+    </div>
+
 </section>
 
-<section class="blog-cta">
-    <h2>Serve una versione personalizzata?</h2>
-    <p>Realizziamo nastri in PU su misura per ogni impianto.</p>
-    <a href="#" class="btn btn-primary btn-preventivo">Contattaci</a>
-</section>
-
-<!-- ============================
-     POPUP COMPLETO RFQ
-============================ -->
+<!-- POPUP PREVENTIVO / RFQ -->
 <div class="popup-overlay" id="popup-overlay" onclick="chiudiPopupEsterno(event)">
     <div class="popup-box" id="popup-preventivo" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-        <span class="popup-close" onclick="chiudiPopup()">&times;</span>
-
-        <div class="popup-content" style="display:flex; gap:40px;">
-            <!-- SINISTRA -->
-            <div class="popup-col popup-left" style="flex:1;">
+        <button type="button" class="popup-close" onclick="chiudiPopup()" aria-label="Chiudi popup">&times;</button>
+        
+        <div class="popup-content">
+            <div class="popup-col popup-left">
                 <h2 id="modal-title">Richiedi Preventivo (RFQ)</h2>
                 <p class="popup-desc">
                     Un nostro tecnico ti risponderà entro 24 ore con una soluzione su misura per la tua linea produttiva.
                 </p>
                 <h3>Perché contattarci</h3>
                 <ul class="popup-points">
-                    <li>Consulenza tecnica gratuita</li>
-                    <li>Preventivi chiari e senza impegno</li>
-                    <li>Soluzioni personalizzate per ogni settore</li>
-                    <li>Supporto diretto con un progettista</li>
-                    <li>Risposta rapida e professionale</li>
+                    <li><i class="fa-solid fa-check"></i> Consulenza tecnica gratuita</li>
+                    <li><i class="fa-solid fa-check"></i> Preventivi chiari e senza impegno</li>
+                    <li><i class="fa-solid fa-check"></i> Soluzioni personalizzate per ogni settore</li>
+                    <li><i class="fa-solid fa-check"></i> Supporto diretto con un progettista</li>
+                    <li><i class="fa-solid fa-check"></i> Risposta rapida e professionale</li>
                 </ul>
                 <h3>Chi ti risponderà</h3>
                 <p>
-                    Il nostro team tecnico analizzerà la tua richiesta e ti guiderà nella scelta del nastro o del trasportatore più adatto.
+                    Il nostro team tecnico analizzerá la tua richiesta e ti guiderà nella scelta del nastro o del trasportatore più adatto.
                 </p>
             </div>
 
-            <!-- DESTRA FORM CON ANTISPAM -->
-            <div class="popup-col popup-right" style="flex:1;">
+            <div class="popup-col popup-right">
                 <form action="https://formsubmit.co/info@sirionastri.it" method="POST" enctype="multipart/form-data" class="popup-form">
                     <input type="hidden" name="_subject" value="Nuova Richiesta RFQ da Nastro in PU (Codice: PU-01)">
                     <input type="hidden" name="_captcha" value="false">
@@ -150,9 +218,9 @@
                     <input type="text" name="_honey" style="display:none">
 
                     <input type="text" name="Azienda" class="popup-input" placeholder="Azienda">
-                    <div style="display: flex; gap: 10px;">
-                        <input type="text" name="Nome" class="popup-input" placeholder="Nome *" required style="flex:1;">
-                        <input type="text" name="Cognome" class="popup-input" placeholder="Cognome *" required style="flex:1;">
+                    <div class="form-row">
+                        <input type="text" name="Nome" class="popup-input" placeholder="Nome *" required>
+                        <input type="text" name="Cognome" class="popup-input" placeholder="Cognome *" required>
                     </div>
                     <input type="email" name="Email" class="popup-input" placeholder="Email *" required>
                     <input type="tel" name="Telefono" class="popup-input" placeholder="Telefono">
@@ -177,9 +245,9 @@
     </div>
 </div>
 
+<!-- FOOTER (SENZA SOCIAL) -->
 <footer class="footer-sirio">
     <div class="footer-top">
-        <!-- COLONNA 1: LOGO + DESCRIZIONE + CONTATTI -->
         <div class="footer-col">
             <div class="footer-logo">
                 <img src="img/logo.jpg" alt="Sirio Nastri Trasportatori">
@@ -191,18 +259,16 @@
             <p class="footer-contact">✉️ info@sirionastri.it</p>
         </div>
 
-        <!-- COLONNA 2: MENU PRINCIPALE -->
         <div class="footer-col">
             <h4>Menu</h4>
             <a href="index.html">Home</a>
             <a href="azienda.html">Azienda</a>
             <a href="prodotti.html">Prodotti</a>
-            <a href="negozio.html">Negozio</a>
+            <a href="catalogo.html">Catalogo Tecnico</a>
             <a href="portfolio.html">Portfolio</a>
             <a href="contatti.html">Contatti</a>
         </div>
 
-        <!-- COLONNA 3: NASTRI TRASPORTATORI -->
         <div class="footer-col">
             <h4>Nastri trasportatori</h4>
             <a href="prodotto-nastro-pvc.html">Nastro in PVC</a>
@@ -213,14 +279,13 @@
             <a href="prodotto-nastro-modulare.html">Nastro modulare in plastica</a>
         </div>
 
-        <!-- COLONNA 4: TRASPORTATORI + COMPONENTI -->
         <div class="footer-col">
             <h4>Trasportatori</h4>
             <a href="prodotto-trasportatore-nastro.html">Lineari</a>
             <a href="prodotto-trasportatore-inclinato.html">Inclinati</a>
             <a href="prodotto-trasportatore-curva.html">Curvi</a>
             <a href="prodotto-trasportatore-rulli.html">Acciaio inox / Rulliere</a>
-            <a href="prodotto-trasportatore-nastro.html">Personalizzati</a>
+            <a href="portfolio.html">Personalizzati</a>
 
             <h4 style="margin-top:20px;">Componenti</h4>
             <a href="prodotto-rulli.html">Rulli</a>
@@ -235,8 +300,13 @@
 
 <script>
 function toggleMenu() {
-    document.querySelector('.hamburger').classList.toggle('active');
-    document.querySelector('nav').classList.toggle('open');
+    const btn = document.querySelector('.hamburger');
+    const nav = document.getElementById('main-nav');
+    const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+    
+    btn.classList.toggle('active');
+    btn.setAttribute('aria-expanded', !isExpanded);
+    nav.classList.toggle('open');
 }
 
 function apriPopup(e) {
@@ -273,9 +343,18 @@ function gestisciFile(input) {
     }
 }
 
-document.querySelectorAll(".btn-preventivo-nav, .btn-preventivo").forEach(btn => {
-    btn.addEventListener("click", function(e) {
-        apriPopup(e);
+document.addEventListener("DOMContentLoaded", function() {
+    const linkCatalogo = document.querySelector('.menu-dropdown > a');
+    if (linkCatalogo) {
+        linkCatalogo.addEventListener('click', function(e) {
+            window.location.href = this.getAttribute('href');
+        });
+    }
+
+    document.querySelectorAll(".btn-preventivo-nav, .btn-preventivo").forEach(btn => {
+        btn.addEventListener("click", function(e) {
+            apriPopup(e);
+        });
     });
 });
 </script>
