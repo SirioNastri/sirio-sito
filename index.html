@@ -202,9 +202,11 @@
 
         <div class="contact-right">
             <form action="https://formsubmit.co/info@sirionastri.it" method="POST">
-                <input type="hidden" name="_next" value="https://sirionastri.github.io/sirio-sito/grazie.html">
+                <!-- REINDIRIZZAMENTO A THANKYOU.HTML -->
+                <input type="hidden" name="_next" value="https://sirionastri.github.io/sirio-sito/thankyou.html">
                 <input type="hidden" name="_subject" value="Nuovo Contatto Diretto da Sito Web (Home)">
                 <input type="hidden" name="_captcha" value="false">
+                <input type="text" name="_honey" style="display:none">
 
                 <label for="nome-contatto">Nome e Cognome *</label>
                 <input type="text" id="nome-contatto" name="Nome" placeholder="Ing. Mario Rossi" required>
@@ -244,9 +246,11 @@
 
             <div class="popup-col popup-right">
                 <form action="https://formsubmit.co/info@sirionastri.it" method="POST" enctype="multipart/form-data" class="popup-form">
-                    <input type="hidden" name="_next" value="https://sirionastri.github.io/sirio-sito/grazie.html">
+                    <!-- REINDIRIZZAMENTO A THANKYOU.HTML -->
+                    <input type="hidden" name="_next" value="https://sirionastri.github.io/sirio-sito/thankyou.html">
                     <input type="hidden" name="_subject" value="Richiesta Preventivo RFQ dal Popup">
                     <input type="hidden" name="_captcha" value="false">
+                    <input type="text" name="_honey" style="display:none">
 
                     <input type="text" name="Azienda" class="popup-input" placeholder="Ragione Sociale Azienda">
                     <input type="text" name="Nome" class="popup-input" placeholder="Nome *" required>
