@@ -4,71 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manutenzione e Post Vendita | Sirio Nastri Trasportatori</title>
-    <link rel="stylesheet" href="css/style.css?v=9">
+    <link rel="stylesheet" href="css/style.css?v=10">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    
     <style>
         /* TASTO INDIETRO ISOLATO A SINISTRA */
         .back-wrapper-left {
-            max-width: 1200px;
-            margin: 20px auto 10px auto;
+            max-width: 900px;
+            margin: 20px auto 0 auto;
             padding: 0 20px;
             text-align: left;
-        }
-
-        /* TITOLO PERSONALIZZATO */
-        .page-title-custom {
-            color: var(--accent, #a2ff00);
-            font-size: 36px;
-            font-weight: 800;
-            margin: 10px 0 10px;
-            text-align: center;
-        }
-
-        .blog-subtitle {
-            text-align: center;
-            color: var(--text-muted, #a0aab8);
-            font-size: 18px;
-            margin-bottom: 40px;
-        }
-
-        /* CONTENUTO A SEZIONI STILE BLOG/TECNICO */
-        .content-section-box {
-            max-width: 900px;
-            margin: 0 auto 30px auto;
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 8px;
-            padding: 30px;
-        }
-
-        .content-section-box h2 {
-            color: #ffffff;
-            font-size: 22px;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .content-section-box h2::before {
-            content: '✔';
-            color: var(--accent, #a2ff00);
-            font-size: 18px;
-        }
-
-        .content-section-box p {
-            color: var(--text-muted, #a0aab8);
-            font-size: 16px;
-            line-height: 1.7;
-            margin: 0;
-        }
-
-        .cta-bottom-wrapper {
-            max-width: 1200px;
-            margin: 40px auto 60px;
-            padding: 0 20px;
-            text-align: center;
         }
     </style>
 </head>
@@ -131,43 +76,35 @@
     </nav>
 </header>
 
+<!-- TASTO TORNA INDIETRO -->
+<div class="back-wrapper-left">
+    <a href="javascript:history.back()" class="btn btn-primary back-btn">← Torna indietro</a>
+</div>
 
-<section class="section" style="padding-top: 10px;">
-
-    <!-- TASTO TORNA INDIETRO A SINISTRA -->
-    <div class="back-wrapper-left">
-        <a href="javascript:history.back()" class="btn btn-primary back-btn">← Torna indietro</a>
-    </div>
-
-    <!-- TITOLO E SOTTOTITOLO -->
-    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-        <h1 class="page-title-custom">Manutenzione e Post Vendita</h1>
-        <p class="blog-subtitle">Procedure consigliate per ridurre i fermi impianto e garantire la massima efficienza.</p>
-    </div>
-
-    <!-- BLOCCHI DI CONTENUTO SPECIFICI -->
-    <div class="content-section-box">
-        <h2>Controlli Periodici</h2>
-        <p>Verifica regolare di tensionamento, allineamento, stato dei rulli e condizioni generali del nastro per prevenire anomalie di funzionamento.</p>
-    </div>
-
-    <div class="content-section-box">
-        <h2>Pulizia</h2>
-        <p>La pulizia mirata e costante evita accumuli di materiale, previene l'usura precoce dei componenti e scongiura rischi di contaminazione.</p>
-    </div>
-
-    <div class="content-section-box">
-        <h2>Sostituzione Preventiva</h2>
-        <p>Intervenire sui componenti soggetti a usura prima che si verifichi il guasto effettivo riduce drasticamente i costi di riparazione e aumenta la produttività della linea.</p>
-    </div>
-
-    <div class="cta-bottom-wrapper">
-        <h2 style="color: #fff; font-size: 24px; margin-bottom: 20px;">Vuoi un piano di manutenzione dedicato?</h2>
-        <a href="contatti.html" class="btn btn-primary">Contattaci →</a>
-    </div>
-
+<section class="blog-hero">
+    <h1 class="section-title">Manutenzione e Post Vendita</h1>
+    <p class="blog-subtitle">Procedure consigliate per ridurre i fermi impianto.</p>
 </section>
 
+<section class="section">
+    <h2 class="section-title">Controlli Periodici</h2>
+    <p>Verifica tensionamento, allineamento, stato dei rulli e condizioni del nastro.</p>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Pulizia</h2>
+    <p>La pulizia regolare evita accumuli, usura precoce e contaminazioni.</p>
+</section>
+
+<section class="section">
+    <h2 class="section-title">Sostituzione Preventiva</h2>
+    <p>Intervenire prima del guasto riduce i costi e aumenta la produttività.</p>
+</section>
+
+<section class="blog-cta">
+    <h2>Vuoi un piano di manutenzione?</h2>
+    <a href="#" class="btn btn-primary btn-preventivo" onclick="apriPopup(event)">Contattaci</a>
+</section>
 
 <!-- POPUP PREVENTIVO / RFQ -->
 <div class="popup-overlay" id="popup-overlay" onclick="chiudiPopupEsterno(event)">
@@ -226,7 +163,6 @@
         </div>
     </div>
 </div>
-
 
 <!-- FOOTER -->
 <footer class="footer-sirio">
