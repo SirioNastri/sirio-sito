@@ -16,13 +16,31 @@
             text-align: left;
         }
 
-        /* TITOLO E CONTENUTO PERSONALIZZATI */
+        /* INTESTAZIONE PRODOTTO CENTRATA */
+        .product-header-center {
+            max-width: 1200px;
+            margin: 10px auto 35px;
+            padding: 0 20px;
+            text-align: center;
+        }
+
         .page-title-custom {
             color: var(--accent, #a2ff00);
-            font-size: 36px;
+            font-size: 38px;
             font-weight: 800;
-            margin: 10px 0 30px;
-            text-align: center;
+            margin: 0 0 10px 0;
+            line-height: 1.2;
+        }
+
+        .product-internal-code {
+            color: var(--text-muted, #a0aab8);
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .product-internal-code span {
+            color: #ffffff;
+            font-weight: 700;
         }
 
         .info-grid-text ul {
@@ -128,8 +146,10 @@
         <a href="javascript:history.back()" class="btn btn-primary back-btn">← Torna indietro</a>
     </div>
 
-    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+    <!-- TITOLO E CODICE INTERNO CENTRATI -->
+    <div class="product-header-center">
         <h1 class="page-title-custom">Nastro in PVC</h1>
+        <div class="product-internal-code">Codice interno: <span>PVC-01</span></div>
     </div>
 
     <div class="info-grid" style="margin-top: 0;">
@@ -192,7 +212,7 @@
 
             <div class="popup-col popup-right">
                 <form action="https://formsubmit.co/info@sirionastri.it" method="POST" enctype="multipart/form-data" class="popup-form">
-                    <input type="hidden" name="_subject" value="Nuova Richiesta RFQ da Nastro in PVC">
+                    <input type="hidden" name="_subject" value="Nuova Richiesta RFQ da Nastro in PVC (Codice: PVC-01)">
                     <input type="hidden" name="_captcha" value="false">
                     <!-- Campo Honeypot Anti-Spam -->
                     <input type="text" name="_honey" style="display:none">
