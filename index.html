@@ -1,3 +1,16 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nastri Trasportatori Industriali e Soluzioni di Movimentazione | Sirio Nastri</title>
+    <meta name="description" content="Progettazione, produzione e manutenzione di nastri trasportatori industriali su misura, rulliere e sistemi di movimentazione per ogni settore produttivo.">
+    <link rel="canonical" href="https://sirionastri.github.io/sirio-sito/index.html">
+    <link rel="stylesheet" href="css/style.css?v=5">
+</head>
+
+<body>
+
 <header>
     <div class="logo">
         <a href="index.html">
@@ -6,22 +19,22 @@
     </div>
 
     <!-- HAMBURGER MENU ACCESSIBILE -->
-    <button class="hamburger" aria-label="Apri menu navigazione" aria-expanded="false" onclick="toggleMenu()">
+    <div class="hamburger" onclick="toggleMenu()">
         <span></span>
         <span></span>
         <span></span>
-    </button>
+    </div>
 
-    <nav id="main-nav">
+    <nav>
         <div class="menu-voce"><a href="index.html" class="active">Home</a></div>
         <div class="menu-voce"><a href="azienda.html">Azienda</a></div>
         <div class="menu-voce"><a href="prodotti.html">Prodotti</a></div>
 
-        <!-- MEGA MENU CATALOGO TECNICO (CLASSI UNIFICATE) -->
-        <div class="menu-voce menu-dropdown">
-            <a href="catalogo.html" class="link-diretto">Catalogo Tecnico</a>
+        <!-- MEGA MENU CATALOGO TECNICO -->
+        <div class="menu-voce menu-negozio">
+            <a href="catalogo.html">Catalogo Tecnico</a>
 
-            <div class="mega-menu">
+            <div class="mega-negozio">
                 <!-- COLONNA 1: NASTRI TRASPORTATORI -->
                 <div class="colonna">
                     <h4>Galleria Nastri</h4>
@@ -60,7 +73,6 @@
         </div>
     </nav>
 </header>
-
 
 <!-- HERO SECTION -->
 <section class="hero">
@@ -214,7 +226,7 @@
 <!-- POPUP COMPLETO PREVENTIVO (RFQ) -->
 <div class="popup-overlay" id="popup-overlay">
     <div class="popup-box" id="popup-preventivo">
-        <span class="popup-close" onclick="chiudiPopup()">&times;</span>
+        <span class="popup-close" onclick="chiudiPopup()">×</span>
 
         <div class="popup-content">
             <div class="popup-col popup-left">
@@ -329,45 +341,27 @@
 
 <script>
 function toggleMenu() {
-    const btn = document.querySelector('.hamburger');
-    const nav = document.getElementById('main-nav');
-    const isExpanded = btn.getAttribute('aria-expanded') === 'true';
-    
-    btn.classList.toggle('active');
-    btn.setAttribute('aria-expanded', !isExpanded);
-    nav.classList.toggle('open');
+    document.querySelector('.hamburger').classList.toggle('active');
+    document.querySelector('nav').classList.toggle('open');
 }
 
-function apriPopup(e) {
-    if(e) e.preventDefault();
+function apriPopup() {
     document.getElementById("popup-preventivo").classList.add("active");
     document.getElementById("popup-overlay").classList.add("active");
-    document.body.style.overflow = "hidden";
 }
 
 function chiudiPopup() {
     document.getElementById("popup-preventivo").classList.remove("active");
     document.getElementById("popup-overlay").classList.remove("active");
-    document.body.style.overflow = "";
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    const linkCatalogo = document.querySelector('.menu-dropdown > a');
-    if (linkCatalogo) {
-        linkCatalogo.addEventListener('click', function(e) {
-            // Se si clicca sul link diretto del catalogo naviga, altrimenti lascia aprire il menu se gestito via CSS
-            window.location.href = this.getAttribute('href');
-        });
-    }
-
-    document.querySelectorAll(".btn-preventivo-nav, .btn-preventivo").forEach(btn => {
-        btn.addEventListener("click", function(e) {
-            apriPopup(e);
-        });
+document.querySelectorAll(".btn-preventivo-nav, .btn-preventivo").forEach(btn => {
+    btn.addEventListener("click", function(e) {
+        e.preventDefault();
+        apriPopup();
     });
 });
 </script>
-
 
 </body>
 </html>
