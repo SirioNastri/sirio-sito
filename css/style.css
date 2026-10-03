@@ -1292,3 +1292,41 @@ nav a.active {
         -webkit-overflow-scrolling: touch !important;
     }
 }
+
+/* ==========================================================
+   CORREZIONE DEFINITIVA MENU MOBILE (APERTURA E SCROLL)
+   ========================================================== */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: flex !important;
+    }
+    
+    nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #1a1a1a;
+        flex-direction: column;
+        padding: 20px;
+        border-bottom: 2px solid #2e7d32;
+    }
+
+    /* Questa è la regola che sblocca lo scroll e mostra tutte le voci finali */
+    nav.open {
+        display: flex !important;
+        flex-direction: column !important;
+        max-height: calc(100vh - 80px) !important;
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+    }
+
+    .mega-negozio {
+        position: static;
+        min-width: 100%;
+        box-shadow: none;
+        border: none;
+        padding: 10px 0;
+    }
+}
