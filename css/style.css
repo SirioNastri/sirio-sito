@@ -1292,9 +1292,8 @@ nav a.active {
         -webkit-overflow-scrolling: touch !important;
     }
 }
-
 /* ==========================================================
-   CORREZIONE DEFINITIVA MENU MOBILE (APERTURA E SCROLL)
+   CORREZIONE DEFINITIVA MENU MOBILE (APERTURA, SCROLL E MEGA MENU)
    ========================================================== */
 @media screen and (max-width: 768px) {
     .hamburger {
@@ -1313,7 +1312,7 @@ nav a.active {
         border-bottom: 2px solid #2e7d32;
     }
 
-    /* Questa è la regola che sblocca lo scroll e mostra tutte le voci finali */
+    /* Regola che sblocca lo scroll e mostra tutte le voci finali */
     nav.open {
         display: flex !important;
         flex-direction: column !important;
@@ -1322,11 +1321,17 @@ nav a.active {
         -webkit-overflow-scrolling: touch !important;
     }
 
+    /* Nasconde completamente il mega menu sul catalogo mobile per evitare spazi vuoti */
+    .menu-negozio:hover .mega-negozio {
+        display: none !important;
+    }
+
     .mega-negozio {
-        position: static;
-        min-width: 100%;
-        box-shadow: none;
-        border: none;
-        padding: 10px 0;
+        display: none !important;
+        position: static !important;
+        width: 100% !important;
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
     }
 }
