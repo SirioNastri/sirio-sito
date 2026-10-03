@@ -1278,3 +1278,17 @@ nav a.active {
     opacity: 0;
     cursor: pointer;
 }
+
+/* ==========================================================
+   CORREZIONE MENU MOBILE (SCROLL E VISIBILITÀ VOCI FINALI)
+   ========================================================== */
+@media screen and (max-width: 768px) {
+    /* Assicura che il menu si apra in verticale e attivi lo scroll se è lungo */
+    nav.open {
+        display: flex !important;
+        flex-direction: column !important;
+        max-height: calc(100vh - 80px) !important;
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+    }
+}
